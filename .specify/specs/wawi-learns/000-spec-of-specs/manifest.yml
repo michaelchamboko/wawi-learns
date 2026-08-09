@@ -1,0 +1,115 @@
+schema_version: "1.1"
+extension: "prd"
+slug: "wawi-learns"
+state: "PLAN_READY"
+created_at: "2026-08-08T21:38:54Z"
+finalized_at: "2026-08-08T21:38:54Z"
+active_version: "v001"
+decomposition_version: "v001"
+decomposition_approval_version: "v001"
+final_review_version: "v001"
+frozen_sequence: true
+artifact_state: "PLAN_READY"
+source:
+  authority: "file"
+  identity: "Wawi Learns PRD.md"
+  canonical_path: "Wawi Learns PRD.md"
+  preserved_at: "Wawi Learns PRD.md"
+  sha256: "e2eced5839b60fbd7047c8605fd03483464dc719f993353ea5846c17acf62257"
+  byte_size: 115459
+  line_count: 2669
+  note: "The root PRD remains the single preserved source to honor the plans-only repository constraint."
+repository:
+  root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
+  remote: "https://github.com/michaelchamboko/wawi-learns.git"
+  visibility: "private"
+  initial_state: "empty remote; no local Git metadata"
+  head: ""
+  dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
+  applicable_instructions: "C:/Users/micha/.buzz/AGENTS.md"
+delivery:
+  vercel_project: "wawi-learns"
+  vercel_project_id: "prj_GATes1T7lKe9y226DQpeFyAhs3Sn"
+  vercel_root_directory: "."
+  vercel_node_version: "24.x"
+  production_branch: "main"
+planning_method:
+  spec_kit_repository: "https://github.com/michaelchamboko/spec-kit.git"
+  spec_kit_commit: "8e258e390535cc88e0738bdd912893f3a7c7826d"
+  prd_extension_version: "1.1.0"
+graph:
+  provider: "direct"
+  indexed_state: "greenfield; root PRD only"
+  fallback_mode: true
+  evidence_path: "codegraph.md"
+slices:
+  - id: "SLC-001"
+    slug: "validation-spikes"
+    directory: "001-validation-spikes"
+    dependencies: []
+    order: 1
+    requirements: ["PRD-FR-023", "PRD-FR-028", "PRD-FR-030", "PRD-NFR-001", "PRD-NFR-004"]
+    state: "PLAN_READY"
+  - id: "SLC-002"
+    slug: "secure-offline-foundation"
+    directory: "002-secure-offline-foundation"
+    dependencies: ["SLC-001"]
+    order: 2
+    requirements: ["PRD-FR-003", "PRD-FR-022", "PRD-FR-023", "PRD-FR-029", "PRD-FR-030", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005"]
+    state: "PLAN_READY"
+  - id: "SLC-003"
+    slug: "curriculum-content-packs"
+    directory: "003-curriculum-content-packs"
+    dependencies: ["SLC-002"]
+    order: 3
+    requirements: ["PRD-FR-001", "PRD-FR-002", "PRD-FR-019", "PRD-FR-027", "PRD-NFR-008"]
+    state: "PLAN_READY"
+  - id: "SLC-004"
+    slug: "adaptive-learner-core"
+    directory: "004-adaptive-learner-core"
+    dependencies: ["SLC-003"]
+    order: 4
+    requirements: ["PRD-FR-004", "PRD-FR-005", "PRD-FR-006", "PRD-FR-007", "PRD-FR-008", "PRD-FR-009", "PRD-FR-010"]
+    state: "PLAN_READY"
+  - id: "SLC-005"
+    slug: "handwriting-spelling-speech"
+    directory: "005-handwriting-spelling-speech"
+    dependencies: ["SLC-004"]
+    order: 5
+    requirements: ["PRD-FR-012", "PRD-FR-013", "PRD-FR-014", "PRD-FR-015"]
+    state: "PLAN_READY"
+  - id: "SLC-006"
+    slug: "reading-stories-ai"
+    directory: "006-reading-stories-ai"
+    dependencies: ["SLC-005"]
+    order: 6
+    requirements: ["PRD-FR-011", "PRD-FR-017", "PRD-FR-018", "PRD-FR-019"]
+    state: "PLAN_READY"
+  - id: "SLC-007"
+    slug: "mathematics-mastery"
+    directory: "007-mathematics-mastery"
+    dependencies: ["SLC-006"]
+    order: 7
+    requirements: ["PRD-FR-016"]
+    state: "PLAN_READY"
+  - id: "SLC-008"
+    slug: "rewards-parent-operations"
+    directory: "008-rewards-parent-operations"
+    dependencies: ["SLC-007"]
+    order: 8
+    requirements: ["PRD-FR-020", "PRD-FR-021", "PRD-FR-026"]
+    state: "PLAN_READY"
+  - id: "SLC-009"
+    slug: "offline-safety-hardening"
+    directory: "009-offline-safety-hardening"
+    dependencies: ["SLC-008"]
+    order: 9
+    requirements: ["PRD-FR-022", "PRD-FR-024", "PRD-FR-025", "PRD-FR-026", "PRD-FR-031", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
+    state: "PLAN_READY"
+  - id: "SLC-010"
+    slug: "private-beta-release"
+    directory: "010-private-beta-release"
+    dependencies: ["SLC-009"]
+    order: 10
+    requirements: ["PRD-FR-030", "PRD-FR-032", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
+    state: "PLAN_READY"
