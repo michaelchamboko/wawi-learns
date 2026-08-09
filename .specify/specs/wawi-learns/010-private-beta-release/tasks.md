@@ -5,7 +5,11 @@
 
 ## Execution protocol
 
-Tasks run in order and each is one scoped human-trailed commit until the deployment task, which records immutable receipts. Never direct-push protected `main`, never weaken required checks and never label preview `LIVE`.
+Tasks run in order and each is one scoped, review-gated direct-`main` commit.
+Every push is a production candidate: declared checks and the artifact-bound round
+robin pass before it, then immutable GitHub Actions and Vercel receipts for that
+exact SHA are retained. Never weaken required checks and never label a preview
+`LIVE`.
 
 ### SLC-010-T001 — Build the complete release evidence gate
 
@@ -35,27 +39,27 @@ Tasks run in order and each is one scoped human-trailed commit until the deploym
 - **Deployment/rollback:** no production deploy; fixes return through relevant regression gates.
 - **Recovery trigger:** material product/content/provider/privacy/a11y change or evidence expiry.
 
-### SLC-010-T003 — Configure protected delivery pipeline
+### SLC-010-T003 — Configure direct-main delivery pipeline
 
 - **Requirements / acceptance:** PRD-FR-030, PRD-NFR-004; AC-SLC-010-003.
-- **Allowed scope:** GitHub Actions/protection evidence, Vercel Git binding, Convex environment deployment scripts/tests.
-- **Forbidden scope:** direct production push, manual untracked deploy, new Vercel project, committed IDs/tokens beyond non-secret project metadata.
+- **Allowed scope:** GitHub Actions/direct-main receipt evidence, Vercel Git binding, Convex environment deployment scripts/tests.
+- **Forbidden scope:** unreviewed production candidate push, manual untracked deploy, new Vercel project, committed IDs/tokens beyond non-secret project metadata.
 - **Interfaces:** consumes `main`, Vercel `wawi-learns` root `.`, and Convex envs; produces immutable candidate metadata.
-- **Steps:** write platform-binding tests; verify required checks and production branch; connect GitHub repository to existing Vercel project and confirm PR previews; set protected environment variables; implement expand/verify/deploy/contract-safe Convex flow; pin Vercel CLI if CI uses it; run preview pipeline; commit workflow.
-- **Evidence:** `npm exec vitest run tests/integration/release/platform-binding.test.ts` plus `gh api`/`vercel project inspect wawi-learns` receipts; expected correct repo/project/root/branch and preview READY.
-- **Edge/failure:** Vercel framework remains Other after source, wrong team/project, missing required check/env or incompatible schema blocks merge/deploy.
+- **Steps:** write platform-binding tests; verify required checks and production branch; connect GitHub repository to the existing Vercel project and confirm exact-SHA direct-`main` candidate receipts; set protected environment variables; implement expand/verify/deploy/contract-safe Convex flow; pin Vercel CLI if CI uses it; run the delivery verification; commit workflow through the review gate.
+- **Evidence:** `npm exec vitest run tests/integration/release/platform-binding.test.ts`, `npm run release:verify -- --phase delivery`, and `vercel project inspect wawi-learns`; expected correct repo/project/root/branch plus GitHub Actions and Vercel receipts for the exact direct-`main` SHA.
+- **Edge/failure:** Vercel framework remains Other after source, wrong team/project, missing required check/env, missing exact-SHA receipt, or incompatible schema blocks delivery.
 - **Security/migration:** GitHub/Vercel/Convex secrets protected; least workflow permissions; expand-contract migration with tested backward compatibility.
-- **Observability:** candidate SHA, workflow run, Convex deployment and Vercel preview ID.
-- **Deployment/rollback:** preview only here; rollback workflow commit and prior Convex preview functions.
+- **Observability:** candidate SHA, workflow run, Convex deployment and Vercel immutable deployment ID.
+- **Deployment/rollback:** the reviewed direct-`main` workflow commit is a production candidate; rollback by reverting that exact commit and restoring the prior compatible Convex bundle.
 - **Recovery trigger:** repo/project/branch/root/env or deployment workflow change.
 
 ### SLC-010-T004 — Deploy and verify exact production candidate
 
 - **Requirements / acceptance:** PRD-FR-030, PRD-NFR-002, 004, 006; AC-SLC-010-004.
-- **Allowed scope:** approved merge/deploy, production smoke/provenance receipt.
+- **Allowed scope:** approved direct-`main` deployment, production smoke/provenance receipt.
 - **Forbidden scope:** code/content edit after candidate approval, preview URL as production, unapproved generated content.
 - **Interfaces:** implements `verifyProduction(...) -> ProductionReceipt`.
-- **Steps:** merge approved PR after required checks; deploy compatible Convex production functions/schema; let Vercel Git integration deploy exact `main` SHA to `wawi-learns`; wait for READY; verify exposed versions/SHA/deployment ID, installability, core offline journey, auth authority, sync, pack hashes and private-static leak; inspect production errors; record receipt.
+- **Steps:** use the reviewed direct-`main` candidate after its required checks; deploy compatible Convex production functions/schema; let Vercel Git integration deploy the exact `main` SHA to `wawi-learns`; wait for READY; verify exposed versions/SHA/deployment ID, installability, core offline journey, auth authority, sync, pack hashes and private-static leak; inspect production errors; record receipt.
 - **Evidence:** `npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production`; expected pass and receipt SHA equals GitHub/Vercel source SHA.
 - **Edge/failure:** build error, deployment mismatch, Convex incompatibility, smoke error or private asset leak triggers rollback and blocks completion.
 - **Security/migration:** no test child in production beyond authorised private-beta setup; logs scanned for secrets/PII.

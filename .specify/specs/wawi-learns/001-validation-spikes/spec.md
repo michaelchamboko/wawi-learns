@@ -10,7 +10,7 @@ Turn every PRD §48 implementation uncertainty into a reproducible pass/fail dec
 
 ## Acceptance criteria
 
-- **AC-SLC-001-001:** The local project can be initialised against `https://github.com/michaelchamboko/wawi-learns.git`, with `main` as the protected production branch and Vercel project `wawi-learns` rooted at `.`.
+- **AC-SLC-001-001:** The local project can be initialised against `https://github.com/michaelchamboko/wawi-learns.git`, with `main` as the direct production branch governed by staged-candidate checks, artifact-bound review, and exact-SHA hosted receipts, and Vercel project `wawi-learns` rooted at `.`.
 - **AC-SLC-001-002:** Next.js 16.3.0, React 19.2.8, TypeScript 7.0.2 and Node 24.x build a minimal installable PWA and pass a browser offline launch/update probe.
 - **AC-SLC-001-003:** IndexedDB events round-trip through a Convex test deployment with event-id deduplication, source-sequence gap detection and occurrence-time preservation.
 - **AC-SLC-001-004:** Identity, speech/TTS, tracing, AI/safety, content-licensing and pack-strategy ADRs name one acceptable choice or block later slices with measured evidence.

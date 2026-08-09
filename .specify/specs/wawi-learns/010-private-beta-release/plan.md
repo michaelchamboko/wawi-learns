@@ -4,13 +4,13 @@
 
 **Goal:** Release the exact fully tested Version 1 commit to the existing `wawi-learns` production project with complete traceability, human approvals and proven rollback.
 
-**Architecture:** CI produces one immutable release candidate and evidence manifest. GitHub branch protection gates merge; Vercel Git integration deploys the same commit to project `wawi-learns`; environment-aware Convex deployment is coordinated with additive schema compatibility. Production is verified externally before final approval.
+**Architecture:** Declared checks and the artifact-bound review gate approve one immutable direct-`main` release candidate and evidence manifest before push. GitHub Actions and Vercel Git integration then identify that same commit in project `wawi-learns`; environment-aware Convex deployment is coordinated with additive schema compatibility. Production is verified externally before final approval.
 
 **Tech Stack:** GitHub Actions/CLI, Vercel project `wawi-learns`, Convex CLI/deployments, existing npm verification scripts.
 
 ## Global Constraints
 
-- Only approved `main` deploys production; PRs receive isolated Vercel previews.
+- Only reviewed direct-`main` candidates deploy production. Preview or test environments are verification evidence only and never replace exact-SHA delivery receipts.
 - Every production deployment exposes approved Git SHA and immutable Vercel deployment ID.
 - Vercel shared assets contain no personalised content; Convex remains sole child-data/AI authority.
 - Schema/function rollout has forward/backward and rollback proof.
@@ -25,7 +25,7 @@
 - Produces `proposed:scripts/release/verify-production.ts:verifyProduction(input: ProductionTarget) -> Promise<ProductionReceipt>`.
 - Consumes all slice journeys, GitHub commit status, Vercel immutable deployment metadata and Convex deployment/version metadata.
 
-Approved PR SHA → full CI/evidence manifest → Convex compatible production functions/schema → Vercel immutable build/deploy from same SHA → production smoke/offline/authority/static-leak checks → rollback rehearsal → human FINAL approval.
+Reviewed candidate tree → declared pre-push checks and artifact-bound round robin → direct-`main` SHA → GitHub Actions/evidence manifest → Convex compatible production functions/schema → Vercel immutable build/deploy from the same SHA → production smoke/offline/authority/static-leak checks → rollback rehearsal → human FINAL approval.
 
 ## Persistence, security and migration
 
@@ -43,7 +43,7 @@ Official Vercel Git/deployment and Convex production docs are rechecked immediat
 
 1. Build the AC-01…36 evidence manifest and content/curriculum inventory gate.
 2. Complete named human curriculum, privacy, accessibility and Malachi usability approvals.
-3. Configure/verify GitHub protection, Vercel Git integration and controlled Convex production pipeline.
+3. Configure/verify GitHub Actions exact-SHA receipts, Vercel Git integration and controlled Convex production pipeline.
 4. Deploy the exact approved commit and run production smoke/provenance checks.
 5. Prove rollback, install the authorised PWA and collect final human release approval.
 

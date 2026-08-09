@@ -26,6 +26,12 @@ Use this precedence order:
 If these sources conflict, stop the active task and ask the human product owner.
 Do not silently reduce the approved V1 or invent missing requirements.
 
+The direct-`main` delivery rule in this file and `Build.md` is an explicit
+product-owner instruction that supersedes older task-packet wording about pull
+requests, slice branches, and preview-only final delivery. Preview and test
+environments remain valid verification evidence; they do not replace the
+reviewed direct-`main` commit or its hosted receipts.
+
 ## Project Identity
 
 - GitHub: `https://github.com/michaelchamboko/wawi-learns.git`
@@ -41,45 +47,79 @@ AI-provider projects when an approved project or task decision already exists.
 
 ## Ownership
 
-- `@Javis` is CTO and orchestrator. Javis assigns work, enforces gates, and does
-  not write implementation code.
-- `@Cody` is the default implementation and commit owner.
-- `@Einstein` investigates architecture, runtime configuration, and failures
-  before fixes are attempted.
-- `@Jimmy` validates product intent and full-stack integration. Jimmy may write
-  only when assigned exclusive ownership of an isolated task.
-- `@Honey` independently verifies tests, CI/CD, reliability, and release proof.
-- `@Bumble` supplies task-required primary-source research and licensing
-  evidence without creating general research files.
-- `@Fizz` performs task-authorized disposable spikes. Fizz may write only when
-  assigned exclusive ownership of an isolated task.
+- `@Javis` is CTO/CEO and release commander. `@Javis` clarifies outcomes,
+  creates bounded task packets, selects one implementation owner, resolves
+  trade-offs, enforces evidence gates, and makes technical ship/no-ship
+  decisions. `@Javis` does not perform routine implementation or self-approve a
+  change.
+- `@Jimmy` is the platform implementation engineer for backend, integration,
+  tooling, runtime repair, builds, and clearly scoped engineering tasks.
+- `@Bumble` is the product and UI implementation engineer for focused
+  frontend/UI tasks and user-flow polish with explicit acceptance criteria.
+- `@Cody` is the fast bounded feature implementer for small, self-contained
+  changes with explicit files, acceptance checks, and rollback boundaries.
+- `@Einstein` is the architecture, diagnosis, and failure-mode reviewer.
+  `@Einstein` challenges the mechanism and load-bearing assumptions before code
+  starts and diagnoses failures without owning the implementation.
+- `@Fizz` owns quality strategy and independent verification, including test
+  strategy, release-risk analysis, cross-cutting trade-offs, and adversarial
+  review. `@Fizz` never implements the change being verified.
+- `@Honey` is the robustness and large-context reviewer for complex diffs,
+  whole-application consistency, edge cases, and evidence sufficiency. `@Honey`
+  never implements the same task or holds final release authority.
 
 Exactly zero or one task may be active, and exactly one agent may write to the
-repository for that task. Read-only investigation and review may run in
-parallel. Never allow competing edits or overlapping implementation branches.
+repository for that task. `@Javis` selects exactly one of `@Jimmy`, `@Bumble`,
+or `@Cody` as that writer. All other agents remain read-only for the task. Never
+allow competing edits or overlapping implementation branches.
+
+The human product owner is the sole human approval authority. Team review
+results are technical evidence, not an additional human or external approval.
 
 ## Execution Loop
 
-1. Read the active task packet and run the orchestrator's `status` and `next`
-   actions.
-2. Start only the next eligible task with one named owner.
-3. State the task's goal, allowed and forbidden scope, owned interfaces,
-   measurable success criteria, failure modes, validation location, and rollback
-   before editing.
-4. Apply the simplest solution that satisfies the task. Do not add speculative
-   abstractions, generic frameworks, future hooks, unrelated refactors, or dead
-   configuration.
-5. Follow the packet's test-first sequence and run every declared targeted
-   check in its intended location.
-6. Have Honey and the task-relevant specialist independently review the diff and
-   evidence.
-7. Record real evidence through the orchestrator. Complete the task only when
-   every required check is fresh and passing.
-8. Block on a real failure. Use Einstein for root-cause analysis, then return the
-   repair to the active implementation owner. Reopen stale tasks and accept the
-   resulting downstream invalidation.
-9. Commit one scoped task with its evidence. Proceed sequentially until the slice
-   exit journey passes and the human product owner approves the slice.
+1. `@Javis` reads the active task packet and runs the orchestrator's `status` and
+   `next` actions.
+2. `@Einstein` challenges the proposed mechanism, assumptions, interfaces, and
+   failure modes before implementation starts.
+3. `@Javis` starts only the next eligible task and selects exactly one of
+   `@Jimmy`, `@Bumble`, or `@Cody` as implementation and commit owner.
+4. The owner states the task goal, allowed and forbidden scope, owned
+   interfaces, measurable success criteria, validation location, and rollback;
+   then follows the packet's test-first sequence and implements the smallest
+   solution.
+5. After the smallest task passes its declared checks, stage only the allowed
+   files and record `git write-tree` as the candidate tree ID. Run the read-only
+   round robin in this order: `@Einstein`, `@Jimmy`, `@Bumble`, `@Cody`,
+   `@Fizz`, `@Honey`, then `@Javis`. The implementation owner uses their turn
+   for self-review and evidence handoff; every other turn is independent.
+6. Each required review role returns `PASS` only when it cites the candidate tree
+   ID and at least one command result, hosted receipt, or evidence path; otherwise
+   it returns `BLOCK` with one exact defect. A review has a ten-minute response
+   window with one reminder at five minutes. Silence is `BLOCK`, never `PASS`.
+   `@Javis` may record an available same-remit substitute; without one, the task
+   remains blocked.
+7. Any `BLOCK` returns the task to the same implementation owner. After repair,
+   restage the candidate, record its new tree ID, rerun affected checks, and run
+   the complete round robin. Do not start the next task until every required
+   review role returns `PASS` and `@Javis` records the technical gate.
+8. Record real evidence through the orchestrator. Complete and commit one scoped
+   task only when every declared check is fresh and passing, then verify that
+   `HEAD^{tree}` equals the reviewed candidate tree ID.
+9. The product owner's recorded direct-main authorization permits the owner to
+   push that reviewed commit to `main`; no pull request or branch-protection gate
+   applies. GitHub Actions and Vercel receipts must match the pushed SHA before
+   the task is `DONE`. A hosted failure requires `git revert <task-sha>` on
+   `main` and `action=block` before another task starts.
+10. Reopen stale tasks and accept the resulting downstream invalidation. The
+    human product owner alone approves slice and final release decisions.
+
+## Escalation Discipline
+
+Before escalating an unresolved multi-step issue, every agent applies the
+`karpathy-guidelines` skill and then the `council` skill. The escalation names
+the evidence, the Council Chair recommendation, and the proposed owner; `@Javis`
+selects the owner and next action.
 
 The orchestration ledger is the only persisted task dashboard. Status reports
 must remain in agent messages and contain only task, owner, state, evidence,
@@ -101,18 +141,24 @@ blocker, and next task.
 
 ## Git and Release
 
-- Work on short-lived task or slice branches after the initial empty-repository
-  bootstrap. Never direct-push a protected `main` branch.
-- Every commit must use the repository's configured `user.name` and `user.email`
-  for matching `Co-authored-by` and `Signed-off-by` trailers, in that order. Stop
-  if the email is missing. Verify trailers with `git log -1` before pushing.
-- Never force-push, hard-reset a protected branch, bypass required checks, commit
-  secrets, or apply destructive production changes without explicit approval.
+- The product owner has explicitly authorized direct task-scoped commits and
+  pushes to `main`. Treat every push as a Vercel production-candidate deployment:
+  complete the execution-loop candidate, check, and review gates before pushing;
+  then match GitHub Actions and Vercel receipts to the pushed SHA before `DONE`.
+- Every commit must have valid repository `user.name` and `user.email` author
+  metadata. Add matching `Co-authored-by` then `Signed-off-by` trailers for that
+  same configured identity. These are attribution only; they do not create an
+  additional approval authority. If either value is missing, use values supplied
+  by the product owner and never infer them.
+- Never force-push, hard-reset `main`, bypass the direct-main review gate, commit
+  secrets, or apply destructive production changes without the product owner's
+  explicit approval.
 - Do not label a preview `LIVE`.
 - Release only the exact tested `main` SHA through the existing Vercel project
   and compatible Convex production deployment.
 - Final completion requires full regression, cross-slice E2E, production smoke,
-  private-data leak checks, rollback proof, and explicit human approval.
+  private-data leak checks, rollback proof, `@Javis` technical release clearance,
+  and the sole product owner's approval.
 
 ## Repository Cleanliness
 

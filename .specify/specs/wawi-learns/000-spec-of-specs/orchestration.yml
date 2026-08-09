@@ -3,10 +3,10 @@ revision: 1
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
-  head: ""
+  head: "26cda450b767002e12914240bfa265ee33c12de0"
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
-  applicable_instructions: "C:/Users/micha/.buzz/AGENTS.md"
+  applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
 plan:
   slug: "wawi-learns"
   manifest_version: "v001"
@@ -1055,7 +1055,7 @@ slices:
         evidence: []
         blockers: []
       - id: "SLC-010-T003"
-        title: "Configure protected delivery pipeline"
+        title: "Configure direct-main delivery pipeline"
         rank: 47
         state: "TODO"
         dependencies: ["SLC-010-T002"]
@@ -1065,7 +1065,7 @@ slices:
         documentation_evidence: *release_docs
         checks:
           unit: ["npm exec vitest run tests/integration/release/platform-binding.test.ts"]
-          integration: ["gh api repos/michaelchamboko/wawi-learns/branches/main/protection"]
+          integration: ["npm run release:verify -- --phase delivery"]
           regression: ["npm run check"]
           e2e: []
           migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]

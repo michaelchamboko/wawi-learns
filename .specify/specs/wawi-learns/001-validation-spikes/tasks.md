@@ -5,7 +5,7 @@
 
 ## Execution protocol
 
-Complete tasks in ID order. Start with a failing test or measurable failing probe, implement the minimum evidence path, run the decisive commands, review the scoped diff, then commit only listed files. Before every commit, read repository `git config user.name` and `git config user.email`; stop if either is empty. Add matching `Co-authored-by` then `Signed-off-by` trailers and verify them with `git log -1`.
+Complete tasks in ID order. Start with a failing test or measurable failing probe, implement the minimum evidence path, run the decisive commands, then stage only listed files and record `git write-tree` as the candidate tree ID. Complete the artifact-bound round robin on that tree before committing. Before every commit, read repository `git config user.name` and `git config user.email`; stop if either is empty. Add matching `Co-authored-by` then `Signed-off-by` trailers and verify them with `git log -1`. The product owner authorizes direct task-scoped pushes to `main`: push only after the review gate passes, require GitHub Actions and Vercel receipts to match the pushed SHA before `DONE`, and revert the exact task commit plus block on hosted failure.
 
 ### SLC-001-T001 — Bind repository, toolchain and hosting
 
@@ -13,12 +13,12 @@ Complete tasks in ID order. Start with a failing test or measurable failing prob
 - **Allowed scope:** root npm/Next/TypeScript/ESLint/Playwright manifests, `.github/workflows/ci.yml`, `tests/e2e/spikes/platform-baseline.spec.ts`, `docs/decisions/ADR-000-toolchain.md`.
 - **Forbidden scope:** learner features, production credentials, Vercel project creation, alternate package managers.
 - **Interfaces:** produces the root npm scripts `lint`, `typecheck`, `test:unit`, `test:integration`, `test:e2e`, `build`; consumes GitHub remote and Vercel project named in DEC-012.
-- **Steps:** (1) write the Playwright assertion for app metadata, build SHA and Vercel project identity; (2) run it and capture failure because no app exists; (3) initialise the pinned Next/React/TS npm workspace with strict TypeScript; (4) add CI checks and project/version exposure; (5) link the existing Vercel project without committing `.vercel`; (6) rerun checks and commit.
+- **Steps:** (1) write the Playwright assertion for app metadata, build SHA and Vercel project identity; (2) run it and capture failure because no app exists; (3) initialise the pinned Next/React/TS npm workspace with strict TypeScript; (4) add CI checks and project/version exposure; (5) link the existing Vercel project without committing `.vercel`; (6) rerun checks, stage the allowed candidate, complete the review gate, commit, and push directly to `main`; (7) retain GitHub Actions and Vercel receipts for that SHA before completion.
 - **Evidence:** `npm ci && npm run lint && npm run typecheck && npm run build && npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts`; expected exit 0 and Next.js build output. `gh repo view michaelchamboko/wawi-learns --json isEmpty,name` must identify `wawi-learns` before first push.
 - **Edge/failure:** wrong remote, non-`main` production branch, Vercel root not `.`, incompatible dependency pin or secret in bundle blocks completion.
 - **Security/migration:** no secrets in manifests; no data migration.
 - **Observability:** build exposes `NEXT_PUBLIC_APP_VERSION` and `NEXT_PUBLIC_GIT_SHA`; CI retains test/build artifacts.
-- **Deployment/rollback:** preview only in Vercel `wawi-learns`; rollback by reverting this commit and unlinking the local `.vercel` directory, never deleting the remote project.
+- **Deployment/rollback:** the reviewed direct `main` push is a Vercel production candidate; rollback by reverting this exact commit on `main` and unlinking the local `.vercel` directory, never deleting the remote project.
 - **Recovery trigger:** dependency-pin, Vercel-project, Node-version or remote-branch drift reopens the task.
 
 ### SLC-001-T002 — Prove PWA offline/update lifecycle

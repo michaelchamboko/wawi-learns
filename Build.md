@@ -2,8 +2,8 @@
 
 > **For @Javis and agentic workers:** REQUIRED EXECUTION METHOD: run one
 > `orchestration.yml` task at a time. @Javis orchestrates and never writes
-> implementation code; @Cody is the sole production-code writer unless the human
-> product owner explicitly transfers one task.
+> implementation code; @Javis selects exactly one of @Jimmy, @Bumble, or @Cody
+> as the implementation and commit owner for each task.
 
 **Goal:** Build, verify, and release the complete approved private Wawi Learns
 Version 1 for Malachi.
@@ -28,16 +28,24 @@ pins before they become release authority.
 - Use `.specify/specs/wawi-learns/000-spec-of-specs/orchestration.yml` as the
   only task-state authority.
 - Execute the frozen 49-task sequence. Exactly zero or one task may be active.
-- @Cody owns production edits and commits. Other agents investigate, prototype
-  outside the repository, or review without competing edits.
+- @Javis selects one implementation owner per task: @Jimmy for platform and
+  integration work, @Bumble for product and UI work, or @Cody for small bounded
+  feature work. Every other agent remains read-only for that task.
 - Add only files allowed by the active task packet.
 - Run application installs, builds, full typechecks, and runtime checks in the
   task's approved hosted environment. Local application execution requires
-  explicit human opt-in recorded for that task.
+  explicit product-owner opt-in recorded for that task.
 - Use the existing GitHub repository, Vercel project `wawi-learns`, and Convex
   architecture. Do not create substitute projects.
-- Human approval is mandatory after every slice and for the final release.
-- A scaffold, preview, green command, or merged pull request is not `LIVE`.
+- The product owner is the sole human approval authority for slice and final
+  release decisions. No co-author, sign-off, second human, external reviewer, or
+  outside organisation is required to approve the work. Agent `PASS`/`BLOCK`
+  results are technical quality evidence, not additional approval authority.
+- The product owner has explicitly authorized direct task-scoped commits and
+  pushes to `main`. There is no pull-request or protected-main gate; therefore a
+  push is a Vercel production-candidate deployment and must satisfy Section 5
+  before it is made.
+- A scaffold, preview, green command, or proposed review is not `LIVE`.
 
 ---
 
@@ -59,27 +67,39 @@ deployment, rollback, and recovery trigger. The corresponding `code-impact.md`
 supplies exact target files and interface ownership. Do not duplicate those
 details in another plan.
 
+The direct-`main` delivery policy in Sections 5 and 6 supersedes any older task
+packet wording about pull requests, slice branches, or preview-only delivery.
+A task may use an isolated preview or test environment as verification evidence,
+but its reviewed final delivery remains the exact direct-`main` commit and the
+matching hosted receipts.
+
 The only persistent project-management outputs are:
 
 - implementation, test, configuration, migration, and deployment files required
   by the active task;
 - the existing `.specify` plans;
 - task evidence under `000-spec-of-specs/orchestration-evidence/`;
-- Git commits, pull requests, CI receipts, deployment receipts, and approvals.
+- Git commits, CI receipts, deployment receipts, and sole
+  product-owner approval records.
 
 **Completion criterion:** every agent can identify one authoritative task packet
 and no second planning, task, status, or handover system exists.
 
 ## 2. Pre-Execution Git Bootstrap
 
-The local repository is initialized on `main`, `origin` points to
-`https://github.com/michaelchamboko/wawi-learns.git`, and the remote has no refs.
-The ledger remains `NOT_STARTED`. The verified pre-execution blocker is missing
-repository Git identity.
+These steps apply only while the repository has no commits. Once the bootstrap
+commit exists, verify it and continue to Section 3; do not recreate, amend, or
+rewrite it merely to add or remove approval trailers. The ledger remains
+`NOT_STARTED` until the orchestrator starts the first task. Git author metadata
+and required trailers are attribution only; they do not add an approval,
+co-authorship decision, or sign-off authority.
 
+- [ ] Run `git rev-parse --verify HEAD`. If it succeeds, verify `HEAD` equals
+  `origin/main`, confirm the baseline files and remote below, then skip the
+  remaining commit-creation steps.
 - [ ] Run `git config user.name` and `git config user.email`.
-- [ ] If either value is empty, stop and ask the human for the exact name and
-  email. Do not infer either value from GitHub or another repository.
+- [ ] If either value is empty, configure repository-local values supplied by
+  the product owner. Do not infer either value from GitHub or another repository.
 - [ ] Confirm the PRD SHA-256 is
   `E2ECED5839B60FBD7047C8605FD03483464DC719F993353EA5846C17ACF62257`.
 - [ ] Confirm `git remote get-url origin` returns the canonical repository.
@@ -88,7 +108,8 @@ repository Git identity.
 - [ ] Stage exactly `.gitignore`, `.specify`, `AGENTS.md`, `Build.md`, and
   `Wawi Learns PRD.md`.
 - [ ] Run `git diff --cached --check`; require exit `0`.
-- [ ] Create the sole pre-ledger bootstrap commit:
+- [ ] Create the sole pre-ledger bootstrap commit with configured Git author
+  metadata and matching attribution trailers:
 
 ```powershell
 $humanName = git config user.name
@@ -98,13 +119,15 @@ git commit -m "chore(repo): initialize Wawi Learns plans" `
   --trailer "Signed-off-by: $humanName <$humanEmail>"
 ```
 
-- [ ] Verify both trailers with `git log -1`.
+- [ ] Verify the commit subject, author, and trailers with `git log -1`.
 - [ ] Push the initial `main` because the remote is empty, establish `main` as
-  the default branch, and enable pull-request-only protection. Do not require a
-  nonexistent CI check; SLC-001-T001 adds the real checks.
+  the default branch, and record the direct-main policy. Do not enable
+  pull-request-only protection or a nonexistent CI check; SLC-001-T001 adds the
+  real checks.
 
 **Completion criterion:** GitHub contains one clean bootstrap commit with the
-preserved PRD and plans, `main` is protected, and no implementation has started.
+preserved PRD and plans, the direct-main policy is recorded, and no implementation
+has started.
 
 ## 3. Orchestrator Contract
 
@@ -125,7 +148,7 @@ ledger audit before implementation.
 State-changing forms:
 
 ```text
-/speckit.prd.orchestrate slug=wawi-learns action=start task=SLC-001-T001 owner=@Cody
+/speckit.prd.orchestrate slug=wawi-learns action=start task=SLC-001-T001 owner=@Jimmy
 /speckit.prd.orchestrate slug=wawi-learns action=evidence task=SLC-001-T001 check=unit.repository-contract result=pass path=tests/unit/repository-contract.test.ts
 /speckit.prd.orchestrate slug=wawi-learns action=complete task=SLC-001-T001
 /speckit.prd.orchestrate slug=wawi-learns action=block task=SLC-001-T001 reason="Vercel project identity does not match DEC-012"
@@ -134,9 +157,9 @@ State-changing forms:
 
 Use the real check IDs returned by `action=next`; the evidence command above
 shows syntax only. Evidence paths must exist inside the repository. Never edit
-ledger state or evidence markers by hand. For an approval call, pass the exact
-human name returned by `git config user.name` as `approved_by`; never pass an
-agent identity.
+ledger state or evidence markers by hand. An approval call records only the
+product owner's decision using the product-owner identifier they supplied as
+`approved_by`; never record an agent, reviewer, or outside party as the approver.
 
 Run this non-rewriting validation after every state transition:
 
@@ -153,107 +176,139 @@ approval actions remain ledger-driven, atomic, and traceable.
 
 ## 4. Team Assignment Contract
 
-| Agent | Required responsibility |
-|---|---|
-| @Javis | Select the next task, issue its packet, coordinate reviews, enforce gates, and report status. Never write production code. |
-| @Cody | Own all production implementation, task tests, scoped commits, and fixes. Load only the active packet and affected files. |
-| @Einstein | Investigate architecture/runtime risks before high-risk tasks and provide root-cause evidence for failures. |
-| @Jimmy | Validate product behaviour, API/UI integration, child flow, and parent flow against acceptance criteria. |
-| @Honey | Independently verify tests, CI, privacy, security, reliability, deployment, and rollback evidence. |
-| @Bumble | Provide task-required primary documentation, curriculum, provider, licensing, and safety evidence. |
-| @Fizz | Test interaction or platform hypotheses in disposable external scratch space; hand findings to @Cody without committing prototypes. |
+| Agent | Role | Owns | Must not do |
+|---|---|---|---|
+| @Javis | CTO/CEO and release commander | Clarify outcomes, create bounded packets, choose one owner per change, resolve trade-offs, enforce evidence gates, and make technical ship/no-ship decisions. | Routine implementation, competing edits, or self-approving a change. |
+| @Jimmy | Platform implementation engineer | Backend/integration work, tooling, runtime repair, builds, and clearly scoped engineering tasks. | Product direction, cross-team orchestration, or final release approval. |
+| @Bumble | Product and UI implementation engineer | Focused frontend/UI tasks, user-flow polish, and implementation with explicit acceptance criteria. | Broad architecture decisions or concurrent edits to another builder's files. |
+| @Cody | Fast bounded feature implementer | Small self-contained changes with clear acceptance tests, explicit files, and a rollback boundary. | Whole-repository rewrites, ambiguous multi-system work, orchestration, or release decisions. |
+| @Einstein | Architecture, diagnosis, and failure-mode reviewer | First-principles framing, root-cause analysis, load-bearing assumptions, and challenging the mechanism before code starts. | Primary delivery ownership or long build execution. |
+| @Fizz | Quality strategy and independent verification reviewer | Test strategy, release-risk analysis, cross-cutting product trade-offs, and adversarial review. | Implementing the same change being verified. |
+| @Honey | Robustness and large-context reviewer | Complex-diff second opinion, larger-surface consistency, edge cases, and evidence sufficiency. | Parallel implementation of the same task or final release authority. |
 
 Every assignment message must contain:
 
 ```text
 TASK: exact SLC-NNN-TMMM and title
-OWNER: @Cody
+OWNER: exactly one of @Jimmy, @Bumble, or @Cody
 GOAL: active packet outcome
 SCOPE: exact allowed and forbidden files
 INTERFACES: exact owned and consumed contracts
 RED: failing test or check and expected failure
 GREEN: minimum implementation boundary
 VERIFY: every required check and its location
-REVIEWERS: @Honey plus task specialist
+ROUND_ROBIN: @Einstein -> @Jimmy -> @Bumble -> @Cody -> @Fizz -> @Honey -> @Javis
+CANDIDATE: staged tree ID plus artifact paths for every PASS
+DIRECT_MAIN: pre-push gate and post-push receipt/rollback conditions
 ROLLBACK: packet rollback action
 STOP: blocker and reopen conditions
 ```
 
-**Completion criterion:** one named writer owns one bounded task; reviewers have
-independent evidence targets; no agent must invent scope or interfaces.
+**Completion criterion:** one named writer owns one bounded task; every agent
+has a defined evidence target; no agent invents scope or interfaces.
 
 ## 5. Per-Task Delivery Loop
 
-For each task returned by `action=next`:
+For each smallest task returned by `action=next`:
 
-- [ ] @Javis checks that dependencies and the previous slice approval are valid.
-- [ ] @Javis creates or continues the current slice branch and starts the task
-  for @Cody.
-- [ ] @Einstein or @Bumble supplies pre-change evidence when the packet depends
-  on runtime, provider, documentation, curriculum, licensing, or safety facts.
-- [ ] @Cody writes the packet's failing test or decisive failing check.
-- [ ] Run the check in its declared environment and retain the real failure.
-- [ ] @Cody implements the smallest code that makes the check pass, touching
-  only allowed files.
-- [ ] Run every declared unit, integration, regression, E2E, migration,
-  deployment, and rollback check.
-- [ ] @Honey independently verifies results. @Jimmy verifies product journeys;
-  @Einstein verifies runtime and data contracts; @Bumble verifies source-backed
-  decisions; @Fizz verifies task-authorized interaction hypotheses.
-- [ ] @Javis records evidence and completes the task through the orchestrator.
-- [ ] @Cody reviews the diff for secrets, generated clutter, unrelated changes,
-  dead configuration, and forbidden files.
-- [ ] @Cody commits implementation, tests, evidence, and ledger state as one
-  task-scoped commit using the repository human trailers.
-- [ ] Push the slice branch and require the configured CI and preview checks.
+- [ ] @Javis checks dependencies and selects exactly one implementation owner:
+  @Jimmy, @Bumble, or @Cody.
+- [ ] @Einstein reviews the proposed mechanism, interfaces, load-bearing
+  assumptions, and failure modes before code starts. A pre-change `BLOCK` must
+  be resolved by @Javis and the selected owner before editing.
+- [ ] The selected owner writes the packet's failing test or decisive failing
+  check, retains the real failure, and implements the smallest allowed change.
+- [ ] The selected owner runs every declared unit, integration, regression,
+  E2E, migration, deployment, and rollback check in its declared environment.
+- [ ] The selected owner stages only allowed files and records `git write-tree`
+  as the candidate tree ID. As soon as the smallest task passes, stop
+  implementation and run this read-only round robin on that candidate in order:
+  @Einstein, @Jimmy, @Bumble, @Cody, @Fizz, @Honey, then @Javis.
+- [ ] @Einstein checks mechanism, architecture, assumptions, and failure modes.
+  @Jimmy checks platform, integration, tooling, runtime, and build evidence.
+  @Bumble checks product behaviour, UI, and user-flow quality. @Cody checks
+  task boundaries, acceptance tests, and rollback. @Fizz checks test strategy,
+  release risk, cross-cutting trade-offs, and adversarial cases. @Honey checks
+  larger-surface consistency, robustness, edge cases, and evidence sufficiency.
+- [ ] The implementation owner uses their round-robin turn for explicit
+  self-review and evidence handoff; every other review remains independent.
+  Each required review role returns `PASS` only with the candidate tree ID plus
+  an exact command result, hosted receipt, or evidence path; otherwise it returns
+  `BLOCK` with one exact defect. A review has a ten-minute response window with
+  one reminder at five minutes. Silence is `BLOCK`, never `PASS`; @Javis may
+  record an available same-remit substitute, or the task remains blocked.
+- [ ] Any `BLOCK` returns the task to the same implementation owner. After the
+  repair, restage the candidate, record its new tree ID, rerun all affected
+  checks and the complete round robin. Do not start another task while any
+  `BLOCK` remains.
+- [ ] @Javis resolves disagreements, records the evidence, and marks the
+  technical gate complete only after every required review role returns `PASS`.
+- [ ] The selected owner reviews the diff for secrets, generated clutter,
+  unrelated changes, dead configuration, and forbidden files; then commits the
+  implementation, tests, evidence, and ledger state as one task-scoped commit
+  with configured Git author metadata plus matching `Co-authored-by` then
+  `Signed-off-by` attribution trailers. Verify `HEAD^{tree}` equals the reviewed
+  candidate tree ID.
+- [ ] Push the reviewed task commit directly to `main`. GitHub Actions and
+  Vercel receipts must identify that exact SHA before the task is `DONE`. On a
+  hosted failure, revert the exact task commit on `main`, run `action=block`, and
+  do not start another task.
 - [ ] Report exactly:
 
 ```text
-TASK | OWNER | STATE | DECISIVE EVIDENCE | COMMIT/PR | BLOCKER | NEXT
+TASK | OWNER | STATE | DECISIVE EVIDENCE | COMMIT/RECEIPTS | BLOCKER | NEXT
 ```
 
-If a task fails, run `action=block`. @Einstein diagnoses; @Cody repairs. If an
-accepted interface, dependency, ADR, test, or environment becomes stale, run
-`action=reopen` and invalidate every downstream result. Never advance on red.
+If a task fails, run `action=block`. @Einstein diagnoses and the selected owner
+repairs. If an accepted interface, dependency, ADR, test, or environment becomes
+stale, run `action=reopen` and invalidate every downstream result. Never advance
+on red.
 
 **Completion criterion:** the task is `DONE`, all declared evidence is fresh and
-passing, its commit is scoped and human-trailed, CI is green, and `action=next`
-returns only the dependency-valid successor.
+passing, every required review role has returned artifact-bound `PASS`, its
+reviewed commit is scoped and pushed to `main`, hosted receipts match its SHA,
+and `action=next` returns only the dependency-valid successor.
 
 ## 6. Slice Delivery Sequence
 
-Use one short-lived branch and one pull request per slice. Preserve each task's
-commit; do not squash away task traceability.
+Use direct task-scoped commits on `main`; no pull request, branch-protection, or
+slice branch is used. Preserve each task commit; do not squash away task
+traceability.
 
-| Order | Branch | Increment | Required exit journey |
+| Order | Delivery ref | Increment | Required exit journey |
 |---:|---|---|---|
-| 1 | `feat/slc-001-validation-spikes` | Platform, provider, licensing, and skeleton proof | `npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts` |
-| 2 | `feat/slc-002-secure-offline-foundation` | Parent authority, sole learner, pack activation, offline child mode | `npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts` |
-| 3 | `feat/slc-003-curriculum-content-packs` | Reproducible licensed Reception and Year 1 core pack | `npm exec playwright test tests/e2e/content/core-pack-install.spec.ts` |
-| 4 | `feat/slc-004-adaptive-learner-core` | Deterministic adaptive English learning journey | `npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts` |
-| 5 | `feat/slc-005-handwriting-spelling-speech` | Tracing, spelling, TTS, and ephemeral speech journey | `npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts` |
-| 6 | `feat/slc-006-reading-stories-ai` | Offline reading and governed private AI overlay | `npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts` |
-| 7 | `feat/slc-007-mathematics-mastery` | Reception and Year 1 mathematics mastery | `npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts` |
-| 8 | `feat/slc-008-rewards-parent-operations` | Rewards, parent evidence, controls, export, and deletion | `npm exec playwright test tests/e2e/parent/dashboard-controls-data-rights.spec.ts` |
-| 9 | `feat/slc-009-offline-safety-hardening` | Offline, privacy, accessibility, security, performance, and device gates | `npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts` |
-| 10 | `feat/slc-010-private-beta-release` | Exact production candidate, rollback, and private-beta approval | `npm run release:verify` |
+| 1 | `main` | Platform, provider, licensing, and skeleton proof | `npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts` |
+| 2 | `main` | Parent authority, sole learner, pack activation, offline child mode | `npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts` |
+| 3 | `main` | Reproducible licensed Reception and Year 1 core pack | `npm exec playwright test tests/e2e/content/core-pack-install.spec.ts` |
+| 4 | `main` | Deterministic adaptive English learning journey | `npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts` |
+| 5 | `main` | Tracing, spelling, TTS, and ephemeral speech journey | `npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts` |
+| 6 | `main` | Offline reading and governed private AI overlay | `npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts` |
+| 7 | `main` | Reception and Year 1 mathematics mastery | `npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts` |
+| 8 | `main` | Rewards, parent evidence, controls, export, and deletion | `npm exec playwright test tests/e2e/parent/dashboard-controls-data-rights.spec.ts` |
+| 9 | `main` | Offline, privacy, accessibility, security, performance, and device gates | `npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts` |
+| 10 | `main` | Exact production candidate, rollback, and private-beta approval | `npm run release:verify` |
 
 At each slice boundary:
 
 - [ ] All slice tasks are `DONE` with passing evidence.
-- [ ] The exit journey passes against the pull-request candidate in its declared
-  environment.
-- [ ] @Honey verifies the full slice regression and preview receipts.
-- [ ] @Javis gives the human the working increment, evidence, residual risk, and
-  rollback path.
-- [ ] The human approves the slice and pull request.
-- [ ] @Javis records `action=approve stage=SLC-NNN` using the human identity.
-- [ ] @Cody commits the approval-only ledger change with human trailers.
-- [ ] Merge without discarding task commits, then create the next slice branch
-  from the updated protected `main`.
+- [ ] The exit journey passes against the exact direct-main candidate in its
+  declared environment.
+- [ ] @Honey verifies the full slice regression and hosted receipts for the
+  corresponding `main` SHA.
+- [ ] @Javis gives the product owner the working increment, evidence, residual
+  risk, and rollback path.
+- [ ] The product owner alone approves the slice; no agent,
+  second human, external reviewer, or outside organisation must approve it.
+- [ ] @Javis records `action=approve stage=SLC-NNN` using only the product-owner
+  identifier.
+- [ ] @Javis assigns the approval-only ledger change to one builder, who commits
+  it directly to `main` with configured attribution trailers after its review
+  gate passes.
+- [ ] Continue the next eligible task from the updated `main` without discarding
+  task commits.
 
-**Completion criterion:** the slice is merged, human-approved, reproducible from
-`main`, and its successor is unlocked by the ledger.
+**Completion criterion:** the slice is delivered on `main`, product-owner-approved,
+reproducible from `main`, and its successor is unlocked by the ledger.
 
 ## 7. Interface Ownership Boundaries
 
@@ -263,8 +318,9 @@ At each slice boundary:
 - SLC-004 exclusively owns `selectNextActivity`, mastery projection, and
   educational decisions; these remain pure and deterministic.
 - Speech, TTS, and tracing produce evidence and never mutate mastery directly.
-- Generated content remains revision-controlled, validated, human-approved, and
-  private. It never alters curriculum or learning decisions.
+- Generated content remains revision-controlled, validated,
+  product-owner-approved, and private. It never alters curriculum or learning
+  decisions.
 - Convex authorises every parent-sensitive and provider operation. Child
   activities read and write authorised local state first.
 - Vercel contains the PWA and shared static core assets only.
@@ -279,14 +335,16 @@ slice substitutes mocks for an upstream production contract at its exit gate.
 
 SLC-010 is complete only after this sequence:
 
-- [ ] Build and approve the complete release evidence gate for all PRD
-  acceptance criteria and non-functional requirements.
+- [ ] @Javis clears the complete technical release evidence gate for all PRD
+  acceptance criteria and non-functional requirements after the final task's
+  full-team round robin passes.
 - [ ] Complete required curriculum, privacy, accessibility, supervised child,
   and product-owner reviews.
-- [ ] Verify protected GitHub delivery, required CI checks, the existing Vercel
-  Git binding, project root `.`, production branch `main`, and protected Convex
+- [ ] Verify direct GitHub delivery, required CI checks, the existing Vercel Git
+  binding, project root `.`, production branch `main`, and protected Convex
   environment variables.
-- [ ] Merge the approved pull request without bypassing checks.
+- [ ] Push the final reviewed candidate directly to `main` without bypassing the
+  direct-main evidence gate.
 - [ ] Deploy backward-compatible Convex production functions and schema.
 - [ ] Allow the existing Vercel Git integration to deploy the exact `main` SHA
   to `wawi-learns`.
@@ -297,17 +355,20 @@ SLC-010 is complete only after this sequence:
 - [ ] Rehearse rollback to the previous safe Vercel deployment and compatible
   Convex bundle while preserving pending local events.
 - [ ] Restore the candidate and rerun the production smoke journey.
-- [ ] Install the approved PWA on the authorised Android device and obtain
-  explicit human `FINAL` approval.
-- [ ] Record `action=approve stage=FINAL` using the human identity.
+- [ ] Install the approved PWA on the authorised Android device and obtain the
+  sole product owner's `FINAL` approval. No additional human, agent, reviewer,
+  or organisation sign-off is required.
+- [ ] Record `action=approve stage=FINAL` using only the product-owner
+  identifier.
 
 On any production failure: withdraw unsafe content, restore the previous Vercel
 deployment and compatible Convex functions, verify pending events remain safe,
 block the release task, and remove every `LIVE` claim.
 
-**Completion criterion:** all 49 tasks are `DONE`, all ten slices and the final
-gate are human-approved, the exact tested SHA is healthy in production, rollback
-is proven, and the ledger state is `RELEASE_READY`.
+**Completion criterion:** all 49 tasks are `DONE`, every task has unanimous
+technical `PASS` evidence, all ten slices and the final gate are approved only
+by the product owner, the exact tested SHA is healthy in production, rollback is
+proven, and the ledger state is `RELEASE_READY`.
 
 ## 9. Final Cleanliness Gate
 
