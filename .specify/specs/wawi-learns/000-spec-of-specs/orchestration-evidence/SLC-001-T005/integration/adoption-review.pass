@@ -1,0 +1,13 @@
+task_id: SLC-001-T005
+check_kind: integration
+check_id: adoption-review
+result: pass
+recorded_at: '2026-08-11T14:00:00Z'
+command: npm exec vitest run tests/integration/spikes/adoption-review.test.ts
+test_count: 6
+evidence_owner: @Jimmy
+notes:
+  - ADR-005 selects OpenRouter with logging and training disabled, circuit breaker + monthly cap.
+  - ADR-006 enforces CC0 1.0 + commercial perpetual licences; share-alike rejected; manifest carries licence/licence_id/source_url/proof_path.
+  - ADR-007 acceptance confirmed (precache allow-list, NetworkOnly catch-all, opt-in SKIP_WAITING, clientsClaim + navigation fallback).
+  - All seven SLC-001 ADRs now carry status = accepted.
