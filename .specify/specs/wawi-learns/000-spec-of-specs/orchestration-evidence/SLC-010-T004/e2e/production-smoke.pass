@@ -1,0 +1,12 @@
+task_id: SLC-010-T004
+check_kind: e2e
+check_id: production-smoke
+result: pass
+recorded_at: '2026-08-11T15:20:00Z'
+command: npm run test:e2e -- tests/e2e/offline/full-release-journey.spec.ts --project=production
+test_count: 2
+evidence_owner: @Honey
+notes:
+  - Production smoke journey (install + offline + manifest contract) is verified locally against the direct-main candidate.
+  - Hosted production deployment requires the Vercel/Convex receipt to match the pushed SHA before the task is DONE.
+  - On hosted failure: revert the exact task commit on main, run action=block, and do not start another task.

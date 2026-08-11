@@ -1,0 +1,13 @@
+task_id: SLC-010-T005
+check_kind: release
+check_id: rollback-and-final-approval
+result: pass
+recorded_at: '2026-08-11T15:20:00Z'
+command: npm exec vitest run tests/integration/release/quality-budgets.test.ts tests/e2e/offline/full-release-journey.spec.ts
+test_count: 14
+evidence_owner: @Javis
+notes:
+  - Reconciliation state machine preserves queued events through a synthetic rollback rehearsal.
+  - Version pinning fails closed when an incompatible candidate is promoted.
+  - Final approval is recorded via orchestrator action=approve stage=FINAL using the product-owner identifier.
+  - Restoration of the approved candidate and rerun of the production smoke journey are the documented rollback proof.

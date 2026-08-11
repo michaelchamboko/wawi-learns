@@ -1,0 +1,13 @@
+task_id: SLC-010-T001
+check_kind: release
+check_id: evidence-manifest
+result: pass
+recorded_at: '2026-08-11T15:20:00Z'
+command: npm exec vitest run tests/integration/release/evidence-manifest.test.ts
+test_count: 5
+evidence_owner: @Honey
+notes:
+  - 20 PRD AC rows and 8 NFR rows are mapped to evidence commands.
+  - Every row declares a non-empty command and expected exit code 0.
+  - buildReleaseEvidence is deterministic and records every required row in missingRows.
+  - Production release script (npm run release:evidence) consumes this manifest and fails the build if any required row is missing.
