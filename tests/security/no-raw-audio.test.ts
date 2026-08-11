@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { readdirSync } from "node:fs";
+import { join, resolve } from "node:path";
 
 const repoRoot = resolve(__dirname, "..", "..");
 
@@ -20,12 +21,10 @@ const FORBIDDEN_TOKENS = [
 const SCAN_EXTENSIONS = [".ts", ".tsx", ".js", ".mjs", ".json"];
 
 const walkFiles = (dir: string, files: string[] = []): string[] => {
-  const fs = require("node:fs") as typeof import("node:fs");
-  const path = require("node:path") as typeof import("node:path");
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (entry.name.startsWith(".") || entry.name === "node_modules") continue;
     if (entry.name === "tests") continue; // skip the security test itself
-    const full = path.join(dir, entry.name);
+    const full = join(dir, entry.name);
     if (entry.isDirectory()) walkFiles(full, files);
     else if (SCAN_EXTENSIONS.some((ext) => entry.name.endsWith(ext))) files.push(full);
   }

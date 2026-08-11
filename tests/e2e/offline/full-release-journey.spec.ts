@@ -27,7 +27,8 @@ test.describe("SLC-009-T005 — full release journey", () => {
     // Allow the precache to settle before going offline.
     await page.waitForTimeout(500);
     await context.setOffline(true);
-    await page.goto(`${BASE_URL}/offline-fallback-check`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${BASE_URL}/offline-fallback-check`, { waitUntil: "load" });
+    await page.waitForFunction(() => document.readyState === "complete");
     // The offline shell may render the precached /offline route OR the SW
     // fallback may serve it from the cache. Accept either.
     const body = await page.content();

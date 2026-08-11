@@ -30,7 +30,8 @@ test.describe("SLC-006-T004 — approved overlay", () => {
     const page = await context.newPage();
     await waitForReady(page);
     await context.setOffline(true);
-    await page.goto(`${BASE_URL}/offline-fallback-check`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${BASE_URL}/offline-fallback-check`, { waitUntil: "load" });
+    await page.waitForFunction(() => document.readyState === "complete");
     const body = await page.content();
     expect(body).not.toMatch(/approve-revision/);
     await context.close();

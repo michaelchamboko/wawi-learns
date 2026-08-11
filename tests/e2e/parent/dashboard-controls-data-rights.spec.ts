@@ -14,7 +14,8 @@ test.describe("SLC-008 — parent operations smoke", () => {
     const page = await context.newPage();
     await page.goto(`${BASE_URL}/home`, { waitUntil: "networkidle" });
     await context.setOffline(true);
-    await page.goto(`${BASE_URL}/offline-fallback-check`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${BASE_URL}/offline-fallback-check`, { waitUntil: "load" });
+    await page.waitForFunction(() => document.readyState === "complete");
     const body = await page.content();
     expect(body).not.toMatch(/approve-revision/);
     await context.close();
