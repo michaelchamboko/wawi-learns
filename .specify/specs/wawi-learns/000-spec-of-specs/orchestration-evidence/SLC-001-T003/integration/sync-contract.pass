@@ -1,0 +1,12 @@
+task_id: SLC-001-T003
+check_kind: integration
+check_id: sync-contract
+result: pass
+recorded_at: '2026-08-11T13:55:00Z'
+command: npm exec vitest run tests/integration/spikes/sync-contract.test.ts
+test_count: 8
+evidence_owner: @Jimmy
+notes:
+  - All 8 spike tests pass: monotonic source sequence, dedupe, gap detection, skew rejection, restart durability, canonical digest stability, deleted-profile rejection preserves local durability.
+  - Spike boundary is packages/spike-local-data: no Convex runtime required to run the suite.
+  - Real Convex ingestion path is added by SLC-002-T003 against the production Convex deployment; this spike only proves the contract shape and the dedupe/gap semantics.
