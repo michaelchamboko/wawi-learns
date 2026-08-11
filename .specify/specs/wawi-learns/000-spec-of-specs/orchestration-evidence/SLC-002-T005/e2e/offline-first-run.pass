@@ -1,0 +1,12 @@
+task_id: SLC-002-T005
+check_kind: e2e
+check_id: offline-first-run
+result: pass
+recorded_at: '2026-08-11T14:10:00Z'
+command: npm run test:e2e -- tests/e2e/onboarding/offline-first-run.spec.ts
+test_count: 1
+evidence_owner: @Bumble
+notes:
+  - Child home-shell opens after the SW controls the page; navigation fallback serves /offline for unknown routes when offline.
+  - packages/local-data/src/offline-auth.ts canOpenChildModeOffline denies when no snapshot, when revoked, when parent-mode requested offline, and permits the safety-lockout.
+  - Hosted Vercel preview deployment + Convex preview still required to satisfy AC-SLC-002-005.

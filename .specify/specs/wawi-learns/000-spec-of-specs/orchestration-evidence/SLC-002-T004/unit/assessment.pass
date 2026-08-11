@@ -1,0 +1,13 @@
+task_id: SLC-002-T004
+check_kind: unit
+check_id: assessment
+result: pass
+recorded_at: '2026-08-11T14:10:00Z'
+command: npm exec vitest run tests/unit/learning-engine/assessment.test.ts
+test_count: 6
+evidence_owner: @Bumble
+notes:
+  - Pure branching engine in packages/learning-engine/src/assessment.ts.
+  - Walks phonics → spelling → reading → maths until target=20 items or all four dimensions covered.
+  - skipAssessment marks baseline-incomplete; restartAssessment preserves parent/child/baseline identity.
+  - Item ids are deterministic per dimension and never drift out of the active dimension.

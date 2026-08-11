@@ -4,7 +4,7 @@ const PORT = Number(process.env.PWA_E2E_PORT ?? 3100);
 
 export default defineConfig({
   testDir: "./tests/e2e",
-  testMatch: ["**/spikes/**/*.spec.ts"],
+  testMatch: ["**/*.spec.ts"],
   fullyParallel: false,
   workers: 1,
   retries: 0,

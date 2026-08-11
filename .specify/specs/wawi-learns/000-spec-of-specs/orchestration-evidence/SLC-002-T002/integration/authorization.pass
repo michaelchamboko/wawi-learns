@@ -1,0 +1,12 @@
+task_id: SLC-002-T002
+check_kind: integration
+check_id: authorization
+result: pass
+recorded_at: '2026-08-11T14:10:00Z'
+command: npm exec vitest run tests/integration/convex/authorization.test.ts
+test_count: 7
+evidence_owner: @Jimmy
+notes:
+  - requireParent denies missing_identity, no_parent, stale_verification; ownership check denies cross-parent access.
+  - Recent-verification window = 10 min (RECENT_VERIFICATION_WINDOW_MS).
+  - Schema defined in convex/schema.ts (parents, childProfiles, installations, attempts).
