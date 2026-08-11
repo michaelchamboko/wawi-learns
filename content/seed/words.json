@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w-cat",
+    "spelling": "cat",
+    "phonemes": ["k", "a", "t"],
+    "gpcIds": ["gpc-c", "gpc-a", "gpc-t"],
+    "category": "concrete",
+    "decodable": true,
+    "taughtIn": ["reception"],
+    "illustrationAssetId": "asset-cat",
+    "audioAssetId": "asset-cat-audio",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/wordlist", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "w-sun",
+    "spelling": "sun",
+    "phonemes": ["s", "uh", "n"],
+    "gpcIds": ["gpc-s", "gpc-u", "gpc-n"],
+    "category": "concrete",
+    "decodable": true,
+    "taughtIn": ["reception"],
+    "illustrationAssetId": "asset-sun",
+    "audioAssetId": "asset-sun-audio",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/wordlist", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "w-sit",
+    "spelling": "sit",
+    "phonemes": ["s", "i", "t"],
+    "gpcIds": ["gpc-s", "gpc-t"],
+    "category": "action",
+    "decodable": true,
+    "taughtIn": ["reception"],
+    "illustrationAssetId": "asset-sit",
+    "audioAssetId": "asset-sit-audio",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/wordlist", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "w-sat",
+    "spelling": "sat",
+    "phonemes": ["s", "a", "t"],
+    "gpcIds": ["gpc-s", "gpc-a", "gpc-t"],
+    "category": "action",
+    "decodable": true,
+    "taughtIn": ["reception"],
+    "illustrationAssetId": "asset-sat",
+    "audioAssetId": "asset-sat-audio",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/wordlist", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "w-can",
+    "spelling": "can",
+    "phonemes": ["k", "a", "n"],
+    "gpcIds": ["gpc-c", "gpc-a", "gpc-n"],
+    "category": "concrete",
+    "decodable": true,
+    "taughtIn": ["reception"],
+    "illustrationAssetId": "asset-can",
+    "audioAssetId": "asset-can-audio",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/wordlist", "proofPath": "docs/licence/cc0.md" }
+  }
+]

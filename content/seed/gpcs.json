@@ -1,0 +1,62 @@
+[
+  {
+    "id": "gpc-s",
+    "grapheme": "s",
+    "phonemes": ["s"],
+    "exampleWordIds": ["w-sun"],
+    "position": "initial",
+    "curriculumOrder": 0,
+    "taughtIn": ["reception"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "gpc-a",
+    "grapheme": "a",
+    "phonemes": ["a"],
+    "exampleWordIds": ["w-cat"],
+    "position": "medial",
+    "curriculumOrder": 1,
+    "taughtIn": ["reception"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "gpc-t",
+    "grapheme": "t",
+    "phonemes": ["t"],
+    "exampleWordIds": ["w-cat"],
+    "position": "final",
+    "curriculumOrder": 2,
+    "taughtIn": ["reception"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "gpc-c",
+    "grapheme": "c",
+    "phonemes": ["k"],
+    "exampleWordIds": ["w-cat"],
+    "position": "initial",
+    "curriculumOrder": 3,
+    "taughtIn": ["reception"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "gpc-n",
+    "grapheme": "n",
+    "phonemes": ["n"],
+    "exampleWordIds": ["w-sun"],
+    "position": "final",
+    "curriculumOrder": 4,
+    "taughtIn": ["reception"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "gpc-u",
+    "grapheme": "u",
+    "phonemes": ["uh"],
+    "exampleWordIds": ["w-sun"],
+    "position": "medial",
+    "curriculumOrder": 5,
+    "taughtIn": ["reception"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+  }
+]

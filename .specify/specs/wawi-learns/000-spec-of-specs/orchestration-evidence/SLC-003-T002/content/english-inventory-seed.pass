@@ -1,0 +1,12 @@
+task_id: SLC-003-T002
+check_kind: content
+check_id: english-inventory-seed
+result: pass
+recorded_at: '2026-08-11T14:25:00Z'
+command: npm run test:content
+test_count: 5
+evidence_owner: @Jimmy
+notes:
+  - Canonical seed corpus loads from content/seed/*.json through packages/content-schema/src/repository.ts.
+  - Seed contains a starter GPC sequence (s, a, t, n, c, u), Reception words (cat, sun, sit, sat, can), sentences, one story with two questions, audio + image assets, and maths templates covering every required strand.
+  - Seed does NOT yet meet PRD minima; production build will replace it. Validator flags the gap so the build fails closed.

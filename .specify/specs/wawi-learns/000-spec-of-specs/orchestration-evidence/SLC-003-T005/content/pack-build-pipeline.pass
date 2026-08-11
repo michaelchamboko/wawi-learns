@@ -1,0 +1,12 @@
+task_id: SLC-003-T005
+check_kind: content
+check_id: pack-build-pipeline
+result: pass
+recorded_at: '2026-08-11T14:25:00Z'
+command: npm run test:content
+test_count: 14
+evidence_owner: @Jimmy
+notes:
+  - Build pipeline loads content/seed and validates against ContentPackManifestSchema + validateContentRepository.
+  - Two-slot pack activation (packages/local-data/src/packs.ts) requires SHA-256 match on every declared asset before promotion.
+  - Production pack build (≥2000 words, 60 stories, 40 maths templates) is a content-authoring effort, not implemented in this spike; the spike proves the contract and the activation gate.

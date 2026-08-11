@@ -1,0 +1,12 @@
+task_id: SLC-003-T004
+check_kind: content
+check_id: maths-inventory-seed
+result: pass
+recorded_at: '2026-08-11T14:25:00Z'
+command: npm run test:content
+test_count: 5
+evidence_owner: @Jimmy
+notes:
+  - Maths seed covers five strands (number-to-10, addition-subtraction, place-value, money) with concrete, pictorial and abstract representations.
+  - Every template tags at least one misconception (count-all, skip-one, reversal, etc.) and a deterministic generator name + answer key.
+  - Production build must expand to ≥40 templates covering every Reception + Year 1 outcome.

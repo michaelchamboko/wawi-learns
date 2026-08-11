@@ -1,0 +1,92 @@
+[
+  {
+    "id": "asset-cat",
+    "url": "/content/0.1.0-spike/images/cat.svg",
+    "contentType": "image/svg+xml",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/assets", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-sun",
+    "url": "/content/0.1.0-spike/images/sun.svg",
+    "contentType": "image/svg+xml",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/assets", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-sit",
+    "url": "/content/0.1.0-spike/images/sit.svg",
+    "contentType": "image/svg+xml",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/assets", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-sat",
+    "url": "/content/0.1.0-spike/images/sat.svg",
+    "contentType": "image/svg+xml",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/assets", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-can",
+    "url": "/content/0.1.0-spike/images/can.svg",
+    "contentType": "image/svg+xml",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/assets", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-cat-audio",
+    "url": "/content/0.1.0-spike/audio/cat.mp3",
+    "contentType": "audio/mpeg",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/audio", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-sun-audio",
+    "url": "/content/0.1.0-spike/audio/sun.mp3",
+    "contentType": "audio/mpeg",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/audio", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-sit-audio",
+    "url": "/content/0.1.0-spike/audio/sit.mp3",
+    "contentType": "audio/mpeg",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/audio", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-sat-audio",
+    "url": "/content/0.1.0-spike/audio/sat.mp3",
+    "contentType": "audio/mpeg",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/audio", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "asset-can-audio",
+    "url": "/content/0.1.0-spike/audio/can.mp3",
+    "contentType": "audio/mpeg",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "greyscaleRecognisable": true,
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/audio", "proofPath": "docs/licence/cc0.md" }
+  }
+]

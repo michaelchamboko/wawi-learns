@@ -1,0 +1,12 @@
+task_id: SLC-003-T001
+check_kind: content
+check_id: schema-validators
+result: pass
+recorded_at: '2026-08-11T14:25:00Z'
+command: npm run test:content
+test_count: 9
+evidence_owner: @Jimmy
+notes:
+  - GpcRecordSchema, WordRecordSchema, ContentPackManifestSchema enforce phoneme lists, US-spelling rejection, and licence tiers.
+  - validateContentRepository rejects unknown schemaVersion, empty dictionary, duplicate spellings, US spelling, unknown licence tiers, and surfaces stable reason codes.
+  - Thresholds match PRD minima: 2000 words, 800 illustrated, 400 sentences, 60 stories, 44 GPCs, 40 maths templates.

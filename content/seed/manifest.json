@@ -1,0 +1,19 @@
+{
+  "packVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "curriculumVersion": "curriculum-spike-1",
+  "engineVersion": "engine-spike-1",
+  "issuedAt": 1700000000000,
+  "counts": {
+    "gpc": 0,
+    "words": 0,
+    "sentences": 0,
+    "stories": 0,
+    "assets": 0,
+    "formations": 0,
+    "mathsTemplates": 0
+  },
+  "assets": [],
+  "entryUrls": ["/content/0.1.0-spike/manifest.json"],
+  "sizeBytes": 0
+}

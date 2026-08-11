@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sent-a-cat-sat",
+    "text": "A cat sat.",
+    "wordIds": ["w-cat", "w-sat"],
+    "decodableRatio": 1,
+    "level": "reception",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/sentences", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "sent-the-sun",
+    "text": "The sun is up.",
+    "wordIds": ["w-sun"],
+    "decodableRatio": 0.5,
+    "level": "reception",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/sentences", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "sent-can-sit",
+    "text": "I can sit.",
+    "wordIds": ["w-can", "w-sit"],
+    "decodableRatio": 1,
+    "level": "reception",
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/sentences", "proofPath": "docs/licence/cc0.md" }
+  }
+]

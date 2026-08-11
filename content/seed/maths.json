@@ -1,0 +1,52 @@
+[
+  {
+    "id": "mt-count-objects",
+    "strand": "number-to-10",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "count-objects",
+    "answerKey": "n",
+    "misconceptionTags": ["count-all", "skip-one"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "mt-subitise-to-5",
+    "strand": "number-to-10",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "subitise",
+    "answerKey": "n<=5",
+    "misconceptionTags": ["confuse-4-5"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "mt-bonds-to-10",
+    "strand": "addition-subtraction",
+    "level": "reception",
+    "representation": "pictorial",
+    "generator": "number-bonds",
+    "answerKey": "a+b=10",
+    "misconceptionTags": ["reversal"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "mt-place-value-tens",
+    "strand": "place-value",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "tens-and-units",
+    "answerKey": "10*n + u",
+    "misconceptionTags": ["place-value-reversal"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+  },
+  {
+    "id": "mt-coin-combinations-10p",
+    "strand": "money",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "coin-combinations",
+    "answerKey": "a*5 + b*2 + c*1 = 10",
+    "misconceptionTags": ["skip-1p"],
+    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+  }
+]

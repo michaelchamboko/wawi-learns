@@ -1,0 +1,12 @@
+task_id: SLC-003-T003
+check_kind: content
+check_id: reading-media-seed
+result: pass
+recorded_at: '2026-08-11T14:25:00Z'
+command: npm run test:content
+test_count: 5
+evidence_owner: @Jimmy
+notes:
+  - Reading + media seed covers sentence/story/asset/formation records with declared licence, sha256 placeholder, and asset URL contract.
+  - Every story binds sentences to its pages and includes both literal and inferential question types. Acceptable answers carry an explicit list (no default fallback).
+  - Production build must replace seed with reviewed ≥400 sentences and ≥60 stories before activation.
