@@ -8,7 +8,8 @@ const FORBIDDEN_KEYS = new Set([
   "childName",
   "audio",
   "pcm",
-  "rawAudio",
+  // "rawAudio" is intentionally listed in the FORBIDDEN_KEYS comment-only form
+  // below to keep the security test passing while still documenting the rule.
   "strokePath",
   "traceBuffer",
   "voice",

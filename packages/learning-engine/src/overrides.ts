@@ -33,12 +33,12 @@ export interface ApplyOverridesInput {
 }
 
 export interface LessonContextOverrides {
-  readonly targetDailyMinutes: number;
-  readonly activityDisabled: readonly string[];
-  readonly micEnabled: boolean;
-  readonly difficulty: "gentle" | "standard" | "stretch";
-  readonly pace: "slow" | "standard" | "fast";
-  readonly subjectBalance: "english-only" | "balanced";
+  targetDailyMinutes: number;
+  activityDisabled: string[];
+  micEnabled: boolean;
+  difficulty: "gentle" | "standard" | "stretch";
+  pace: "slow" | "standard" | "fast";
+  subjectBalance: "english-only" | "balanced";
 }
 
 const DEFAULT_OVERRIDES: LessonContextOverrides = {
