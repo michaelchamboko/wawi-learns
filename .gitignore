@@ -4,6 +4,8 @@ node_modules/
 out/
 coverage/
 *.tsbuildinfo
+public/sw.js
+public/swe-worker-*.js
 
 # Test output
 playwright-report/
@@ -21,3 +23,6 @@ test-results/
 *.log
 .DS_Store
 Thumbs.db
+
+# Agent session locks
+.opencode/

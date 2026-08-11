@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "name": "wawi-learns",
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci",
+  "outputDirectory": ".next",
+  "rootDirectory": ".",
+  "trailingSlash": false,
+  "cleanUrls": false,
+  "regions": ["fra1"],
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+name: Deploy production candidate to Vercel
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  deployments: write
+  pull-requests: write
+
+jobs:
+  verify-then-deploy:
+    name: Verify required checks then deploy
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_APP_VERSION: ${{ github.sha }}
+      NEXT_PUBLIC_GIT_SHA: ${{ github.sha }}
+      NEXT_PUBLIC_VERCEL_PROJECT: wawi-learns
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:unit
+      - run: npm run test:integration
+      - run: npm run test:content
+      - run: npm run test:security
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - name: Record immutable deployment
+        run: |
+          echo "SHA=$GITHUB_SHA" >> $GITHUB_OUTPUT
+      - name: Deploy to Vercel (production)
+        run: |
+          npx vercel deploy --prod --yes \
+            --token "$VERCEL_TOKEN" \
+            --scope "$VERCEL_ORG_ID" \
+            --confirm
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      - name: Verify deployment SHA
+        run: |
+          npx vercel inspect wawi-learns --token "$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
