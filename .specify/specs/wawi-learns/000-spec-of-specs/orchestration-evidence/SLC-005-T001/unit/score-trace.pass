@@ -1,0 +1,12 @@
+task_id: SLC-005-T001
+check_kind: unit
+check_id: score-trace
+result: pass
+recorded_at: '2026-08-11T14:40:00Z'
+command: npm exec vitest run tests/unit/tracing/score-trace.test.ts
+test_count: 7
+evidence_owner: @Bumble
+notes:
+  - Custom pointer-event tracer scores coverage, corridor, start, direction.
+  - Clean correct stroke passes; wrong-start, scribble, and dot strokes fail closed.
+  - Deterministic for the same input; no handedness penalty.

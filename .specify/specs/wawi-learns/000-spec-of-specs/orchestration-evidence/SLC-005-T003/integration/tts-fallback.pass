@@ -1,0 +1,12 @@
+task_id: SLC-005-T003
+check_kind: integration
+check_id: tts-fallback
+result: pass
+recorded_at: '2026-08-11T14:40:00Z'
+command: npm exec vitest run tests/integration/audio/tts-fallback.test.ts
+test_count: 6
+evidence_owner: @Bumble
+notes:
+  - playSpeech selects reviewed > premium-cache > browser in order.
+  - Returns 'unavailable' when every tier fails and respects autoplay=false.
+  - ttsFailureProbe records the failure reason.

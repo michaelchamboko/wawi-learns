@@ -1,0 +1,12 @@
+task_id: SLC-005-T004
+check_kind: security
+check_id: no-raw-audio
+result: pass
+recorded_at: '2026-08-11T14:40:00Z'
+command: npm exec vitest run tests/security/no-raw-audio.test.ts tests/integration/audio/pronunciation.test.ts
+test_count: 8
+evidence_owner: @Fizz
+notes:
+  - No raw-audio or PCM persistence anywhere in src/.
+  - EphemeralAudioBuffer is the only PCM-bearing type and disposes on demand.
+  - assessPronunciation returns practice_only when consent expires, uncertain when confidence is low, unavailable on provider failure.

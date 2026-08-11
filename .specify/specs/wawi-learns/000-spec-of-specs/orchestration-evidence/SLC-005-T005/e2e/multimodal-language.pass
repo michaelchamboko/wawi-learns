@@ -1,0 +1,13 @@
+task_id: SLC-005-T005
+check_kind: e2e
+check_id: multimodal-language
+result: pass
+recorded_at: '2026-08-11T14:40:00Z'
+command: npm run test:e2e -- tests/e2e/learner/multimodal-language.spec.ts
+test_count: 3
+evidence_owner: @Bumble
+notes:
+  - /home renders the picture-word activity as the default modality.
+  - Hint counter increments without committing; correct button commits and stays in feedback.
+  - Accidental double-tap on the correct button does not double-advance.
+  - Real multimodal lesson (audio + tracing + speech) requires the production Convex deployment and Azure Speech + tracing renderers.
