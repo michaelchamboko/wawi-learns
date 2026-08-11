@@ -1,0 +1,38 @@
+name: Validate platform baseline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  platform-baseline:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_APP_VERSION: ci
+      NEXT_PUBLIC_GIT_SHA: ${{ github.sha }}
+      NEXT_PUBLIC_VERCEL_PROJECT: wawi-learns
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+          cache: npm
+      - run: npm ci
+      - run: npm exec playwright install --with-deps chromium
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm run test:e2e -- tests/e2e/spikes/platform-baseline.spec.ts
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: platform-baseline-artifacts
+          if-no-files-found: ignore
+          path: |
+            playwright-report/
+            test-results/
+            .next/

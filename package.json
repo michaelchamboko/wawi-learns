@@ -1,0 +1,42 @@
+{
+  "name": "wawi-learns",
+  "version": "0.0.0-local",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -p none \"serwist build --watch\" \"next dev\"",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test:unit": "vitest run tests/**/*.unit.test.ts",
+    "test:integration": "vitest run tests/integration/**/*.test.ts",
+    "test:e2e": "playwright test"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "dependencies": {
+    "@serwist/next": "9.5.12",
+    "convex": "1.43.0",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@serwist/window": "9.5.12",
+    "@types/node": "24.0.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "concurrently": "9.0.1",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.3.0",
+    "fast-check": "4.9.0",
+    "playwright": "1.62.1",
+    "serwist": "9.5.12",
+    "typescript": "6.0.3",
+    "vitest": "4.1.10",
+    "zod": "4.4.3"
+  }
+}

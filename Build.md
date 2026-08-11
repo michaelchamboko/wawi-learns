@@ -14,7 +14,7 @@ the only backend authority for identity, parent operations, reconciliation, and
 private overlays. Vercel serves the application and shared static core assets.
 
 **Tech stack:** npm workspaces; candidate pins Node 24.x, Next.js 16.3.0, React
-19.2.8, TypeScript 7.0.2, Convex 1.43.0, Serwist 9.5.12, idb 8.0.3, Zod 4.4.3,
+19.2.8, TypeScript 6.0.3, Convex 1.43.0, Serwist 9.5.12, idb 8.0.3, Zod 4.4.3,
 Vitest 4.1.10, Playwright 1.62.1, and fast-check 4.9.0. SLC-001 must prove these
 pins before they become release authority.
 

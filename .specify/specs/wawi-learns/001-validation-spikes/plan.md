@@ -6,7 +6,7 @@
 
 **Architecture:** Use the smallest executable probes that cross the actual browser, Vercel and Convex boundaries. Each probe ends in one ADR; failed candidates are discarded, and only the selected contract is consumed downstream.
 
-**Tech Stack:** Node.js 24.x, npm workspaces, Next.js 16.3.0, React 19.2.8, TypeScript 7.0.2, Convex 1.43.0, Serwist 9.5.12, Playwright 1.62.1.
+**Tech Stack:** Node.js 24.x, npm workspaces, Next.js 16.3.0, React 19.2.8, TypeScript 6.0.3, Convex 1.43.0, Serwist 9.5.12, Playwright 1.62.1.
 
 ## Global Constraints
 
