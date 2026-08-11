@@ -1,0 +1,11 @@
+task_id: SLC-006-T001
+check_kind: e2e
+check_id: curated-reader
+result: pass
+recorded_at: '2026-08-11T14:50:00Z'
+command: npm run test:e2e -- tests/e2e/stories/approved-overlay.spec.ts
+test_count: 2
+evidence_owner: @Bumble
+notes:
+  - Curated public-pack stories render with offline fallback when no approved overlay exists.
+  - Production reader (buildReadingPlan + comprehension/retelling) is owned by the Convex-backed content build and is verified by the smoke reader journey; this spike proves the offline shell contract.

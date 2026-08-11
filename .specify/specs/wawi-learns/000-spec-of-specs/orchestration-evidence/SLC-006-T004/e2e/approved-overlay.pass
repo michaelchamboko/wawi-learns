@@ -1,0 +1,11 @@
+task_id: SLC-006-T004
+check_kind: e2e
+check_id: approved-overlay
+result: pass
+recorded_at: '2026-08-11T14:50:00Z'
+command: npm run test:e2e -- tests/e2e/stories/approved-overlay.spec.ts
+test_count: 2
+evidence_owner: @Fizz
+notes:
+  - Story reading page renders with the curated fallback when no approved overlay is bound.
+  - The child cannot reach the parent approval surface offline; the route falls back to the shell.

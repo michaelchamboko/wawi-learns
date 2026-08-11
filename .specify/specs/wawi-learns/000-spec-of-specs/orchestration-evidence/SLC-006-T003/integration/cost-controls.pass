@@ -1,0 +1,11 @@
+task_id: SLC-006-T003
+check_kind: integration
+check_id: cost-controls
+result: pass
+recorded_at: '2026-08-11T14:50:00Z'
+command: npm exec vitest run tests/integration/ai/cost-controls.test.ts
+test_count: 5
+evidence_owner: @Fizz
+notes:
+  - reserveAiBudget denies over-cap, circuit-open, duplicate-recent, and rate-limited requests.
+  - Monthly cap, circuit breaker, debounce window are all configurable; failure threshold trips the circuit.

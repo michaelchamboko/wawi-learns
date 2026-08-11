@@ -1,0 +1,13 @@
+task_id: SLC-006-T005
+check_kind: security
+check_id: ai-red-team
+result: pass
+recorded_at: '2026-08-11T14:50:00Z'
+command: npm exec vitest run tests/security/ai-red-team.test.ts
+test_count: 4
+evidence_owner: @Fizz
+notes:
+  - RED_TEAM_CORPUS covers unsafe-content, name-leak, out-of-scope, off-policy-provider.
+  - assertRedTeamRefusal returns failures when the provider response is missing a refusal.
+  - All corpus entries have stable ids and non-empty prompts.
+  - Production red-team runner in tests/security/ is the spec-kit evidence path.

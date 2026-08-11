@@ -1,0 +1,12 @@
+task_id: SLC-006-T002
+check_kind: unit
+check_id: generated-revision
+result: pass
+recorded_at: '2026-08-11T14:50:00Z'
+command: npm exec vitest run tests/unit/validation/generated-revision.test.ts
+test_count: 7
+evidence_owner: @Jimmy
+notes:
+  - State machine: draft → validated → approved → withdrawn with compare-and-set digests.
+  - Rejects unknown revision, digest mismatch, forbidden transition, self-loop.
+  - Validator pipeline and revision state live in packages/learning-engine/src/revisions.ts.
