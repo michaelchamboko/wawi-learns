@@ -1,0 +1,12 @@
+task_id: SLC-009-T005
+check_kind: e2e
+check_id: full-release-journey
+result: pass
+recorded_at: '2026-08-11T15:15:00Z'
+command: npm run test:e2e -- tests/e2e/offline/full-release-journey.spec.ts
+test_count: 2
+evidence_owner: @Honey
+notes:
+  - SW controls the page after install; offline navigation falls back to /offline.
+  - Manifest endpoint returns the expected PWA metadata (name, standalone, /).
+  - Production matrix (Android 13–17, Chrome stable + two majors) requires physical device evidence captured in the release artefact; CI evidence covers contract only.

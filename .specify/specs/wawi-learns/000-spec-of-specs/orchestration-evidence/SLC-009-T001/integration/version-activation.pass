@@ -1,0 +1,12 @@
+task_id: SLC-009-T001
+check_kind: integration
+check_id: version-activation
+result: pass
+recorded_at: '2026-08-11T15:15:00Z'
+command: npm exec vitest run tests/integration/release/quality-budgets.test.ts
+test_count: 5
+evidence_owner: @Jimmy
+notes:
+  - pinSessionVersions accepts shell/engine/pack/schema combinations declared in COMPATIBILITY_GRAPH.
+  - Unknown shell, incompatible engine, and incompatible pack are rejected with typed reasons.
+  - Session-version pinning preserves the prior shell when the snapshot fails to match.

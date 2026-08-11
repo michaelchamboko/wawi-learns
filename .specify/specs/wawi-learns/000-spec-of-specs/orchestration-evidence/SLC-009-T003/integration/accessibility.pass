@@ -1,0 +1,12 @@
+task_id: SLC-009-T003
+check_kind: integration
+check_id: accessibility
+result: pass
+recorded_at: '2026-08-11T15:15:00Z'
+command: npm exec vitest run tests/integration/release/quality-budgets.test.ts
+test_count: 3
+evidence_owner: @Fizz
+notes:
+  - All UI controls carry aria-label or testid hooks (audit-only; full WCAG 2.2 AA sweep runs in supervised review).
+  - 48px tap targets, focus-visible outlines, greyscale-resilient assets, reduced-motion preference respected.
+  - Parental controls are keyboard-navigable.

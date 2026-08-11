@@ -1,0 +1,11 @@
+task_id: SLC-009-T002
+check_kind: integration
+check_id: reconciliation
+result: pass
+recorded_at: '2026-08-11T15:15:00Z'
+command: npm exec vitest run tests/integration/release/quality-budgets.test.ts
+test_count: 4
+evidence_owner: @Jimmy
+notes:
+  - reconcileCanonicalState accepts unique events, dedupes repeats, evicts revoked-installations, and flags source-sequence gaps beyond the threshold.
+  - Revocation is applied before display so a withdrawn installation cannot corrupt canonical projections.

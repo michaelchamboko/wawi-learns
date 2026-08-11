@@ -1,0 +1,12 @@
+task_id: SLC-009-T004
+check_kind: integration
+check_id: quality-security-observability
+result: pass
+recorded_at: '2026-08-11T15:15:00Z'
+command: npm exec vitest run tests/integration/release/quality-budgets.test.ts
+test_count: 12
+evidence_owner: @Fizz
+notes:
+  - sanitizeOperationalEvent redacts forbidden keys (childProfileId, audio, voice, parentEmail) and truncates oversized payloads.
+  - COMPATIBILITY_GRAPH declares a single shell-v1 rule with engine-1, pack 0.1.0, schema 1.0.0.
+  - Version pinning, reconciliation, and sanitiser run as fast unit tests without external dependencies.
