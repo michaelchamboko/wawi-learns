@@ -1,0 +1,6 @@
+task_id: SLC-001-T001
+check_kind: e2e
+check_id: platform-baseline
+result: pass
+recorded_at: '2026-08-11T12:45:37Z'
+source_path: tests\e2e\spikes\platform-baseline.spec.ts
