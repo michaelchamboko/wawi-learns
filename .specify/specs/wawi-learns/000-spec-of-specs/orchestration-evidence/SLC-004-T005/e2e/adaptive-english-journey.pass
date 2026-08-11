@@ -1,0 +1,13 @@
+task_id: SLC-004-T005
+check_kind: e2e
+check_id: adaptive-english-journey
+result: pass
+recorded_at: '2026-08-11T14:35:00Z'
+command: npm run test:e2e -- tests/e2e/learner/adaptive-english-journey.spec.ts
+test_count: 3
+evidence_owner: @Bumble
+notes:
+  - /home renders the child home, the picture-word activity, and the local fallback placeholders when the API is offline.
+  - Tapping "I got it" commits the attempt and stays in feedback.
+  - Tapping "Help me" increments the hint counter without committing.
+  - Full production journey (Reception + Year 1 with all activity types) requires the production content build (SLC-003-T005) and Convex deployment.

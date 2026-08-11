@@ -1,0 +1,12 @@
+task_id: SLC-004-T002
+check_kind: unit
+check_id: scheduler
+result: pass
+recorded_at: '2026-08-11T14:35:00Z'
+command: npm exec vitest run tests/unit/learning-engine/scheduler.test.ts
+test_count: 5
+evidence_owner: @Jimmy
+notes:
+  - buildReviewQueue returns weak candidates up to the backlog ceiling.
+  - selectNextActivity drops new content when backlog exceeds the ceiling and rotates modality when the same one was used twice in a row.
+  - Empty candidate list returns the home plan with reason "queue-empty".

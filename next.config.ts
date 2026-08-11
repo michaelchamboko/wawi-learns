@@ -1,4 +1,5 @@
 import withSerwistInit from "@serwist/next";
+import { resolve } from "node:path";
 
 const shellRevision = process.env.NEXT_PUBLIC_GIT_SHA ?? "development";
 
@@ -15,6 +16,13 @@ const withSerwist = withSerwistInit({
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   typedRoutes: true,
+  webpack: (config: { resolve: { alias: Record<string, string> } }) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@wawi-learns/ui": resolve(__dirname, "packages/ui/src/index.ts"),
+    };
+    return config;
+  },
 };
 
 export default withSerwist(nextConfig);

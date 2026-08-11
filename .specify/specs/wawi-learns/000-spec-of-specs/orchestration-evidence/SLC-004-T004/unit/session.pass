@@ -1,0 +1,12 @@
+task_id: SLC-004-T004
+check_kind: unit
+check_id: session
+result: pass
+recorded_at: '2026-08-11T14:35:00Z'
+command: npm exec vitest run tests/unit/learning-engine/session.test.ts
+test_count: 5
+evidence_owner: @Bumble
+notes:
+  - commitAttemptThenAdvance is durable-before-advance: commit failure leaves the session in 'playing' with the activity re-presented.
+  - Commit in the wrong phase is rejected with a typed error.
+  - pauseSession returns to intro; completeSession marks the session complete.

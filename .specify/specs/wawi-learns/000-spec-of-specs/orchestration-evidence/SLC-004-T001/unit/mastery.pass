@@ -1,0 +1,13 @@
+task_id: SLC-004-T001
+check_kind: unit
+check_id: mastery
+result: pass
+recorded_at: '2026-08-11T14:35:00Z'
+command: npm exec vitest run tests/unit/learning-engine/mastery.test.ts tests/unit/learning-engine/mastery.property.test.ts
+test_count: 12
+evidence_owner: @Jimmy
+notes:
+  - Mastery transitions new → practising → strong → mastered with cross-modality requirement.
+  - Full reveal (3+ hints) does not advance mastery.
+  - Recent-window regression flips state to "relearning".
+  - Property test: projection is idempotent, order-independent, and excludes hint-revealed correct from the count.
