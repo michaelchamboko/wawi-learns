@@ -1,0 +1,12 @@
+task_id: SLC-007-T004
+check_kind: e2e
+check_id: representations-and-retention
+result: pass
+recorded_at: '2026-08-11T15:00:00Z'
+command: npm run test:e2e -- tests/e2e/maths/representations-and-retention.spec.ts
+test_count: 1
+evidence_owner: @Bumble
+notes:
+  - Child home renders the offline-first maths fallback when no Convex is reachable.
+  - Concrete → pictorial → abstract representations share the same renderer pipeline.
+  - Production Reception + Year 1 journeys require the full content build (SLC-003-T005) and the Convex-backed scheduler integration.
