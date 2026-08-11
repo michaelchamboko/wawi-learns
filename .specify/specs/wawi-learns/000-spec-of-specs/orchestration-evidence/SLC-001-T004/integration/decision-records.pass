@@ -1,0 +1,13 @@
+task_id: SLC-001-T004
+check_kind: integration
+check_id: decision-records
+result: pass
+recorded_at: '2026-08-11T13:58:00Z'
+command: npm exec vitest run tests/integration/spikes/decision-records.test.ts
+test_count: 7
+evidence_owner: @Jimmy
+notes:
+  - ADR-001 selects Convex Auth (no third-party IdP); requireRecentVerification enforced.
+  - ADR-003 layered audio (reviewed clips > Azure > Web Speech) + Azure pronunciation assessment with logging and retention disabled.
+  - ADR-004 custom in-repo perfect-freehand pointer-event tracer; no third-party tracing library.
+  - All ADR status = accepted, owner_slice matches this task, acceptance IDs referenced.
