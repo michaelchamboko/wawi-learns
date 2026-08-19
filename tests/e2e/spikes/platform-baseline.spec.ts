@@ -17,6 +17,13 @@ test.describe("SLC-001-T001 — platform baseline", () => {
     const appVersion = await shell.getAttribute("data-app-version");
     const gitSha = await shell.getAttribute("data-git-sha");
 
+    const expectedGitSha = process.env.VERCEL_GIT_COMMIT_SHA
+      ?? process.env.NEXT_PUBLIC_GIT_SHA
+      ?? process.env.EXPECTED_PUBLIC_GIT_SHA;
+    if (expectedGitSha) {
+      expect(gitSha).toBe(expectedGitSha);
+    }
+
     await expect(page.locator('meta[name="wawi:app-version"]')).toHaveAttribute(
       "content",
       appVersion ?? "",

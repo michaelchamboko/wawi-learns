@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 
 const root = resolve(__dirname, "..", "..");
 
-describe("SLC-002-T001 — repository contract", () => {
+describe("SLC-001-T001 — repository contract", () => {
   it("declares npm workspaces and the required scripts", () => {
     const pkg = JSON.parse(readFileSync(resolve(root, "package.json"), "utf-8")) as {
       workspaces?: string[];
@@ -53,5 +53,38 @@ describe("SLC-002-T001 — repository contract", () => {
     expect(workflow).toMatch(/npm run typecheck/);
     expect(workflow).toMatch(/npm run build/);
     expect(workflow).toMatch(/test:e2e/);
+  });
+
+  it("keeps the Vercel Git deployment configuration schema-compatible", () => {
+    const vercel = JSON.parse(readFileSync(resolve(root, "vercel.json"), "utf-8")) as Record<string, unknown>;
+    expect(vercel).not.toHaveProperty("rootDirectory");
+  });
+
+  it("uses Vercel Git integration as the only production deployer", () => {
+    expect(existsSync(resolve(root, ".github/workflows/deploy-production.yml"))).toBe(false);
+  });
+
+  it("pins fake-indexeddb and links every workspace in the npm lockfile", () => {
+    const pkg = JSON.parse(readFileSync(resolve(root, "package.json"), "utf-8")) as {
+      devDependencies?: Record<string, string>;
+    };
+    const lock = JSON.parse(readFileSync(resolve(root, "package-lock.json"), "utf-8")) as {
+      packages?: Record<string, { link?: boolean; version?: string }>;
+    };
+    const workspaces = [
+      "audio",
+      "content-schema",
+      "learning-engine",
+      "local-data",
+      "spike-local-data",
+      "tracing",
+      "ui",
+    ];
+
+    expect(pkg.devDependencies?.["fake-indexeddb"]).toBe("6.2.5");
+    expect(lock.packages?.["node_modules/fake-indexeddb"]?.version).toBe("6.2.5");
+    for (const workspace of workspaces) {
+      expect(lock.packages?.[`node_modules/@wawi-learns/${workspace}`]?.link, `missing lockfile link for ${workspace}`).toBe(true);
+    }
   });
 });
