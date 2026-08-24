@@ -27,7 +27,7 @@ pins before they become release authority.
 - Preserve the complete approved V1 and every PRD exclusion.
 - Use `.specify/specs/wawi-learns/000-spec-of-specs/orchestration.yml` as the
   only task-state authority.
-- Execute the frozen 49-task sequence. Exactly zero or one task may be active.
+- Execute the frozen 54-task sequence across eleven slices. Exactly zero or one task may be active.
 - @Javis selects one implementation owner per task: @Jimmy for platform and
   integration work, @Bumble for product and UI work, or @Cody for small bounded
   feature work. Every other agent remains read-only for that task.
@@ -365,8 +365,8 @@ On any production failure: withdraw unsafe content, restore the previous Vercel
 deployment and compatible Convex functions, verify pending events remain safe,
 block the release task, and remove every `LIVE` claim.
 
-**Completion criterion:** all 49 tasks are `DONE`, every task has unanimous
-technical `PASS` evidence, all ten slices and the final gate are approved only
+**Completion criterion:** all 54 tasks are `DONE`, every task has unanimous
+technical `PASS` evidence, all eleven slices and the final gate are approved only
 by the product owner, the exact tested SHA is healthy in production, rollback is
 proven, and the ledger state is `RELEASE_READY`.
 
