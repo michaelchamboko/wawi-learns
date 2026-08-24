@@ -12,13 +12,17 @@ const expected = {
   "can.svg": [596, "e73a7c2f0ee63e97852c322cc3a018c7f5b431d3b7780db218f406b5e284e6eb"],
 } as const;
 
+const normalizeLineEndings = (content: Buffer) =>
+  content.toString("utf8").replaceAll("\r\n", "\n");
+
 describe("private-beta MVP artwork", () => {
   it("ships five real, hashed project-original illustrations", async () => {
     for (const [file, [bytes, digest]] of Object.entries(expected)) {
       const content = await readFile(resolve(root, "public/content/mvp/images", file));
-      expect(content.byteLength).toBe(bytes);
-      expect(createHash("sha256").update(content).digest("hex")).toBe(digest);
-      expect(content.toString("utf8")).toContain("<svg");
+      const normalized = normalizeLineEndings(content);
+      expect(Buffer.byteLength(normalized)).toBe(bytes);
+      expect(createHash("sha256").update(normalized).digest("hex")).toBe(digest);
+      expect(normalized).toContain("<svg");
     }
   });
 });

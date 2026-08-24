@@ -6,6 +6,7 @@ export default defineConfig([
   ...nextCoreWebVitals,
   ...nextTypeScript,
   globalIgnores([
+    ".gitnexus/**",
     ".next/**",
     ".specify/**",
     "node_modules/**",
