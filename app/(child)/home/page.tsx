@@ -10,6 +10,7 @@ import { commitAttemptThenAdvance, startSession } from "../../../packages/learni
 import { LocalAttemptStore } from "../../../packages/local-data/src";
 import type { AttemptEvent, SyncReceipt } from "../../../packages/local-data/src";
 import { MVP_SESSION_PLAN, MvpActivityRenderer, activityProgressLabel } from "../../../packages/ui/src";
+import { parentAuthErrorMessage, type ParentAuthMode } from "./parent-auth-errors";
 
 type HomeData = { readonly profile: { readonly _id: string; readonly displayName: string } | null; readonly completedCount: number };
 type Feedback = "correct" | "retry" | null;
@@ -54,7 +55,7 @@ function AuthenticatedChildHome() {
 
 function ParentAuth() {
   const { signIn } = useAuthActions();
-  const [mode, setMode] = useState<"signIn" | "signUp" | "verify" | "reset" | "resetVerification">("signIn");
+  const [mode, setMode] = useState<ParentAuthMode>("signIn");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
@@ -72,7 +73,7 @@ function ParentAuth() {
       if (mode === "signUp") setMode("verify");
       if (mode === "reset") setMode("resetVerification");
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "Please check the details and try again.");
+      setError(parentAuthErrorMessage(mode, reason));
     } finally {
       setBusy(false);
     }
@@ -106,7 +107,7 @@ function LearnerHome() {
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState("");
   if (home === undefined) return <LoadingShell label="Getting your adventure ready…" />;
-  if (!home.profile) return <main className="learner-shell"><section className="setup-card"><p className="eyebrow">One small setup</p><h2>Who is learning today?</h2><p>This name stays in the private parent account.</p><form className="auth-form" onSubmit={(event) => { event.preventDefault(); setCreating(true); setError(""); void createProfile({ displayName: name.trim() }).catch((reason: unknown) => setError(reason instanceof Error ? reason.message : "We could not save that yet.")).finally(() => setCreating(false)); }}><label>Child&apos;s first name<input value={name} onChange={(event) => setName(event.target.value)} maxLength={40} required /></label>{error ? <p className="form-error" role="alert">{error}</p> : null}<button className="primary-button" type="submit" disabled={creating || !name.trim()}>{creating ? "Saving…" : "Start the adventure"}</button></form></section></main>;
+  if (!home.profile) return <main className="learner-shell"><section className="setup-card"><p className="eyebrow">One small setup</p><h2>Who is learning today?</h2><p>This name stays in the private parent account.</p><form className="auth-form" onSubmit={(event) => { event.preventDefault(); setCreating(true); setError(""); void createProfile({ displayName: name.trim() }).catch(() => setError("We could not save that yet. Please try again.")).finally(() => setCreating(false)); }}><label>Child&apos;s first name<input value={name} onChange={(event) => setName(event.target.value)} maxLength={40} required /></label>{error ? <p className="form-error" role="alert">{error}</p> : null}<button className="primary-button" type="submit" disabled={creating || !name.trim()}>{creating ? "Saving…" : "Start the adventure"}</button></form></section></main>;
   return <MvpLearner profile={home.profile} completedCount={home.completedCount} />;
 }
 
