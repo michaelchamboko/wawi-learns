@@ -29,5 +29,15 @@ test.describe("SLC-001-T001 — platform baseline", () => {
       "content",
       "wawi-learns",
     );
+
+    const identity = await page.request.get("/api/deployment");
+    expect(identity.status()).toBe(200);
+    expect(identity.headers()["cache-control"]).toContain("no-store");
+
+    const payload = await identity.json();
+    expect(payload.project).toBe("wawi-learns");
+    expect(payload.environment).toMatch(/^(production|local)$/);
+    expect(payload.gitSha).toBeTruthy();
+    expect(payload.gitSha).toMatch(/^[0-9a-f]{40}$/);
   });
 });
