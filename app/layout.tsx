@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
+import { readDeploymentIdentity } from "./deployment-identity";
 
 const appVersion = process.env.NEXT_PUBLIC_APP_VERSION ?? "0.1.0";
-const gitSha = process.env.NEXT_PUBLIC_GIT_SHA ?? "development";
-const vercelProject = process.env.NEXT_PUBLIC_VERCEL_PROJECT ?? "wawi-learns";
+const deployment = readDeploymentIdentity();
 const shellRevision = process.env.PWA_E2E_SHELL_REVISION ?? "shell-v1";
 
 export const metadata: Metadata = {
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   other: {
     "wawi:app-version": appVersion,
-    "wawi:git-sha": gitSha,
-    "wawi:vercel-project": vercelProject,
+    "wawi:git-sha": deployment.gitSha,
+    "wawi:vercel-project": deployment.project,
     "x-shell-revision": shellRevision,
   },
 };

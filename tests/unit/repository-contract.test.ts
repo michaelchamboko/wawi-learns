@@ -54,4 +54,14 @@ describe("SLC-002-T001 — repository contract", () => {
     expect(workflow).toMatch(/npm run build/);
     expect(workflow).toMatch(/test:e2e/);
   });
+
+  it("renders the public deployment identity from the shared Vercel-aware helper", () => {
+    const page = readFileSync(resolve(root, "app/page.tsx"), "utf-8");
+    const layout = readFileSync(resolve(root, "app/layout.tsx"), "utf-8");
+
+    expect(page).toContain('readDeploymentIdentity');
+    expect(layout).toContain('readDeploymentIdentity');
+    expect(page).not.toContain('NEXT_PUBLIC_GIT_SHA');
+    expect(layout).not.toContain('NEXT_PUBLIC_GIT_SHA');
+  });
 });
