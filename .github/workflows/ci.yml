@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   baseline:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64, wawi-ci]
     env:
       NEXT_PUBLIC_APP_VERSION: ci
       NEXT_PUBLIC_GIT_SHA: ${{ github.sha }}
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24.x
-          cache: npm
+          cache: 'false'
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
@@ -29,59 +29,41 @@ jobs:
       - run: npm run build
       - run: npm exec playwright install --with-deps chromium
       - run: npm run test:e2e -- tests/e2e/spikes/platform-baseline.spec.ts tests/e2e/spikes/pwa-update.spec.ts
-      - if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: baseline-artifacts
-          if-no-files-found: ignore
-          path: |
-            playwright-report/
-            test-results/
-            .next/
 
   content:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64, wawi-ci]
     needs: baseline
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24.x
-          cache: npm
+          cache: 'false'
       - run: npm ci
       - run: npm run test:content
 
   security:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64, wawi-ci]
     needs: baseline
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24.x
-          cache: npm
+          cache: 'false'
       - run: npm ci
       - run: npm run test:security
 
   offline-e2e:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64, wawi-ci]
     needs: baseline
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24.x
-          cache: npm
+          cache: 'false'
       - run: npm ci
       - run: npm exec playwright install --with-deps chromium
       - run: npm run build
       - run: npm run test:offline
-      - if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: offline-e2e-artifacts
-          if-no-files-found: ignore
-          path: |
-            playwright-report/
-            test-results/
-            .next/

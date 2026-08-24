@@ -46,7 +46,7 @@ describe("SLC-002-T001 — repository contract", () => {
   it("GitHub Actions workflow declares required jobs and the main branch trigger", () => {
     const workflow = readFileSync(resolve(root, ".github/workflows/ci.yml"), "utf-8");
     expect(workflow).toMatch(/branches:\s*\[main\]/);
-    expect(workflow).toMatch(/runs-on:\s*ubuntu-latest/);
+    expect(workflow).toMatch(/runs-on:\s*\[self-hosted, Windows, X64, wawi-ci\]/);
     expect(workflow).toMatch(/node-version:\s*24\.x/);
     expect(workflow).toMatch(/npm ci/);
     expect(workflow).toMatch(/npm run lint/);
