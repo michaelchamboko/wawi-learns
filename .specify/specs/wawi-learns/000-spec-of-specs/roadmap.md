@@ -23,6 +23,12 @@ The frozen directory order follows PRD §46. Business priority and execution pri
 
 `SLC-001 → SLC-002 → SLC-003 → SLC-004 → SLC-005 → SLC-006 → SLC-007 → SLC-008 → SLC-009 → SLC-010`
 
+## Private-beta MVP lane
+
+`SLC-011` is a product-owner-approved validation-only lane. It becomes eligible
+after fresh `SLC-001-T001` evidence, runs before the remaining V1 sequence, and
+does not close or waive any SLC-002 through SLC-010 acceptance criteria.
+
 No downstream slice may substitute mocks for an upstream production contract at its exit gate. Within a task, independent test fixtures may be created in the same commit; separate setup-only tasks are forbidden.
 
 ## Business priority

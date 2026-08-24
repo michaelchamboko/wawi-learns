@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 1
+revision: 2
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -9,8 +9,8 @@ repository:
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
 plan:
   slug: "wawi-learns"
-  manifest_version: "v001"
-  decomposition_version: "v001"
+  manifest_version: "v002"
+  decomposition_version: "v002"
   frozen_sequence: true
 project:
   state: "NOT_STARTED"
@@ -18,9 +18,14 @@ project:
   active_owner: null
   blockers: []
 priorities:
-  business: ["SLC-004", "SLC-002", "SLC-003", "SLC-005", "SLC-006", "SLC-007", "SLC-008", "SLC-009", "SLC-010", "SLC-001"]
+  business: ["SLC-011", "SLC-004", "SLC-002", "SLC-003", "SLC-005", "SLC-006", "SLC-007", "SLC-008", "SLC-009", "SLC-010", "SLC-001"]
   execution:
     - "SLC-001::SLC-001-T001"
+    - "SLC-011::SLC-011-T001"
+    - "SLC-011::SLC-011-T002"
+    - "SLC-011::SLC-011-T003"
+    - "SLC-011::SLC-011-T004"
+    - "SLC-011::SLC-011-T005"
     - "SLC-001::SLC-001-T002"
     - "SLC-001::SLC-001-T003"
     - "SLC-001::SLC-001-T004"
@@ -1109,6 +1114,112 @@ slices:
           migration: []
           deployment: ["vercel inspect $VERCEL_PRODUCTION_URL"]
           rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
+        evidence: []
+        blockers: []
+  - id: "SLC-011"
+    directory: "011-private-beta-ux-mvp"
+    state: "PENDING"
+    rank: 11
+    business_rank: 1
+    dependencies: []
+    exit_gate:
+      required_evidence: ["e2e.private-beta-mvp", "integration.mvp-sync"]
+      e2e_journey: "npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-011-T001"
+        title: "Verify private repository and platform baseline"
+        rank: 50
+        state: "TODO"
+        dependencies: ["SLC-001-T001"]
+        requirements: ["PRD-FR-023", "PRD-NFR-004"]
+        acceptance: ["MVP-PRIVACY-001"]
+        interfaces: ["existing:app/page.tsx:PublicParentEntry"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/deployment-identity.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"]
+          migration: []
+          deployment: ["gh repo view michaelchamboko/wawi-learns --json visibility"]
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T002"
+        title: "Implement parent authority and attempt reconciliation"
+        rank: 51
+        state: "TODO"
+        dependencies: ["SLC-011-T001"]
+        requirements: ["PRD-FR-003", "PRD-FR-029"]
+        acceptance: ["MVP-AUTH-001", "MVP-SYNC-001"]
+        interfaces: ["proposed:convex/attempts.ts:ingestAttempts -> SyncReceipt"]
+        documentation_evidence: *data_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/session.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: ["npx convex deploy"]
+          rollback: ["git revert <task-sha>"]
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T003"
+        title: "Ship the five-word MVP assets"
+        rank: 52
+        state: "TODO"
+        dependencies: ["SLC-011-T002"]
+        requirements: ["PRD-FR-019"]
+        acceptance: ["MVP-CONTENT-001"]
+        interfaces: ["proposed:public/content/mvp/images:FiveHashedSvgAssets"]
+        documentation_evidence: *content_docs
+        checks:
+          unit: ["npm exec vitest run tests/content/mvp-assets.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: ["git revert <task-sha>"]
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T004"
+        title: "Build child home and five-step learner loop"
+        rank: 53
+        state: "TODO"
+        dependencies: ["SLC-011-T003"]
+        requirements: ["PRD-FR-004", "PRD-FR-005", "PRD-FR-009"]
+        acceptance: ["MVP-UX-001"]
+        interfaces: ["proposed:packages/ui/src/MvpActivityRenderer.tsx:MvpActivityRenderer"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/ui/mvp-session.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: ["git revert <task-sha>"]
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T005"
+        title: "Verify and release the private beta"
+        rank: 54
+        state: "TODO"
+        dependencies: ["SLC-011-T004"]
+        requirements: ["PRD-FR-030", "PRD-NFR-004"]
+        acceptance: ["MVP-RELEASE-001"]
+        interfaces: ["existing:app/(child)/home/page.tsx:PrivateBetaJourney"]
+        documentation_evidence: *release_docs
+        checks:
+          unit: []
+          integration: ["npm run check"]
+          regression: ["npm run build"]
+          e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
+          migration: []
+          deployment: ["vercel --prod"]
+          rollback: ["git revert <task-sha>"]
         evidence: []
         blockers: []
 final_gate:

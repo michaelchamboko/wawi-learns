@@ -11,14 +11,15 @@ export default function HomePage() {
       data-testid="home-shell"
       data-vercel-project={deployment.project}
     >
-      <h1>Wawi Learns</h1>
-      <p>Offline-ready child learning shell.</p>
-      <p data-testid="build-identity">
+      <div className="parent-entry">
+        <p className="eyebrow">Wawi Learns</p>
+        <h1>A gentle place to practise.</h1>
+        <p>Parents start here. Your child&apos;s adventure stays private.</p>
+        <a className="primary-button entry-button" href="/home">Parent sign in</a>
+      </div>
+      <span className="visually-hidden" data-testid="build-identity">
         Version {appVersion} · Build {deployment.gitSha} · Hosted by {deployment.project}
-      </p>
-      <p>
-        <a href="/offline">Open the offline page</a>
-      </p>
+      </span>
     </main>
   );
 }

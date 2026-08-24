@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import { readDeploymentIdentity } from "./deployment-identity";
+import { ConvexClientProvider } from "./ConvexClientProvider";
+import "./globals.css";
 
 const appVersion = process.env.NEXT_PUBLIC_APP_VERSION ?? "0.1.0";
 const deployment = readDeploymentIdentity();
@@ -29,9 +31,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-GB">
-      <body>
-        {children}
-      </body>
+      <body><ConvexClientProvider>{children}</ConvexClientProvider></body>
     </html>
   );
 }
