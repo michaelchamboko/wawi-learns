@@ -5,8 +5,8 @@ state: "PLAN_READY"
 created_at: "2026-08-08T21:38:54Z"
 finalized_at: "2026-08-08T21:38:54Z"
 active_version: "v001"
-decomposition_version: "v001"
-decomposition_approval_version: "v001"
+decomposition_version: "v002"
+decomposition_approval_version: "v002"
 final_review_version: "v001"
 frozen_sequence: true
 artifact_state: "PLAN_READY"
@@ -112,4 +112,11 @@ slices:
     dependencies: ["SLC-009"]
     order: 10
     requirements: ["PRD-FR-030", "PRD-FR-032", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
+    state: "PLAN_READY"
+  - id: "SLC-011"
+    slug: "private-beta-ux-mvp"
+    directory: "011-private-beta-ux-mvp"
+    dependencies: []
+    order: 11
+    requirements: ["PRD-FR-003", "PRD-FR-004", "PRD-FR-005", "PRD-FR-009", "PRD-FR-023", "PRD-FR-029", "PRD-NFR-004"]
     state: "PLAN_READY"
