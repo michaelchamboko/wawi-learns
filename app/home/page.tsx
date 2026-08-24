@@ -1,7 +1,6 @@
-import Link from "next/link";
-import StorybookTrail from "./storybook-trail";
-import ActivityRenderer from "./activity-renderer";
-import Controls from "./controls";
+import { StorybookTrail } from "./storybook-trail.tsx";
+import { ActivityRenderer } from "./activity-renderer.tsx";
+import { Controls } from "./controls.tsx";
 
 export default function HomePage() {
   return (
