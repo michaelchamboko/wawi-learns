@@ -1,5 +1,6 @@
 import Resend from "@auth/core/providers/resend";
-import { RandomReader, generateRandomString } from "@oslojs/crypto/random";
+import type { RandomReader } from "@oslojs/crypto/random";
+import { generateRandomString } from "@oslojs/crypto/random";
 import { Resend as ResendClient } from "resend";
 
 export const ResendOTP = Resend({
