@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = resolve(__dirname, "..", "..");
@@ -44,15 +44,37 @@ describe("SLC-002-T001 — repository contract", () => {
   });
 
   it("GitHub Actions workflow declares required jobs and the main branch trigger", () => {
-    const workflow = readFileSync(resolve(root, ".github/workflows/ci.yml"), "utf-8");
-    expect(workflow).toMatch(/branches:\s*\[main\]/);
-    expect(workflow).toMatch(/runs-on:\s*\[self-hosted, Windows, X64, wawi-ci\]/);
-    expect(workflow).toMatch(/node-version:\s*24\.x/);
-    expect(workflow).toMatch(/npm ci/);
-    expect(workflow).toMatch(/npm run lint/);
-    expect(workflow).toMatch(/npm run typecheck/);
-    expect(workflow).toMatch(/npm run build/);
-    expect(workflow).toMatch(/test:e2e/);
+    const workflowDirectory = resolve(root, ".github/workflows");
+    const workflows = readdirSync(workflowDirectory)
+      .filter((name) => /\.ya?ml$/i.test(name))
+      .map((name) => ({ name, content: readFileSync(resolve(workflowDirectory, name), "utf-8") }));
+
+    expect(workflows.map(({ name }) => name)).toContain("ci.yml");
+
+    for (const { name, content } of workflows) {
+      const runnerSelections = Array.from(
+        content.matchAll(/^\s*runs-on:\s*(.+)$/gm),
+        ([, value]) => value.trim(),
+      );
+      expect(runnerSelections, `${name} has no CI jobs`).not.toHaveLength(0);
+      expect(runnerSelections, `${name} selects an unapproved runner`).toEqual(
+        Array(runnerSelections.length).fill("[self-hosted, Windows, X64, wawi-ci]"),
+      );
+      expect(content, `${name} permits untrusted pull-request code`).not.toMatch(/^\s*pull_request\s*:/m);
+      expect(content, `${name} uses GitHub-managed cache or artifact storage`).not.toMatch(
+        /actions\/(?:cache|upload-artifact)@/,
+      );
+      expect(content, `${name} configures package caching`).not.toMatch(/^\s*cache\s*:/m);
+    }
+
+    const ciWorkflow = workflows.find(({ name }) => name === "ci.yml")?.content ?? "";
+    expect(ciWorkflow).toMatch(/branches:\s*\[main\]/);
+    expect(ciWorkflow).toMatch(/node-version:\s*24\.x/);
+    expect(ciWorkflow).toMatch(/npm ci/);
+    expect(ciWorkflow).toMatch(/npm run lint/);
+    expect(ciWorkflow).toMatch(/npm run typecheck/);
+    expect(ciWorkflow).toMatch(/npm run build/);
+    expect(ciWorkflow).toMatch(/test:e2e/);
   });
 
   it("renders the public deployment identity from the shared Vercel-aware helper", () => {
