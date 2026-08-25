@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 
 const expectedGitSha = process.env.EXPECTED_GIT_SHA;
 const previousProductionUrl = process.env.PREVIOUS_PRODUCTION_URL;
+const previousProductionShareUrl = process.env.PREVIOUS_PRODUCTION_SHARE_URL;
 if (process.env.WAWI_E2E_REQUIRE_HOSTED === "1" && (!expectedGitSha || !previousProductionUrl)) {
   throw new Error("WAWI_E2E_REQUIRE_HOSTED=1 requires EXPECTED_GIT_SHA and PREVIOUS_PRODUCTION_URL");
 }
@@ -24,6 +25,7 @@ test.describe("SLC-011-T005 — Hosted private-beta verification", () => {
 
   test("previous production deployment is healthy and rollback-ready", async ({ request }) => {
     test.skip(!previousProductionUrl, "PREVIOUS_PRODUCTION_URL is required for rollback readiness");
+    if (previousProductionShareUrl) await request.get(previousProductionShareUrl);
     const res = await request.get(`${previousProductionUrl}/api/deployment`);
     expect(res.status()).toBe(200);
     const json = await res.json();
