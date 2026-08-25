@@ -59,9 +59,9 @@ describe("SLC-001-T005 — ADR rubric for AI, licensing, packaging", () => {
     expect(body).toMatch(/share-alike|CC-BY-SA/);
     // Manifest requires licence, licence_id, source_url, proof_path fields.
     expect(body).toMatch(/licence/);
-    expect(body).toMatch(/licence_id/);
-    expect(body).toMatch(/source_url/);
-    expect(body).toMatch(/proof_path/);
+    expect(body).toMatch(/licenceId/);
+    expect(body).toMatch(/sourceUrl/);
+    expect(body).toMatch(/proofPath/);
   });
 
   it("ADR-007 acceptance: allowed scope, atomic activation, never private in shared cache", async () => {

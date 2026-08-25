@@ -55,9 +55,11 @@ configuration probe before any action is enabled.
 
 ### Privacy and licence
 
-- Provider logging/training are disabled at the OpenRouter account. The
-  configuration probe `tests/integration/ai/cost-controls.test.ts` asserts
-  this at deploy time.
+- AI remains fail-closed and disabled until a hosted configuration probe
+  confirms that provider logging and training controls are disabled. The
+  local `tests/integration/ai/cost-controls.test.ts` covers budget, circuit
+  breaker and dedupe behavior; it does not claim to probe OpenRouter account
+  configuration.
 - No provider payload, prompt or response is written to operational logs.
   Only aggregate counters (latency, token count, validator outcome) are
   emitted.

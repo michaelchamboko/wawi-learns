@@ -48,8 +48,8 @@ licence tier is:
 
 ### Compliance check
 
-Every content record carries `licence`, `licence_id`, `source_url`,
-`proof_path` (relative to the manifest). A validator
+Every content record carries `licence`, `licenceId`, `sourceUrl`,
+`proofPath` (relative to the manifest). A validator
 (`tests/content/licensing.test.ts`) rejects the build when any record is
 missing one of these fields or references an unknown licence tier.
 
