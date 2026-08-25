@@ -1,0 +1,6 @@
+task_id: SLC-002-T002
+check_kind: migration
+check_id: schema-compatibility
+result: pass
+recorded_at: '2026-08-25T23:29:41Z'
+source_path: tests\integration\convex\schema-compatibility.test.ts
