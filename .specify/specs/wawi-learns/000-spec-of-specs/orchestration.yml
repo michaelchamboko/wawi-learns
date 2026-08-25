@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 118
+revision: 121
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -589,7 +589,9 @@ slices:
       deployment: []
       rollback: []
     evidence: []
-    blockers: []
+    blockers:
+    - reason: assessment-e2e-missing:no tests/e2e/onboarding/assessment.spec.ts and no onboarding assessment route/component exists; unit engine passes but declared browser acceptance cannot run
+      recorded_at: '2026-08-25T23:43:43Z'
     active_owner: '@Builder'
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
@@ -607,6 +609,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-002-T005"
     title: "Complete authorised offline first run"
     rank: 10
@@ -643,6 +648,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-003"
   directory: "003-curriculum-content-packs"
   state: "STALE"
@@ -690,6 +698,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-003-T002"
     title: "Build curriculum, phonics and word core"
     rank: 12
@@ -726,6 +737,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-003-T003"
     title: "Build reading and media core"
     rank: 13
@@ -762,6 +776,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-003-T004"
     title: "Build mathematics core"
     rank: 14
@@ -798,6 +815,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-003-T005"
     title: "Build and publish immutable packs"
     rank: 15
@@ -834,6 +854,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-004"
   directory: "004-adaptive-learner-core"
   state: "STALE"
@@ -881,6 +904,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-004-T002"
     title: "Implement lesson scheduling and weak recovery"
     rank: 17
@@ -917,6 +943,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-004-T003"
     title: "Implement baseline and progress windows"
     rank: 18
@@ -953,6 +982,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-004-T004"
     title: "Build child home and activity shell"
     rank: 19
@@ -989,6 +1021,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-004-T005"
     title: "Deliver core adaptive English journey"
     rank: 20
@@ -1025,6 +1060,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-005"
   directory: "005-handwriting-spelling-speech"
   state: "STALE"
@@ -1072,6 +1110,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-005-T002"
     title: "Implement spelling and composition progression"
     rank: 22
@@ -1108,6 +1149,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
@@ -1144,6 +1188,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-005-T004"
     title: "Implement ephemeral pronunciation assessment"
     rank: 24
@@ -1180,6 +1227,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-005-T005"
     title: "Integrate multimodal lesson and privacy regression"
     rank: 25
@@ -1216,6 +1266,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -1263,6 +1316,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
@@ -1299,6 +1355,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
@@ -1335,6 +1394,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -1371,6 +1433,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -1407,6 +1472,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -1454,6 +1522,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -1490,6 +1561,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -1526,6 +1600,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -1562,6 +1639,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -1609,6 +1689,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -1645,6 +1728,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -1681,6 +1767,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -1717,6 +1806,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -1753,6 +1845,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -1800,6 +1895,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -1836,6 +1934,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -1872,6 +1973,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -1908,6 +2012,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -1944,6 +2051,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -1991,6 +2101,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -2027,6 +2140,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -2063,6 +2179,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -2099,6 +2218,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -2135,6 +2257,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -2498,4 +2623,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T23:40:59Z'
+updated_at: '2026-08-25T23:44:39Z'
