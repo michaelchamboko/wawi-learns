@@ -5,10 +5,10 @@ import {
   type AttemptEvent,
 } from "../../../packages/spike-local-data/test/index.js";
 
-const makeEvent = (overrides: Partial<AttemptEvent> & Pick<AttemptEvent, "eventId" | "sourceSequence">): AttemptEvent => ({
-  eventId: overrides.eventId,
+const makeEvent = ({ eventId, sourceSequence, ...overrides }: Partial<AttemptEvent> & Pick<AttemptEvent, "eventId" | "sourceSequence">): AttemptEvent => ({
+  eventId,
   installationId: "install-spike-1",
-  sourceSequence: overrides.sourceSequence,
+  sourceSequence,
   occurredAt: 1_700_000_000_000,
   recordedAt: 1_700_000_000_000,
   dimension: "phonics",
