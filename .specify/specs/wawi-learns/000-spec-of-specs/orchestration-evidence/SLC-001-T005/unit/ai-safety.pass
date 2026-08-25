@@ -1,0 +1,6 @@
+task_id: SLC-001-T005
+check_kind: unit
+check_id: ai-safety
+result: pass
+recorded_at: '2026-08-25T22:43:53Z'
+source_path: tests\integration\spikes\ai-safety.test.ts
