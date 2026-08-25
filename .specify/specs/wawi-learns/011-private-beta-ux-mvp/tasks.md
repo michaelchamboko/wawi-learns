@@ -1,9 +1,10 @@
 # Tasks: SLC-011 Private-beta UX MVP
 
-## SLC-011-T001 — Privacy and platform baseline
+## SLC-011-T001 — Public build and privacy boundary baseline
 
 - Depends on fresh `SLC-001-T001` evidence.
-- Make the existing GitHub repository private and verify the existing Vercel project retains access.
+- Verify the existing GitHub repository is public, GitHub-hosted Actions can run,
+  and the existing Vercel project retains access.
 - Verify public routes and bundles contain no child profile data.
 
 ## SLC-011-T002 — Parent authority and connected-first persistence
@@ -21,6 +22,6 @@
 - Build the calm storybook-trail home and the fixed five-activity renderer.
 - Verify one clear primary action, speaker/hint/pause controls, neutral retry feedback, touch targets, and reduced motion.
 
-## SLC-011-T005 — Hosted private-beta verification
+## SLC-011-T005 — Hosted vertical-slice verification
 
 - Verify preview then production against the reviewed `main` SHA, including authentication, email delivery, asset availability, outbox reconciliation, and rollback evidence.

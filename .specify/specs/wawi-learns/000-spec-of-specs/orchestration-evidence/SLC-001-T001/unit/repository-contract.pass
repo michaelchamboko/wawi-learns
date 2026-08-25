@@ -1,0 +1,6 @@
+task_id: SLC-001-T001
+check_kind: unit
+check_id: repository-contract
+result: pass
+recorded_at: '2026-08-25T12:11:43Z'
+source_path: tests\unit\repository-contract.test.ts

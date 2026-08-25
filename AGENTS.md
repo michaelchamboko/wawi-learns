@@ -23,8 +23,11 @@ Use this precedence order:
 8. `.specify/specs/wawi-learns/000-spec-of-specs/orchestration.yml` for task
    state.
 
-If these sources conflict, stop the active task and ask the human product owner.
-Do not silently reduce the approved V1 or invent missing requirements.
+Resolve lower-source conflicts by the precedence above and record the decision in
+the active task evidence. Stop only when sources at the same precedence conflict
+or a missing choice would materially change the approved product. Do not silently
+reduce the approved V1, invent requirements, or ask for routine implementation
+decisions that the existing sources already answer.
 
 The direct-`main` delivery rule in this file and `Build.md` is an explicit
 product-owner instruction that supersedes older task-packet wording about pull
@@ -35,6 +38,9 @@ reviewed direct-`main` commit or its hosted receipts.
 ## Project Identity
 
 - GitHub: `https://github.com/michaelchamboko/wawi-learns.git`
+- Repository visibility: keep `PUBLIC` while the complete V1 is being built so
+  GitHub-hosted Actions remain available. Do not make it private before the full
+  build and release gates pass.
 - Production branch: `main`
 - Vercel project: `wawi-learns`
 - Vercel root: `.`
@@ -47,79 +53,97 @@ AI-provider projects when an approved project or task decision already exists.
 
 ## Ownership
 
-- `@Javis` is CTO/CEO and release commander. `@Javis` clarifies outcomes,
-  creates bounded task packets, selects one implementation owner, resolves
-  trade-offs, enforces evidence gates, and makes technical ship/no-ship
-  decisions. `@Javis` does not perform routine implementation or self-approve a
-  change.
-- `@Jimmy` is the platform implementation engineer for backend, integration,
-  tooling, runtime repair, builds, and clearly scoped engineering tasks.
-- `@Bumble` is the product and UI implementation engineer for focused
-  frontend/UI tasks and user-flow polish with explicit acceptance criteria.
-- `@Cody` is the fast bounded feature implementer for small, self-contained
-  changes with explicit files, acceptance checks, and rollback boundaries.
-- `@Einstein` is the architecture, diagnosis, and failure-mode reviewer.
-  `@Einstein` challenges the mechanism and load-bearing assumptions before code
-  starts and diagnoses failures without owning the implementation.
-- `@Fizz` owns quality strategy and independent verification, including test
-  strategy, release-risk analysis, cross-cutting trade-offs, and adversarial
-  review. `@Fizz` never implements the change being verified.
-- `@Honey` is the robustness and large-context reviewer for complex diffs,
-  whole-application consistency, edge cases, and evidence sufficiency. `@Honey`
-  never implements the same task or holds final release authority.
+Keep three accountabilities. They are roles for the active task, not a permanent
+cast of personas:
+
+- `@Javis` is release commander and integrator. `@Javis` selects the next task,
+  defines its boundary, chooses one writer, resolves evidence-backed trade-offs,
+  integrates the result, and makes the technical ship or rework decision.
+- `@Builder` is the one implementation and commit owner for the active task.
+  The role may be filled by the root agent or one coding subagent, but never by
+  multiple concurrent writers.
+- `@Reviewer` is the independent, read-only reviewer. The reviewer did not write
+  the candidate and returns either evidence-bound `PASS` or one exact `BLOCK`.
 
 Exactly zero or one task may be active, and exactly one agent may write to the
-repository for that task. `@Javis` selects exactly one of `@Jimmy`, `@Bumble`,
-or `@Cody` as that writer. All other agents remain read-only for the task. Never
+repository for that task. Read-only exploration may run in parallel when lanes
+are narrow and non-overlapping. `@Javis` owns synthesis and integration; never
 allow competing edits or overlapping implementation branches.
 
 The human product owner is the sole human approval authority. Team review
 results are technical evidence, not an additional human or external approval.
 
+## Model Routing
+
+Route by task shape and available capability. A preferred model being missing or
+misrouted is never a build blocker:
+
+- Keep release decisions, architecture, integration, ambiguous debugging, and
+  final verification on the strongest available primary model.
+- Prefer `gpt-5.3-codex-spark` for narrow, bounded implementation and problem
+  resolution with automatic checks. If unavailable, use `gpt-5.6-luna`, then
+  `gpt-5.4`, then the fastest available coding-capable model.
+- Prefer `gpt-5.5` at high reasoning for independent review. If unavailable, use
+  `gpt-5.6-sol` or the strongest available model that did not write the change.
+- Prefer `gpt-5.6-terra` or `gpt-5.6-luna` for read-heavy repository mapping,
+  log inspection, inventories, and test triage.
+
+Give every subagent one bounded mission, exact allowed files, required output,
+and stop condition. Do not delegate when coordination costs more than the work.
+Never claim an effective model from the requested slug alone; cite runtime spawn
+metadata when it is exposed, otherwise report only the requested routing and the
+verification evidence.
+
+## Local Code Style
+
+Before writing code, inspect the target file, two or three neighboring examples,
+and the nearest tests. Match their naming, module boundaries, imports, types,
+control flow, error handling, component structure, test style, formatting, and
+comment density. Reuse an existing abstraction before adding one. Do not add a
+pattern, helper, dependency, or explanatory comment unless the surrounding code
+demonstrates the same need. The diff and formatter must make each changed line
+look native to its directory.
+
 ## Execution Loop
 
-1. `@Javis` reads the active task packet and runs the orchestrator's `status` and
-   `next` actions.
-2. `@Einstein` challenges the proposed mechanism, assumptions, interfaces, and
-   failure modes before implementation starts.
-3. `@Javis` starts only the next eligible task and selects exactly one of
-   `@Jimmy`, `@Bumble`, or `@Cody` as implementation and commit owner.
-4. The owner states the task goal, allowed and forbidden scope, owned
-   interfaces, measurable success criteria, validation location, and rollback;
-   then follows the packet's test-first sequence and implements the smallest
-   solution.
-5. After the smallest task passes its declared checks, stage only the allowed
-   files and record `git write-tree` as the candidate tree ID. Run the read-only
-   round robin in this order: `@Einstein`, `@Jimmy`, `@Bumble`, `@Cody`,
-   `@Fizz`, `@Honey`, then `@Javis`. The implementation owner uses their turn
-   for self-review and evidence handoff; every other turn is independent.
-6. Each required review role returns `PASS` only when it cites the candidate tree
-   ID and at least one command result, hosted receipt, or evidence path; otherwise
-   it returns `BLOCK` with one exact defect. A review has a ten-minute response
-   window with one reminder at five minutes. Silence is `BLOCK`, never `PASS`.
-   `@Javis` may record an available same-remit substitute; without one, the task
-   remains blocked.
-7. Any `BLOCK` returns the task to the same implementation owner. After repair,
-   restage the candidate, record its new tree ID, rerun affected checks, and run
-   the complete round robin. Do not start the next task until every required
-   review role returns `PASS` and `@Javis` records the technical gate.
-8. Record real evidence through the orchestrator. Complete and commit one scoped
-   task only when every declared check is fresh and passing, then verify that
-   `HEAD^{tree}` equals the reviewed candidate tree ID.
-9. The product owner's recorded direct-main authorization permits the owner to
-   push that reviewed commit to `main`; no pull request or branch-protection gate
-   applies. GitHub Actions and Vercel receipts must match the pushed SHA before
-   the task is `DONE`. A hosted failure requires `git revert <task-sha>` on
-   `main` and `action=block` before another task starts.
-10. Reopen stale tasks and accept the resulting downstream invalidation. The
-    human product owner alone approves slice and final release decisions.
+1. `@Javis` runs the orchestrator's `status` and `next` actions and reads the
+   active packet plus its neighboring implementation and tests.
+2. `@Javis` starts only the next eligible task and assigns exactly one
+   `@Builder` with a bounded goal, allowed files, interfaces, red check, green
+   boundary, verification, rollback, and stop condition.
+3. The builder runs GitNexus impact analysis before changing a symbol, preserves
+   the real failing check, and implements the smallest locally consistent fix.
+4. The builder runs every declared check, stages only allowed files, records
+   `git write-tree`, and hands the candidate plus evidence to `@Reviewer`.
+5. The reviewer checks correctness, local style, task scope, regression risk,
+   security and privacy implications, and evidence sufficiency. Add one specialist
+   review only for authentication, private data, destructive migrations,
+   security boundaries, irreversible production actions, or a cross-slice
+   architectural change. Small, automatically verified tasks need no extra cast.
+6. A reviewer returns `PASS` only with the candidate tree ID and a command result,
+   receipt, or evidence path; otherwise it returns one exact `BLOCK`. If a
+   preferred reviewer is unavailable or silent, reroute the same read-only review
+   to the fallback model. Absence is never `PASS` and never requires the product
+   owner to choose another agent.
+7. Any `BLOCK` returns to the same builder. Repair only the defect, rerun affected
+   checks, restage, and repeat the independent review on the new tree.
+8. Record real evidence through the orchestrator, complete one scoped task, commit
+   it, verify `HEAD^{tree}` equals the reviewed tree, and push directly to `main`.
+   GitHub Actions and Vercel receipts must match the SHA before `DONE`. Revert a
+   code-induced hosted failure; reroute or block an infrastructure failure without
+   discarding a locally and independently verified change.
+9. Reopen stale tasks and accept downstream invalidation. The current full-build
+   instruction authorizes uninterrupted progression through verified slice
+   boundaries; the product owner alone retains the final release decision.
 
 ## Escalation Discipline
 
-Before escalating an unresolved multi-step issue, every agent applies the
-`karpathy-guidelines` skill and then the `council` skill. The escalation names
-the evidence, the Council Chair recommendation, and the proposed owner; `@Javis`
-selects the owner and next action.
+After the same blocker fingerprint appears three times, apply the
+`karpathy-guidelines` skill and then the `council` skill, select a distinct lawful
+strategy, and continue. Ask the product owner only for a missing secret, external
+authority, destructive production decision, or unresolved same-precedence product
+conflict. Do not escalate routine code, test, model-routing, runner, or deployment
+diagnosis that can be resolved from repository and hosted evidence.
 
 The orchestration ledger is the only persisted task dashboard. Status reports
 must remain in agent messages and contain only task, owner, state, evidence,
@@ -128,11 +152,11 @@ blocker, and next task.
 ## Validation
 
 - Every task must declare where its checks run.
-- Prefer targeted checks during implementation and GitHub Actions, Vercel, and
-  the approved Convex environment for hosted/runtime validation.
-- Do not run local dependency installs, production builds, development servers,
-  or full-project typechecks unless the human explicitly opts into local preview
-  and the active task records the commands and cleanup plan.
+- Run targeted local checks during implementation and GitHub Actions, Vercel, and
+  the approved Convex environment for hosted/runtime validation. The full-build
+  instruction authorizes non-destructive installs from the lockfile, builds,
+  typechecks, tests, and short-lived local servers required by the active task;
+  record the commands and clean up temporary processes and artifacts.
 - Test behavior rather than implementation details. Prefer real implementations
   and mock only external system boundaries.
 - Never suppress, weaken, repeatedly retry, or relabel a failing check.
@@ -153,6 +177,10 @@ blocker, and next task.
 - Never force-push, hard-reset `main`, bypass the direct-main review gate, commit
   secrets, or apply destructive production changes without the product owner's
   explicit approval.
+- Keep the GitHub repository public until every V1 task and final release check is
+  complete. Only then perform the planned privacy transition and reverify GitHub,
+  Vercel, and production access; never use an early visibility change as a task
+  prerequisite.
 - Do not label a preview `LIVE`.
 - Release only the exact tested `main` SHA through the existing Vercel project
   and compatible Convex production deployment.
@@ -173,7 +201,7 @@ artifacts after verification. Never edit or commit `.env` files or secrets.
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **Wawi-Learns** (1194 symbols, 1665 relationships, 13 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **Wawi-Learns** (1199 symbols, 1594 relationships, 5 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > Index stale? Run `node .gitnexus/run.cjs analyze` from the project root — it auto-selects an available runner. No `.gitnexus/run.cjs` yet? `npx gitnexus analyze` (npm 11 crash → `npm i -g gitnexus`; #1939).
 

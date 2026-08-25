@@ -1,0 +1,6 @@
+task_id: SLC-001-T001
+check_kind: evidence
+check_id: vercel-production
+result: pass
+recorded_at: '2026-08-25T12:04:04Z'
+source_path: .vercel\project.json

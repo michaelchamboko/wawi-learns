@@ -1,6 +1,6 @@
 task_id: SLC-001-T001
-check_kind: e2e
+check_kind: evidence
 check_id: platform-baseline
 result: pass
-recorded_at: '2026-08-25T12:12:29Z'
+recorded_at: '2026-08-25T12:03:44Z'
 source_path: tests\e2e\spikes\platform-baseline.spec.ts

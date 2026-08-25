@@ -1,11 +1,10 @@
 # Wawi Learns Version 1 Implementation Plan
 
-> **For @Javis and agentic workers:** REQUIRED EXECUTION METHOD: run one
-> `orchestration.yml` task at a time. @Javis orchestrates and never writes
-> implementation code; @Javis selects exactly one of @Jimmy, @Bumble, or @Cody
-> as the implementation and commit owner for each task.
+> **For @Javis and agentic workers:** run one `orchestration.yml` task at a
+> time. Assign one `@Builder`, keep every other lane read-only, and require one
+> independent `@Reviewer` before integration.
 
-**Goal:** Build, verify, and release the complete approved private Wawi Learns
+**Goal:** Build, verify, deploy, and release the complete approved Wawi Learns
 Version 1 for Malachi.
 
 **Architecture:** The child experience is a local-first Next.js PWA. IndexedDB
@@ -28,19 +27,24 @@ pins before they become release authority.
 - Use `.specify/specs/wawi-learns/000-spec-of-specs/orchestration.yml` as the
   only task-state authority.
 - Execute the frozen 54-task sequence across eleven slices. Exactly zero or one task may be active.
-- @Javis selects one implementation owner per task: @Jimmy for platform and
-  integration work, @Bumble for product and UI work, or @Cody for small bounded
-  feature work. Every other agent remains read-only for that task.
+- @Javis selects one `@Builder` per task and one independent `@Reviewer` for the
+  staged candidate. Every other agent remains read-only for that task.
 - Add only files allowed by the active task packet.
-- Run application installs, builds, full typechecks, and runtime checks in the
-  task's approved hosted environment. Local application execution requires
-  explicit product-owner opt-in recorded for that task.
+- Run non-destructive local installs from the lockfile, builds, typechecks,
+  targeted tests, and short-lived runtime checks when the active packet needs
+  them. Hosted GitHub Actions, Vercel, and Convex receipts remain required where
+  declared.
 - Use the existing GitHub repository, Vercel project `wawi-learns`, and Convex
   architecture. Do not create substitute projects.
-- The product owner is the sole human approval authority for slice and final
-  release decisions. No co-author, sign-off, second human, external reviewer, or
-  outside organisation is required to approve the work. Agent `PASS`/`BLOCK`
-  results are technical quality evidence, not additional approval authority.
+- Keep the repository public until all 54 tasks and the final release gate are
+  complete. Use GitHub-hosted runners; self-hosted runners are an optional
+  contingency only after a live runner proves its labels and availability.
+- The product owner is the sole human final-release approval authority. The
+  current full-build instruction is standing authorization to continue through
+  independently verified slice boundaries without interruption. No co-author,
+  sign-off, second human, external reviewer, or outside organisation is required
+  to approve the work. Agent `PASS`/`BLOCK` results are technical evidence, not
+  additional human approval authority.
 - The product owner has explicitly authorized direct task-scoped commits and
   pushes to `main`. There is no pull-request or protected-main gate; therefore a
   push is a Vercel production-candidate deployment and must satisfy Section 5
@@ -142,17 +146,19 @@ From the repository root:
 /speckit.prd.orchestrate slug=wawi-learns action=next
 ```
 
-`next` must return `SLC-001-T001`. Any other result is a blocker requiring a
-ledger audit before implementation.
+On an empty ledger, `next` must return `SLC-001-T001`. After a task completes,
+`next` must return the first dependency-valid successor from the live execution
+priority. A stale hard-coded task expectation is not a blocker; the validated
+ledger and current dependency state decide the successor.
 
 State-changing forms:
 
 ```text
-/speckit.prd.orchestrate slug=wawi-learns action=start task=SLC-001-T001 owner=@Jimmy
-/speckit.prd.orchestrate slug=wawi-learns action=evidence task=SLC-001-T001 check=unit.repository-contract result=pass path=tests/unit/repository-contract.test.ts
-/speckit.prd.orchestrate slug=wawi-learns action=complete task=SLC-001-T001
-/speckit.prd.orchestrate slug=wawi-learns action=block task=SLC-001-T001 reason="Vercel project identity does not match DEC-012"
-/speckit.prd.orchestrate slug=wawi-learns action=reopen task=SLC-001-T001 reason="Accepted Node or dependency pin changed"
+/speckit.prd.orchestrate slug=wawi-learns action=start task=<next-task> owner=@Builder
+/speckit.prd.orchestrate slug=wawi-learns action=evidence task=<next-task> check=<check-id> result=pass path=<repository-evidence-path>
+/speckit.prd.orchestrate slug=wawi-learns action=complete task=<next-task>
+/speckit.prd.orchestrate slug=wawi-learns action=block task=<next-task> reason="<decisive blocker>"
+/speckit.prd.orchestrate slug=wawi-learns action=reopen task=<task-id> reason="<accepted evidence became stale>"
 ```
 
 Use the real check IDs returned by `action=next`; the evidence command above
@@ -178,26 +184,38 @@ approval actions remain ledger-driven, atomic, and traceable.
 
 | Agent | Role | Owns | Must not do |
 |---|---|---|---|
-| @Javis | CTO/CEO and release commander | Clarify outcomes, create bounded packets, choose one owner per change, resolve trade-offs, enforce evidence gates, and make technical ship/no-ship decisions. | Routine implementation, competing edits, or self-approving a change. |
-| @Jimmy | Platform implementation engineer | Backend/integration work, tooling, runtime repair, builds, and clearly scoped engineering tasks. | Product direction, cross-team orchestration, or final release approval. |
-| @Bumble | Product and UI implementation engineer | Focused frontend/UI tasks, user-flow polish, and implementation with explicit acceptance criteria. | Broad architecture decisions or concurrent edits to another builder's files. |
-| @Cody | Fast bounded feature implementer | Small self-contained changes with clear acceptance tests, explicit files, and a rollback boundary. | Whole-repository rewrites, ambiguous multi-system work, orchestration, or release decisions. |
-| @Einstein | Architecture, diagnosis, and failure-mode reviewer | First-principles framing, root-cause analysis, load-bearing assumptions, and challenging the mechanism before code starts. | Primary delivery ownership or long build execution. |
-| @Fizz | Quality strategy and independent verification reviewer | Test strategy, release-risk analysis, cross-cutting product trade-offs, and adversarial review. | Implementing the same change being verified. |
-| @Honey | Robustness and large-context reviewer | Complex-diff second opinion, larger-surface consistency, edge cases, and evidence sufficiency. | Parallel implementation of the same task or final release authority. |
+| @Javis | Release commander and integrator | Select the next task, bound scope, route work, integrate evidence, and make technical ship or rework decisions. | Competing edits, self-approving a candidate, or inventing product scope. |
+| @Builder | Active implementation and commit owner | Inspect local patterns, implement the smallest task solution, run checks, stage the candidate, and repair exact defects. | Writing outside the active packet or sharing write ownership. |
+| @Reviewer | Independent read-only reviewer | Check correctness, surrounding-code style, task scope, regression risk, privacy/security, and evidence. | Editing the candidate or approving without tree-bound evidence. |
+
+Use this routing ladder without making a preferred model a dependency:
+
+| Work | Preferred route | Fallback |
+|---|---|---|
+| Release, architecture, integration, ambiguous debugging | Strongest available primary model | Current root model |
+| Narrow implementation and fast problem resolution | `gpt-5.3-codex-spark` | `gpt-5.6-luna`, then `gpt-5.4`, then fastest available coding model |
+| Independent review | `gpt-5.5` with high reasoning | `gpt-5.6-sol` or strongest independent available model |
+| Repository mapping, logs, inventories, test triage | `gpt-5.6-terra` or `gpt-5.6-luna` | Any read-only context-efficient model |
+
+The requested model is a routing intention, not evidence of the effective model.
+Record runtime spawn metadata when available; otherwise record the request and
+judge the work only by its command, diff, tree, and hosted evidence. A missing
+model, timed-out subagent, or unavailable persona is rerouted automatically and
+never escalated to the product owner.
 
 Every assignment message must contain:
 
 ```text
 TASK: exact SLC-NNN-TMMM and title
-OWNER: exactly one of @Jimmy, @Bumble, or @Cody
+OWNER: exactly one @Builder
 GOAL: active packet outcome
 SCOPE: exact allowed and forbidden files
 INTERFACES: exact owned and consumed contracts
 RED: failing test or check and expected failure
 GREEN: minimum implementation boundary
 VERIFY: every required check and its location
-ROUND_ROBIN: @Einstein -> @Jimmy -> @Bumble -> @Cody -> @Fizz -> @Honey -> @Javis
+REVIEW: one independent @Reviewer plus any risk-triggered specialist lens
+ROUTING: preferred model, fallback ladder, and stop condition
 CANDIDATE: staged tree ID plus artifact paths for every PASS
 DIRECT_MAIN: pre-push gate and post-push receipt/rollback conditions
 ROLLBACK: packet rollback action
@@ -205,67 +223,64 @@ STOP: blocker and reopen conditions
 ```
 
 **Completion criterion:** one named writer owns one bounded task; every agent
-has a defined evidence target; no agent invents scope or interfaces.
+has a defined evidence target; routing failure cannot block the task; no agent
+invents scope or interfaces.
 
 ## 5. Per-Task Delivery Loop
 
 For each smallest task returned by `action=next`:
 
-- [ ] @Javis checks dependencies and selects exactly one implementation owner:
-  @Jimmy, @Bumble, or @Cody.
-- [ ] @Einstein reviews the proposed mechanism, interfaces, load-bearing
-  assumptions, and failure modes before code starts. A pre-change `BLOCK` must
-  be resolved by @Javis and the selected owner before editing.
-- [ ] The selected owner writes the packet's failing test or decisive failing
-  check, retains the real failure, and implements the smallest allowed change.
-- [ ] The selected owner runs every declared unit, integration, regression,
-  E2E, migration, deployment, and rollback check in its declared environment.
-- [ ] The selected owner stages only allowed files and records `git write-tree`
-  as the candidate tree ID. As soon as the smallest task passes, stop
-  implementation and run this read-only round robin on that candidate in order:
-  @Einstein, @Jimmy, @Bumble, @Cody, @Fizz, @Honey, then @Javis.
-- [ ] @Einstein checks mechanism, architecture, assumptions, and failure modes.
-  @Jimmy checks platform, integration, tooling, runtime, and build evidence.
-  @Bumble checks product behaviour, UI, and user-flow quality. @Cody checks
-  task boundaries, acceptance tests, and rollback. @Fizz checks test strategy,
-  release risk, cross-cutting trade-offs, and adversarial cases. @Honey checks
-  larger-surface consistency, robustness, edge cases, and evidence sufficiency.
-- [ ] The implementation owner uses their round-robin turn for explicit
-  self-review and evidence handoff; every other review remains independent.
-  Each required review role returns `PASS` only with the candidate tree ID plus
-  an exact command result, hosted receipt, or evidence path; otherwise it returns
-  `BLOCK` with one exact defect. A review has a ten-minute response window with
-  one reminder at five minutes. Silence is `BLOCK`, never `PASS`; @Javis may
-  record an available same-remit substitute, or the task remains blocked.
-- [ ] Any `BLOCK` returns the task to the same implementation owner. After the
-  repair, restage the candidate, record its new tree ID, rerun all affected
-  checks and the complete round robin. Do not start another task while any
-  `BLOCK` remains.
-- [ ] @Javis resolves disagreements, records the evidence, and marks the
-  technical gate complete only after every required review role returns `PASS`.
-- [ ] The selected owner reviews the diff for secrets, generated clutter,
-  unrelated changes, dead configuration, and forbidden files; then commits the
-  implementation, tests, evidence, and ledger state as one task-scoped commit
-  with configured Git author metadata plus matching `Co-authored-by` then
-  `Signed-off-by` attribution trailers. Verify `HEAD^{tree}` equals the reviewed
-  candidate tree ID.
+- [ ] @Javis checks dependencies, confirms the source hierarchy resolves the
+  outcome, and selects exactly one @Builder.
+- [ ] Before code changes, the builder inspects the target file, two or three
+  neighboring examples, and the nearest tests. Record the naming, imports,
+  types, control flow, error handling, component structure, test style,
+  formatting, and comment density that the patch must follow.
+- [ ] Run GitNexus impact analysis for every changed symbol. Warn before any
+  HIGH or CRITICAL blast radius and add the corresponding specialist review.
+- [ ] The builder retains the packet's real failing test or decisive failing
+  check, implements the smallest allowed change, and runs every declared unit,
+  integration, regression, E2E, migration, deployment, and rollback check in
+  its declared environment.
+- [ ] The builder stages only allowed files, records `git write-tree`, and hands
+  the candidate plus evidence to one independent @Reviewer.
+- [ ] The reviewer checks behavior, surrounding-code consistency, task scope,
+  regression risk, privacy/security, rollback, and evidence. Add one specialist
+  review only for authentication, private data, security boundaries, destructive
+  migrations, irreversible production actions, or cross-slice architecture.
+- [ ] A review returns `PASS` only with the candidate tree ID plus an exact
+  command result, hosted receipt, or evidence path; otherwise it returns one
+  exact `BLOCK`. If the preferred reviewer or model is unavailable, reroute the
+  same read-only review to the next model in Section 4. Silence is not `PASS`.
+- [ ] Any `BLOCK` returns to the same builder. Repair only the cited defect,
+  restage, record the new tree, rerun affected checks, and repeat independent
+  review. Do not start another task while a real defect remains.
+- [ ] Run GitNexus `detect_changes` against `main`, review the diff for secrets,
+  generated clutter, unrelated changes, dead configuration, and forbidden files,
+  then commit the task implementation, tests, evidence, and ledger state with
+  configured author metadata and matching attribution trailers. Verify
+  `HEAD^{tree}` equals the reviewed candidate tree ID.
 - [ ] Push the reviewed task commit directly to `main`. GitHub Actions and
   Vercel receipts must identify that exact SHA before the task is `DONE`. On a
-  hosted failure, revert the exact task commit on `main`, run `action=block`, and
-  do not start another task.
+  code-induced hosted failure, revert the exact task commit and run
+  `action=block`. On runner, quota, or provider infrastructure failure, preserve
+  the verified commit, reroute to the approved hosted fallback, and record the
+  infrastructure evidence without weakening the check.
 - [ ] Report exactly:
 
 ```text
 TASK | OWNER | STATE | DECISIVE EVIDENCE | COMMIT/RECEIPTS | BLOCKER | NEXT
 ```
 
-If a task fails, run `action=block`. @Einstein diagnoses and the selected owner
-repairs. If an accepted interface, dependency, ADR, test, or environment becomes
-stale, run `action=reopen` and invalidate every downstream result. Never advance
-on red.
+If a task fails, run `action=block`; @Javis diagnoses and the same builder
+repairs. After the same blocker fingerprint repeats three times, apply Karpathy
+and Council, select a distinct lawful strategy, and continue without asking the
+product owner to choose routine tooling. If an accepted interface, dependency,
+ADR, test, or environment becomes stale, run `action=reopen` and invalidate every
+downstream result. Never advance on red.
 
 **Completion criterion:** the task is `DONE`, all declared evidence is fresh and
-passing, every required review role has returned artifact-bound `PASS`, its
+passing, the independent review has returned artifact-bound `PASS`, its
 reviewed commit is scoped and pushed to `main`, hosted receipts match its SHA,
 and `action=next` returns only the dependency-valid successor.
 
@@ -277,38 +292,35 @@ traceability.
 
 | Order | Delivery ref | Increment | Required exit journey |
 |---:|---|---|---|
-| 1 | `main` | Platform, provider, licensing, and skeleton proof | `npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts` |
-| 2 | `main` | Parent authority, sole learner, pack activation, offline child mode | `npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts` |
-| 3 | `main` | Reproducible licensed Reception and Year 1 core pack | `npm exec playwright test tests/e2e/content/core-pack-install.spec.ts` |
-| 4 | `main` | Deterministic adaptive English learning journey | `npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts` |
-| 5 | `main` | Tracing, spelling, TTS, and ephemeral speech journey | `npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts` |
-| 6 | `main` | Offline reading and governed private AI overlay | `npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts` |
-| 7 | `main` | Reception and Year 1 mathematics mastery | `npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts` |
-| 8 | `main` | Rewards, parent evidence, controls, export, and deletion | `npm exec playwright test tests/e2e/parent/dashboard-controls-data-rights.spec.ts` |
-| 9 | `main` | Offline, privacy, accessibility, security, performance, and device gates | `npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts` |
-| 10 | `main` | Exact production candidate, rollback, and private-beta approval | `npm run release:verify` |
+| 1 | `SLC-001-T001` | GitHub-hosted platform and deployment baseline | `npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts` |
+| 2 | `SLC-011` | Public-build baseline plus authenticated five-activity vertical slice | `npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts` |
+| 3 | `SLC-001-T002..T005` | Remaining provider, licensing, PWA, and skeleton spikes | `npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts` |
+| 4 | `SLC-002` | Parent authority, sole learner, pack activation, offline child mode | `npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts` |
+| 5 | `SLC-003` | Reproducible licensed Reception and Year 1 core pack | `npm exec playwright test tests/e2e/content/core-pack-install.spec.ts` |
+| 6 | `SLC-004` | Deterministic adaptive English learning journey | `npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts` |
+| 7 | `SLC-005` | Tracing, spelling, TTS, and ephemeral speech journey | `npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts` |
+| 8 | `SLC-006` | Offline reading and governed private AI overlay | `npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts` |
+| 9 | `SLC-007` | Reception and Year 1 mathematics mastery | `npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts` |
+| 10 | `SLC-008` | Rewards, parent evidence, controls, export, and deletion | `npm exec playwright test tests/e2e/parent/dashboard-controls-data-rights.spec.ts` |
+| 11 | `SLC-009` | Offline, privacy, accessibility, security, performance, and device gates | `npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts` |
+| 12 | `SLC-010` | Exact production candidate, rollback, privacy transition, and release | `npm run release:verify` |
 
 At each slice boundary:
 
 - [ ] All slice tasks are `DONE` with passing evidence.
 - [ ] The exit journey passes against the exact direct-main candidate in its
   declared environment.
-- [ ] @Honey verifies the full slice regression and hosted receipts for the
-  corresponding `main` SHA.
-- [ ] @Javis gives the product owner the working increment, evidence, residual
-  risk, and rollback path.
-- [ ] The product owner alone approves the slice; no agent,
-  second human, external reviewer, or outside organisation must approve it.
-- [ ] @Javis records `action=approve stage=SLC-NNN` using only the product-owner
-  identifier.
-- [ ] @Javis assigns the approval-only ledger change to one builder, who commits
-  it directly to `main` with configured attribution trailers after its review
-  gate passes.
+- [ ] The independent reviewer verifies the full slice regression and hosted
+  receipts for the corresponding `main` SHA.
+- [ ] @Javis records the working increment, evidence, residual risk, and rollback
+  path. The current full-build instruction is standing authorization to continue
+  through slice boundaries; do not interrupt the product owner for routine
+  approval between slices.
 - [ ] Continue the next eligible task from the updated `main` without discarding
   task commits.
 
-**Completion criterion:** the slice is delivered on `main`, product-owner-approved,
-reproducible from `main`, and its successor is unlocked by the ledger.
+**Completion criterion:** the slice is delivered on `main`, independently
+verified, reproducible from `main`, and its successor is unlocked by the ledger.
 
 ## 7. Interface Ownership Boundaries
 
@@ -337,7 +349,7 @@ SLC-010 is complete only after this sequence:
 
 - [ ] @Javis clears the complete technical release evidence gate for all PRD
   acceptance criteria and non-functional requirements after the final task's
-  full-team round robin passes.
+  independent review passes.
 - [ ] Complete required curriculum, privacy, accessibility, supervised child,
   and product-owner reviews.
 - [ ] Verify direct GitHub delivery, required CI checks, the existing Vercel Git
@@ -350,6 +362,9 @@ SLC-010 is complete only after this sequence:
   to `wawi-learns`.
 - [ ] Verify GitHub SHA, CI SHA, Vercel source SHA, runtime build SHA, and Convex
   candidate metadata agree.
+- [ ] Keep the repository public through all preceding checks, then make it
+  private and immediately reverify GitHub Actions history, Vercel Git access,
+  production availability, and rollback access before the final `LIVE` claim.
 - [ ] Run production installability, authentication, offline learning,
   reconciliation, content-hash, private-static-leak, and observability checks.
 - [ ] Rehearse rollback to the previous safe Vercel deployment and compatible
@@ -365,10 +380,10 @@ On any production failure: withdraw unsafe content, restore the previous Vercel
 deployment and compatible Convex functions, verify pending events remain safe,
 block the release task, and remove every `LIVE` claim.
 
-**Completion criterion:** all 54 tasks are `DONE`, every task has unanimous
-technical `PASS` evidence, all eleven slices and the final gate are approved only
-by the product owner, the exact tested SHA is healthy in production, rollback is
-proven, and the ledger state is `RELEASE_READY`.
+**Completion criterion:** all 54 tasks are `DONE`, every task has independent
+technical `PASS` evidence, the final gate is approved only by the product owner,
+the exact tested SHA is healthy in production, the post-build privacy transition
+and rollback are proven, and the ledger state is `RELEASE_READY`.
 
 ## 9. Final Cleanliness Gate
 
