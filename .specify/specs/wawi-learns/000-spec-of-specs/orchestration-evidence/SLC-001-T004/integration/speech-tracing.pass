@@ -1,0 +1,6 @@
+task_id: SLC-001-T004
+check_kind: integration
+check_id: speech-tracing
+result: pass
+recorded_at: '2026-08-25T22:36:10Z'
+source_path: tests\integration\spikes\speech.test.ts

@@ -1,0 +1,6 @@
+task_id: SLC-001-T004
+check_kind: unit
+check_id: identity
+result: pass
+recorded_at: '2026-08-25T22:35:43Z'
+source_path: tests\integration\spikes\identity.test.ts
