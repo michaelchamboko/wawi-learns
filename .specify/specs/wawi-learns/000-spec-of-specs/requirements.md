@@ -39,7 +39,7 @@ Each grouped ID below is the stable planning identifier. The source column prese
 | PRD-FR-029 | FR-AUTH-01…04 | Authenticate the parent, open the single learner directly, lock sensitive parent mode and preserve only authorised child mode offline. | SLC-002 |
 | PRD-FR-030 | §42 | Separate local/test/preview/production, require the full PR check set, deploy GitHub previews and approved `main` to Vercel `wawi-learns`, deploy Convex safely and expose version provenance. | SLC-010 |
 | PRD-FR-031 | §43 | Implement the complete learning, curriculum, offline, speech, handwriting, AI-safety, usability and Android/Chrome test matrix. | SLC-009 |
-| PRD-FR-032 | §44, AC-01…36 | Release only when every Version 1 P0 acceptance criterion has decisive evidence. | SLC-010 |
+| PRD-FR-032 | §44, AC-01…37 | Release only when every Version 1 P0 acceptance criterion has decisive evidence. | SLC-010 |
 
 ## Non-functional requirements
 
@@ -53,7 +53,8 @@ Each grouped ID below is the stable planning identifier. The source column prese
 | PRD-NFR-006 | NFR-06 | Observe crashes, sync, validation, provider, cost and pack failures without raw audio or unnecessary personal data. | SLC-009 |
 | PRD-NFR-007 | NFR-07 | Avoid continuous microphone/background work and repeated downloads; expose pack and mobile-data cost. | SLC-009 |
 | PRD-NFR-008 | NFR-08 | Block publication of any curriculum/content item whose validation fails. | SLC-003 |
+| PRD-NFR-009 | NFR-09 | Maintain continuous Spark implementation throughput: keep one ACTIVE packet plus up to two READY packets, avoid unnecessary packet-level pauses, and preserve one-task-at-a-time write ownership. | SLC-011 |
 
 ## Coverage rule
 
-Every task references at least one ID above and at least one `AC-SLC-*` criterion. `SLC-010` owns the final cross-slice mapping to PRD `AC-01…36`; it does not replace the per-slice acceptance evidence.
+Every task references at least one ID above and at least one `AC-SLC-*` criterion. `SLC-010` owns the final cross-slice mapping to PRD `AC-01…37`; it does not replace the per-slice acceptance evidence.

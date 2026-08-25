@@ -2,7 +2,7 @@
 
 > **For @Javis and agentic workers:** run one `orchestration.yml` task at a
 > time. Assign one `@Builder`, keep every other lane read-only, and require one
-> independent `@Reviewer` before integration.
+> independent `@Reviewer` per release cohort before integration.
 
 **Goal:** Build, verify, deploy, and release the complete approved Wawi Learns
 Version 1 for Malachi.
@@ -26,9 +26,13 @@ pins before they become release authority.
 - Preserve the complete approved V1 and every PRD exclusion.
 - Use `.specify/specs/wawi-learns/000-spec-of-specs/orchestration.yml` as the
   only task-state authority.
-- Execute the frozen 54-task sequence across eleven slices. Exactly zero or one task may be active.
+- Execute the frozen 54-task sequence across eleven slices. Exactly zero or one task
+  may be active, and Sol manages one `ACTIVE` plus up to two `READY` packets.
 - @Javis selects one `@Builder` per task and one independent `@Reviewer` for the
-  staged candidate. Every other agent remains read-only for that task.
+  staged cohort. Every other agent remains read-only for that task.
+- PRD-NFR-009 / AC-37 are active: task-level automation does not block Spark,
+  evidence-backed repairs are queued, and `gpt-5.5` review is applied once per
+  release cohort.
 - Add only files allowed by the active task packet.
 - Run non-destructive local installs from the lockfile, builds, typechecks,
   targeted tests, and short-lived runtime checks when the active packet needs
@@ -242,30 +246,34 @@ For each smallest task returned by `action=next`:
   check, implements the smallest allowed change, and runs every declared unit,
   integration, regression, E2E, migration, deployment, and rollback check in
   its declared environment.
-- [ ] The builder stages only allowed files, records `git write-tree`, and hands
-  the candidate plus evidence to one independent @Reviewer.
-- [ ] The reviewer checks behavior, surrounding-code consistency, task scope,
-  regression risk, privacy/security, rollback, and evidence. Add one specialist
-  review only for authentication, private data, security boundaries, destructive
-  migrations, irreversible production actions, or cross-slice architecture.
-- [ ] A review returns `PASS` only with the candidate tree ID plus an exact
-  command result, hosted receipt, or evidence path; otherwise it returns one
+- [ ] The builder stages only allowed files, records `git write-tree`, and records
+  packet-level evidence for the active release cohort.
+- [ ] For cohort-mode execution, there is no per-packet manual model review; packet-level
+  evidence remains automated and non-blocking. The reviewer checks behavior,
+  surrounding-code consistency, task scope, regression risk, privacy/security,
+  rollback, and evidence only at cohort close.
+- [ ] Task-level evidence and repair packets are automated; they must not pause
+  Spark while a dependency-valid `READY` packet exists.
+- [ ] A cohort review returns `PASS` only with the final candidate tree ID plus an
+  exact command result, hosted receipt, or evidence path; otherwise it returns one
   exact `BLOCK`. If the preferred reviewer or model is unavailable, reroute the
   same read-only review to the next model in Section 4. Silence is not `PASS`.
+- [ ] For cohort-mode execution, `gpt-5.5` review and host/deploy checks are
+  executed only after all code in the release cohort is complete.
 - [ ] Any `BLOCK` returns to the same builder. Repair only the cited defect,
   restage, record the new tree, rerun affected checks, and repeat independent
   review. Do not start another task while a real defect remains.
 - [ ] Run GitNexus `detect_changes` against `main`, review the diff for secrets,
   generated clutter, unrelated changes, dead configuration, and forbidden files,
-  then commit the task implementation, tests, evidence, and ledger state with
-  configured author metadata and matching attribution trailers. Verify
-  `HEAD^{tree}` equals the reviewed candidate tree ID.
-- [ ] Push the reviewed task commit directly to `main`. GitHub Actions and
-  Vercel receipts must identify that exact SHA before the task is `DONE`. On a
-  code-induced hosted failure, revert the exact task commit and run
+  then commit packet-level implementation and evidence with configured author
+  metadata and matching attribution trailers. Verify each packet `HEAD^{tree}` for
+  local reviewability; defer ledger-close and integration review to cohort close.
+- [ ] Push the reviewed release-cohort commit directly to `main`. GitHub Actions
+  and Vercel receipts must identify that exact SHA before `DONE`. On a code-induced
+  hosted failure, revert the exact hosted-breaking commit and run
   `action=block`. On runner, quota, or provider infrastructure failure, preserve
-  the verified commit, reroute to the approved hosted fallback, and record the
-  infrastructure evidence without weakening the check.
+  the verified candidate work, reroute to the approved hosted fallback, and record
+  the infrastructure evidence without weakening the check.
 - [ ] Report exactly:
 
 ```text
@@ -273,16 +281,19 @@ TASK | OWNER | STATE | DECISIVE EVIDENCE | COMMIT/RECEIPTS | BLOCKER | NEXT
 ```
 
 If a task fails, run `action=block`; @Javis diagnoses and the same builder
-repairs. After the same blocker fingerprint repeats three times, apply Karpathy
-and Council, select a distinct lawful strategy, and continue without asking the
-product owner to choose routine tooling. If an accepted interface, dependency,
-ADR, test, or environment becomes stale, run `action=reopen` and invalidate every
-downstream result. Never advance on red.
+repairs at the priority determined by packet impact and queue ordering. Queue the
+exact repair packet and continue unrelated dependency-valid READY packets in the
+same cycle; stop only when the defect invalidates every available READY packet.
+After the same blocker fingerprint repeats three times, apply Karpathy and Council,
+select a distinct lawful strategy, and continue without asking the product owner
+to choose routine tooling. If an accepted interface, dependency, ADR, test, or
+environment becomes stale, run `action=reopen` and invalidate every downstream
+result. Never advance on red.
 
-**Completion criterion:** the task is `DONE`, all declared evidence is fresh and
-passing, the independent review has returned artifact-bound `PASS`, its
-reviewed commit is scoped and pushed to `main`, hosted receipts match its SHA,
-and `action=next` returns only the dependency-valid successor.
+**Completion criterion:** the task/cycle is `DONE`, all declared evidence is fresh
+and passing, the independent review has returned artifact-bound `PASS` at cohort
+close, the reviewed cohort commit is pushed to `main`, hosted receipts match its
+SHA, and `action=next` returns the next dependency-valid successor.
 
 ## 6. Slice Delivery Sequence
 

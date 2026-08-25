@@ -16,6 +16,7 @@
 | DEC-012 | GitHub `michaelchamboko/wawi-learns` and Vercel project `wawi-learns` are canonical; production branch is `main` and project root is `.`. | Live project inspection on 2026-08-08 and user direction. |
 | DEC-013 | Delivery uses one active implementation task, one review gate per task, one human approval per slice and a final release gate. | spec-kit PRD extension 1.1 orchestration contract. |
 | DEC-014 | The root PRD remains the single source copy instead of duplicating it under `.specify`. | Explicit plans-only and repository-cleanliness constraint. |
+| DEC-015 | Add a continuous Spark execution governance mode (PRD-NFR-009, AC-37): one ACTIVE packet and up to two READY packets, no manual packet waiting, one `gpt-5.5` review point per release cohort, and cohort-only push/deploy. | This supersedes DEC-013 review/push cadence only during product-owner-authorised continuous cohort mode; DEC-013 remains the outside-default. |
 
 ## Decisions owned by SLC-001 evidence
 

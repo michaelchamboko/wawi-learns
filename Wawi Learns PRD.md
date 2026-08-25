@@ -2093,6 +2093,14 @@ The app SHOULD avoid continuous microphone listening, unnecessary background wor
 
 A content-validation failure must block release of the affected item. Curriculum correctness is a release gate, not a cosmetic issue.
 
+### NFR-09 Continuous implementation throughput
+
+- The implementation team maintains one `ACTIVE` packet and up to two `READY`
+  packets whenever safe work remains.
+- Packet-level automation evidence must not block continuous packet movement.
+- `gpt-5.5` review is cohort-scoped, and pushes/deployments occur once per
+  complete release cohort.
+
 ---
 
 ## 38. Analytics and success measures
@@ -2467,6 +2475,7 @@ Version 1 is releasable only when all P0 criteria below pass.
 - **AC-34:** The Next.js PWA passes the complete Android 13–17 and Chrome stable/previous-two release matrix, is installable in every supported combination and exposes a valid manifest, service worker and versioned offline shell.
 - **AC-35:** The installed PWA launches and continues learning offline from the last validated shared core pack and any compatible downloaded private overlay; an interrupted or corrupt update cannot displace them or mix curriculum, core-pack, overlay or engine versions within a session.
 - **AC-36:** No production secret is present in client bundles or Git history.
+- **AC-37:** Release-cohort execution is continuous, with one `ACTIVE` packet and up to two `READY` packets when available, packet-level automation evidence does not pause work, and independent review/deploy occurs once per cohort.
 
 ---
 

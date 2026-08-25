@@ -66,9 +66,10 @@ cast of personas:
   the candidate and returns either evidence-bound `PASS` or one exact `BLOCK`.
 
 Exactly zero or one task may be active, and exactly one agent may write to the
-repository for that task. Read-only exploration may run in parallel when lanes
-are narrow and non-overlapping. `@Javis` owns synthesis and integration; never
-allow competing edits or overlapping implementation branches.
+repository for that task. Sol (`@Javis`) keeps a runtime execution queue of one
+`ACTIVE` packet and up to two `READY` packets. Read-only exploration may run in
+parallel when lanes are narrow and non-overlapping. `@Javis` owns synthesis and
+integration; never allow competing edits or overlapping implementation branches.
 
 The human product owner is the sole human approval authority. Team review
 results are technical evidence, not an additional human or external approval.
@@ -111,27 +112,34 @@ look native to its directory.
 2. `@Javis` starts only the next eligible task and assigns exactly one
    `@Builder` with a bounded goal, allowed files, interfaces, red check, green
    boundary, verification, rollback, and stop condition.
+   The runtime queue may hold one `ACTIVE` and up to two `READY` packets.
 3. The builder runs GitNexus impact analysis before changing a symbol, preserves
    the real failing check, and implements the smallest locally consistent fix.
 4. The builder runs every declared check, stages only allowed files, records
-   `git write-tree`, and hands the candidate plus evidence to `@Reviewer`.
-5. The reviewer checks correctness, local style, task scope, regression risk,
-   security and privacy implications, and evidence sufficiency. Add one specialist
-   review only for authentication, private data, destructive migrations,
-   security boundaries, irreversible production actions, or a cross-slice
-   architectural change. Small, automatically verified tasks need no extra cast.
-6. A reviewer returns `PASS` only with the candidate tree ID and a command result,
-   receipt, or evidence path; otherwise it returns one exact `BLOCK`. If a
-   preferred reviewer is unavailable or silent, reroute the same read-only review
-   to the fallback model. Absence is never `PASS` and never requires the product
-   owner to choose another agent.
-7. Any `BLOCK` returns to the same builder. Repair only the defect, rerun affected
-   checks, restage, and repeat the independent review on the new tree.
-8. Record real evidence through the orchestrator, complete one scoped task, commit
-   it, verify `HEAD^{tree}` equals the reviewed tree, and push directly to `main`.
-   GitHub Actions and Vercel receipts must match the SHA before `DONE`. Revert a
-   code-induced hosted failure; reroute or block an infrastructure failure without
-   discarding a locally and independently verified change.
+   `git write-tree`, and hands packet evidence to the automated verifier while
+   Spark continues.
+5. After all coded packets in the current release cohort are ready for integration,
+   an independent reviewer checks correctness, local style, task scope, regression
+   risk, security and privacy implications, and evidence sufficiency for the whole
+   cohort. Add one specialist review only for authentication, private
+   data, destructive migrations, security boundaries, irreversible production
+   actions, or cross-slice architectural change. Task-level automated evidence
+   and repair packets must not pause Spark; unresolved automation results create
+   repair packets inside the same queue.
+6. The cohort review returns `PASS` only with the final reviewed tree ID and a
+   command result, receipt, or evidence path; otherwise it returns one exact
+   `BLOCK`. If a preferred reviewer is unavailable or silent, reroute the same
+   read-only review to the fallback model. Absence is never `PASS` and never
+   requires the product owner to choose another agent.
+7. Any `BLOCK` is handled as a cohort repair packet at the appropriate priority;
+   repair the cited defect, record new evidence, rerun affected checks, and return
+   for one cohort-level review.
+8. Record real evidence through the orchestrator, complete all code packets for the
+   active release cohort, commit each scoped packet locally, and prepare one final
+   reviewed tree for cohort close. Push to `main` only after the cohort review and
+   hosted checks are complete. On a code-induced hosted failure, revert the exact
+   hosted-breaking commit; on infrastructure failure, preserve the verified candidate,
+   reroute to approved fallback checks, and record the infrastructure blocker.
 9. Reopen stale tasks and accept downstream invalidation. The current full-build
    instruction authorizes uninterrupted progression through verified slice
    boundaries; the product owner alone retains the final release decision.
