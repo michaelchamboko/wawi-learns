@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 3
+revision: 2
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,1231 +7,1228 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: a3828256772a6ddffe8e66d2eb7a97f591f3fdb0802b1c3a46b509c153c58bda
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
   decomposition_version: "v002"
   frozen_sequence: true
 project:
-  state: "IN_PROGRESS"
-  current_task: SLC-001-T001
-  active_owner: '@Jimmy'
+  state: "NOT_STARTED"
+  current_task: null
+  active_owner: null
   blockers: []
 priorities:
   business: ["SLC-011", "SLC-004", "SLC-002", "SLC-003", "SLC-005", "SLC-006", "SLC-007", "SLC-008", "SLC-009", "SLC-010", "SLC-001"]
   execution:
-  - "SLC-001::SLC-001-T001"
-  - "SLC-011::SLC-011-T001"
-  - "SLC-011::SLC-011-T002"
-  - "SLC-011::SLC-011-T003"
-  - "SLC-011::SLC-011-T004"
-  - "SLC-011::SLC-011-T005"
-  - "SLC-001::SLC-001-T002"
-  - "SLC-001::SLC-001-T003"
-  - "SLC-001::SLC-001-T004"
-  - "SLC-001::SLC-001-T005"
-  - "SLC-002::SLC-002-T001"
-  - "SLC-002::SLC-002-T002"
-  - "SLC-002::SLC-002-T003"
-  - "SLC-002::SLC-002-T004"
-  - "SLC-002::SLC-002-T005"
-  - "SLC-003::SLC-003-T001"
-  - "SLC-003::SLC-003-T002"
-  - "SLC-003::SLC-003-T003"
-  - "SLC-003::SLC-003-T004"
-  - "SLC-003::SLC-003-T005"
-  - "SLC-004::SLC-004-T001"
-  - "SLC-004::SLC-004-T002"
-  - "SLC-004::SLC-004-T003"
-  - "SLC-004::SLC-004-T004"
-  - "SLC-004::SLC-004-T005"
-  - "SLC-005::SLC-005-T001"
-  - "SLC-005::SLC-005-T002"
-  - "SLC-005::SLC-005-T003"
-  - "SLC-005::SLC-005-T004"
-  - "SLC-005::SLC-005-T005"
-  - "SLC-006::SLC-006-T001"
-  - "SLC-006::SLC-006-T002"
-  - "SLC-006::SLC-006-T003"
-  - "SLC-006::SLC-006-T004"
-  - "SLC-006::SLC-006-T005"
-  - "SLC-007::SLC-007-T001"
-  - "SLC-007::SLC-007-T002"
-  - "SLC-007::SLC-007-T003"
-  - "SLC-007::SLC-007-T004"
-  - "SLC-008::SLC-008-T001"
-  - "SLC-008::SLC-008-T002"
-  - "SLC-008::SLC-008-T003"
-  - "SLC-008::SLC-008-T004"
-  - "SLC-008::SLC-008-T005"
-  - "SLC-009::SLC-009-T001"
-  - "SLC-009::SLC-009-T002"
-  - "SLC-009::SLC-009-T003"
-  - "SLC-009::SLC-009-T004"
-  - "SLC-009::SLC-009-T005"
-  - "SLC-010::SLC-010-T001"
-  - "SLC-010::SLC-010-T002"
-  - "SLC-010::SLC-010-T003"
-  - "SLC-010::SLC-010-T004"
-  - "SLC-010::SLC-010-T005"
+    - "SLC-001::SLC-001-T001"
+    - "SLC-011::SLC-011-T001"
+    - "SLC-011::SLC-011-T002"
+    - "SLC-011::SLC-011-T003"
+    - "SLC-011::SLC-011-T004"
+    - "SLC-011::SLC-011-T005"
+    - "SLC-001::SLC-001-T002"
+    - "SLC-001::SLC-001-T003"
+    - "SLC-001::SLC-001-T004"
+    - "SLC-001::SLC-001-T005"
+    - "SLC-002::SLC-002-T001"
+    - "SLC-002::SLC-002-T002"
+    - "SLC-002::SLC-002-T003"
+    - "SLC-002::SLC-002-T004"
+    - "SLC-002::SLC-002-T005"
+    - "SLC-003::SLC-003-T001"
+    - "SLC-003::SLC-003-T002"
+    - "SLC-003::SLC-003-T003"
+    - "SLC-003::SLC-003-T004"
+    - "SLC-003::SLC-003-T005"
+    - "SLC-004::SLC-004-T001"
+    - "SLC-004::SLC-004-T002"
+    - "SLC-004::SLC-004-T003"
+    - "SLC-004::SLC-004-T004"
+    - "SLC-004::SLC-004-T005"
+    - "SLC-005::SLC-005-T001"
+    - "SLC-005::SLC-005-T002"
+    - "SLC-005::SLC-005-T003"
+    - "SLC-005::SLC-005-T004"
+    - "SLC-005::SLC-005-T005"
+    - "SLC-006::SLC-006-T001"
+    - "SLC-006::SLC-006-T002"
+    - "SLC-006::SLC-006-T003"
+    - "SLC-006::SLC-006-T004"
+    - "SLC-006::SLC-006-T005"
+    - "SLC-007::SLC-007-T001"
+    - "SLC-007::SLC-007-T002"
+    - "SLC-007::SLC-007-T003"
+    - "SLC-007::SLC-007-T004"
+    - "SLC-008::SLC-008-T001"
+    - "SLC-008::SLC-008-T002"
+    - "SLC-008::SLC-008-T003"
+    - "SLC-008::SLC-008-T004"
+    - "SLC-008::SLC-008-T005"
+    - "SLC-009::SLC-009-T001"
+    - "SLC-009::SLC-009-T002"
+    - "SLC-009::SLC-009-T003"
+    - "SLC-009::SLC-009-T004"
+    - "SLC-009::SLC-009-T005"
+    - "SLC-010::SLC-010-T001"
+    - "SLC-010::SLC-010-T002"
+    - "SLC-010::SLC-010-T003"
+    - "SLC-010::SLC-010-T004"
+    - "SLC-010::SLC-010-T005"
 slices:
-- id: "SLC-001"
-  directory: "001-validation-spikes"
-  state: "PENDING"
-  rank: 1
-  business_rank: 10
-  dependencies: []
-  exit_gate:
-    required_evidence: ["e2e.platform-baseline", "integration.decision-records"]
-    e2e_journey: "npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-001-T001"
-    title: "Bind repository, toolchain and hosting"
+  - id: "SLC-001"
+    directory: "001-validation-spikes"
+    state: "PENDING"
     rank: 1
-    state: "IN_PROGRESS"
+    business_rank: 10
     dependencies: []
-    requirements: ["PRD-FR-023", "PRD-FR-030", "PRD-NFR-004"]
-    acceptance: ["AC-SLC-001-001", "AC-SLC-001-002"]
-    interfaces: ["proposed:package.json:scripts -> RepositoryScripts", "proposed:docs/decisions/ADR-000-toolchain.md:ToolchainDecision -> AcceptedVersions"]
-    documentation_evidence: &platform_docs ["official:https://nextjs.org/docs/app/getting-started/installation@2026-08-08T21:38:54Z", "official:https://react.dev/learn/installation@2026-08-08T21:38:54Z", "official:https://www.typescriptlang.org/docs/@2026-08-08T21:38:54Z", "official:https://vercel.com/docs/git/vercel-for-github@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/repository-contract.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"]
-      migration: []
-      deployment: ["vercel project inspect wawi-learns"]
-      rollback: []
-    evidence: []
-    blockers: []
-    active_owner: '@Jimmy'
-  - id: "SLC-001-T002"
-    title: "Prove PWA offline and update lifecycle"
+    exit_gate:
+      required_evidence: ["e2e.platform-baseline", "integration.decision-records"]
+      e2e_journey: "npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-001-T001"
+        title: "Bind repository, toolchain and hosting"
+        rank: 1
+        state: "TODO"
+        dependencies: []
+        requirements: ["PRD-FR-023", "PRD-FR-030", "PRD-NFR-004"]
+        acceptance: ["AC-SLC-001-001", "AC-SLC-001-002"]
+        interfaces: ["proposed:package.json:scripts -> RepositoryScripts", "proposed:docs/decisions/ADR-000-toolchain.md:ToolchainDecision -> AcceptedVersions"]
+        documentation_evidence: &platform_docs ["official:https://nextjs.org/docs/app/getting-started/installation@2026-08-08T21:38:54Z", "official:https://react.dev/learn/installation@2026-08-08T21:38:54Z", "official:https://www.typescriptlang.org/docs/@2026-08-08T21:38:54Z", "official:https://vercel.com/docs/git/vercel-for-github@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/repository-contract.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"]
+          migration: []
+          deployment: ["vercel project inspect wawi-learns"]
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-001-T002"
+        title: "Prove PWA offline and update lifecycle"
+        rank: 2
+        state: "TODO"
+        dependencies: ["SLC-001-T001"]
+        requirements: ["PRD-FR-022", "PRD-FR-023", "PRD-NFR-001", "PRD-NFR-003"]
+        acceptance: ["AC-SLC-001-002"]
+        interfaces: ["proposed:app/sw.ts:ServiceWorkerVersion -> string"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/pwa/manifest.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/spikes/pwa-update.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
+        evidence: []
+        blockers: []
+      - id: "SLC-001-T003"
+        title: "Prove local event reconciliation"
+        rank: 3
+        state: "TODO"
+        dependencies: ["SLC-001-T002"]
+        requirements: ["PRD-FR-022", "PRD-FR-023", "PRD-NFR-002"]
+        acceptance: ["AC-SLC-001-003"]
+        interfaces: ["proposed:packages/local-data/src/attempts.ts:appendAttempt(event: AttemptEvent) -> Promise<void>", "proposed:convex/spikes/sync.ts:reconcileAttempts(batch: readonly AttemptEvent[]) -> Promise<SyncReceipt>"]
+        documentation_evidence: &data_docs ["official:https://docs.convex.dev/quickstart/nextjs@2026-08-08T21:38:54Z", "official:https://github.com/jakearchibald/idb@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/local-data/attempts.test.ts"]
+          integration: ["npm exec vitest run tests/integration/spikes/sync-contract.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-001-T004"
+        title: "Select identity, speech/TTS and tracing paths"
+        rank: 4
+        state: "TODO"
+        dependencies: ["SLC-001-T003"]
+        requirements: ["PRD-FR-013", "PRD-FR-014", "PRD-FR-015", "PRD-FR-028"]
+        acceptance: ["AC-SLC-001-004", "AC-SLC-001-005"]
+        interfaces: ["proposed:docs/decisions/ADR-001-identity-provider.md:IdentityDecision -> AcceptedProvider", "proposed:docs/decisions/ADR-003-speech-and-tts.md:SpeechDecision -> ProviderPolicy", "proposed:docs/decisions/ADR-004-tracing-renderer.md:TracingDecision -> RendererContract"]
+        documentation_evidence: *data_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/spikes/identity.test.ts"]
+          integration: ["npm exec vitest run tests/integration/spikes/speech.test.ts tests/integration/spikes/tracing.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-001-T005"
+        title: "Select AI/safety, licensing and packaging paths"
+        rank: 5
+        state: "TODO"
+        dependencies: ["SLC-001-T004"]
+        requirements: ["PRD-FR-018", "PRD-FR-019", "PRD-FR-028", "PRD-NFR-008"]
+        acceptance: ["AC-SLC-001-004", "AC-SLC-001-005"]
+        interfaces: ["proposed:docs/decisions/ADR-005-ai-and-safety-providers.md:AiDecision -> ProviderPolicy", "proposed:docs/decisions/ADR-006-content-licensing.md:LicensingDecision -> ApprovedSources", "proposed:docs/decisions/ADR-007-offline-packaging.md:PackDecision -> PackagingContract"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/spikes/ai-safety.test.ts"]
+          integration: ["npm exec vitest run tests/integration/spikes/licensing.test.ts tests/integration/spikes/packaging.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+  - id: "SLC-002"
+    directory: "002-secure-offline-foundation"
+    state: "PENDING"
     rank: 2
-    state: "TODO"
-    dependencies: ["SLC-001-T001"]
-    requirements: ["PRD-FR-022", "PRD-FR-023", "PRD-NFR-001", "PRD-NFR-003"]
-    acceptance: ["AC-SLC-001-002"]
-    interfaces: ["proposed:app/sw.ts:ServiceWorkerVersion -> string"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/pwa/manifest.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/spikes/pwa-update.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
-    evidence: []
-    blockers: []
-  - id: "SLC-001-T003"
-    title: "Prove local event reconciliation"
+    business_rank: 2
+    dependencies: ["SLC-001"]
+    exit_gate:
+      required_evidence: ["e2e.offline-first-run", "integration.authorization"]
+      e2e_journey: "npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-002-T001"
+        title: "Materialise workspace and CI contract"
+        rank: 6
+        state: "TODO"
+        dependencies: ["SLC-001-T005"]
+        requirements: ["PRD-FR-023", "PRD-FR-030", "PRD-NFR-005"]
+        acceptance: ["AC-SLC-002-001"]
+        interfaces: ["proposed:package.json:check -> VerificationScript", "proposed:.github/workflows/ci.yml:ci -> RequiredChecks"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/repository-contract.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-002-T002"
+        title: "Implement Convex parent authority"
+        rank: 7
+        state: "TODO"
+        dependencies: ["SLC-002-T001"]
+        requirements: ["PRD-FR-003", "PRD-FR-023", "PRD-FR-029", "PRD-NFR-004"]
+        acceptance: ["AC-SLC-002-002"]
+        interfaces: ["proposed:convex/lib/requireParent.ts:requireParent(ctx: QueryCtx|MutationCtx|ActionCtx) -> Promise<ParentContext>", "proposed:convex/childProfiles.ts:createOnlyChildProfile(args: ChildProfileInput) -> Promise<Id<\"childProfile\">>"]
+        documentation_evidence: *data_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/convex/auth-guards.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-002-T003"
+        title: "Implement durable local stores and sync"
+        rank: 8
+        state: "TODO"
+        dependencies: ["SLC-002-T002"]
+        requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
+        acceptance: ["AC-SLC-002-003"]
+        interfaces: ["proposed:packages/local-data/src/attempts.ts:appendAttempt(event: AttemptEvent) -> Promise<void>", "proposed:packages/local-data/src/packs.ts:activateValidatedPack(manifest: ContentPackManifest) -> Promise<ActivationResult>", "proposed:convex/attempts.ts:ingestAttempts(args: { events: AttemptEvent[] }) -> Promise<SyncReceipt>"]
+        documentation_evidence: *data_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/local-data"]
+          integration: ["npm exec vitest run tests/integration/local-data tests/integration/convex/sync.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-002-T004"
+        title: "Implement onboarding and assessment baseline"
+        rank: 9
+        state: "TODO"
+        dependencies: ["SLC-002-T003"]
+        requirements: ["PRD-FR-003", "PRD-FR-026"]
+        acceptance: ["AC-SLC-002-004"]
+        interfaces: ["proposed:packages/learning-engine/src/assessment.ts:nextAssessmentItem(state: AssessmentState) -> AssessmentDecision"]
+        documentation_evidence: *data_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/assessment.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/onboarding/assessment.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-002-T005"
+        title: "Complete authorised offline first run"
+        rank: 10
+        state: "TODO"
+        dependencies: ["SLC-002-T004"]
+        requirements: ["PRD-FR-003", "PRD-FR-022", "PRD-FR-029", "PRD-NFR-003"]
+        acceptance: ["AC-SLC-002-003", "AC-SLC-002-005"]
+        interfaces: ["proposed:packages/local-data/src/authorization.ts:canOpenChildModeOffline(snapshot: AuthorizationSnapshot) -> boolean"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/local-data/authorization.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts"]
+          migration: []
+          deployment: ["vercel inspect $VERCEL_PREVIEW_URL"]
+          rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
+        evidence: []
+        blockers: []
+  - id: "SLC-003"
+    directory: "003-curriculum-content-packs"
+    state: "PENDING"
     rank: 3
-    state: "TODO"
-    dependencies: ["SLC-001-T002"]
-    requirements: ["PRD-FR-022", "PRD-FR-023", "PRD-NFR-002"]
-    acceptance: ["AC-SLC-001-003"]
-    interfaces: ["proposed:packages/local-data/src/attempts.ts:appendAttempt(event: AttemptEvent) -> Promise<void>", "proposed:convex/spikes/sync.ts:reconcileAttempts(batch: readonly AttemptEvent[]) -> Promise<SyncReceipt>"]
-    documentation_evidence: &data_docs ["official:https://docs.convex.dev/quickstart/nextjs@2026-08-08T21:38:54Z", "official:https://github.com/jakearchibald/idb@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data/attempts.test.ts"]
-      integration: ["npm exec vitest run tests/integration/spikes/sync-contract.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-001-T004"
-    title: "Select identity, speech/TTS and tracing paths"
+    business_rank: 3
+    dependencies: ["SLC-002"]
+    exit_gate:
+      required_evidence: ["content.full-validation", "e2e.core-pack-install"]
+      e2e_journey: "npm exec playwright test tests/e2e/content/core-pack-install.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-003-T001"
+        title: "Implement schemas, importer and validators"
+        rank: 11
+        state: "TODO"
+        dependencies: ["SLC-002-T005"]
+        requirements: ["PRD-FR-001", "PRD-FR-002", "PRD-FR-027", "PRD-NFR-008"]
+        acceptance: ["AC-SLC-003-001"]
+        interfaces: ["proposed:packages/content-schema/src/index.ts:ContentPackManifestSchema -> ZodSchema<ContentPackManifest>", "proposed:packages/validation/src/content.ts:validateContentRepository(input: ContentSourceTree) -> ValidationReport"]
+        documentation_evidence: &content_docs ["official:https://zod.dev/@2026-08-08T21:38:54Z", "official:https://www.gov.uk/government/publications/the-reading-framework-teaching-the-foundations-of-literacy@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/content/schema.test.ts tests/content/validators.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-003-T002"
+        title: "Build curriculum, phonics and word core"
+        rank: 12
+        state: "TODO"
+        dependencies: ["SLC-003-T001"]
+        requirements: ["PRD-FR-001", "PRD-FR-002"]
+        acceptance: ["AC-SLC-003-002"]
+        interfaces: ["proposed:content/curriculum/v1:CurriculumVersion -> CurriculumRules", "proposed:content/curriculum/v1/words:WordRecord[] -> ReviewedWordInventory"]
+        documentation_evidence: *content_docs
+        checks:
+          unit: ["npm exec vitest run tests/content/english-inventory.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-003-T003"
+        title: "Build reading and media core"
+        rank: 13
+        state: "TODO"
+        dependencies: ["SLC-003-T002"]
+        requirements: ["PRD-FR-002", "PRD-FR-019"]
+        acceptance: ["AC-SLC-003-003"]
+        interfaces: ["proposed:content/curriculum/v1/reading:StoryRecord[] -> ReviewedReadingInventory", "proposed:content/assets:AssetRecord[] -> LicensedAssetInventory"]
+        documentation_evidence: *content_docs
+        checks:
+          unit: ["npm exec vitest run tests/content/reading-media-inventory.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-003-T004"
+        title: "Build mathematics core"
+        rank: 14
+        state: "TODO"
+        dependencies: ["SLC-003-T003"]
+        requirements: ["PRD-FR-002", "PRD-FR-016"]
+        acceptance: ["AC-SLC-003-004"]
+        interfaces: ["proposed:content/curriculum/v1/maths:MathsTemplate[] -> ReviewedMathsInventory"]
+        documentation_evidence: ["official:https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/content/maths-inventory.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-003-T005"
+        title: "Build and publish immutable packs"
+        rank: 15
+        state: "TODO"
+        dependencies: ["SLC-003-T004"]
+        requirements: ["PRD-FR-001", "PRD-FR-002", "PRD-FR-027", "PRD-NFR-008"]
+        acceptance: ["AC-SLC-003-005"]
+        interfaces: ["proposed:scripts/content/build-packs.ts:buildPacks(input: BuildPackInput) -> Promise<PackBuildResult>"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/content/pack-build.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/content/core-pack-install.spec.ts"]
+          migration: []
+          deployment: ["npm run build"]
+          rollback: ["npm exec playwright test tests/e2e/content/pack-rollback.spec.ts"]
+        evidence: []
+        blockers: []
+  - id: "SLC-004"
+    directory: "004-adaptive-learner-core"
+    state: "PENDING"
     rank: 4
-    state: "TODO"
-    dependencies: ["SLC-001-T003"]
-    requirements: ["PRD-FR-013", "PRD-FR-014", "PRD-FR-015", "PRD-FR-028"]
-    acceptance: ["AC-SLC-001-004", "AC-SLC-001-005"]
-    interfaces: ["proposed:docs/decisions/ADR-001-identity-provider.md:IdentityDecision -> AcceptedProvider", "proposed:docs/decisions/ADR-003-speech-and-tts.md:SpeechDecision -> ProviderPolicy", "proposed:docs/decisions/ADR-004-tracing-renderer.md:TracingDecision -> RendererContract"]
-    documentation_evidence: *data_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/spikes/identity.test.ts"]
-      integration: ["npm exec vitest run tests/integration/spikes/speech.test.ts tests/integration/spikes/tracing.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-001-T005"
-    title: "Select AI/safety, licensing and packaging paths"
+    business_rank: 1
+    dependencies: ["SLC-003"]
+    exit_gate:
+      required_evidence: ["e2e.adaptive-english", "unit.mastery-properties"]
+      e2e_journey: "npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-004-T001"
+        title: "Implement evidence and mastery projection"
+        rank: 16
+        state: "TODO"
+        dependencies: ["SLC-003-T005"]
+        requirements: ["PRD-FR-007"]
+        acceptance: ["AC-SLC-004-001"]
+        interfaces: ["proposed:packages/learning-engine/src/mastery.ts:projectMastery(events: readonly AttemptEvent[], rules: CurriculumRules) -> MasteryProjection"]
+        documentation_evidence: &engine_docs ["official:https://www.typescriptlang.org/docs/@2026-08-08T21:38:54Z", "official:https://vitest.dev/guide/@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/mastery.test.ts tests/unit/learning-engine/mastery.property.test.ts"]
+          integration: ["npm exec vitest run tests/integration/learning-engine/replay.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: ["npm exec vitest run tests/unit/learning-engine/replay-compatibility.test.ts"]
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-004-T002"
+        title: "Implement lesson scheduling and weak recovery"
+        rank: 17
+        state: "TODO"
+        dependencies: ["SLC-004-T001"]
+        requirements: ["PRD-FR-006", "PRD-FR-008", "PRD-FR-010"]
+        acceptance: ["AC-SLC-004-002"]
+        interfaces: ["proposed:packages/learning-engine/src/nextActivity.ts:selectNextActivity(input: LessonContext) -> ActivityPlan"]
+        documentation_evidence: *engine_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/scheduler.test.ts"]
+          integration: ["npm exec vitest run tests/integration/learning-engine/lesson-selection.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-004-T003"
+        title: "Implement baseline and progress windows"
+        rank: 18
+        state: "TODO"
+        dependencies: ["SLC-004-T002"]
+        requirements: ["PRD-FR-003", "PRD-FR-026"]
+        acceptance: ["AC-SLC-004-003"]
+        interfaces: ["proposed:packages/learning-engine/src/progress.ts:buildProgressWindows(input: ProgressInput) -> readonly ProgressWindow[]"]
+        documentation_evidence: *engine_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/progress-windows.test.ts"]
+          integration: ["npm exec vitest run tests/integration/learning-engine/progress-replay.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-004-T004"
+        title: "Build child home and activity shell"
+        rank: 19
+        state: "TODO"
+        dependencies: ["SLC-004-T003"]
+        requirements: ["PRD-FR-004", "PRD-FR-009", "PRD-NFR-001"]
+        acceptance: ["AC-SLC-004-004"]
+        interfaces: ["proposed:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer(props: ActivityRendererProps) -> JSX.Element"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/ui/activity-renderer.test.tsx"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/learner/child-shell.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-004-T005"
+        title: "Deliver core adaptive English journey"
+        rank: 20
+        state: "TODO"
+        dependencies: ["SLC-004-T004"]
+        requirements: ["PRD-FR-005", "PRD-FR-008", "PRD-FR-009", "PRD-FR-010"]
+        acceptance: ["AC-SLC-004-005"]
+        interfaces: ["existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer", "existing:packages/learning-engine/src/nextActivity.ts:selectNextActivity"]
+        documentation_evidence: *engine_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine"]
+          integration: ["npm exec vitest run tests/integration/learner/attempt-flow.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+  - id: "SLC-005"
+    directory: "005-handwriting-spelling-speech"
+    state: "PENDING"
     rank: 5
-    state: "TODO"
-    dependencies: ["SLC-001-T004"]
-    requirements: ["PRD-FR-018", "PRD-FR-019", "PRD-FR-028", "PRD-NFR-008"]
-    acceptance: ["AC-SLC-001-004", "AC-SLC-001-005"]
-    interfaces: ["proposed:docs/decisions/ADR-005-ai-and-safety-providers.md:AiDecision -> ProviderPolicy", "proposed:docs/decisions/ADR-006-content-licensing.md:LicensingDecision -> ApprovedSources", "proposed:docs/decisions/ADR-007-offline-packaging.md:PackDecision -> PackagingContract"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/spikes/ai-safety.test.ts"]
-      integration: ["npm exec vitest run tests/integration/spikes/licensing.test.ts tests/integration/spikes/packaging.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-- id: "SLC-002"
-  directory: "002-secure-offline-foundation"
-  state: "PENDING"
-  rank: 2
-  business_rank: 2
-  dependencies: ["SLC-001"]
-  exit_gate:
-    required_evidence: ["e2e.offline-first-run", "integration.authorization"]
-    e2e_journey: "npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-002-T001"
-    title: "Materialise workspace and CI contract"
+    business_rank: 4
+    dependencies: ["SLC-004"]
+    exit_gate:
+      required_evidence: ["e2e.multimodal-language", "security.no-raw-audio"]
+      e2e_journey: "npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-005-T001"
+        title: "Implement adaptive tracing"
+        rank: 21
+        state: "TODO"
+        dependencies: ["SLC-004-T005"]
+        requirements: ["PRD-FR-013"]
+        acceptance: ["AC-SLC-005-001"]
+        interfaces: ["proposed:packages/tracing/src/scoreTrace.ts:scoreTrace(input: TraceInput, formation: FormationPath) -> TraceScore"]
+        documentation_evidence: &media_docs ["official:https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events@2026-08-08T21:38:54Z", "official:https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/tracing/score-trace.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/tracing/input-matrix.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-005-T002"
+        title: "Implement spelling and composition progression"
+        rank: 22
+        state: "TODO"
+        dependencies: ["SLC-005-T001"]
+        requirements: ["PRD-FR-012", "PRD-FR-005"]
+        acceptance: ["AC-SLC-005-002"]
+        interfaces: ["proposed:packages/learning-engine/src/spelling.ts:analyseSpelling(input: SpellingAttempt, target: WordRecord) -> SpellingAnalysis"]
+        documentation_evidence: *engine_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/spelling.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/learner/spelling-progression.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-005-T003"
+        title: "Implement TTS and audio hierarchy"
+        rank: 23
+        state: "TODO"
+        dependencies: ["SLC-005-T002"]
+        requirements: ["PRD-FR-014"]
+        acceptance: ["AC-SLC-005-003"]
+        interfaces: ["proposed:packages/audio/src/tts.ts:playSpeech(request: SpeechPlaybackRequest) -> Promise<PlaybackOutcome>"]
+        documentation_evidence: *media_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/audio/tts.test.ts"]
+          integration: ["npm exec vitest run tests/integration/audio/tts-fallback.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-005-T004"
+        title: "Implement ephemeral pronunciation assessment"
+        rank: 24
+        state: "TODO"
+        dependencies: ["SLC-005-T003"]
+        requirements: ["PRD-FR-015", "PRD-FR-024"]
+        acceptance: ["AC-SLC-005-004"]
+        interfaces: ["proposed:packages/audio/src/speech.ts:scorePronunciation(request: PronunciationRequest) -> Promise<PronunciationOutcome>", "proposed:convex/actions/pronunciation.ts:assessPronunciation(args: EphemeralPronunciationArgs) -> Promise<DerivedPronunciationResult>"]
+        documentation_evidence: *media_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/audio/pronunciation.test.ts"]
+          integration: ["npm exec vitest run tests/integration/audio/pronunciation.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-005-T005"
+        title: "Integrate multimodal lesson and privacy regression"
+        rank: 25
+        state: "TODO"
+        dependencies: ["SLC-005-T004"]
+        requirements: ["PRD-FR-012", "PRD-FR-013", "PRD-FR-014", "PRD-FR-015"]
+        acceptance: ["AC-SLC-005-001", "AC-SLC-005-002", "AC-SLC-005-003", "AC-SLC-005-004", "AC-SLC-005-005"]
+        interfaces: ["existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer", "existing:packages/learning-engine/src/mastery.ts:projectMastery"]
+        documentation_evidence: *media_docs
+        checks:
+          unit: ["npm exec vitest run tests/security/no-raw-audio.test.ts"]
+          integration: ["npm exec vitest run tests/integration/audio"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+  - id: "SLC-006"
+    directory: "006-reading-stories-ai"
+    state: "PENDING"
     rank: 6
-    state: "TODO"
-    dependencies: ["SLC-001-T005"]
-    requirements: ["PRD-FR-023", "PRD-FR-030", "PRD-NFR-005"]
-    acceptance: ["AC-SLC-002-001"]
-    interfaces: ["proposed:package.json:check -> VerificationScript", "proposed:.github/workflows/ci.yml:ci -> RequiredChecks"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/repository-contract.test.ts"]
-      integration: ["npm run test:content"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-002-T002"
-    title: "Implement Convex parent authority"
+    business_rank: 5
+    dependencies: ["SLC-005"]
+    exit_gate:
+      required_evidence: ["e2e.approved-overlay", "security.ai-red-team"]
+      e2e_journey: "npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-006-T001"
+        title: "Implement controlled reading and curated reader"
+        rank: 26
+        state: "TODO"
+        dependencies: ["SLC-005-T005"]
+        requirements: ["PRD-FR-011", "PRD-FR-017"]
+        acceptance: ["AC-SLC-006-001"]
+        interfaces: ["proposed:packages/learning-engine/src/reading.ts:buildReadingPlan(context: ReadingContext) -> ReadingPlan"]
+        documentation_evidence: *engine_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/reading.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/reading/curated-reader.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-006-T002"
+        title: "Implement revision state and validators"
+        rank: 27
+        state: "TODO"
+        dependencies: ["SLC-006-T001"]
+        requirements: ["PRD-FR-017", "PRD-FR-018", "PRD-FR-019", "PRD-NFR-008"]
+        acceptance: ["AC-SLC-006-002"]
+        interfaces: ["proposed:packages/validation/src/generatedContent.ts:validateGeneratedRevision(input: GeneratedRevision, rules: ValidationRules) -> ValidationResult"]
+        documentation_evidence: &ai_docs ["official:https://docs.convex.dev/functions/actions@2026-08-08T21:38:54Z", "official:https://docs.convex.dev/file-storage/overview@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/validation/generated-revision.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/generated-state.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-006-T003"
+        title: "Implement constrained remediation, examples and summaries"
+        rank: 28
+        state: "TODO"
+        dependencies: ["SLC-006-T002"]
+        requirements: ["PRD-FR-018", "PRD-FR-021"]
+        acceptance: ["AC-SLC-006-003"]
+        interfaces: ["proposed:convex/actions/generateContent.ts:generateContent(args: ConstrainedGenerationRequest) -> Promise<GeneratedRevisionRef>"]
+        documentation_evidence: *ai_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/validation/ai-output.test.ts"]
+          integration: ["npm exec vitest run tests/integration/ai/constrained-actions.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-006-T004"
+        title: "Implement stories, images, approval and overlay"
+        rank: 29
+        state: "TODO"
+        dependencies: ["SLC-006-T003"]
+        requirements: ["PRD-FR-017", "PRD-FR-018", "PRD-FR-019", "PRD-FR-021"]
+        acceptance: ["AC-SLC-006-002", "AC-SLC-006-004"]
+        interfaces: ["proposed:convex/generatedContent.ts:approveRevision(args: { revisionId: Id<\"generatedContent\"> }) -> Promise<void>", "proposed:packages/local-data/src/overlay.ts:activateValidatedOverlay(manifest: OverlayManifest) -> Promise<ActivationResult>"]
+        documentation_evidence: *ai_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/local-data/overlay.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/generated-state.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-006-T005"
+        title: "Enforce safety, cost and failure controls"
+        rank: 30
+        state: "TODO"
+        dependencies: ["SLC-006-T004"]
+        requirements: ["PRD-FR-018", "PRD-FR-024", "PRD-NFR-002", "PRD-NFR-006"]
+        acceptance: ["AC-SLC-006-003", "AC-SLC-006-004", "AC-SLC-006-005"]
+        interfaces: ["proposed:convex/lib/aiBudget.ts:reserveAiBudget(request: AiBudgetRequest) -> BudgetDecision"]
+        documentation_evidence: *ai_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/ai/cost-controls.test.ts"]
+          integration: ["npm exec vitest run tests/security/ai-red-team.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/stories/provider-outage.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: ["npm exec playwright test tests/e2e/stories/withdrawal.spec.ts"]
+        evidence: []
+        blockers: []
+  - id: "SLC-007"
+    directory: "007-mathematics-mastery"
+    state: "PENDING"
     rank: 7
-    state: "TODO"
-    dependencies: ["SLC-002-T001"]
-    requirements: ["PRD-FR-003", "PRD-FR-023", "PRD-FR-029", "PRD-NFR-004"]
-    acceptance: ["AC-SLC-002-002"]
-    interfaces: ["proposed:convex/lib/requireParent.ts:requireParent(ctx: QueryCtx|MutationCtx|ActionCtx) -> Promise<ParentContext>", "proposed:convex/childProfiles.ts:createOnlyChildProfile(args: ChildProfileInput) -> Promise<Id<\"childProfile\">>"]
-    documentation_evidence: *data_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/convex/auth-guards.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-002-T003"
-    title: "Implement durable local stores and sync"
+    business_rank: 6
+    dependencies: ["SLC-006"]
+    exit_gate:
+      required_evidence: ["e2e.maths-retention", "unit.maths-properties"]
+      e2e_journey: "npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-007-T001"
+        title: "Integrate maths domain and evidence"
+        rank: 31
+        state: "TODO"
+        dependencies: ["SLC-006-T005"]
+        requirements: ["PRD-FR-016"]
+        acceptance: ["AC-SLC-007-001"]
+        interfaces: ["proposed:packages/learning-engine/src/maths.ts:buildMathsActivity(input: MathsLessonContext) -> MathsActivityPlan", "proposed:packages/learning-engine/src/maths.ts:classifyMathsAttempt(input: MathsAttempt, template: MathsTemplate) -> MathsEvidence"]
+        documentation_evidence: &maths_docs ["official:https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study@2026-08-08T21:38:54Z", "official:https://vitest.dev/guide/@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/maths.test.ts tests/unit/learning-engine/maths.property.test.ts"]
+          integration: ["npm exec vitest run tests/integration/learner/maths-projection.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-007-T002"
+        title: "Deliver Reception mathematics"
+        rank: 32
+        state: "TODO"
+        dependencies: ["SLC-007-T001"]
+        requirements: ["PRD-FR-016"]
+        acceptance: ["AC-SLC-007-002"]
+        interfaces: ["existing:packages/learning-engine/src/maths.ts:buildMathsActivity", "existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer"]
+        documentation_evidence: *maths_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/maths.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/maths/reception.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-007-T003"
+        title: "Deliver Year 1 mathematics"
+        rank: 33
+        state: "TODO"
+        dependencies: ["SLC-007-T002"]
+        requirements: ["PRD-FR-016"]
+        acceptance: ["AC-SLC-007-003"]
+        interfaces: ["existing:packages/learning-engine/src/maths.ts:buildMathsActivity", "existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer"]
+        documentation_evidence: *maths_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/maths.property.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/maths/year-one.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-007-T004"
+        title: "Prove adaptive maths mastery end to end"
+        rank: 34
+        state: "TODO"
+        dependencies: ["SLC-007-T003"]
+        requirements: ["PRD-FR-016"]
+        acceptance: ["AC-SLC-007-004"]
+        interfaces: ["existing:packages/learning-engine/src/maths.ts:classifyMathsAttempt", "existing:packages/learning-engine/src/mastery.ts:projectMastery"]
+        documentation_evidence: *maths_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine"]
+          integration: ["npm exec vitest run tests/integration/learner/maths-projection.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+  - id: "SLC-008"
+    directory: "008-rewards-parent-operations"
+    state: "PENDING"
     rank: 8
-    state: "TODO"
-    dependencies: ["SLC-002-T002"]
-    requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
-    acceptance: ["AC-SLC-002-003"]
-    interfaces: ["proposed:packages/local-data/src/attempts.ts:appendAttempt(event: AttemptEvent) -> Promise<void>", "proposed:packages/local-data/src/packs.ts:activateValidatedPack(manifest: ContentPackManifest) -> Promise<ActivationResult>", "proposed:convex/attempts.ts:ingestAttempts(args: { events: AttemptEvent[] }) -> Promise<SyncReceipt>"]
-    documentation_evidence: *data_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data"]
-      integration: ["npm exec vitest run tests/integration/local-data tests/integration/convex/sync.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-002-T004"
-    title: "Implement onboarding and assessment baseline"
+    business_rank: 7
+    dependencies: ["SLC-007"]
+    exit_gate:
+      required_evidence: ["e2e.parent-operations", "e2e.data-rights"]
+      e2e_journey: "npm exec playwright test tests/e2e/parent/dashboard-controls-data-rights.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-008-T001"
+        title: "Implement rewards and adventure projection"
+        rank: 35
+        state: "TODO"
+        dependencies: ["SLC-007-T004"]
+        requirements: ["PRD-FR-020"]
+        acceptance: ["AC-SLC-008-001"]
+        interfaces: ["proposed:packages/learning-engine/src/rewards.ts:projectWorldState(events: readonly RewardEvent[]) -> WorldState"]
+        documentation_evidence: *engine_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/rewards.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/rewards/adventure.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-008-T002"
+        title: "Implement evidence-backed parent dashboard"
+        rank: 36
+        state: "TODO"
+        dependencies: ["SLC-008-T001"]
+        requirements: ["PRD-FR-008", "PRD-FR-021", "PRD-FR-026"]
+        acceptance: ["AC-SLC-008-002"]
+        interfaces: ["proposed:convex/dashboard.ts:getParentDashboard(args: { childId: Id<\"childProfile\"> }) -> ParentDashboard"]
+        documentation_evidence: &parent_docs ["official:https://docs.convex.dev/auth/overview@2026-08-08T21:38:54Z", "official:https://docs.convex.dev/functions/actions@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/dashboard/projection.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/dashboard.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/parent/dashboard-evidence.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-008-T003"
+        title: "Implement audited controls and overrides"
+        rank: 37
+        state: "TODO"
+        dependencies: ["SLC-008-T002"]
+        requirements: ["PRD-FR-006", "PRD-FR-021", "PRD-FR-029"]
+        acceptance: ["AC-SLC-008-003"]
+        interfaces: ["proposed:convex/overrides.ts:setParentOverride(args: ParentOverrideInput) -> Promise<Id<\"parentOverrides\">>"]
+        documentation_evidence: *parent_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/overrides.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/overrides.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-008-T004"
+        title: "Implement custom packs and assisted activities"
+        rank: 38
+        state: "TODO"
+        dependencies: ["SLC-008-T003"]
+        requirements: ["PRD-FR-021", "PRD-FR-017", "PRD-FR-018"]
+        acceptance: ["AC-SLC-008-004"]
+        interfaces: ["existing:packages/validation/src/generatedContent.ts:validateGeneratedRevision", "existing:packages/local-data/src/overlay.ts:activateValidatedOverlay"]
+        documentation_evidence: *ai_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/validation/custom-pack.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/custom-pack.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/parent/custom-pack.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-008-T005"
+        title: "Implement export, consent and verified deletion"
+        rank: 39
+        state: "TODO"
+        dependencies: ["SLC-008-T004"]
+        requirements: ["PRD-FR-021", "PRD-FR-024", "PRD-FR-029"]
+        acceptance: ["AC-SLC-008-005"]
+        interfaces: ["proposed:convex/dataRights.ts:requestProfileDeletion(args: { childId: Id<\"childProfile\"> }) -> Promise<DeletionReceipt>"]
+        documentation_evidence: *parent_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/local-data/purge.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/data-rights.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/parent/data-rights.spec.ts"]
+          migration: ["npm exec vitest run tests/integration/convex/deletion-worker-compatibility.test.ts"]
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+  - id: "SLC-009"
+    directory: "009-offline-safety-hardening"
+    state: "PENDING"
     rank: 9
-    state: "TODO"
-    dependencies: ["SLC-002-T003"]
-    requirements: ["PRD-FR-003", "PRD-FR-026"]
-    acceptance: ["AC-SLC-002-004"]
-    interfaces: ["proposed:packages/learning-engine/src/assessment.ts:nextAssessmentItem(state: AssessmentState) -> AssessmentDecision"]
-    documentation_evidence: *data_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/assessment.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/onboarding/assessment.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-002-T005"
-    title: "Complete authorised offline first run"
+    business_rank: 8
+    dependencies: ["SLC-008"]
+    exit_gate:
+      required_evidence: ["e2e.full-release-offline", "matrix.supported", "quality.all"]
+      e2e_journey: "npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-009-T001"
+        title: "Harden versioned offline activation"
+        rank: 40
+        state: "TODO"
+        dependencies: ["SLC-008-T005"]
+        requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
+        acceptance: ["AC-SLC-009-001"]
+        interfaces: ["proposed:packages/local-data/src/sessionVersion.ts:pinSessionVersions(input: AvailableVersions) -> SessionVersionSet"]
+        documentation_evidence: &hardening_docs ["official:https://playwright.dev/docs/intro@2026-08-08T21:38:54Z", "official:https://serwist.pages.dev/docs/next/getting-started@2026-08-08T21:38:54Z", "official:https://vercel.com/docs/deployments@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/unit/local-data/session-version.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/offline/version-activation.spec.ts"]
+          migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
+          deployment: []
+          rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
+        evidence: []
+        blockers: []
+      - id: "SLC-009-T002"
+        title: "Harden reconciliation, deletion and withdrawal"
+        rank: 41
+        state: "TODO"
+        dependencies: ["SLC-009-T001"]
+        requirements: ["PRD-FR-022", "PRD-FR-021", "PRD-FR-024", "PRD-NFR-002"]
+        acceptance: ["AC-SLC-009-002"]
+        interfaces: ["proposed:packages/local-data/src/reconcile.ts:reconcileCanonicalState(input: ReconcileInput) -> Promise<ReconcileResult>"]
+        documentation_evidence: *hardening_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/local-data/reconcile.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/sync.test.ts"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/offline/reconciliation.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-009-T003"
+        title: "Complete accessibility and child usability"
+        rank: 42
+        state: "TODO"
+        dependencies: ["SLC-009-T002"]
+        requirements: ["PRD-FR-025", "PRD-FR-004", "PRD-NFR-001"]
+        acceptance: ["AC-SLC-009-003"]
+        interfaces: ["existing:packages/ui:AccessibleComponents", "existing:app/(child):ChildRoutes", "existing:app/(parent):ParentRoutes"]
+        documentation_evidence: *hardening_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/ui/accessibility.test.tsx"]
+          integration: ["npm run audit:accessibility"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/accessibility/child-parent.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-009-T004"
+        title: "Enforce quality, security and observability budgets"
+        rank: 43
+        state: "TODO"
+        dependencies: ["SLC-009-T003"]
+        requirements: ["PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
+        acceptance: ["AC-SLC-009-004"]
+        interfaces: ["proposed:packages/validation/src/telemetry.ts:sanitizeOperationalEvent(event: OperationalEvent) -> SanitizedOperationalEvent"]
+        documentation_evidence: *hardening_docs
+        checks:
+          unit: ["npm exec vitest run tests/security/telemetry-sanitizer.test.ts"]
+          integration: ["npm run verify:quality"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: ["npm run build"]
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-009-T005"
+        title: "Execute release matrix and cross-slice regression"
+        rank: 44
+        state: "TODO"
+        dependencies: ["SLC-009-T004"]
+        requirements: ["PRD-FR-031", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
+        acceptance: ["AC-SLC-009-005"]
+        interfaces: ["proposed:scripts/release/verify-matrix.ts:verifyMatrix(input: SupportMatrix) -> Promise<MatrixResult>"]
+        documentation_evidence: *hardening_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/release/support-matrix.test.ts"]
+          integration: ["npm run verify:matrix"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
+        evidence: []
+        blockers: []
+  - id: "SLC-010"
+    directory: "010-private-beta-release"
+    state: "PENDING"
     rank: 10
-    state: "TODO"
-    dependencies: ["SLC-002-T004"]
-    requirements: ["PRD-FR-003", "PRD-FR-022", "PRD-FR-029", "PRD-NFR-003"]
-    acceptance: ["AC-SLC-002-003", "AC-SLC-002-005"]
-    interfaces: ["proposed:packages/local-data/src/authorization.ts:canOpenChildModeOffline(snapshot: AuthorizationSnapshot) -> boolean"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data/authorization.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts"]
-      migration: []
-      deployment: ["vercel inspect $VERCEL_PREVIEW_URL"]
-      rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
-    evidence: []
-    blockers: []
-- id: "SLC-003"
-  directory: "003-curriculum-content-packs"
-  state: "PENDING"
-  rank: 3
-  business_rank: 3
-  dependencies: ["SLC-002"]
-  exit_gate:
-    required_evidence: ["content.full-validation", "e2e.core-pack-install"]
-    e2e_journey: "npm exec playwright test tests/e2e/content/core-pack-install.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-003-T001"
-    title: "Implement schemas, importer and validators"
+    business_rank: 9
+    dependencies: ["SLC-009"]
+    exit_gate:
+      required_evidence: ["release.ac-01-36", "human.approvals", "deployment.production-smoke", "rollback.production"]
+      e2e_journey: "npm run release:verify"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-010-T001"
+        title: "Build the complete release evidence gate"
+        rank: 45
+        state: "TODO"
+        dependencies: ["SLC-009-T005"]
+        requirements: ["PRD-FR-032", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
+        acceptance: ["AC-SLC-010-001"]
+        interfaces: ["proposed:scripts/release/build-evidence.ts:buildReleaseEvidence(input: ReleaseInputs) -> ReleaseEvidenceManifest"]
+        documentation_evidence: &release_docs ["official:https://vercel.com/docs/git/vercel-for-github@2026-08-08T21:38:54Z", "official:https://vercel.com/docs/deployments@2026-08-08T21:38:54Z", "official:https://docs.convex.dev/production@2026-08-08T21:38:54Z"]
+        checks:
+          unit: ["npm exec vitest run tests/integration/release/evidence-manifest.test.ts"]
+          integration: ["npm run release:evidence"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-010-T002"
+        title: "Complete human review gates"
+        rank: 46
+        state: "TODO"
+        dependencies: ["SLC-010-T001"]
+        requirements: ["PRD-FR-001", "PRD-FR-024", "PRD-FR-025", "PRD-FR-031", "PRD-FR-032"]
+        acceptance: ["AC-SLC-010-002"]
+        interfaces: ["proposed:tests/evidence/human-reviews:HumanReviewRecords -> ReleaseApprovalInputs"]
+        documentation_evidence: *release_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/release/human-approval-records.test.ts"]
+          integration: ["npm run release:verify -- --phase human-review"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-010-T003"
+        title: "Configure direct-main delivery pipeline"
+        rank: 47
+        state: "TODO"
+        dependencies: ["SLC-010-T002"]
+        requirements: ["PRD-FR-030", "PRD-NFR-004"]
+        acceptance: ["AC-SLC-010-003"]
+        interfaces: ["proposed:.github/workflows/release.yml:release -> ImmutableCandidate", "existing:vercel:wawi-learns -> DeploymentProject"]
+        documentation_evidence: *release_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/release/platform-binding.test.ts"]
+          integration: ["npm run release:verify -- --phase delivery"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
+          deployment: ["vercel project inspect wawi-learns"]
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-010-T004"
+        title: "Deploy and verify exact production candidate"
+        rank: 48
+        state: "TODO"
+        dependencies: ["SLC-010-T003"]
+        requirements: ["PRD-FR-030", "PRD-NFR-002", "PRD-NFR-004", "PRD-NFR-006"]
+        acceptance: ["AC-SLC-010-004"]
+        interfaces: ["proposed:scripts/release/verify-production.ts:verifyProduction(input: ProductionTarget) -> Promise<ProductionReceipt>"]
+        documentation_evidence: *release_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/release/production-receipt.test.ts"]
+          integration: ["npm run release:verify"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"]
+          migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
+          deployment: ["vercel inspect $VERCEL_PRODUCTION_URL"]
+          rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
+        evidence: []
+        blockers: []
+      - id: "SLC-010-T005"
+        title: "Prove rollback and approve private beta"
+        rank: 49
+        state: "TODO"
+        dependencies: ["SLC-010-T004"]
+        requirements: ["PRD-FR-032"]
+        acceptance: ["AC-SLC-010-005"]
+        interfaces: ["existing:scripts/release/verify-production.ts:verifyProduction", "proposed:tests/evidence/release/rollback-receipt.json:RollbackReceipt -> FinalApprovalInput"]
+        documentation_evidence: *release_docs
+        checks:
+          unit: ["npm exec vitest run tests/integration/release/rollback-receipt.test.ts"]
+          integration: ["npm run release:verify"]
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
+          migration: []
+          deployment: ["vercel inspect $VERCEL_PRODUCTION_URL"]
+          rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
+        evidence: []
+        blockers: []
+  - id: "SLC-011"
+    directory: "011-private-beta-ux-mvp"
+    state: "PENDING"
     rank: 11
-    state: "TODO"
-    dependencies: ["SLC-002-T005"]
-    requirements: ["PRD-FR-001", "PRD-FR-002", "PRD-FR-027", "PRD-NFR-008"]
-    acceptance: ["AC-SLC-003-001"]
-    interfaces: ["proposed:packages/content-schema/src/index.ts:ContentPackManifestSchema -> ZodSchema<ContentPackManifest>", "proposed:packages/validation/src/content.ts:validateContentRepository(input: ContentSourceTree) -> ValidationReport"]
-    documentation_evidence: &content_docs ["official:https://zod.dev/@2026-08-08T21:38:54Z", "official:https://www.gov.uk/government/publications/the-reading-framework-teaching-the-foundations-of-literacy@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/content/schema.test.ts tests/content/validators.test.ts"]
-      integration: ["npm run test:content"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-003-T002"
-    title: "Build curriculum, phonics and word core"
-    rank: 12
-    state: "TODO"
-    dependencies: ["SLC-003-T001"]
-    requirements: ["PRD-FR-001", "PRD-FR-002"]
-    acceptance: ["AC-SLC-003-002"]
-    interfaces: ["proposed:content/curriculum/v1:CurriculumVersion -> CurriculumRules", "proposed:content/curriculum/v1/words:WordRecord[] -> ReviewedWordInventory"]
-    documentation_evidence: *content_docs
-    checks:
-      unit: ["npm exec vitest run tests/content/english-inventory.test.ts"]
-      integration: ["npm run test:content"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-003-T003"
-    title: "Build reading and media core"
-    rank: 13
-    state: "TODO"
-    dependencies: ["SLC-003-T002"]
-    requirements: ["PRD-FR-002", "PRD-FR-019"]
-    acceptance: ["AC-SLC-003-003"]
-    interfaces: ["proposed:content/curriculum/v1/reading:StoryRecord[] -> ReviewedReadingInventory", "proposed:content/assets:AssetRecord[] -> LicensedAssetInventory"]
-    documentation_evidence: *content_docs
-    checks:
-      unit: ["npm exec vitest run tests/content/reading-media-inventory.test.ts"]
-      integration: ["npm run test:content"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-003-T004"
-    title: "Build mathematics core"
-    rank: 14
-    state: "TODO"
-    dependencies: ["SLC-003-T003"]
-    requirements: ["PRD-FR-002", "PRD-FR-016"]
-    acceptance: ["AC-SLC-003-004"]
-    interfaces: ["proposed:content/curriculum/v1/maths:MathsTemplate[] -> ReviewedMathsInventory"]
-    documentation_evidence: ["official:https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/content/maths-inventory.test.ts"]
-      integration: ["npm run test:content"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-003-T005"
-    title: "Build and publish immutable packs"
-    rank: 15
-    state: "TODO"
-    dependencies: ["SLC-003-T004"]
-    requirements: ["PRD-FR-001", "PRD-FR-002", "PRD-FR-027", "PRD-NFR-008"]
-    acceptance: ["AC-SLC-003-005"]
-    interfaces: ["proposed:scripts/content/build-packs.ts:buildPacks(input: BuildPackInput) -> Promise<PackBuildResult>"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/content/pack-build.test.ts"]
-      integration: ["npm run test:content"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/content/core-pack-install.spec.ts"]
-      migration: []
-      deployment: ["npm run build"]
-      rollback: ["npm exec playwright test tests/e2e/content/pack-rollback.spec.ts"]
-    evidence: []
-    blockers: []
-- id: "SLC-004"
-  directory: "004-adaptive-learner-core"
-  state: "PENDING"
-  rank: 4
-  business_rank: 1
-  dependencies: ["SLC-003"]
-  exit_gate:
-    required_evidence: ["e2e.adaptive-english", "unit.mastery-properties"]
-    e2e_journey: "npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-004-T001"
-    title: "Implement evidence and mastery projection"
-    rank: 16
-    state: "TODO"
-    dependencies: ["SLC-003-T005"]
-    requirements: ["PRD-FR-007"]
-    acceptance: ["AC-SLC-004-001"]
-    interfaces: ["proposed:packages/learning-engine/src/mastery.ts:projectMastery(events: readonly AttemptEvent[], rules: CurriculumRules) -> MasteryProjection"]
-    documentation_evidence: &engine_docs ["official:https://www.typescriptlang.org/docs/@2026-08-08T21:38:54Z", "official:https://vitest.dev/guide/@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/mastery.test.ts tests/unit/learning-engine/mastery.property.test.ts"]
-      integration: ["npm exec vitest run tests/integration/learning-engine/replay.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: ["npm exec vitest run tests/unit/learning-engine/replay-compatibility.test.ts"]
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-004-T002"
-    title: "Implement lesson scheduling and weak recovery"
-    rank: 17
-    state: "TODO"
-    dependencies: ["SLC-004-T001"]
-    requirements: ["PRD-FR-006", "PRD-FR-008", "PRD-FR-010"]
-    acceptance: ["AC-SLC-004-002"]
-    interfaces: ["proposed:packages/learning-engine/src/nextActivity.ts:selectNextActivity(input: LessonContext) -> ActivityPlan"]
-    documentation_evidence: *engine_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/scheduler.test.ts"]
-      integration: ["npm exec vitest run tests/integration/learning-engine/lesson-selection.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-004-T003"
-    title: "Implement baseline and progress windows"
-    rank: 18
-    state: "TODO"
-    dependencies: ["SLC-004-T002"]
-    requirements: ["PRD-FR-003", "PRD-FR-026"]
-    acceptance: ["AC-SLC-004-003"]
-    interfaces: ["proposed:packages/learning-engine/src/progress.ts:buildProgressWindows(input: ProgressInput) -> readonly ProgressWindow[]"]
-    documentation_evidence: *engine_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/progress-windows.test.ts"]
-      integration: ["npm exec vitest run tests/integration/learning-engine/progress-replay.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-004-T004"
-    title: "Build child home and activity shell"
-    rank: 19
-    state: "TODO"
-    dependencies: ["SLC-004-T003"]
-    requirements: ["PRD-FR-004", "PRD-FR-009", "PRD-NFR-001"]
-    acceptance: ["AC-SLC-004-004"]
-    interfaces: ["proposed:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer(props: ActivityRendererProps) -> JSX.Element"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/ui/activity-renderer.test.tsx"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/learner/child-shell.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-004-T005"
-    title: "Deliver core adaptive English journey"
-    rank: 20
-    state: "TODO"
-    dependencies: ["SLC-004-T004"]
-    requirements: ["PRD-FR-005", "PRD-FR-008", "PRD-FR-009", "PRD-FR-010"]
-    acceptance: ["AC-SLC-004-005"]
-    interfaces: ["existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer", "existing:packages/learning-engine/src/nextActivity.ts:selectNextActivity"]
-    documentation_evidence: *engine_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine"]
-      integration: ["npm exec vitest run tests/integration/learner/attempt-flow.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/learner/adaptive-english-journey.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-- id: "SLC-005"
-  directory: "005-handwriting-spelling-speech"
-  state: "PENDING"
-  rank: 5
-  business_rank: 4
-  dependencies: ["SLC-004"]
-  exit_gate:
-    required_evidence: ["e2e.multimodal-language", "security.no-raw-audio"]
-    e2e_journey: "npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-005-T001"
-    title: "Implement adaptive tracing"
-    rank: 21
-    state: "TODO"
-    dependencies: ["SLC-004-T005"]
-    requirements: ["PRD-FR-013"]
-    acceptance: ["AC-SLC-005-001"]
-    interfaces: ["proposed:packages/tracing/src/scoreTrace.ts:scoreTrace(input: TraceInput, formation: FormationPath) -> TraceScore"]
-    documentation_evidence: &media_docs ["official:https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events@2026-08-08T21:38:54Z", "official:https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/tracing/score-trace.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/tracing/input-matrix.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-005-T002"
-    title: "Implement spelling and composition progression"
-    rank: 22
-    state: "TODO"
-    dependencies: ["SLC-005-T001"]
-    requirements: ["PRD-FR-012", "PRD-FR-005"]
-    acceptance: ["AC-SLC-005-002"]
-    interfaces: ["proposed:packages/learning-engine/src/spelling.ts:analyseSpelling(input: SpellingAttempt, target: WordRecord) -> SpellingAnalysis"]
-    documentation_evidence: *engine_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/spelling.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/learner/spelling-progression.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-005-T003"
-    title: "Implement TTS and audio hierarchy"
-    rank: 23
-    state: "TODO"
-    dependencies: ["SLC-005-T002"]
-    requirements: ["PRD-FR-014"]
-    acceptance: ["AC-SLC-005-003"]
-    interfaces: ["proposed:packages/audio/src/tts.ts:playSpeech(request: SpeechPlaybackRequest) -> Promise<PlaybackOutcome>"]
-    documentation_evidence: *media_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/audio/tts.test.ts"]
-      integration: ["npm exec vitest run tests/integration/audio/tts-fallback.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-005-T004"
-    title: "Implement ephemeral pronunciation assessment"
-    rank: 24
-    state: "TODO"
-    dependencies: ["SLC-005-T003"]
-    requirements: ["PRD-FR-015", "PRD-FR-024"]
-    acceptance: ["AC-SLC-005-004"]
-    interfaces: ["proposed:packages/audio/src/speech.ts:scorePronunciation(request: PronunciationRequest) -> Promise<PronunciationOutcome>", "proposed:convex/actions/pronunciation.ts:assessPronunciation(args: EphemeralPronunciationArgs) -> Promise<DerivedPronunciationResult>"]
-    documentation_evidence: *media_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/audio/pronunciation.test.ts"]
-      integration: ["npm exec vitest run tests/integration/audio/pronunciation.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-005-T005"
-    title: "Integrate multimodal lesson and privacy regression"
-    rank: 25
-    state: "TODO"
-    dependencies: ["SLC-005-T004"]
-    requirements: ["PRD-FR-012", "PRD-FR-013", "PRD-FR-014", "PRD-FR-015"]
-    acceptance: ["AC-SLC-005-001", "AC-SLC-005-002", "AC-SLC-005-003", "AC-SLC-005-004", "AC-SLC-005-005"]
-    interfaces: ["existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer", "existing:packages/learning-engine/src/mastery.ts:projectMastery"]
-    documentation_evidence: *media_docs
-    checks:
-      unit: ["npm exec vitest run tests/security/no-raw-audio.test.ts"]
-      integration: ["npm exec vitest run tests/integration/audio"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/learner/multimodal-language.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-- id: "SLC-006"
-  directory: "006-reading-stories-ai"
-  state: "PENDING"
-  rank: 6
-  business_rank: 5
-  dependencies: ["SLC-005"]
-  exit_gate:
-    required_evidence: ["e2e.approved-overlay", "security.ai-red-team"]
-    e2e_journey: "npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-006-T001"
-    title: "Implement controlled reading and curated reader"
-    rank: 26
-    state: "TODO"
-    dependencies: ["SLC-005-T005"]
-    requirements: ["PRD-FR-011", "PRD-FR-017"]
-    acceptance: ["AC-SLC-006-001"]
-    interfaces: ["proposed:packages/learning-engine/src/reading.ts:buildReadingPlan(context: ReadingContext) -> ReadingPlan"]
-    documentation_evidence: *engine_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/reading.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/reading/curated-reader.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-006-T002"
-    title: "Implement revision state and validators"
-    rank: 27
-    state: "TODO"
-    dependencies: ["SLC-006-T001"]
-    requirements: ["PRD-FR-017", "PRD-FR-018", "PRD-FR-019", "PRD-NFR-008"]
-    acceptance: ["AC-SLC-006-002"]
-    interfaces: ["proposed:packages/validation/src/generatedContent.ts:validateGeneratedRevision(input: GeneratedRevision, rules: ValidationRules) -> ValidationResult"]
-    documentation_evidence: &ai_docs ["official:https://docs.convex.dev/functions/actions@2026-08-08T21:38:54Z", "official:https://docs.convex.dev/file-storage/overview@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/validation/generated-revision.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/generated-state.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-006-T003"
-    title: "Implement constrained remediation, examples and summaries"
-    rank: 28
-    state: "TODO"
-    dependencies: ["SLC-006-T002"]
-    requirements: ["PRD-FR-018", "PRD-FR-021"]
-    acceptance: ["AC-SLC-006-003"]
-    interfaces: ["proposed:convex/actions/generateContent.ts:generateContent(args: ConstrainedGenerationRequest) -> Promise<GeneratedRevisionRef>"]
-    documentation_evidence: *ai_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/validation/ai-output.test.ts"]
-      integration: ["npm exec vitest run tests/integration/ai/constrained-actions.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-006-T004"
-    title: "Implement stories, images, approval and overlay"
-    rank: 29
-    state: "TODO"
-    dependencies: ["SLC-006-T003"]
-    requirements: ["PRD-FR-017", "PRD-FR-018", "PRD-FR-019", "PRD-FR-021"]
-    acceptance: ["AC-SLC-006-002", "AC-SLC-006-004"]
-    interfaces: ["proposed:convex/generatedContent.ts:approveRevision(args: { revisionId: Id<\"generatedContent\"> }) -> Promise<void>", "proposed:packages/local-data/src/overlay.ts:activateValidatedOverlay(manifest: OverlayManifest) -> Promise<ActivationResult>"]
-    documentation_evidence: *ai_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data/overlay.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/generated-state.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/stories/approved-overlay.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-006-T005"
-    title: "Enforce safety, cost and failure controls"
-    rank: 30
-    state: "TODO"
-    dependencies: ["SLC-006-T004"]
-    requirements: ["PRD-FR-018", "PRD-FR-024", "PRD-NFR-002", "PRD-NFR-006"]
-    acceptance: ["AC-SLC-006-003", "AC-SLC-006-004", "AC-SLC-006-005"]
-    interfaces: ["proposed:convex/lib/aiBudget.ts:reserveAiBudget(request: AiBudgetRequest) -> BudgetDecision"]
-    documentation_evidence: *ai_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/ai/cost-controls.test.ts"]
-      integration: ["npm exec vitest run tests/security/ai-red-team.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/stories/provider-outage.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: ["npm exec playwright test tests/e2e/stories/withdrawal.spec.ts"]
-    evidence: []
-    blockers: []
-- id: "SLC-007"
-  directory: "007-mathematics-mastery"
-  state: "PENDING"
-  rank: 7
-  business_rank: 6
-  dependencies: ["SLC-006"]
-  exit_gate:
-    required_evidence: ["e2e.maths-retention", "unit.maths-properties"]
-    e2e_journey: "npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-007-T001"
-    title: "Integrate maths domain and evidence"
-    rank: 31
-    state: "TODO"
-    dependencies: ["SLC-006-T005"]
-    requirements: ["PRD-FR-016"]
-    acceptance: ["AC-SLC-007-001"]
-    interfaces: ["proposed:packages/learning-engine/src/maths.ts:buildMathsActivity(input: MathsLessonContext) -> MathsActivityPlan", "proposed:packages/learning-engine/src/maths.ts:classifyMathsAttempt(input: MathsAttempt, template: MathsTemplate) -> MathsEvidence"]
-    documentation_evidence: &maths_docs ["official:https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study@2026-08-08T21:38:54Z", "official:https://vitest.dev/guide/@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/maths.test.ts tests/unit/learning-engine/maths.property.test.ts"]
-      integration: ["npm exec vitest run tests/integration/learner/maths-projection.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-007-T002"
-    title: "Deliver Reception mathematics"
-    rank: 32
-    state: "TODO"
-    dependencies: ["SLC-007-T001"]
-    requirements: ["PRD-FR-016"]
-    acceptance: ["AC-SLC-007-002"]
-    interfaces: ["existing:packages/learning-engine/src/maths.ts:buildMathsActivity", "existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer"]
-    documentation_evidence: *maths_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/maths.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/maths/reception.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-007-T003"
-    title: "Deliver Year 1 mathematics"
-    rank: 33
-    state: "TODO"
-    dependencies: ["SLC-007-T002"]
-    requirements: ["PRD-FR-016"]
-    acceptance: ["AC-SLC-007-003"]
-    interfaces: ["existing:packages/learning-engine/src/maths.ts:buildMathsActivity", "existing:app/(child)/learn/ActivityRenderer.tsx:ActivityRenderer"]
-    documentation_evidence: *maths_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/maths.property.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/maths/year-one.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-007-T004"
-    title: "Prove adaptive maths mastery end to end"
-    rank: 34
-    state: "TODO"
-    dependencies: ["SLC-007-T003"]
-    requirements: ["PRD-FR-016"]
-    acceptance: ["AC-SLC-007-004"]
-    interfaces: ["existing:packages/learning-engine/src/maths.ts:classifyMathsAttempt", "existing:packages/learning-engine/src/mastery.ts:projectMastery"]
-    documentation_evidence: *maths_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine"]
-      integration: ["npm exec vitest run tests/integration/learner/maths-projection.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/maths/representations-and-retention.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-- id: "SLC-008"
-  directory: "008-rewards-parent-operations"
-  state: "PENDING"
-  rank: 8
-  business_rank: 7
-  dependencies: ["SLC-007"]
-  exit_gate:
-    required_evidence: ["e2e.parent-operations", "e2e.data-rights"]
-    e2e_journey: "npm exec playwright test tests/e2e/parent/dashboard-controls-data-rights.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-008-T001"
-    title: "Implement rewards and adventure projection"
-    rank: 35
-    state: "TODO"
-    dependencies: ["SLC-007-T004"]
-    requirements: ["PRD-FR-020"]
-    acceptance: ["AC-SLC-008-001"]
-    interfaces: ["proposed:packages/learning-engine/src/rewards.ts:projectWorldState(events: readonly RewardEvent[]) -> WorldState"]
-    documentation_evidence: *engine_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/rewards.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/rewards/adventure.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-008-T002"
-    title: "Implement evidence-backed parent dashboard"
-    rank: 36
-    state: "TODO"
-    dependencies: ["SLC-008-T001"]
-    requirements: ["PRD-FR-008", "PRD-FR-021", "PRD-FR-026"]
-    acceptance: ["AC-SLC-008-002"]
-    interfaces: ["proposed:convex/dashboard.ts:getParentDashboard(args: { childId: Id<\"childProfile\"> }) -> ParentDashboard"]
-    documentation_evidence: &parent_docs ["official:https://docs.convex.dev/auth/overview@2026-08-08T21:38:54Z", "official:https://docs.convex.dev/functions/actions@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/dashboard/projection.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/dashboard.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/parent/dashboard-evidence.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-008-T003"
-    title: "Implement audited controls and overrides"
-    rank: 37
-    state: "TODO"
-    dependencies: ["SLC-008-T002"]
-    requirements: ["PRD-FR-006", "PRD-FR-021", "PRD-FR-029"]
-    acceptance: ["AC-SLC-008-003"]
-    interfaces: ["proposed:convex/overrides.ts:setParentOverride(args: ParentOverrideInput) -> Promise<Id<\"parentOverrides\">>"]
-    documentation_evidence: *parent_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/overrides.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/overrides.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-008-T004"
-    title: "Implement custom packs and assisted activities"
-    rank: 38
-    state: "TODO"
-    dependencies: ["SLC-008-T003"]
-    requirements: ["PRD-FR-021", "PRD-FR-017", "PRD-FR-018"]
-    acceptance: ["AC-SLC-008-004"]
-    interfaces: ["existing:packages/validation/src/generatedContent.ts:validateGeneratedRevision", "existing:packages/local-data/src/overlay.ts:activateValidatedOverlay"]
-    documentation_evidence: *ai_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/validation/custom-pack.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/custom-pack.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/parent/custom-pack.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-008-T005"
-    title: "Implement export, consent and verified deletion"
-    rank: 39
-    state: "TODO"
-    dependencies: ["SLC-008-T004"]
-    requirements: ["PRD-FR-021", "PRD-FR-024", "PRD-FR-029"]
-    acceptance: ["AC-SLC-008-005"]
-    interfaces: ["proposed:convex/dataRights.ts:requestProfileDeletion(args: { childId: Id<\"childProfile\"> }) -> Promise<DeletionReceipt>"]
-    documentation_evidence: *parent_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data/purge.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/data-rights.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/parent/data-rights.spec.ts"]
-      migration: ["npm exec vitest run tests/integration/convex/deletion-worker-compatibility.test.ts"]
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-- id: "SLC-009"
-  directory: "009-offline-safety-hardening"
-  state: "PENDING"
-  rank: 9
-  business_rank: 8
-  dependencies: ["SLC-008"]
-  exit_gate:
-    required_evidence: ["e2e.full-release-offline", "matrix.supported", "quality.all"]
-    e2e_journey: "npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-009-T001"
-    title: "Harden versioned offline activation"
-    rank: 40
-    state: "TODO"
-    dependencies: ["SLC-008-T005"]
-    requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
-    acceptance: ["AC-SLC-009-001"]
-    interfaces: ["proposed:packages/local-data/src/sessionVersion.ts:pinSessionVersions(input: AvailableVersions) -> SessionVersionSet"]
-    documentation_evidence: &hardening_docs ["official:https://playwright.dev/docs/intro@2026-08-08T21:38:54Z", "official:https://serwist.pages.dev/docs/next/getting-started@2026-08-08T21:38:54Z", "official:https://vercel.com/docs/deployments@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data/session-version.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/offline/version-activation.spec.ts"]
-      migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
-      deployment: []
-      rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
-    blockers: []
-  - id: "SLC-009-T002"
-    title: "Harden reconciliation, deletion and withdrawal"
-    rank: 41
-    state: "TODO"
-    dependencies: ["SLC-009-T001"]
-    requirements: ["PRD-FR-022", "PRD-FR-021", "PRD-FR-024", "PRD-NFR-002"]
-    acceptance: ["AC-SLC-009-002"]
-    interfaces: ["proposed:packages/local-data/src/reconcile.ts:reconcileCanonicalState(input: ReconcileInput) -> Promise<ReconcileResult>"]
-    documentation_evidence: *hardening_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data/reconcile.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/sync.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/offline/reconciliation.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-009-T003"
-    title: "Complete accessibility and child usability"
-    rank: 42
-    state: "TODO"
-    dependencies: ["SLC-009-T002"]
-    requirements: ["PRD-FR-025", "PRD-FR-004", "PRD-NFR-001"]
-    acceptance: ["AC-SLC-009-003"]
-    interfaces: ["existing:packages/ui:AccessibleComponents", "existing:app/(child):ChildRoutes", "existing:app/(parent):ParentRoutes"]
-    documentation_evidence: *hardening_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/ui/accessibility.test.tsx"]
-      integration: ["npm run audit:accessibility"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/accessibility/child-parent.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-009-T004"
-    title: "Enforce quality, security and observability budgets"
-    rank: 43
-    state: "TODO"
-    dependencies: ["SLC-009-T003"]
-    requirements: ["PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
-    acceptance: ["AC-SLC-009-004"]
-    interfaces: ["proposed:packages/validation/src/telemetry.ts:sanitizeOperationalEvent(event: OperationalEvent) -> SanitizedOperationalEvent"]
-    documentation_evidence: *hardening_docs
-    checks:
-      unit: ["npm exec vitest run tests/security/telemetry-sanitizer.test.ts"]
-      integration: ["npm run verify:quality"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: ["npm run build"]
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-009-T005"
-    title: "Execute release matrix and cross-slice regression"
-    rank: 44
-    state: "TODO"
-    dependencies: ["SLC-009-T004"]
-    requirements: ["PRD-FR-031", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
-    acceptance: ["AC-SLC-009-005"]
-    interfaces: ["proposed:scripts/release/verify-matrix.ts:verifyMatrix(input: SupportMatrix) -> Promise<MatrixResult>"]
-    documentation_evidence: *hardening_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/release/support-matrix.test.ts"]
-      integration: ["npm run verify:matrix"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/offline/full-release-journey.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
-    blockers: []
-- id: "SLC-010"
-  directory: "010-private-beta-release"
-  state: "PENDING"
-  rank: 10
-  business_rank: 9
-  dependencies: ["SLC-009"]
-  exit_gate:
-    required_evidence: ["release.ac-01-36", "human.approvals", "deployment.production-smoke", "rollback.production"]
-    e2e_journey: "npm run release:verify"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-010-T001"
-    title: "Build the complete release evidence gate"
-    rank: 45
-    state: "TODO"
-    dependencies: ["SLC-009-T005"]
-    requirements: ["PRD-FR-032", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
-    acceptance: ["AC-SLC-010-001"]
-    interfaces: ["proposed:scripts/release/build-evidence.ts:buildReleaseEvidence(input: ReleaseInputs) -> ReleaseEvidenceManifest"]
-    documentation_evidence: &release_docs ["official:https://vercel.com/docs/git/vercel-for-github@2026-08-08T21:38:54Z", "official:https://vercel.com/docs/deployments@2026-08-08T21:38:54Z", "official:https://docs.convex.dev/production@2026-08-08T21:38:54Z"]
-    checks:
-      unit: ["npm exec vitest run tests/integration/release/evidence-manifest.test.ts"]
-      integration: ["npm run release:evidence"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-010-T002"
-    title: "Complete human review gates"
-    rank: 46
-    state: "TODO"
-    dependencies: ["SLC-010-T001"]
-    requirements: ["PRD-FR-001", "PRD-FR-024", "PRD-FR-025", "PRD-FR-031", "PRD-FR-032"]
-    acceptance: ["AC-SLC-010-002"]
-    interfaces: ["proposed:tests/evidence/human-reviews:HumanReviewRecords -> ReleaseApprovalInputs"]
-    documentation_evidence: *release_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/release/human-approval-records.test.ts"]
-      integration: ["npm run release:verify -- --phase human-review"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-010-T003"
-    title: "Configure direct-main delivery pipeline"
-    rank: 47
-    state: "TODO"
-    dependencies: ["SLC-010-T002"]
-    requirements: ["PRD-FR-030", "PRD-NFR-004"]
-    acceptance: ["AC-SLC-010-003"]
-    interfaces: ["proposed:.github/workflows/release.yml:release -> ImmutableCandidate", "existing:vercel:wawi-learns -> DeploymentProject"]
-    documentation_evidence: *release_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/release/platform-binding.test.ts"]
-      integration: ["npm run release:verify -- --phase delivery"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
-      deployment: ["vercel project inspect wawi-learns"]
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-010-T004"
-    title: "Deploy and verify exact production candidate"
-    rank: 48
-    state: "TODO"
-    dependencies: ["SLC-010-T003"]
-    requirements: ["PRD-FR-030", "PRD-NFR-002", "PRD-NFR-004", "PRD-NFR-006"]
-    acceptance: ["AC-SLC-010-004"]
-    interfaces: ["proposed:scripts/release/verify-production.ts:verifyProduction(input: ProductionTarget) -> Promise<ProductionReceipt>"]
-    documentation_evidence: *release_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/release/production-receipt.test.ts"]
-      integration: ["npm run release:verify"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"]
-      migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
-      deployment: ["vercel inspect $VERCEL_PRODUCTION_URL"]
-      rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
-    blockers: []
-  - id: "SLC-010-T005"
-    title: "Prove rollback and approve private beta"
-    rank: 49
-    state: "TODO"
-    dependencies: ["SLC-010-T004"]
-    requirements: ["PRD-FR-032"]
-    acceptance: ["AC-SLC-010-005"]
-    interfaces: ["existing:scripts/release/verify-production.ts:verifyProduction", "proposed:tests/evidence/release/rollback-receipt.json:RollbackReceipt -> FinalApprovalInput"]
-    documentation_evidence: *release_docs
-    checks:
-      unit: ["npm exec vitest run tests/integration/release/rollback-receipt.test.ts"]
-      integration: ["npm run release:verify"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-      migration: []
-      deployment: ["vercel inspect $VERCEL_PRODUCTION_URL"]
-      rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
-    blockers: []
-- id: "SLC-011"
-  directory: "011-private-beta-ux-mvp"
-  state: "PENDING"
-  rank: 11
-  business_rank: 1
-  dependencies: []
-  exit_gate:
-    required_evidence: ["e2e.private-beta-mvp", "integration.mvp-sync"]
-    e2e_journey: "npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"
-    approval: {required: true, approved_by: null, approved_at: null}
-  tasks:
-  - id: "SLC-011-T001"
-    title: "Verify private repository and platform baseline"
-    rank: 50
-    state: "TODO"
-    dependencies: ["SLC-001-T001"]
-    requirements: ["PRD-FR-023", "PRD-NFR-004"]
-    acceptance: ["MVP-PRIVACY-001"]
-    interfaces: ["existing:app/page.tsx:PublicParentEntry"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/deployment-identity.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"]
-      migration: []
-      deployment: ["gh repo view michaelchamboko/wawi-learns --json visibility"]
-      rollback: []
-    evidence: []
-    blockers: []
-  - id: "SLC-011-T002"
-    title: "Implement parent authority and attempt reconciliation"
-    rank: 51
-    state: "TODO"
-    dependencies: ["SLC-011-T001"]
-    requirements: ["PRD-FR-003", "PRD-FR-029"]
-    acceptance: ["MVP-AUTH-001", "MVP-SYNC-001"]
-    interfaces: ["proposed:convex/attempts.ts:ingestAttempts -> SyncReceipt"]
-    documentation_evidence: *data_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/learning-engine/session.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: ["npx convex deploy"]
-      rollback: ["git revert <task-sha>"]
-    evidence: []
-    blockers: []
-  - id: "SLC-011-T003"
-    title: "Ship the five-word MVP assets"
-    rank: 52
-    state: "TODO"
-    dependencies: ["SLC-011-T002"]
-    requirements: ["PRD-FR-019"]
-    acceptance: ["MVP-CONTENT-001"]
-    interfaces: ["proposed:public/content/mvp/images:FiveHashedSvgAssets"]
-    documentation_evidence: *content_docs
-    checks:
-      unit: ["npm exec vitest run tests/content/mvp-assets.test.ts"]
-      integration: ["npm run test:content"]
-      regression: ["npm run check"]
-      e2e: []
-      migration: []
-      deployment: []
-      rollback: ["git revert <task-sha>"]
-    evidence: []
-    blockers: []
-  - id: "SLC-011-T004"
-    title: "Build child home and five-step learner loop"
-    rank: 53
-    state: "TODO"
-    dependencies: ["SLC-011-T003"]
-    requirements: ["PRD-FR-004", "PRD-FR-005", "PRD-FR-009"]
-    acceptance: ["MVP-UX-001"]
-    interfaces: ["proposed:packages/ui/src/MvpActivityRenderer.tsx:MvpActivityRenderer"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/ui/mvp-session.test.ts"]
-      integration: []
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
-      migration: []
-      deployment: []
-      rollback: ["git revert <task-sha>"]
-    evidence: []
-    blockers: []
-  - id: "SLC-011-T005"
-    title: "Verify and release the private beta"
-    rank: 54
-    state: "TODO"
-    dependencies: ["SLC-011-T004"]
-    requirements: ["PRD-FR-030", "PRD-NFR-004"]
-    acceptance: ["MVP-RELEASE-001"]
-    interfaces: ["existing:app/(child)/home/page.tsx:PrivateBetaJourney"]
-    documentation_evidence: *release_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/ui/mvp-session.test.ts"]
-      integration: ["npm run check"]
-      regression: ["npm run build"]
-      e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
-      migration: []
-      deployment: ["vercel --prod"]
-      rollback: ["git revert <task-sha>"]
-    evidence: []
-    blockers: []
+    business_rank: 1
+    dependencies: []
+    exit_gate:
+      required_evidence: ["e2e.private-beta-mvp", "integration.mvp-sync"]
+      e2e_journey: "npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"
+      approval: { required: true, approved_by: null, approved_at: null }
+    tasks:
+      - id: "SLC-011-T001"
+        title: "Verify private repository and platform baseline"
+        rank: 50
+        state: "TODO"
+        dependencies: ["SLC-001-T001"]
+        requirements: ["PRD-FR-023", "PRD-NFR-004"]
+        acceptance: ["MVP-PRIVACY-001"]
+        interfaces: ["existing:app/page.tsx:PublicParentEntry"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/deployment-identity.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"]
+          migration: []
+          deployment: ["gh repo view michaelchamboko/wawi-learns --json visibility"]
+          rollback: []
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T002"
+        title: "Implement parent authority and attempt reconciliation"
+        rank: 51
+        state: "TODO"
+        dependencies: ["SLC-011-T001"]
+        requirements: ["PRD-FR-003", "PRD-FR-029"]
+        acceptance: ["MVP-AUTH-001", "MVP-SYNC-001"]
+        interfaces: ["proposed:convex/attempts.ts:ingestAttempts -> SyncReceipt"]
+        documentation_evidence: *data_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/learning-engine/session.test.ts"]
+          integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: ["npx convex deploy"]
+          rollback: ["git revert <task-sha>"]
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T003"
+        title: "Ship the five-word MVP assets"
+        rank: 52
+        state: "TODO"
+        dependencies: ["SLC-011-T002"]
+        requirements: ["PRD-FR-019"]
+        acceptance: ["MVP-CONTENT-001"]
+        interfaces: ["proposed:public/content/mvp/images:FiveHashedSvgAssets"]
+        documentation_evidence: *content_docs
+        checks:
+          unit: ["npm exec vitest run tests/content/mvp-assets.test.ts"]
+          integration: ["npm run test:content"]
+          regression: ["npm run check"]
+          e2e: []
+          migration: []
+          deployment: []
+          rollback: ["git revert <task-sha>"]
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T004"
+        title: "Build child home and five-step learner loop"
+        rank: 53
+        state: "TODO"
+        dependencies: ["SLC-011-T003"]
+        requirements: ["PRD-FR-004", "PRD-FR-005", "PRD-FR-009"]
+        acceptance: ["MVP-UX-001"]
+        interfaces: ["proposed:packages/ui/src/MvpActivityRenderer.tsx:MvpActivityRenderer"]
+        documentation_evidence: *platform_docs
+        checks:
+          unit: ["npm exec vitest run tests/unit/ui/mvp-session.test.ts"]
+          integration: []
+          regression: ["npm run check"]
+          e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
+          migration: []
+          deployment: []
+          rollback: ["git revert <task-sha>"]
+        evidence: []
+        blockers: []
+      - id: "SLC-011-T005"
+        title: "Verify and release the private beta"
+        rank: 54
+        state: "TODO"
+        dependencies: ["SLC-011-T004"]
+        requirements: ["PRD-FR-030", "PRD-NFR-004"]
+        acceptance: ["MVP-RELEASE-001"]
+        interfaces: ["existing:app/(child)/home/page.tsx:PrivateBetaJourney"]
+        documentation_evidence: *release_docs
+        checks:
+          unit: []
+          integration: ["npm run check"]
+          regression: ["npm run build"]
+          e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
+          migration: []
+          deployment: ["vercel --prod"]
+          rollback: ["git revert <task-sha>"]
+        evidence: []
+        blockers: []
 final_gate:
   required: true
-  approved_by:
-  approved_at:
+  approved_by: null
+  approved_at: null
   baseline_check: "npm run check"
   full_regression: "npm run test:all"
   cross_slice_e2e: "npm exec playwright test"
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T06:19:11Z'

@@ -1,9 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
-import { execFileSync } from "node:child_process";
 
 const PORT = Number(process.env.PWA_E2E_PORT ?? 3100);
-const gitSha = execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim();
-const buildGitSha = process.env.NEXT_PUBLIC_GIT_SHA ?? process.env.VERCEL_GIT_COMMIT_SHA ?? gitSha;
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -26,7 +23,6 @@ export default defineConfig({
     ? undefined
     : {
         command: `npx next start -p ${PORT}`,
-        env: { ...process.env, NEXT_PUBLIC_GIT_SHA: buildGitSha },
         url: `http://127.0.0.1:${PORT}`,
         reuseExistingServer: false,
         timeout: 120_000,

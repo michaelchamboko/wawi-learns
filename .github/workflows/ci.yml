@@ -3,6 +3,7 @@ name: Validate platform and slices
 on:
   push:
     branches: [main]
+  pull_request:
 
 permissions:
   contents: read
