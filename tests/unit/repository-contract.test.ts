@@ -83,4 +83,11 @@ describe("SLC-002-T001 — repository contract", () => {
     expect(page).not.toContain('NEXT_PUBLIC_GIT_SHA');
     expect(layout).not.toContain('NEXT_PUBLIC_GIT_SHA');
   });
+
+  it("deploys Convex backend and Next.js frontend in the Vercel build command", () => {
+    const vercel = JSON.parse(readFileSync(resolve(root, "vercel.json"), "utf-8")) as {
+      buildCommand?: string;
+    };
+    expect(vercel.buildCommand).toBe("npx convex deploy --cmd 'npm run build'");
+  });
 });

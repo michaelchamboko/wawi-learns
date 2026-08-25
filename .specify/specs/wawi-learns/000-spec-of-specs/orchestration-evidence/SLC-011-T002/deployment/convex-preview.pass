@@ -1,0 +1,6 @@
+task_id: SLC-011-T002
+check_kind: deployment
+check_id: convex-preview
+result: pass
+recorded_at: '2026-08-25T13:03:51Z'
+source_path: vercel.json
