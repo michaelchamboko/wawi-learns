@@ -1,0 +1,6 @@
+task_id: SLC-001-T002
+check_kind: rollback
+check_id: pwa-rollback
+result: pass
+recorded_at: '2026-08-25T21:49:30Z'
+source_path: tests\e2e\spikes\pwa-rollback.spec.ts
