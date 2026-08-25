@@ -1,0 +1,6 @@
+task_id: SLC-011-T003
+check_kind: rollback
+check_id: content-reverse-check
+result: pass
+recorded_at: '2026-08-25T18:42:38Z'
+source_path: content\mvp\LICENCE.md

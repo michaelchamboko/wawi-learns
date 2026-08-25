@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 49
+revision: 56
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -1828,7 +1828,7 @@ slices:
   - id: "SLC-011-T003"
     title: "Ship the five-word MVP assets"
     rank: 52
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-011-T002"]
     requirements: ["PRD-FR-019"]
     acceptance: ["MVP-CONTENT-001"]
@@ -1841,8 +1841,43 @@ slices:
       e2e: []
       migration: []
       deployment: []
-      rollback: ["git revert <task-sha>"]
-    evidence: []
+      rollback: ["npm exec vitest run tests/integration/local-data/pack-activation.test.ts"]
+    evidence:
+    - check_kind: unit
+      check_id: mvp-assets
+      result: pass
+      recorded_at: '2026-08-25T18:40:48Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T003\unit\mvp-assets.pass
+      implementation_fingerprint: 75d24db07f6bdd46cc3c30669f7040ce75912d69f5673f220824cbfcc3cae587
+      source_path: tests\content\mvp-assets.test.ts
+    - check_kind: integration
+      check_id: content
+      result: pass
+      recorded_at: '2026-08-25T18:41:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T003\integration\content.pass
+      implementation_fingerprint: 75d24db07f6bdd46cc3c30669f7040ce75912d69f5673f220824cbfcc3cae587
+      source_path: tests\content\mvp-assets.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-25T18:42:13Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T003\regression\check.pass
+      implementation_fingerprint: 75d24db07f6bdd46cc3c30669f7040ce75912d69f5673f220824cbfcc3cae587
+      source_path: package.json
+    - check_kind: rollback
+      check_id: content-reverse-check
+      result: pass
+      recorded_at: '2026-08-25T18:42:38Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T003\rollback\content-reverse-check.pass
+      implementation_fingerprint: 75d24db07f6bdd46cc3c30669f7040ce75912d69f5673f220824cbfcc3cae587
+      source_path: content\mvp\LICENCE.md
+    - check_kind: rollback
+      check_id: pack-activation
+      result: pass
+      recorded_at: '2026-08-25T18:50:22Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T003\rollback\pack-activation.pass
+      implementation_fingerprint: 75d24db07f6bdd46cc3c30669f7040ce75912d69f5673f220824cbfcc3cae587
+      source_path: tests\integration\local-data\pack-activation.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -1858,6 +1893,7 @@ slices:
     - reason: stable Convex Auth user ownership and patched Auth.js dependency invalidate prior evidence
       by: SLC-011-T002
       recorded_at: '2026-08-25T17:04:09Z'
+    completed_at: '2026-08-25T18:50:40Z'
   - id: "SLC-011-T004"
     title: "Build child home and five-step learner loop"
     rank: 53
@@ -1874,7 +1910,7 @@ slices:
       e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
       migration: []
       deployment: []
-      rollback: ["git revert <task-sha>"]
+      rollback: ["npm exec vitest run tests/unit/ui/mvp-session.test.ts"]
     evidence: []
     blockers: []
     active_owner:
@@ -1934,4 +1970,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T18:04:59Z'
+updated_at: '2026-08-25T18:50:40Z'

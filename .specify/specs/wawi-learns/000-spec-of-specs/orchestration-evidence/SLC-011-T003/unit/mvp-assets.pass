@@ -1,0 +1,6 @@
+task_id: SLC-011-T003
+check_kind: unit
+check_id: mvp-assets
+result: pass
+recorded_at: '2026-08-25T18:40:48Z'
+source_path: tests\content\mvp-assets.test.ts

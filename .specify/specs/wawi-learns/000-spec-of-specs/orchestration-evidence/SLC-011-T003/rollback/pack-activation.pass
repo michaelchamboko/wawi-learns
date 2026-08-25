@@ -1,0 +1,6 @@
+task_id: SLC-011-T003
+check_kind: rollback
+check_id: pack-activation
+result: pass
+recorded_at: '2026-08-25T18:50:22Z'
+source_path: tests\integration\local-data\pack-activation.test.ts
