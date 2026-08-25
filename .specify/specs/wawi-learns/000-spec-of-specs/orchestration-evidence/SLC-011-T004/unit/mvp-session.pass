@@ -1,0 +1,6 @@
+task_id: SLC-011-T004
+check_kind: unit
+check_id: mvp-session
+result: pass
+recorded_at: '2026-08-25T19:32:53Z'
+source_path: tests\unit\ui\mvp-session.test.ts

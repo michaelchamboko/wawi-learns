@@ -3,6 +3,7 @@ import {
   MVP_SESSION_PLAN,
   activityProgressLabel,
   nextActivityIndex,
+  restoredActivityIndex,
 } from "../../../packages/ui/src/mvp-session";
 
 describe("private-beta MVP session", () => {
@@ -32,5 +33,12 @@ describe("private-beta MVP session", () => {
   it("uses a clear progress label for every child-facing screen", () => {
     expect(activityProgressLabel(0)).toBe("Activity 1 of 5");
     expect(activityProgressLabel(4)).toBe("Activity 5 of 5");
+  });
+
+  it("restores an open checkpoint after offline reload instead of returning home", () => {
+    expect(restoredActivityIndex(null)).toBeNull();
+    expect(restoredActivityIndex("2")).toBe(2);
+    expect(restoredActivityIndex("99")).toBe(4);
+    expect(restoredActivityIndex("malformed")).toBe(0);
   });
 });

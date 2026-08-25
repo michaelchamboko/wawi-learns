@@ -1,0 +1,6 @@
+task_id: SLC-011-T004
+check_kind: e2e
+check_id: private-beta-mvp-public
+result: pass
+recorded_at: '2026-08-25T19:33:25Z'
+source_path: tests\e2e\learner\private-beta-mvp.spec.ts

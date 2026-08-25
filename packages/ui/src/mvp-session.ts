@@ -71,3 +71,12 @@ export const nextActivityIndex = (
 
 export const activityProgressLabel = (index: number): string =>
   `Activity ${index + 1} of ${MVP_SESSION_PLAN.length}`;
+
+export const restoredActivityIndex = (savedIndex: string | null): number | null => {
+  if (savedIndex === null) return null;
+  const parsedIndex = Number.parseInt(savedIndex, 10);
+  return Math.min(
+    Math.max(Number.isNaN(parsedIndex) ? 0 : parsedIndex, 0),
+    MVP_SESSION_PLAN.length - 1,
+  );
+};
