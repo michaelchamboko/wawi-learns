@@ -17,6 +17,7 @@ describe("SLC-001-T001 — deployment identity", () => {
       environment: "preview",
       gitSha: "vercel-sha-123",
       deploymentId: "dep-999",
+      convexDeployment: "unconfigured",
     });
   });
 
@@ -39,13 +40,28 @@ describe("SLC-001-T001 — deployment identity", () => {
       environment: "local",
       gitSha: "development",
       deploymentId: "local",
+      convexDeployment: "unconfigured",
     });
   });
 
   it("returns exactly the deployed identity contract shape", () => {
     const identity = readDeploymentIdentity({ VERCEL_ENV: "test", VERCEL_DEPLOYMENT_ID: "dep-local", NODE_ENV: "test" } as unknown as NodeJS.ProcessEnv);
 
-    expect(Object.keys(identity).sort()).toEqual(["project", "environment", "deploymentId", "gitSha"].sort());
+    expect(Object.keys(identity).sort()).toEqual(["project", "environment", "deploymentId", "gitSha", "convexDeployment"].sort());
     expect(identity.project).toBe("wawi-learns");
+  });
+
+  it("parses the non-secret Convex deployment name", () => {
+    const identity = readDeploymentIdentity({
+      NEXT_PUBLIC_CONVEX_URL: "https://tacit-pony-603.convex.cloud",
+      NODE_ENV: "test",
+    } as unknown as NodeJS.ProcessEnv);
+
+    expect(identity.convexDeployment).toBe("tacit-pony-603");
+  });
+
+  it("defaults the Convex deployment name when the URL is absent or invalid", () => {
+    expect(readDeploymentIdentity({ NODE_ENV: "test" } as unknown as NodeJS.ProcessEnv).convexDeployment).toBe("unconfigured");
+    expect(readDeploymentIdentity({ NEXT_PUBLIC_CONVEX_URL: "not-a-url", NODE_ENV: "test" } as unknown as NodeJS.ProcessEnv).convexDeployment).toBe("unconfigured");
   });
 });

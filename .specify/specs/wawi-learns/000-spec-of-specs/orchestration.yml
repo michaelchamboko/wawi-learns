@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 62
+revision: 63
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -15,8 +15,8 @@ plan:
   frozen_sequence: true
 project:
   state: "IN_PROGRESS"
-  current_task:
-  active_owner:
+  current_task: SLC-011-T005
+  active_owner: '@Builder'
   blockers: []
 priorities:
   business: ["SLC-011", "SLC-004", "SLC-002", "SLC-003", "SLC-005", "SLC-006", "SLC-007", "SLC-008", "SLC-009", "SLC-010", "SLC-001"]
@@ -1959,7 +1959,7 @@ slices:
   - id: "SLC-011-T005"
     title: "Verify and release the hosted vertical slice"
     rank: 54
-    state: "STALE"
+    state: "IN_PROGRESS"
     dependencies: ["SLC-011-T004"]
     requirements: ["PRD-FR-030", "PRD-NFR-004"]
     acceptance: ["MVP-RELEASE-001"]
@@ -1975,7 +1975,7 @@ slices:
       rollback: ["git revert <task-sha>"]
     evidence: []
     blockers: []
-    active_owner:
+    active_owner: '@Builder'
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
       by: SLC-001-T001
@@ -1999,4 +1999,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T19:33:58Z'
+updated_at: '2026-08-25T19:40:03Z'
