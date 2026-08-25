@@ -10,7 +10,7 @@ Complete tasks in ID order. Start with a failing test or measurable failing prob
 ### SLC-001-T001 — Bind repository, toolchain and hosting
 
 - **Requirements / acceptance:** PRD-FR-023, PRD-FR-030, PRD-NFR-004; AC-SLC-001-001, AC-SLC-001-002.
-- **Allowed scope:** root npm/Next/TypeScript/ESLint/Playwright manifests, `.github/workflows/ci.yml`, `tests/e2e/spikes/platform-baseline.spec.ts`, `docs/decisions/ADR-000-toolchain.md`.
+- **Allowed scope:** root npm/Next/TypeScript/ESLint/Playwright manifests and configuration (`next.config.ts`, `playwright.config.ts`), `.github/workflows/ci.yml`, `tests/unit/repository-contract.test.ts`, `tests/e2e/spikes/platform-baseline.spec.ts`, `docs/decisions/ADR-000-toolchain.md`.
 - **Forbidden scope:** learner features, production credentials, Vercel project creation, alternate package managers.
 - **Interfaces:** produces the root npm scripts `lint`, `typecheck`, `test:unit`, `test:integration`, `test:e2e`, `build`; consumes GitHub remote and Vercel project named in DEC-012.
 - **Steps:** (1) write the Playwright assertion for app metadata, build SHA and Vercel project identity; (2) run it and capture failure because no app exists; (3) initialise the pinned Next/React/TS npm workspace with strict TypeScript; (4) add CI checks and project/version exposure; (5) link the existing Vercel project without committing `.vercel`; (6) rerun checks, stage the allowed candidate, complete the review gate, commit, and push directly to `main`; (7) retain GitHub Actions and Vercel receipts for that SHA before completion.
