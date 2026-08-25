@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 28
+revision: 34
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: ef335f34ed0dafbec7300880aab7c5f11bb87417056113ef761999d5afe1b8ec
+  implementation_fingerprint: 863ee0a3be1447e1ef7da50d6e04e62e82e7c0a9dd065c5d2e225bc4720040e3
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -1701,7 +1701,7 @@ slices:
   - id: "SLC-011-T001"
     title: "Verify public build and privacy boundary baseline"
     rank: 50
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-001-T001"]
     requirements: ["PRD-FR-023", "PRD-NFR-004"]
     acceptance: ["MVP-PRIVACY-001"]
@@ -1713,9 +1713,36 @@ slices:
       regression: ["npm run check"]
       e2e: ["npm exec playwright test tests/e2e/spikes/platform-baseline.spec.ts"]
       migration: []
-      deployment: ["gh repo view michaelchamboko/wawi-learns --json visibility"]
+      deployment: ["node -e \"fetch('https://api.github.com/repos/michaelchamboko/wawi-learns').then((response) => response.json()).then((repository) => { if (repository.visibility !== 'public') process.exit(1); console.log(repository.visibility); })\""]
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: deployment-identity
+      result: pass
+      recorded_at: '2026-08-25T12:35:18Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T001\unit\deployment-identity.pass
+      implementation_fingerprint: 863ee0a3be1447e1ef7da50d6e04e62e82e7c0a9dd065c5d2e225bc4720040e3
+      source_path: tests\unit\deployment-identity.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-25T12:35:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T001\regression\check.pass
+      implementation_fingerprint: 863ee0a3be1447e1ef7da50d6e04e62e82e7c0a9dd065c5d2e225bc4720040e3
+      source_path: package.json
+    - check_kind: e2e
+      check_id: platform-baseline
+      result: pass
+      recorded_at: '2026-08-25T12:36:08Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T001\e2e\platform-baseline.pass
+      implementation_fingerprint: 863ee0a3be1447e1ef7da50d6e04e62e82e7c0a9dd065c5d2e225bc4720040e3
+      source_path: tests\e2e\spikes\platform-baseline.spec.ts
+    - check_kind: deployment
+      check_id: public-repository
+      result: pass
+      recorded_at: '2026-08-25T12:36:29Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T001\deployment\public-repository.pass
+      implementation_fingerprint: 863ee0a3be1447e1ef7da50d6e04e62e82e7c0a9dd065c5d2e225bc4720040e3
     blockers: []
     active_owner:
     reopens:
@@ -1728,6 +1755,7 @@ slices:
     - reason: GitNexus index refresh updated repository guidance counts after evidence
       by: SLC-001-T001
       recorded_at: '2026-08-25T12:10:53Z'
+    completed_at: '2026-08-25T12:38:15Z'
   - id: "SLC-011-T002"
     title: "Implement parent authority and attempt reconciliation"
     rank: 51
@@ -1858,4 +1886,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T12:13:13Z'
+updated_at: '2026-08-25T12:38:15Z'

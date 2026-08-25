@@ -1,0 +1,6 @@
+task_id: SLC-011-T001
+check_kind: regression
+check_id: check
+result: pass
+recorded_at: '2026-08-25T12:35:44Z'
+source_path: package.json
