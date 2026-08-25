@@ -43,4 +43,22 @@ describe("SLC-001-T004 — tracing spike", () => {
     expect(result.passed).toBe(false);
     expect(["wrong-start", "below-coverage-or-corridor"]).toContain(result.reason);
   });
+
+  it("keeps the score unchanged when stylus metadata is absent", () => {
+    const withoutMetadata = samples([
+      [10, 10],
+      [20, 10],
+      [30, 10],
+      [40, 10],
+    ]);
+    const withMetadata = withoutMetadata.map((sample) => ({
+      ...sample,
+      pressure: 0.5,
+      handedness: "left" as const,
+    }));
+
+    expect(scoreTrace(withoutMetadata, formation)).toEqual(
+      scoreTrace(withMetadata, formation),
+    );
+  });
 });
