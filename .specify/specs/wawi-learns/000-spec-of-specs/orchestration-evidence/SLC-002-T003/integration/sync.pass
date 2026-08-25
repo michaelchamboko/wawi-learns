@@ -1,0 +1,6 @@
+task_id: SLC-002-T003
+check_kind: integration
+check_id: sync
+result: pass
+recorded_at: '2026-08-25T23:38:56Z'
+source_path: tests\integration\convex\sync.test.ts

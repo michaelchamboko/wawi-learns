@@ -1,0 +1,6 @@
+task_id: SLC-002-T003
+check_kind: migration
+check_id: local-data
+result: pass
+recorded_at: '2026-08-25T23:39:17Z'
+source_path: tests\integration\local-data\migrations.test.ts

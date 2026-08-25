@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 112
+revision: 118
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: d1863558fed4859ad07acc92558c7f6e57da063bedf1038a37fa8712d4d621fb
+  implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -15,7 +15,7 @@ plan:
   frozen_sequence: true
 project:
   state: "IN_PROGRESS"
-  current_task: SLC-002-T003
+  current_task: SLC-002-T004
   active_owner: '@Builder'
   blockers: []
 priorities:
@@ -509,7 +509,7 @@ slices:
   - id: "SLC-002-T003"
     title: "Implement durable local stores and sync"
     rank: 8
-    state: "IN_PROGRESS"
+    state: "DONE"
     dependencies: ["SLC-002-T002"]
     requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
     acceptance: ["AC-SLC-002-003"]
@@ -523,9 +523,37 @@ slices:
       migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: integration
+      check_id: sync
+      result: pass
+      recorded_at: '2026-08-25T23:38:56Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\integration\sync.pass
+      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
+      source_path: tests\integration\convex\sync.test.ts
+    - check_kind: migration
+      check_id: local-data
+      result: pass
+      recorded_at: '2026-08-25T23:39:17Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\migration\local-data.pass
+      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
+      source_path: tests\integration\local-data\migrations.test.ts
+    - check_kind: regression
+      check_id: check-plus-test-delta
+      result: pass
+      recorded_at: '2026-08-25T23:39:39Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\regression\check-plus-test-delta.pass
+      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
+      source_path: package.json
+    - check_kind: unit
+      check_id: local-data
+      result: pass
+      recorded_at: '2026-08-25T23:40:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\unit\local-data.pass
+      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
+      source_path: tests\unit\local-data\attempts.test.ts
     blockers: []
-    active_owner: '@Builder'
+    active_owner:
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
       by: SLC-001-T001
@@ -542,10 +570,11 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
+    completed_at: '2026-08-25T23:40:31Z'
   - id: "SLC-002-T004"
     title: "Implement onboarding and assessment baseline"
     rank: 9
-    state: "STALE"
+    state: "IN_PROGRESS"
     dependencies: ["SLC-002-T003"]
     requirements: ["PRD-FR-003", "PRD-FR-026"]
     acceptance: ["AC-SLC-002-004"]
@@ -561,7 +590,7 @@ slices:
       rollback: []
     evidence: []
     blockers: []
-    active_owner:
+    active_owner: '@Builder'
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
       by: SLC-001-T001
@@ -2469,4 +2498,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T23:30:56Z'
+updated_at: '2026-08-25T23:40:59Z'
