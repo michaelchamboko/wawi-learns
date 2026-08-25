@@ -1,0 +1,6 @@
+task_id: SLC-011-T005
+check_kind: deployment
+check_id: exact-sha-a6a0399
+result: pass
+recorded_at: '2026-08-25T20:56:00Z'
+source_path: tests\e2e\spikes\hosted-verification.spec.ts

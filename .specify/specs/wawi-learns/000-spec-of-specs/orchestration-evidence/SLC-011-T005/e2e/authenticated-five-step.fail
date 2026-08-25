@@ -1,0 +1,6 @@
+task_id: SLC-011-T005
+check_kind: e2e
+check_id: authenticated-five-step
+result: fail
+recorded_at: '2026-08-25T20:57:06Z'
+source_path: tests\e2e\learner\private-beta-mvp.spec.ts

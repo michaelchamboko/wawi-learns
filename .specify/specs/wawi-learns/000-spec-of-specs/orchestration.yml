@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 63
+revision: 72
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 9e0beb2fe50f720880431f57e2b257bb68ce653d3abe42727ea2b32dec9a9dfe
+  implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -15,7 +15,7 @@ plan:
   frozen_sequence: true
 project:
   state: "IN_PROGRESS"
-  current_task: SLC-011-T005
+  current_task: SLC-001-T002
   active_owner: '@Builder'
   blockers: []
 priorities:
@@ -151,7 +151,7 @@ slices:
   - id: "SLC-001-T002"
     title: "Prove PWA offline and update lifecycle"
     rank: 2
-    state: "STALE"
+    state: "IN_PROGRESS"
     dependencies: ["SLC-001-T001"]
     requirements: ["PRD-FR-022", "PRD-FR-023", "PRD-NFR-001", "PRD-NFR-003"]
     acceptance: ["AC-SLC-001-002"]
@@ -167,7 +167,7 @@ slices:
       rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
     evidence: []
     blockers: []
-    active_owner:
+    active_owner: '@Builder'
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
       by: SLC-001-T001
@@ -1959,7 +1959,7 @@ slices:
   - id: "SLC-011-T005"
     title: "Verify and release the hosted vertical slice"
     rank: 54
-    state: "IN_PROGRESS"
+    state: "BLOCKED"
     dependencies: ["SLC-011-T004"]
     requirements: ["PRD-FR-030", "PRD-NFR-004"]
     acceptance: ["MVP-RELEASE-001"]
@@ -1973,8 +1973,59 @@ slices:
       migration: []
       deployment: ["npm exec playwright test tests/e2e/spikes/hosted-verification.spec.ts"]
       rollback: ["npm exec playwright test tests/e2e/spikes/hosted-verification.spec.ts"]
-    evidence: []
-    blockers: []
+    evidence:
+    - check_kind: unit
+      check_id: mvp-session
+      result: pass
+      recorded_at: '2026-08-25T20:53:54Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T005\unit\mvp-session.pass
+      implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
+      source_path: tests\unit\ui\mvp-session.test.ts
+    - check_kind: integration
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-25T20:54:22Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T005\integration\check.pass
+      implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
+      source_path: package.json
+    - check_kind: regression
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-25T20:54:53Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T005\regression\build.pass
+      implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
+      source_path: package.json
+    - check_kind: e2e
+      check_id: public-auth-boundary
+      result: pass
+      recorded_at: '2026-08-25T20:55:27Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T005\e2e\public-auth-boundary.pass
+      implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
+      source_path: tests\e2e\learner\private-beta-mvp.spec.ts
+    - check_kind: deployment
+      check_id: exact-sha-a6a0399
+      result: pass
+      recorded_at: '2026-08-25T20:56:00Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T005\deployment\exact-sha-a6a0399.pass
+      implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
+      source_path: tests\e2e\spikes\hosted-verification.spec.ts
+    - check_kind: rollback
+      check_id: previous-d327e5c
+      result: pass
+      recorded_at: '2026-08-25T20:56:34Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T005\rollback\previous-d327e5c.pass
+      implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
+      source_path: tests\e2e\spikes\hosted-verification.spec.ts
+    - check_kind: e2e
+      check_id: authenticated-five-step
+      result: fail
+      recorded_at: '2026-08-25T20:57:06Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-011-T005\e2e\authenticated-five-step.fail
+      implementation_fingerprint: e63136790abf904dbc32e35e190aa19b62b5eadd2c5cce973ee7869f95994e62
+      source_path: tests\e2e\learner\private-beta-mvp.spec.ts
+    blockers:
+    - reason: 'hosted-auth-session-unavailable:a6a0399: WAWI_E2E_AUTH_STORAGE is absent locally and no GitHub Actions secret exists; production parent auth requires email OTP. Resume only with an approved email-verified production parent storage-state artifact; never add an auth bypass.'
+      recorded_at: '2026-08-25T20:57:48Z'
     active_owner: '@Builder'
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
@@ -1999,4 +2050,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T19:40:03Z'
+updated_at: '2026-08-25T20:58:26Z'

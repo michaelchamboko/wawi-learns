@@ -1,0 +1,6 @@
+task_id: SLC-011-T005
+check_kind: e2e
+check_id: public-auth-boundary
+result: pass
+recorded_at: '2026-08-25T20:55:27Z'
+source_path: tests\e2e\learner\private-beta-mvp.spec.ts
