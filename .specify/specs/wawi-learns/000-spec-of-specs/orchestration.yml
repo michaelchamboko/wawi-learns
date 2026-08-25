@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 78
+revision: 83
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: b072fc19ee3d23eaf829bf9c68f668b66fb2e0d48fab0d51b9052a23a2ff005d
+  implementation_fingerprint: 51b92646e0ee79ad511e8697b116342faa348f9fe6f4e7328c2f441784e33779
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -15,7 +15,7 @@ plan:
   frozen_sequence: true
 project:
   state: "IN_PROGRESS"
-  current_task: SLC-001-T003
+  current_task: SLC-001-T004
   active_owner: '@Builder'
   blockers: []
 priorities:
@@ -210,7 +210,7 @@ slices:
   - id: "SLC-001-T003"
     title: "Prove local event reconciliation"
     rank: 3
-    state: "IN_PROGRESS"
+    state: "DONE"
     dependencies: ["SLC-001-T002"]
     requirements: ["PRD-FR-022", "PRD-FR-023", "PRD-NFR-002"]
     acceptance: ["AC-SLC-001-003"]
@@ -224,9 +224,30 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: attempts
+      result: pass
+      recorded_at: '2026-08-25T22:00:27Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T003\unit\attempts.pass
+      implementation_fingerprint: 51b92646e0ee79ad511e8697b116342faa348f9fe6f4e7328c2f441784e33779
+      source_path: tests\unit\local-data\attempts.test.ts
+    - check_kind: integration
+      check_id: sync-contract
+      result: pass
+      recorded_at: '2026-08-25T22:00:53Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T003\integration\sync-contract.pass
+      implementation_fingerprint: 51b92646e0ee79ad511e8697b116342faa348f9fe6f4e7328c2f441784e33779
+      source_path: tests\integration\spikes\sync-contract.test.ts
+    - check_kind: regression
+      check_id: check-plus-test-delta
+      result: pass
+      recorded_at: '2026-08-25T22:01:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T003\regression\check-plus-test-delta.pass
+      implementation_fingerprint: 51b92646e0ee79ad511e8697b116342faa348f9fe6f4e7328c2f441784e33779
+      source_path: package.json
     blockers: []
-    active_owner: '@Builder'
+    active_owner:
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
       by: SLC-001-T001
@@ -237,10 +258,11 @@ slices:
     - reason: GitNexus index refresh updated repository guidance counts after evidence
       by: SLC-001-T001
       recorded_at: '2026-08-25T12:10:53Z'
+    completed_at: '2026-08-25T22:04:41Z'
   - id: "SLC-001-T004"
     title: "Select identity, speech/TTS and tracing paths"
     rank: 4
-    state: "STALE"
+    state: "IN_PROGRESS"
     dependencies: ["SLC-001-T003"]
     requirements: ["PRD-FR-013", "PRD-FR-014", "PRD-FR-015", "PRD-FR-028"]
     acceptance: ["AC-SLC-001-004", "AC-SLC-001-005"]
@@ -256,7 +278,7 @@ slices:
       rollback: []
     evidence: []
     blockers: []
-    active_owner:
+    active_owner: '@Builder'
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
       by: SLC-001-T001
@@ -2079,4 +2101,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T21:50:52Z'
+updated_at: '2026-08-25T22:05:35Z'
