@@ -11,7 +11,7 @@ const waitForReady = async (page: Page) => {
 };
 
 test.describe("SLC-001-T002 — PWA atomic rollback", () => {
-  test("a failed candidate install preserves the prior controller and shell", async ({ browser }) => {
+  test("an interrupted candidate update preserves the prior controller and shell", async ({ browser }) => {
     const context: BrowserContext = await browser.newContext({
       serviceWorkers: "allow",
     });
@@ -35,14 +35,14 @@ test.describe("SLC-001-T002 — PWA atomic rollback", () => {
       if (!registration) throw new Error("service worker registration is required");
       await registration.update();
     });
-    await expect.poll(async () => page.evaluate(async (expectedController) => {
+    await expect.poll(async () => page.evaluate(async () => {
       const registration = await navigator.serviceWorker.getRegistration();
       return {
         installing: registration?.installing?.scriptURL ?? null,
         active: registration?.active?.scriptURL ?? null,
         waiting: registration?.waiting?.scriptURL ?? null,
       };
-    }, previousController)).toMatchObject({ active: previousController, waiting: expect.stringContaining("/sw.js") });
+    })).toMatchObject({ active: previousController, waiting: expect.stringContaining("/sw.js") });
 
     const rollbackState = await page.evaluate(async () => {
       const registration = await navigator.serviceWorker.getRegistration();
