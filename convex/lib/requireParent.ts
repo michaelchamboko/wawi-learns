@@ -6,6 +6,7 @@
  * which is exercised by `tests/integration/convex/authorization.test.ts`.
  */
 import type { AnyDataModel, GenericMutationCtx, GenericQueryCtx } from "convex/server";
+import { getAuthUserId } from "@convex-dev/auth/server";
 export interface ParentContext {
   readonly parentId: string;
   readonly userId: string;
@@ -69,22 +70,92 @@ export function assertOwnership(
 
 /** Runtime Convex gate used by the private-beta functions. */
 type ParentRuntimeContext = GenericMutationCtx<AnyDataModel> | GenericQueryCtx<AnyDataModel>;
-type ParentRow = { readonly _id: string; readonly userId: string; readonly verifiedAt: number };
+type ParentWriteRuntimeContext = GenericMutationCtx<AnyDataModel>;
+type ParentId = Parameters<GenericMutationCtx<AnyDataModel>["db"]["patch"]>[0];
+type ParentRow = { readonly _id: ParentId; readonly userId: string; readonly verifiedAt: number };
+type ParentMatch = {
+  readonly parentId: ParentId;
+  readonly stableUserId: string;
+  readonly existingUserId: string;
+  readonly verifiedAt: number;
+};
 
-export async function requireAuthenticatedParent(ctx: ParentRuntimeContext): Promise<ParentContext> {
-  const identity = await ctx.auth.getUserIdentity();
-  if (!identity) {
-    throw new ParentAuthorizationError("missing_identity", "sign-in required");
+const buildParentMatchCandidates = async (
+  ctx: ParentRuntimeContext,
+): Promise<readonly ParentMatch[]> => {
+  const stableUserId = await getAuthUserId(ctx);
+  if (!stableUserId) {
+    return [];
   }
   const parentRows = await ctx.db.query("parents").collect() as unknown as readonly ParentRow[];
-  const parentRow = parentRows.find((row) => row.userId === identity.subject) ?? null;
-  if (!parentRow) {
+  const legacyPattern = `${stableUserId}|`;
+  return parentRows
+    .filter((row) => row.userId === stableUserId || row.userId.startsWith(legacyPattern))
+    .map((row) => ({
+      parentId: row._id,
+      stableUserId,
+      existingUserId: row.userId,
+      verifiedAt: row.verifiedAt,
+    }));
+};
+
+export async function findAuthenticatedParent(
+  ctx: ParentRuntimeContext,
+): Promise<ParentContext | null> {
+  const stableUserId = await getAuthUserId(ctx);
+  if (!stableUserId) {
+    throw new ParentAuthorizationError("missing_identity", "sign-in required");
+  }
+  const matches = await buildParentMatchCandidates(ctx);
+  if (matches.length === 0) {
+    return null;
+  }
+  if (matches.length > 1) {
+    throw new ParentAuthorizationError("no_parent", `ambiguous parent records for user ${stableUserId}`);
+  }
+  const match = matches[0];
+  const now = Date.now();
+  return {
+    parentId: match.parentId,
+    userId: match.stableUserId,
+    verifiedAt: match.verifiedAt,
+    recentVerificationMs: now - match.verifiedAt,
+  };
+}
+
+export async function requireAuthenticatedParent(ctx: ParentWriteRuntimeContext): Promise<ParentContext> {
+  const stableUserId = await getAuthUserId(ctx);
+  if (!stableUserId) {
+    throw new ParentAuthorizationError("missing_identity", "sign-in required");
+  }
+  const matches = await buildParentMatchCandidates(ctx);
+  if (matches.length === 0) {
     throw new ParentAuthorizationError("no_parent", "parent record missing");
   }
+  if (matches.length > 1) {
+    throw new ParentAuthorizationError("no_parent", `ambiguous parent records for user ${stableUserId}`);
+  }
+  const match = matches[0];
+  if (match.existingUserId !== match.stableUserId) {
+    await ctx.db.patch(match.parentId, { userId: stableUserId } as const);
+  }
   return {
-    parentId: parentRow._id,
-    userId: identity.subject,
-    verifiedAt: parentRow.verifiedAt,
-    recentVerificationMs: Date.now() - parentRow.verifiedAt,
+    parentId: match.parentId,
+    userId: match.stableUserId,
+    verifiedAt: match.verifiedAt,
+    recentVerificationMs: Date.now() - match.verifiedAt,
   };
+}
+
+export async function requireRecentlyVerifiedParent(ctx: ParentWriteRuntimeContext): Promise<ParentContext> {
+  const parent = await requireAuthenticatedParent(ctx);
+  return requireParent({
+    identity: { userId: parent.userId },
+    parentRow: {
+      _id: parent.parentId,
+      userId: parent.userId,
+      verifiedAt: parent.verifiedAt,
+    },
+    now: () => Date.now(),
+  });
 }

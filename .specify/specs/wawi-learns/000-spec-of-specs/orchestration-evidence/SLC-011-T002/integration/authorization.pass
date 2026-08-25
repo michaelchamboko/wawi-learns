@@ -2,5 +2,5 @@ task_id: SLC-011-T002
 check_kind: integration
 check_id: authorization
 result: pass
-recorded_at: '2026-08-25T13:03:12Z'
+recorded_at: '2026-08-25T18:03:06Z'
 source_path: tests\integration\convex\authorization.test.ts

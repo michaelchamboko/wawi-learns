@@ -3,7 +3,9 @@ import {
   RECENT_VERIFICATION_WINDOW_MS,
   ParentAuthorizationError,
   assertOwnership,
+  requireAuthenticatedParent,
   requireParent,
+  requireRecentlyVerifiedParent,
 } from "../../../convex/lib/requireParent";
 
 const NOW = 1_700_000_000_000;
@@ -13,6 +15,28 @@ const parent = (verifiedAt: number) => ({
   userId: "user-1",
   verifiedAt,
 });
+
+type ParentRow = { readonly _id: string; readonly userId: string; readonly verifiedAt: number };
+
+const createAuthContext = (userIdentitySubject: string, parentRows: readonly ParentRow[]) => {
+  const patches: Array<{ id: string; patch: Partial<ParentRow> }> = [];
+  return {
+    context: {
+      auth: {
+        getUserIdentity: async () => ({ subject: userIdentitySubject, email: null }),
+      },
+      db: {
+        query: () => ({
+          collect: async () => parentRows,
+        }),
+        patch: async (id: string, patch: Partial<ParentRow>) => {
+          patches.push({ id, patch });
+        },
+      },
+    },
+    getPatches: () => patches,
+  };
+};
 
 describe("SLC-002-T002 — Convex parent authority", () => {
   it("rejects an unauthenticated caller", () => {
@@ -90,5 +114,39 @@ describe("SLC-002-T002 — Convex parent authority", () => {
       "no_parent",
       "stale_verification",
     ]);
+  });
+
+  it("migrates a unique legacy session-based parent record to stable user ownership", async () => {
+    const { context, getPatches } = createAuthContext("stable-user|new-session", [
+      { _id: "parent-1", userId: "stable-user|old-session", verifiedAt: NOW },
+    ]);
+    const result = await requireAuthenticatedParent(
+      context as unknown as Parameters<typeof requireAuthenticatedParent>[0],
+    );
+    expect(result.userId).toBe("stable-user");
+    expect(getPatches()).toHaveLength(1);
+    expect(getPatches()[0]).toMatchObject({
+      id: "parent-1",
+      patch: { userId: "stable-user" },
+    });
+  });
+
+  it("rejects ambiguous legacy parent rows instead of choosing one", async () => {
+    const { context } = createAuthContext("stable-user|new-session", [
+      { _id: "parent-1", userId: "stable-user|old-session", verifiedAt: NOW },
+      { _id: "parent-2", userId: "stable-user|other-session", verifiedAt: NOW },
+    ]);
+    await expect(
+      requireAuthenticatedParent(context as unknown as Parameters<typeof requireAuthenticatedParent>[0]),
+    ).rejects.toThrowError(/ambiguous/i);
+  });
+
+  it("requires a recent parent verification for sensitive paths", async () => {
+    const { context } = createAuthContext("stable-user|new-session", [
+      { _id: "parent-1", userId: "stable-user", verifiedAt: NOW - RECENT_VERIFICATION_WINDOW_MS - 1 },
+    ]);
+    await expect(
+      requireRecentlyVerifiedParent(context as unknown as Parameters<typeof requireAuthenticatedParent>[0]),
+    ).rejects.toThrowError(/re-enter password/);
   });
 });
