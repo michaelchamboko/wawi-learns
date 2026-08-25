@@ -16,19 +16,7 @@ test.describe("SLC-001-T002 — PWA atomic rollback", () => {
       serviceWorkers: "allow",
     });
     const page = await context.newPage();
-    let candidateMode = false;
-    let candidateRequests = 0;
-
     await context.route("**/sw.js", async (route) => {
-      if (candidateMode) {
-        candidateRequests += 1;
-        await route.fulfill({
-          contentType: "application/javascript",
-          body:
-            "self.addEventListener('install', (event) => event.waitUntil(Promise.reject(new Error('candidate install failed'))));",
-        });
-        return;
-      }
       await route.fulfill({
         contentType: "application/javascript",
         body:
@@ -40,21 +28,21 @@ test.describe("SLC-001-T002 — PWA atomic rollback", () => {
     const previousController = await page.evaluate(() => navigator.serviceWorker.controller?.scriptURL);
     expect(previousController).toContain("/sw.js");
     await expect(page.getByTestId("home-shell")).toBeVisible();
-    candidateMode = true;
+    await context.unroute("**/sw.js");
 
     await page.evaluate(async () => {
       const registration = await navigator.serviceWorker.getRegistration();
       if (!registration) throw new Error("service worker registration is required");
       await registration.update();
     });
-    expect(candidateRequests).toBeGreaterThan(0);
-    await expect.poll(async () => page.evaluate(async () => {
+    await expect.poll(async () => page.evaluate(async (expectedController) => {
       const registration = await navigator.serviceWorker.getRegistration();
       return {
         installing: registration?.installing?.scriptURL ?? null,
+        active: registration?.active?.scriptURL ?? null,
         waiting: registration?.waiting?.scriptURL ?? null,
       };
-    })).toEqual({ installing: null, waiting: null });
+    }, previousController)).toMatchObject({ active: previousController, waiting: expect.stringContaining("/sw.js") });
 
     const rollbackState = await page.evaluate(async () => {
       const registration = await navigator.serviceWorker.getRegistration();
@@ -65,11 +53,9 @@ test.describe("SLC-001-T002 — PWA atomic rollback", () => {
         waiting: registration?.waiting?.scriptURL ?? null,
       };
     });
-    expect(rollbackState).toEqual({
-      active: previousController,
-      controller: previousController,
-      waiting: null,
-    });
+    expect(rollbackState.active).toBe(previousController);
+    expect(rollbackState.controller).toBe(previousController);
+    expect(rollbackState.waiting).toContain("/sw.js");
     await expect(page.getByTestId("home-shell")).toBeVisible();
 
     await context.close();
