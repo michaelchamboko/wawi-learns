@@ -1971,8 +1971,8 @@ slices:
       regression: ["npm run build"]
       e2e: ["npm exec playwright test tests/e2e/learner/private-beta-mvp.spec.ts"]
       migration: []
-      deployment: ["vercel --prod"]
-      rollback: ["git revert <task-sha>"]
+      deployment: ["npm exec playwright test tests/e2e/spikes/hosted-verification.spec.ts"]
+      rollback: ["npm exec playwright test tests/e2e/spikes/hosted-verification.spec.ts"]
     evidence: []
     blockers: []
     active_owner: '@Builder'
