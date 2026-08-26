@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 265
+revision: 270
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
+  implementation_fingerprint: ef07c53ac6e448124c060f7a2366ea9999b398bc6621c2a5d346802fea53fbaf
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -1089,7 +1089,7 @@ slices:
   - id: "SLC-003-T004"
     title: "Build mathematics core"
     rank: 14
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-003-T003"]
     requirements: ["PRD-FR-002", "PRD-FR-016"]
     acceptance: ["AC-SLC-003-004"]
@@ -1103,7 +1103,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: maths-inventory
+      result: pass
+      recorded_at: '2026-08-26T20:23:52Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T004\unit\maths-inventory.pass
+      implementation_fingerprint: ef07c53ac6e448124c060f7a2366ea9999b398bc6621c2a5d346802fea53fbaf
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T004\raw\maths-inventory.log
+    - check_kind: integration
+      check_id: content-suite
+      result: pass
+      recorded_at: '2026-08-26T20:24:15Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T004\integration\content-suite.pass
+      implementation_fingerprint: ef07c53ac6e448124c060f7a2366ea9999b398bc6621c2a5d346802fea53fbaf
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T004\raw\test-content.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-26T20:24:50Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T004\regression\check.pass
+      implementation_fingerprint: ef07c53ac6e448124c060f7a2366ea9999b398bc6621c2a5d346802fea53fbaf
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T004\raw\check.log
     blockers: []
     active_owner:
     reopens:
@@ -1158,6 +1179,7 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    completed_at: '2026-08-26T20:25:29Z'
   - id: "SLC-003-T005"
     title: "Build and publish immutable packs"
     rank: 15
@@ -4118,4 +4140,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-26T20:17:30Z'
+updated_at: '2026-08-26T20:25:29Z'

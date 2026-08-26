@@ -1,52 +1,1016 @@
 [
   {
+    "recordVersion": "0.1.0",
     "id": "mt-count-objects",
     "strand": "number-to-10",
     "level": "reception",
     "representation": "concrete",
     "generator": "count-objects",
     "answerKey": "n",
-    "misconceptionTags": ["count-all", "skip-one"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+    "misconceptionTags": [
+      "count-all",
+      "skip-one"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
   },
   {
-    "id": "mt-subitise-to-5",
+    "recordVersion": "0.1.0",
+    "id": "mt-count-to-10",
     "strand": "number-to-10",
     "level": "reception",
     "representation": "concrete",
-    "generator": "subitise",
-    "answerKey": "n<=5",
-    "misconceptionTags": ["confuse-4-5"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+    "generator": "count-sequence",
+    "answerKey": "n<=10",
+    "misconceptionTags": [
+      "skip-one",
+      "order-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
   },
   {
-    "id": "mt-bonds-to-10",
-    "strand": "addition-subtraction",
+    "recordVersion": "0.1.0",
+    "id": "mt-match-numeral",
+    "strand": "number-to-10",
     "level": "reception",
-    "representation": "pictorial",
-    "generator": "number-bonds",
-    "answerKey": "a+b=10",
-    "misconceptionTags": ["reversal"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+    "representation": "concrete",
+    "generator": "numeral-match",
+    "answerKey": "numeral==quantity",
+    "misconceptionTags": [
+      "numeral-quantity-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
   },
   {
-    "id": "mt-place-value-tens",
+    "recordVersion": "0.1.0",
+    "id": "mt-compare-10",
+    "strand": "number-to-10",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "compare-more-fewer",
+    "answerKey": "a!=b",
+    "misconceptionTags": [
+      "more-fewer-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-one-more",
+    "strand": "number-to-10",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "one-more",
+    "answerKey": "n+1",
+    "misconceptionTags": [
+      "count-all",
+      "off-by-one"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-one-less",
+    "strand": "number-to-10",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "one-less",
+    "answerKey": "n-1",
+    "misconceptionTags": [
+      "off-by-one",
+      "count-back-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-number-to-20-count-20",
+    "strand": "number-to-20",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "count-20",
+    "answerKey": "n<=20",
+    "misconceptionTags": [
+      "count-all",
+      "skip-teen"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-number-to-20-teen-break",
+    "strand": "number-to-20",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "teen-break",
+    "answerKey": "10+u",
+    "misconceptionTags": [
+      "teen-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-number-to-20-order-20",
+    "strand": "number-to-20",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "order-20",
+    "answerKey": "a<b",
+    "misconceptionTags": [
+      "order-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-number-to-100-count-in-tens",
+    "strand": "number-to-100",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "count-in-tens",
+    "answerKey": "10*k",
+    "misconceptionTags": [
+      "ten-miscount"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-number-to-100-read-write-numbers",
+    "strand": "number-to-100",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "read-write-numbers",
+    "answerKey": "word==digit",
+    "misconceptionTags": [
+      "teen-hundred-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-number-to-100-estimate-100",
+    "strand": "number-to-100",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "estimate-100",
+    "answerKey": "estimate within reason",
+    "misconceptionTags": [
+      "over-under-estimate"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-place-value-tens-and-units",
     "strand": "place-value",
     "level": "year1",
     "representation": "abstract",
     "generator": "tens-and-units",
-    "answerKey": "10*n + u",
-    "misconceptionTags": ["place-value-reversal"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+    "answerKey": "10*n+u",
+    "misconceptionTags": [
+      "place-value-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
   },
   {
-    "id": "mt-coin-combinations-10p",
+    "recordVersion": "0.1.0",
+    "id": "mt-place-value-partition-2digit",
+    "strand": "place-value",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "partition-2digit",
+    "answerKey": "tens+units",
+    "misconceptionTags": [
+      "partition-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-place-value-make-number",
+    "strand": "place-value",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "make-number",
+    "answerKey": "t*10+u",
+    "misconceptionTags": [
+      "exchange-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-addition-subtraction-number-bonds",
+    "strand": "addition-subtraction",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "number-bonds",
+    "answerKey": "a+b=10",
+    "misconceptionTags": [
+      "reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-addition-subtraction-add-within-10",
+    "strand": "addition-subtraction",
+    "level": "reception",
+    "representation": "pictorial",
+    "generator": "add-within-10",
+    "answerKey": "a+b<=10",
+    "misconceptionTags": [
+      "count-all",
+      "off-by-one"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-addition-subtraction-sub-within-10",
+    "strand": "addition-subtraction",
+    "level": "reception",
+    "representation": "pictorial",
+    "generator": "sub-within-10",
+    "answerKey": "a-b>=0",
+    "misconceptionTags": [
+      "take-away-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-addition-subtraction-add-within-20",
+    "strand": "addition-subtraction",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "add-within-20",
+    "answerKey": "a+b<=20",
+    "misconceptionTags": [
+      "carry-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-addition-subtraction-sub-within-20",
+    "strand": "addition-subtraction",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "sub-within-20",
+    "answerKey": "a-b>=0",
+    "misconceptionTags": [
+      "borrow-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-addition-subtraction-fact-families",
+    "strand": "addition-subtraction",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "fact-families",
+    "answerKey": "a+b=c,b+a=c",
+    "misconceptionTags": [
+      "fact-family-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-multiplication-division-groups-of",
+    "strand": "multiplication-division",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "groups-of",
+    "answerKey": "n*g",
+    "misconceptionTags": [
+      "group-count-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-multiplication-division-arrays",
+    "strand": "multiplication-division",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "arrays",
+    "answerKey": "r*c",
+    "misconceptionTags": [
+      "row-column-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-multiplication-division-doubles",
+    "strand": "multiplication-division",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "doubles",
+    "answerKey": "2*n",
+    "misconceptionTags": [
+      "double-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-multiplication-division-share-equally",
+    "strand": "multiplication-division",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "share-equally",
+    "answerKey": "a/b",
+    "misconceptionTags": [
+      "share-remainder"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-multiplication-division-halves",
+    "strand": "multiplication-division",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "halves",
+    "answerKey": "n/2",
+    "misconceptionTags": [
+      "half-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-fractions-half-of",
+    "strand": "fractions",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "half-of",
+    "answerKey": "n/2",
+    "misconceptionTags": [
+      "half-not-equal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-fractions-quarter-of",
+    "strand": "fractions",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "quarter-of",
+    "answerKey": "n/4",
+    "misconceptionTags": [
+      "quarter-not-equal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-fractions-equal-parts",
+    "strand": "fractions",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "equal-parts",
+    "answerKey": "parts equal",
+    "misconceptionTags": [
+      "unequal-parts"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-measure-compare-length",
+    "strand": "measure",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "compare-length",
+    "answerKey": "longer/shorter",
+    "misconceptionTags": [
+      "length-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-measure-measure-cm",
+    "strand": "measure",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "measure-cm",
+    "answerKey": "cm",
+    "misconceptionTags": [
+      "unit-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-measure-compare-mass",
+    "strand": "measure",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "compare-mass",
+    "answerKey": "heavier/lighter",
+    "misconceptionTags": [
+      "mass-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-measure-capacity",
+    "strand": "measure",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "capacity",
+    "answerKey": "more/less",
+    "misconceptionTags": [
+      "capacity-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-time-o-clock",
+    "strand": "time",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "o-clock",
+    "answerKey": "hh:00",
+    "misconceptionTags": [
+      "hour-hand-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-time-order-days",
+    "strand": "time",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "order-days",
+    "answerKey": "sequence",
+    "misconceptionTags": [
+      "day-order"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-time-half-past",
+    "strand": "time",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "half-past",
+    "answerKey": "hh:30",
+    "misconceptionTags": [
+      "half-past-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-time-sequence-events",
+    "strand": "time",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "sequence-events",
+    "answerKey": "before/after",
+    "misconceptionTags": [
+      "sequence-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-money-coin-values",
+    "strand": "money",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "coin-values",
+    "answerKey": "denomination",
+    "misconceptionTags": [
+      "coin-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-money-coin-combinations",
     "strand": "money",
     "level": "year1",
     "representation": "pictorial",
     "generator": "coin-combinations",
-    "answerKey": "a*5 + b*2 + c*1 = 10",
-    "misconceptionTags": ["skip-1p"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/maths", "proofPath": "docs/licence/cc0.md" }
+    "answerKey": "a*5+b*2+c*1=10",
+    "misconceptionTags": [
+      "skip-1p"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-money-same-amount",
+    "strand": "money",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "same-amount",
+    "answerKey": "equal value",
+    "misconceptionTags": [
+      "value-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-money-pay-exact",
+    "strand": "money",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "pay-exact",
+    "answerKey": "total",
+    "misconceptionTags": [
+      "total-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-shape-position-name-2d",
+    "strand": "shape-position",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "name-2d",
+    "answerKey": "shape name",
+    "misconceptionTags": [
+      "shape-misname"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-shape-position-properties-2d",
+    "strand": "shape-position",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "properties-2d",
+    "answerKey": "sides/corners",
+    "misconceptionTags": [
+      "side-corner-confusion"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-shape-position-name-3d",
+    "strand": "shape-position",
+    "level": "year1",
+    "representation": "concrete",
+    "generator": "name-3d",
+    "answerKey": "solid name",
+    "misconceptionTags": [
+      "solid-misname"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-shape-position-position",
+    "strand": "shape-position",
+    "level": "year1",
+    "representation": "pictorial",
+    "generator": "position",
+    "answerKey": "left/right/above/below",
+    "misconceptionTags": [
+      "position-reversal"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-pattern-continue-pattern",
+    "strand": "pattern",
+    "level": "reception",
+    "representation": "pictorial",
+    "generator": "continue-pattern",
+    "answerKey": "next item",
+    "misconceptionTags": [
+      "pattern-break"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-pattern-missing-term",
+    "strand": "pattern",
+    "level": "year1",
+    "representation": "abstract",
+    "generator": "missing-term",
+    "answerKey": "sequence rule",
+    "misconceptionTags": [
+      "rule-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "mt-pattern-copy-pattern",
+    "strand": "pattern",
+    "level": "reception",
+    "representation": "concrete",
+    "generator": "copy-pattern",
+    "answerKey": "match",
+    "misconceptionTags": [
+      "copy-error"
+    ],
+    "source": "content/seed/maths.json",
+    "reviewStatus": "draft",
+    "reviewer": "pending-human-review",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/maths.json",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
   }
 ]
