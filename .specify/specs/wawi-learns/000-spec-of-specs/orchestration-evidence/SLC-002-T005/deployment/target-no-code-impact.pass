@@ -1,6 +1,6 @@
 task_id: SLC-002-T005
 check_kind: deployment
-check_id: vercel-project-target
+check_id: target-no-code-impact
 result: pass
-recorded_at: '2026-08-26T05:22:58Z'
+recorded_at: '2026-08-26T05:18:40Z'
 source_path: .vercel\project.json

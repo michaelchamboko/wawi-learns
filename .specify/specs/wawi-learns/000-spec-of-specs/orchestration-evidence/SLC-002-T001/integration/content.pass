@@ -2,5 +2,5 @@ task_id: SLC-002-T001
 check_kind: integration
 check_id: content
 result: pass
-recorded_at: '2026-08-25T23:23:10Z'
+recorded_at: '2026-08-26T04:51:04Z'
 source_path: tests\content\validators.test.ts

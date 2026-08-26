@@ -2,5 +2,5 @@ task_id: SLC-002-T003
 check_kind: unit
 check_id: local-data
 result: pass
-recorded_at: '2026-08-25T23:40:04Z'
+recorded_at: '2026-08-26T04:58:20Z'
 source_path: tests\unit\local-data\attempts.test.ts

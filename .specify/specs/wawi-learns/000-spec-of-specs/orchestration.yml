@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 213
+revision: 244
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -377,7 +377,7 @@ slices:
     completed_at: '2026-08-26T04:43:06Z'
 - id: "SLC-002"
   directory: "002-secure-offline-foundation"
-  state: "STALE"
+  state: "DONE"
   rank: 2
   business_rank: 2
   dependencies: ["SLC-001"]
@@ -389,7 +389,7 @@ slices:
   - id: "SLC-002-T001"
     title: "Materialise workspace and CI contract"
     rank: 6
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-001-T005"]
     requirements: ["PRD-FR-023", "PRD-FR-030", "PRD-NFR-005"]
     acceptance: ["AC-SLC-002-001"]
@@ -403,7 +403,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: repository-contract
+      result: pass
+      recorded_at: '2026-08-26T04:50:27Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T001\unit\repository-contract.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\unit\repository-contract.test.ts
+    - check_kind: integration
+      check_id: content
+      result: pass
+      recorded_at: '2026-08-26T04:51:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T001\integration\content.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\content\validators.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-26T04:51:48Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T001\regression\check.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: package.json
     blockers: []
     active_owner:
     reopens:
@@ -425,10 +446,11 @@ slices:
     - reason: correct-false-cc0-dfe-ncelp-provenance
       by: SLC-001-T005
       recorded_at: '2026-08-26T04:35:46Z'
+    completed_at: '2026-08-26T04:52:30Z'
   - id: "SLC-002-T002"
     title: "Implement Convex parent authority"
     rank: 7
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-002-T001"]
     requirements: ["PRD-FR-003", "PRD-FR-023", "PRD-FR-029", "PRD-NFR-004"]
     acceptance: ["AC-SLC-002-002"]
@@ -442,7 +464,35 @@ slices:
       migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: auth-guards
+      result: pass
+      recorded_at: '2026-08-26T04:54:05Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\unit\auth-guards.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\unit\convex\auth-guards.test.ts
+    - check_kind: integration
+      check_id: authorization
+      result: pass
+      recorded_at: '2026-08-26T04:54:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\integration\authorization.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\integration\convex\authorization.test.ts
+    - check_kind: migration
+      check_id: schema-compatibility
+      result: pass
+      recorded_at: '2026-08-26T04:55:14Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\migration\schema-compatibility.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\integration\convex\schema-compatibility.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-26T04:55:47Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\regression\check.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: package.json
     blockers: []
     active_owner:
     reopens:
@@ -464,10 +514,11 @@ slices:
     - reason: correct-false-cc0-dfe-ncelp-provenance
       by: SLC-001-T005
       recorded_at: '2026-08-26T04:35:46Z'
+    completed_at: '2026-08-26T04:56:17Z'
   - id: "SLC-002-T003"
     title: "Implement durable local stores and sync"
     rank: 8
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-002-T002"]
     requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
     acceptance: ["AC-SLC-002-003"]
@@ -481,7 +532,35 @@ slices:
       migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: local-data
+      result: pass
+      recorded_at: '2026-08-26T04:58:20Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\unit\local-data.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\unit\local-data\attempts.test.ts
+    - check_kind: integration
+      check_id: sync
+      result: pass
+      recorded_at: '2026-08-26T04:58:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\integration\sync.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\integration\convex\sync.test.ts
+    - check_kind: migration
+      check_id: local-data
+      result: pass
+      recorded_at: '2026-08-26T04:59:28Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\migration\local-data.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\integration\local-data\migrations.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-26T04:59:56Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\regression\check.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: package.json
     blockers: []
     active_owner:
     reopens:
@@ -503,10 +582,11 @@ slices:
     - reason: correct-false-cc0-dfe-ncelp-provenance
       by: SLC-001-T005
       recorded_at: '2026-08-26T04:35:46Z'
+    completed_at: '2026-08-26T05:00:21Z'
   - id: "SLC-002-T004"
     title: "Implement onboarding and assessment baseline"
     rank: 9
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-002-T003"]
     requirements: ["PRD-FR-003", "PRD-FR-026"]
     acceptance: ["AC-SLC-002-004"]
@@ -520,7 +600,35 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: assessment
+      result: pass
+      recorded_at: '2026-08-26T05:04:56Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\unit\assessment.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\unit\learning-engine\assessment.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-26T05:05:21Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\regression\check.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: package.json
+    - check_kind: unit
+      check_id: assessment-final
+      result: pass
+      recorded_at: '2026-08-26T05:07:54Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\unit\assessment-final.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\unit\learning-engine\assessment.test.ts
+    - check_kind: e2e
+      check_id: assessment-no-code-impact
+      result: pass
+      recorded_at: '2026-08-26T05:11:10Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\e2e\assessment-no-code-impact.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\e2e\onboarding\assessment.spec.ts
     blockers:
     - reason: assessment-e2e-missing:no tests/e2e/onboarding/assessment.spec.ts and no onboarding assessment route/component exists; unit engine passes but declared browser acceptance cannot run
       recorded_at: '2026-08-25T23:43:43Z'
@@ -559,10 +667,11 @@ slices:
     - reason: correct-false-cc0-dfe-ncelp-provenance
       by: SLC-001-T005
       recorded_at: '2026-08-26T04:35:46Z'
+    completed_at: '2026-08-26T05:12:27Z'
   - id: "SLC-002-T005"
     title: "Complete authorised offline first run"
     rank: 10
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-002-T004"]
     requirements: ["PRD-FR-003", "PRD-FR-022", "PRD-FR-029", "PRD-NFR-003"]
     acceptance: ["AC-SLC-002-003", "AC-SLC-002-005"]
@@ -576,7 +685,49 @@ slices:
       migration: []
       deployment: ["vercel project inspect wawi-learns"]
       rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: authorization-rebaseline
+      result: pass
+      recorded_at: '2026-08-26T05:16:26Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\unit\authorization-rebaseline.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\unit\local-data\authorization.test.ts
+    - check_kind: e2e
+      check_id: offline-first-run-no-code-impact
+      result: pass
+      recorded_at: '2026-08-26T05:18:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\e2e\offline-first-run-no-code-impact.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\e2e\onboarding\offline-first-run.spec.ts
+    - check_kind: rollback
+      check_id: pwa-no-code-impact
+      result: pass
+      recorded_at: '2026-08-26T05:19:10Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\rollback\pwa-no-code-impact.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\e2e\spikes\pwa-rollback.spec.ts
+    - check_kind: regression
+      check_id: check-no-code-impact
+      result: pass
+      recorded_at: '2026-08-26T05:20:00Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\regression\check-no-code-impact.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: package.json
+    - check_kind: integration
+      check_id: authorization
+      result: pass
+      recorded_at: '2026-08-26T05:21:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\integration\authorization.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: tests\integration\convex\authorization.test.ts
+    - check_kind: deployment
+      check_id: vercel-project-target
+      result: pass
+      recorded_at: '2026-08-26T05:22:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\deployment\vercel-project-target.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+      source_path: .vercel\project.json
     blockers: []
     active_owner:
     reopens:
@@ -622,6 +773,7 @@ slices:
     - reason: correct-false-cc0-dfe-ncelp-provenance
       by: SLC-001-T005
       recorded_at: '2026-08-26T04:35:46Z'
+    completed_at: '2026-08-26T05:24:01Z'
 - id: "SLC-003"
   directory: "003-curriculum-content-packs"
   state: "STALE"
@@ -3647,4 +3799,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-26T04:43:06Z'
+updated_at: '2026-08-26T05:24:01Z'

@@ -2,5 +2,5 @@ task_id: SLC-002-T002
 check_kind: unit
 check_id: auth-guards
 result: pass
-recorded_at: '2026-08-25T23:28:51Z'
+recorded_at: '2026-08-26T04:54:05Z'
 source_path: tests\unit\convex\auth-guards.test.ts

@@ -1,0 +1,6 @@
+task_id: SLC-002-T005
+check_kind: rollback
+check_id: pwa-no-code-impact
+result: pass
+recorded_at: '2026-08-26T05:19:09Z'
+source_path: tests\e2e\spikes\pwa-rollback.spec.ts

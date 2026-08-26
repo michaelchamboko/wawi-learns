@@ -1,0 +1,6 @@
+task_id: SLC-002-T005
+check_kind: unit
+check_id: authorization-rebaseline
+result: pass
+recorded_at: '2026-08-26T05:16:26Z'
+source_path: tests\unit\local-data\authorization.test.ts

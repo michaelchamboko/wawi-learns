@@ -1,6 +1,6 @@
-task_id: SLC-002-T002
+task_id: SLC-002-T005
 check_kind: integration
-check_id: authorization
+check_id: authorization-rebaseline
 result: pass
-recorded_at: '2026-08-26T04:54:42Z'
+recorded_at: '2026-08-26T05:17:17Z'
 source_path: tests\integration\convex\authorization.test.ts
