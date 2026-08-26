@@ -23,7 +23,7 @@ export type ActivePackState = z.infer<typeof ActivePackStateSchema>;
 export const INSTALLATION_SNAPSHOT_KEY = "wawi.installation.snapshot";
 export const ACTIVE_PACK_KEY = "wawi.active.pack";
 export const OFFLINE_AUTHORIZATION_KEY = "wawi.offline.authorization";
-export const SafetyLockoutStateSchema = z.object({ microphoneDisabled: z.literal(true), pendingSync: z.literal(true), acknowledged: z.boolean() });
+export const SafetyLockoutStateSchema = z.object({ microphoneDisabled: z.boolean(), pendingSync: z.boolean(), acknowledged: z.boolean() });
 export const OfflineAuthorizationEnvelopeSchema = z.object({ snapshot: InstallationSnapshotSchema, activePack: ActivePackStateSchema, lockout: SafetyLockoutStateSchema });
 export type SafetyLockoutState = z.infer<typeof SafetyLockoutStateSchema>;
 export type OfflineAuthorizationEnvelope = z.infer<typeof OfflineAuthorizationEnvelopeSchema>;
@@ -41,7 +41,7 @@ export const persistInstallationSnapshot = (
   const parsedSnapshot = InstallationSnapshotSchema.safeParse(snapshot);
   const parsedPack = ActivePackStateSchema.safeParse(activePack);
   if (!parsedSnapshot.success || !parsedPack.success || parsedSnapshot.data.packVersion !== parsedPack.data.packVersion || parsedSnapshot.data.packDigest !== parsedPack.data.packDigest) return false;
-  const envelope: OfflineAuthorizationEnvelope = { snapshot: parsedSnapshot.data, activePack: parsedPack.data, lockout: { microphoneDisabled: true, pendingSync: true, acknowledged: false } };
+  const envelope: OfflineAuthorizationEnvelope = { snapshot: parsedSnapshot.data, activePack: parsedPack.data, lockout: { microphoneDisabled: false, pendingSync: false, acknowledged: false } };
   try { storage.setItem(OFFLINE_AUTHORIZATION_KEY, JSON.stringify(envelope)); } catch { return false; }
   return true;
 };
@@ -64,6 +64,12 @@ export const requestSafetyLockout = (storage: Pick<Storage, "getItem" | "setItem
   const current = readOfflineAuthorization(storage);
   if (!current) return false;
   try { storage.setItem(OFFLINE_AUTHORIZATION_KEY, JSON.stringify({ ...current, lockout: { microphoneDisabled: true, pendingSync: true, acknowledged: false } })); return true; } catch { return false; }
+};
+
+export const acknowledgeSafetyLockout = (storage: Pick<Storage, "getItem" | "setItem">): boolean => {
+  const current = readOfflineAuthorization(storage);
+  if (!current) return false;
+  try { storage.setItem(OFFLINE_AUTHORIZATION_KEY, JSON.stringify({ ...current, lockout: { microphoneDisabled: true, pendingSync: false, acknowledged: true } })); return true; } catch { return false; }
 };
 
 export type SafetyWithdrawalState = { readonly pending: boolean; readonly acknowledged: boolean };

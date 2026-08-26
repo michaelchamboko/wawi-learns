@@ -10,6 +10,7 @@ import {
   canQueueDependentProviderWork,
   readOfflineAuthorization,
   requestSafetyLockout,
+  acknowledgeSafetyLockout,
 } from "../../../packages/local-data/src/offline-auth";
 
 const NOW = 1_700_000_000_000;
@@ -30,6 +31,17 @@ describe("SLC-002-T005 — offline authorisation", () => {
     const decision = canOpenChildModeOffline(auth());
     expect(decision.mode).toBe("child");
     expect(decision.reason).toBe("snapshot-valid");
+  });
+
+  it("starts authorization enabled and acknowledges a withdrawal without re-enabling work", () => {
+    const values = new Map<string, string>();
+    const storage = { getItem: (key: string) => values.get(key) ?? null, setItem: (key: string, value: string) => values.set(key, value) };
+    expect(persistInstallationSnapshot(snapshot(), activePack, storage)).toBe(true);
+    expect(readOfflineAuthorization(storage)?.lockout).toEqual({ microphoneDisabled: false, pendingSync: false, acknowledged: false });
+    expect(requestSafetyLockout(storage)).toBe(true);
+    expect(acknowledgeSafetyLockout(storage)).toBe(true);
+    expect(readOfflineAuthorization(storage)?.lockout).toEqual({ microphoneDisabled: true, pendingSync: false, acknowledged: true });
+    expect(canQueueDependentProviderWork({ pending: false, acknowledged: true })).toBe(false);
   });
 
   it("denies child mode when no snapshot exists", () => {

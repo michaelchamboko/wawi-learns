@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { createHash } from "node:crypto";
 import { canOpenChildModeOffline, parseInstallationSnapshot, persistInstallationSnapshot, type ActivePackState, type InstallationSnapshot } from "../../../packages/local-data/src/offline-auth";
 import { ESSENTIAL_PACK_DIGEST, essentialPackManifest } from "../../../packages/local-data/src/essential-pack";
 
@@ -7,7 +8,8 @@ const pack: ActivePackState = { packVersion: "1.0.0", packDigest: ESSENTIAL_PACK
 
 describe("SLC-002-T005 — installation-bound offline authorization", () => {
   it("binds the snapshot to the validated active pack", () => {
-    expect(ESSENTIAL_PACK_DIGEST).toBe("fd40e9000dd033b90b3a7c61fab091220d5ce96e496e1471cc681f1947deb352");
+    const canonical = [essentialPackManifest.packVersion, essentialPackManifest.curriculumVersion, essentialPackManifest.engineVersion, ...essentialPackManifest.assets.slice().sort((a, b) => a.url.localeCompare(b.url)).map((asset) => `${asset.url.split("/").pop()}:${asset.bytes}:${asset.sha256}`)].join("|");
+    expect(createHash("sha256").update(canonical).digest("hex")).toBe(ESSENTIAL_PACK_DIGEST);
     expect(essentialPackManifest.assets).toHaveLength(5);
     const values = new Map<string, string>();
     const storage = { getItem: (key: string) => values.get(key) ?? null, setItem: (key: string, value: string) => values.set(key, value) };
