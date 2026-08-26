@@ -6,11 +6,11 @@
   "issuedAt": 1700000000000,
   "counts": {
     "gpc": 44,
-    "words": 1999,
-    "sentences": 399,
-    "stories": 59,
-    "assets": 0,
-    "formations": 0,
+    "words": 2000,
+    "sentences": 400,
+    "stories": 60,
+    "assets": 5,
+    "formations": 3,
     "mathsTemplates": 0
   },
   "assets": [],

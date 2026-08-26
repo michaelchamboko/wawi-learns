@@ -1,4486 +1,4462 @@
 [
   {
-    "id": "story-10",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-001",
+    "title": "The Man and the Woman",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0001"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0002"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0003"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0004"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0005"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0006"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0007"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0008"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0009"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0010"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-10-1",
-        "prompt": "What is the story about?",
+        "id": "q-001-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "man",
+          "woman"
         ],
         "type": "literal"
       },
       {
-        "id": "q-10-2",
-        "prompt": "How did the story end?",
+        "id": "q-001-2",
+        "prompt": "What does the man do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The man eat the woman."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-11",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-002",
+    "title": "The Boy and the Girl",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0011"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0012"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0013"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0014"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0015"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0016"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0017"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0018"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0019"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0020"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-11-1",
-        "prompt": "What is the story about?",
+        "id": "q-002-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "boy",
+          "girl"
         ],
         "type": "literal"
       },
       {
-        "id": "q-11-2",
-        "prompt": "How did the story end?",
+        "id": "q-002-2",
+        "prompt": "What does the boy do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The boy write the girl."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-12",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-003",
+    "title": "The Baby and the Child",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0021"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0022"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0023"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0024"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0025"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0026"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0027"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0028"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0029"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0030"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-12-1",
-        "prompt": "What is the story about?",
+        "id": "q-003-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "baby",
+          "child"
         ],
         "type": "literal"
       },
       {
-        "id": "q-12-2",
-        "prompt": "How did the story end?",
+        "id": "q-003-2",
+        "prompt": "What does the baby do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The baby open the child."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-13",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-004",
+    "title": "The Father and the Mother",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0031"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0032"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0033"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0034"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0035"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0036"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0037"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0038"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0039"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0040"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-13-1",
-        "prompt": "What is the story about?",
+        "id": "q-004-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "father",
+          "mother"
         ],
         "type": "literal"
       },
       {
-        "id": "q-13-2",
-        "prompt": "How did the story end?",
+        "id": "q-004-2",
+        "prompt": "What does the father do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The father find the mother."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-14",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-005",
+    "title": "The Dad and the Mom",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0041"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0042"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0043"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0044"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0045"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0046"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0047"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0048"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0049"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0050"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-14-1",
-        "prompt": "What is the story about?",
+        "id": "q-005-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "dad",
+          "mom"
         ],
         "type": "literal"
       },
       {
-        "id": "q-14-2",
-        "prompt": "How did the story end?",
+        "id": "q-005-2",
+        "prompt": "What does the dad do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The dad make the mom."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-15",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-006",
+    "title": "The Brother and the Sister",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0051"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0052"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0053"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0054"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0055"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0056"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0057"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0058"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0059"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0060"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-15-1",
-        "prompt": "What is the story about?",
+        "id": "q-006-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "brother",
+          "sister"
         ],
         "type": "literal"
       },
       {
-        "id": "q-15-2",
-        "prompt": "How did the story end?",
+        "id": "q-006-2",
+        "prompt": "What does the brother do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The brother paint the sister."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-16",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-007",
+    "title": "The Uncle and the Aunt",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0061"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0062"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0063"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0064"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0065"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0066"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0067"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0068"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0069"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0070"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-16-1",
-        "prompt": "What is the story about?",
+        "id": "q-007-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "uncle",
+          "aunt"
         ],
         "type": "literal"
       },
       {
-        "id": "q-16-2",
-        "prompt": "How did the story end?",
+        "id": "q-007-2",
+        "prompt": "What does the uncle do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The uncle count the aunt."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-17",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-008",
+    "title": "The Grandpa and the Grandma",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0071"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0072"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0073"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0074"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0075"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0076"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0077"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0078"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0079"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0080"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-17-1",
-        "prompt": "What is the story about?",
+        "id": "q-008-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "grandpa",
+          "grandma"
         ],
         "type": "literal"
       },
       {
-        "id": "q-17-2",
-        "prompt": "How did the story end?",
+        "id": "q-008-2",
+        "prompt": "What does the grandpa do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The grandpa hold the grandma."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-18",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-009",
+    "title": "The Friend and the Neighbour",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0081"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0082"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0083"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0084"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0085"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0086"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0087"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0088"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0089"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0090"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-18-1",
-        "prompt": "What is the story about?",
+        "id": "q-009-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "friend",
+          "neighbour"
         ],
         "type": "literal"
       },
       {
-        "id": "q-18-2",
-        "prompt": "How did the story end?",
+        "id": "q-009-2",
+        "prompt": "What does the friend do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The friend call the neighbour."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-19",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-010",
+    "title": "The Cousin and the Dog",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0091"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0092"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0093"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0094"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0095"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0096"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0097"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0098"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0099"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0100"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-19-1",
-        "prompt": "What is the story about?",
+        "id": "q-010-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "cousin",
+          "dog"
         ],
         "type": "literal"
       },
       {
-        "id": "q-19-2",
-        "prompt": "How did the story end?",
+        "id": "q-010-2",
+        "prompt": "What does the cousin do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The cousin push the dog."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-20",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-011",
+    "title": "The Cat and the Bird",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0101"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0102"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0103"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0104"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0105"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0106"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0107"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0108"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0109"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0110"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-20-1",
-        "prompt": "What is the story about?",
+        "id": "q-011-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "cat",
+          "bird"
         ],
         "type": "literal"
       },
       {
-        "id": "q-20-2",
-        "prompt": "How did the story end?",
+        "id": "q-011-2",
+        "prompt": "What does the cat do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The cat eat the bird."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-21",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-012",
+    "title": "The Fish and the Horse",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0111"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0112"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0113"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0114"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0115"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0116"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0117"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0118"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0119"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0120"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-21-1",
-        "prompt": "What is the story about?",
+        "id": "q-012-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "fish",
+          "horse"
         ],
         "type": "literal"
       },
       {
-        "id": "q-21-2",
-        "prompt": "How did the story end?",
+        "id": "q-012-2",
+        "prompt": "What does the fish do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The fish write the horse."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-22",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-013",
+    "title": "The Cow and the Pig",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0121"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0122"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0123"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0124"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0125"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0126"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0127"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0128"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0129"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0130"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-22-1",
-        "prompt": "What is the story about?",
+        "id": "q-013-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "cow",
+          "pig"
         ],
         "type": "literal"
       },
       {
-        "id": "q-22-2",
-        "prompt": "How did the story end?",
+        "id": "q-013-2",
+        "prompt": "What does the cow do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The cow open the pig."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-23",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-014",
+    "title": "The Sheep and the Duck",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0131"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0132"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0133"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0134"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0135"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0136"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0137"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0138"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0139"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0140"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-23-1",
-        "prompt": "What is the story about?",
+        "id": "q-014-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "sheep",
+          "duck"
         ],
         "type": "literal"
       },
       {
-        "id": "q-23-2",
-        "prompt": "How did the story end?",
+        "id": "q-014-2",
+        "prompt": "What does the sheep do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The sheep find the duck."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-24",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-015",
+    "title": "The Chicken and the Goat",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0141"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0142"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0143"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0144"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0145"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0146"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0147"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0148"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0149"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0150"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-24-1",
-        "prompt": "What is the story about?",
+        "id": "q-015-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "chicken",
+          "goat"
         ],
         "type": "literal"
       },
       {
-        "id": "q-24-2",
-        "prompt": "How did the story end?",
+        "id": "q-015-2",
+        "prompt": "What does the chicken do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The chicken make the goat."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-25",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-016",
+    "title": "The Rabbit and the Mouse",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0151"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0152"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0153"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0154"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0155"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0156"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0157"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0158"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0159"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0160"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-25-1",
-        "prompt": "What is the story about?",
+        "id": "q-016-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "rabbit",
+          "mouse"
         ],
         "type": "literal"
       },
       {
-        "id": "q-25-2",
-        "prompt": "How did the story end?",
+        "id": "q-016-2",
+        "prompt": "What does the rabbit do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The rabbit paint the mouse."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-26",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-017",
+    "title": "The Rat and the Hamster",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0161"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0162"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0163"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0164"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0165"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0166"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0167"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0168"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0169"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0170"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-26-1",
-        "prompt": "What is the story about?",
+        "id": "q-017-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "rat",
+          "hamster"
         ],
         "type": "literal"
       },
       {
-        "id": "q-26-2",
-        "prompt": "How did the story end?",
+        "id": "q-017-2",
+        "prompt": "What does the rat do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The rat count the hamster."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-27",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-018",
+    "title": "The Gerbil and the Ferret",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0171"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0172"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0173"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0174"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0175"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0176"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0177"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0178"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0179"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0180"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-27-1",
-        "prompt": "What is the story about?",
+        "id": "q-018-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "gerbil",
+          "ferret"
         ],
         "type": "literal"
       },
       {
-        "id": "q-27-2",
-        "prompt": "How did the story end?",
+        "id": "q-018-2",
+        "prompt": "What does the gerbil do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The gerbil hold the ferret."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-28",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-019",
+    "title": "The Parrot and the Goldfish",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0181"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0182"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0183"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0184"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0185"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0186"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0187"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0188"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0189"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0190"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-28-1",
-        "prompt": "What is the story about?",
+        "id": "q-019-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "parrot",
+          "goldfish"
         ],
         "type": "literal"
       },
       {
-        "id": "q-28-2",
-        "prompt": "How did the story end?",
+        "id": "q-019-2",
+        "prompt": "What does the parrot do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The parrot call the goldfish."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-29",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-020",
+    "title": "The Frog and the Turtle",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0191"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0192"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0193"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0194"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0195"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0196"
+        ]
+      },
+      {
+        "pageNumber": 7,
+        "sentenceIds": [
+          "s-0197"
+        ]
+      },
+      {
+        "pageNumber": 8,
+        "sentenceIds": [
+          "s-0198"
+        ]
+      },
+      {
+        "pageNumber": 9,
+        "sentenceIds": [
+          "s-0199"
+        ]
+      },
+      {
+        "pageNumber": 10,
+        "sentenceIds": [
+          "s-0200"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-29-1",
-        "prompt": "What is the story about?",
+        "id": "q-020-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "frog",
+          "turtle"
         ],
         "type": "literal"
       },
       {
-        "id": "q-29-2",
-        "prompt": "How did the story end?",
+        "id": "q-020-2",
+        "prompt": "What does the frog do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The frog push the turtle."
         ],
         "type": "literal"
       }
     ],
     "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-30",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-021",
+    "title": "The Snake",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0201"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0202"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0203"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0204"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0205"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-30-1",
-        "prompt": "What is the story about?",
+        "id": "q-021-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "snake"
         ],
         "type": "literal"
       },
       {
-        "id": "q-30-2",
-        "prompt": "How did the story end?",
+        "id": "q-021-2",
+        "prompt": "What does the snake do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The snake eat the spider."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-31",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-022",
+    "title": "The Spider",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0206"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0207"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0208"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0209"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0210"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-31-1",
-        "prompt": "What is the story about?",
+        "id": "q-022-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "spider"
         ],
         "type": "literal"
       },
       {
-        "id": "q-31-2",
-        "prompt": "How did the story end?",
+        "id": "q-022-2",
+        "prompt": "What does the spider do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The spider read the ant."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-32",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-023",
+    "title": "The Ant",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0211"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0212"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0213"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0214"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0215"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-32-1",
-        "prompt": "What is the story about?",
+        "id": "q-023-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "ant"
         ],
         "type": "literal"
       },
       {
-        "id": "q-32-2",
-        "prompt": "How did the story end?",
+        "id": "q-023-2",
+        "prompt": "What does the ant do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The ant write the bee."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-33",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-024",
+    "title": "The Bee",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0216"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0217"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0218"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0219"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0220"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-33-1",
-        "prompt": "What is the story about?",
+        "id": "q-024-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "bee"
         ],
         "type": "literal"
       },
       {
-        "id": "q-33-2",
-        "prompt": "How did the story end?",
+        "id": "q-024-2",
+        "prompt": "What does the bee do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The bee draw the butterfly."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-34",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-025",
+    "title": "The Butterfly",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0221"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0222"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0223"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0224"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0225"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-34-1",
-        "prompt": "What is the story about?",
+        "id": "q-025-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "butterfly"
         ],
         "type": "literal"
       },
       {
-        "id": "q-34-2",
-        "prompt": "How did the story end?",
+        "id": "q-025-2",
+        "prompt": "What does the butterfly do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The butterfly open the lion."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-35",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-026",
+    "title": "The Lion",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0226"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0227"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0228"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0229"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0230"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-35-1",
-        "prompt": "What is the story about?",
+        "id": "q-026-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "lion"
         ],
         "type": "literal"
       },
       {
-        "id": "q-35-2",
-        "prompt": "How did the story end?",
+        "id": "q-026-2",
+        "prompt": "What does the lion do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The lion close the tiger."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-36",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-027",
+    "title": "The Tiger",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0231"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0232"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0233"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0234"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0235"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-36-1",
-        "prompt": "What is the story about?",
+        "id": "q-027-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "tiger"
         ],
         "type": "literal"
       },
       {
-        "id": "q-36-2",
-        "prompt": "How did the story end?",
+        "id": "q-027-2",
+        "prompt": "What does the tiger do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The tiger find the bear."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-37",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-028",
+    "title": "The Bear",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0236"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0237"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0238"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0239"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0240"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-37-1",
-        "prompt": "What is the story about?",
+        "id": "q-028-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "bear"
         ],
         "type": "literal"
       },
       {
-        "id": "q-37-2",
-        "prompt": "How did the story end?",
+        "id": "q-028-2",
+        "prompt": "What does the bear do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The bear give the wolf."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-38",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-029",
+    "title": "The Wolf",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0241"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0242"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0243"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0244"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0245"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-38-1",
-        "prompt": "What is the story about?",
+        "id": "q-029-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "wolf"
         ],
         "type": "literal"
       },
       {
-        "id": "q-38-2",
-        "prompt": "How did the story end?",
+        "id": "q-029-2",
+        "prompt": "What does the wolf do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The wolf make the fox."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-39",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-030",
+    "title": "The Fox",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0246"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0247"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0248"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0249"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0250"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-39-1",
-        "prompt": "What is the story about?",
+        "id": "q-030-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "fox"
         ],
         "type": "literal"
       },
       {
-        "id": "q-39-2",
-        "prompt": "How did the story end?",
+        "id": "q-030-2",
+        "prompt": "What does the fox do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The fox drink the deer."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-40",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-031",
+    "title": "The Deer",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0251"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0252"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0253"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0254"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0255"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-40-1",
-        "prompt": "What is the story about?",
+        "id": "q-031-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "deer"
         ],
         "type": "literal"
       },
       {
-        "id": "q-40-2",
-        "prompt": "How did the story end?",
+        "id": "q-031-2",
+        "prompt": "What does the deer do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The deer paint the elephant."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-41",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-032",
+    "title": "The Elephant",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0256"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0257"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0258"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0259"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0260"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-41-1",
-        "prompt": "What is the story about?",
+        "id": "q-032-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "elephant"
         ],
         "type": "literal"
       },
       {
-        "id": "q-41-2",
-        "prompt": "How did the story end?",
+        "id": "q-032-2",
+        "prompt": "What does the elephant do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The elephant love the giraffe."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-42",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-033",
+    "title": "The Giraffe",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0261"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0262"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0263"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0264"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0265"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-42-1",
-        "prompt": "What is the story about?",
+        "id": "q-033-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "giraffe"
         ],
         "type": "literal"
       },
       {
-        "id": "q-42-2",
-        "prompt": "How did the story end?",
+        "id": "q-033-2",
+        "prompt": "What does the giraffe do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The giraffe count the zebra."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-43",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-034",
+    "title": "The Zebra",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0266"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0267"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0268"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0269"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0270"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-43-1",
-        "prompt": "What is the story about?",
+        "id": "q-034-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "zebra"
         ],
         "type": "literal"
       },
       {
-        "id": "q-43-2",
-        "prompt": "How did the story end?",
+        "id": "q-034-2",
+        "prompt": "What does the zebra do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The zebra show the monkey."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-44",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-035",
+    "title": "The Monkey",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0271"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0272"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0273"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0274"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0275"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-44-1",
-        "prompt": "What is the story about?",
+        "id": "q-035-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "monkey"
         ],
         "type": "literal"
       },
       {
-        "id": "q-44-2",
-        "prompt": "How did the story end?",
+        "id": "q-035-2",
+        "prompt": "What does the monkey do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The monkey hold the kangaroo."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-45",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-036",
+    "title": "The Kangaroo",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0276"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0277"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0278"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0279"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0280"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-45-1",
-        "prompt": "What is the story about?",
+        "id": "q-036-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "kangaroo"
         ],
         "type": "literal"
       },
       {
-        "id": "q-45-2",
-        "prompt": "How did the story end?",
+        "id": "q-036-2",
+        "prompt": "What does the kangaroo do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The kangaroo wash the koala."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-46",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-037",
+    "title": "The Koala",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0281"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0282"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0283"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0284"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0285"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-46-1",
-        "prompt": "What is the story about?",
+        "id": "q-037-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "koala"
         ],
         "type": "literal"
       },
       {
-        "id": "q-46-2",
-        "prompt": "How did the story end?",
+        "id": "q-037-2",
+        "prompt": "What does the koala do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The koala call the panda."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-47",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-038",
+    "title": "The Panda",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0286"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0287"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0288"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0289"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0290"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-47-1",
-        "prompt": "What is the story about?",
+        "id": "q-038-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "panda"
         ],
         "type": "literal"
       },
       {
-        "id": "q-47-2",
-        "prompt": "How did the story end?",
+        "id": "q-038-2",
+        "prompt": "What does the panda do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The panda pull the apple."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-48",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-039",
+    "title": "The Apple",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0291"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0292"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0293"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0294"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0295"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-48-1",
-        "prompt": "What is the story about?",
+        "id": "q-039-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "apple"
         ],
         "type": "literal"
       },
       {
-        "id": "q-48-2",
-        "prompt": "How did the story end?",
+        "id": "q-039-2",
+        "prompt": "What does the apple do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The apple push the banana."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-49",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-040",
+    "title": "The Banana",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0296"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0297"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0298"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0299"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0300"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-49-1",
-        "prompt": "What is the story about?",
+        "id": "q-040-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "banana"
         ],
         "type": "literal"
       },
       {
-        "id": "q-49-2",
-        "prompt": "How did the story end?",
+        "id": "q-040-2",
+        "prompt": "What does the banana do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The banana need the orange."
         ],
         "type": "literal"
       }
     ],
-    "level": "year1",
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-50",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-041",
+    "title": "The Orange",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0301"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0302"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0303"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0304"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0305"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-50-1",
-        "prompt": "What is the story about?",
+        "id": "q-041-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "orange"
         ],
         "type": "literal"
       },
       {
-        "id": "q-50-2",
-        "prompt": "How did the story end?",
+        "id": "q-041-2",
+        "prompt": "What does the orange do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The orange eat the pear."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-51",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-042",
+    "title": "The Pear",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0306"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0307"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0308"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0309"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0310"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-51-1",
-        "prompt": "What is the story about?",
+        "id": "q-042-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "pear"
         ],
         "type": "literal"
       },
       {
-        "id": "q-51-2",
-        "prompt": "How did the story end?",
+        "id": "q-042-2",
+        "prompt": "What does the pear do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The pear read the grape."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-52",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-043",
+    "title": "The Grape",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0311"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0312"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0313"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0314"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0315"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-52-1",
-        "prompt": "What is the story about?",
+        "id": "q-043-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "grape"
         ],
         "type": "literal"
       },
       {
-        "id": "q-52-2",
-        "prompt": "How did the story end?",
+        "id": "q-043-2",
+        "prompt": "What does the grape do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The grape write the strawberry."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-53",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-044",
+    "title": "The Strawberry",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0316"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0317"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0318"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0319"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0320"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-53-1",
-        "prompt": "What is the story about?",
+        "id": "q-044-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "strawberry"
         ],
         "type": "literal"
       },
       {
-        "id": "q-53-2",
-        "prompt": "How did the story end?",
+        "id": "q-044-2",
+        "prompt": "What does the strawberry do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The strawberry draw the blueberry."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-54",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-045",
+    "title": "The Blueberry",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0321"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0322"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0323"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0324"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0325"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-54-1",
-        "prompt": "What is the story about?",
+        "id": "q-045-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "blueberry"
         ],
         "type": "literal"
       },
       {
-        "id": "q-54-2",
-        "prompt": "How did the story end?",
+        "id": "q-045-2",
+        "prompt": "What does the blueberry do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The blueberry open the raspberry."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-55",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-046",
+    "title": "The Raspberry",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0326"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0327"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0328"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0329"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0330"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-55-1",
-        "prompt": "What is the story about?",
+        "id": "q-046-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "raspberry"
         ],
         "type": "literal"
       },
       {
-        "id": "q-55-2",
-        "prompt": "How did the story end?",
+        "id": "q-046-2",
+        "prompt": "What does the raspberry do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The raspberry close the watermelon."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-56",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-047",
+    "title": "The Watermelon",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0331"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0332"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0333"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0334"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0335"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-56-1",
-        "prompt": "What is the story about?",
+        "id": "q-047-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "watermelon"
         ],
         "type": "literal"
       },
       {
-        "id": "q-56-2",
-        "prompt": "How did the story end?",
+        "id": "q-047-2",
+        "prompt": "What does the watermelon do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The watermelon find the pineapple."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-57",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-048",
+    "title": "The Pineapple",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0336"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0337"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0338"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0339"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0340"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-57-1",
-        "prompt": "What is the story about?",
+        "id": "q-048-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "pineapple"
         ],
         "type": "literal"
       },
       {
-        "id": "q-57-2",
-        "prompt": "How did the story end?",
+        "id": "q-048-2",
+        "prompt": "What does the pineapple do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The pineapple give the mango."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-58",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-049",
+    "title": "The Mango",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0341"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0342"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0343"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0344"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0345"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-58-1",
-        "prompt": "What is the story about?",
+        "id": "q-049-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "mango"
         ],
         "type": "literal"
       },
       {
-        "id": "q-58-2",
-        "prompt": "How did the story end?",
+        "id": "q-049-2",
+        "prompt": "What does the mango do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The mango make the peach."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-59",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-050",
+    "title": "The Peach",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0346"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0347"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0348"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0349"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0350"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-59-1",
-        "prompt": "What is the story about?",
+        "id": "q-050-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "peach"
         ],
         "type": "literal"
       },
       {
-        "id": "q-59-2",
-        "prompt": "How did the story end?",
+        "id": "q-050-2",
+        "prompt": "What does the peach do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The peach drink the plum."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-60",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-051",
+    "title": "The Plum",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0351"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0352"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0353"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0354"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0355"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-60-1",
-        "prompt": "What is the story about?",
+        "id": "q-051-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "plum"
         ],
         "type": "literal"
       },
       {
-        "id": "q-60-2",
-        "prompt": "How did the story end?",
+        "id": "q-051-2",
+        "prompt": "What does the plum do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The plum paint the cherry."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-61",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-052",
+    "title": "The Cherry",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0356"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0357"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0358"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0359"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0360"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-61-1",
-        "prompt": "What is the story about?",
+        "id": "q-052-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "cherry"
         ],
         "type": "literal"
       },
       {
-        "id": "q-61-2",
-        "prompt": "How did the story end?",
+        "id": "q-052-2",
+        "prompt": "What does the cherry do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The cherry love the kiwi."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-62",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-053",
+    "title": "The Kiwi",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0361"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0362"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0363"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0364"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0365"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-62-1",
-        "prompt": "What is the story about?",
+        "id": "q-053-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "kiwi"
         ],
         "type": "literal"
       },
       {
-        "id": "q-62-2",
-        "prompt": "How did the story end?",
+        "id": "q-053-2",
+        "prompt": "What does the kiwi do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The kiwi count the carrot."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-63",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-054",
+    "title": "The Carrot",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0366"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0367"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0368"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0369"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0370"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-63-1",
-        "prompt": "What is the story about?",
+        "id": "q-054-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "carrot"
         ],
         "type": "literal"
       },
       {
-        "id": "q-63-2",
-        "prompt": "How did the story end?",
+        "id": "q-054-2",
+        "prompt": "What does the carrot do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The carrot show the potato."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-64",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-055",
+    "title": "The Potato",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0371"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0372"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0373"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0374"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0375"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-64-1",
-        "prompt": "What is the story about?",
+        "id": "q-055-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "potato"
         ],
         "type": "literal"
       },
       {
-        "id": "q-64-2",
-        "prompt": "How did the story end?",
+        "id": "q-055-2",
+        "prompt": "What does the potato do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The potato hold the tomato."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-65",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-056",
+    "title": "The Tomato",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0376"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0377"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0378"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0379"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0380"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-65-1",
-        "prompt": "What is the story about?",
+        "id": "q-056-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "tomato"
         ],
         "type": "literal"
       },
       {
-        "id": "q-65-2",
-        "prompt": "How did the story end?",
+        "id": "q-056-2",
+        "prompt": "What does the tomato do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The tomato wash the onion."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-66",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-057",
+    "title": "The Onion",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0381"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0382"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0383"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0384"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0385"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-66-1",
-        "prompt": "What is the story about?",
+        "id": "q-057-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "onion"
         ],
         "type": "literal"
       },
       {
-        "id": "q-66-2",
-        "prompt": "How did the story end?",
+        "id": "q-057-2",
+        "prompt": "What does the onion do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The onion call the lettuce."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-67",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-058",
+    "title": "The Lettuce",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0386"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0387"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0388"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0389"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0390"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-67-1",
-        "prompt": "What is the story about?",
+        "id": "q-058-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "lettuce"
         ],
         "type": "literal"
       },
       {
-        "id": "q-67-2",
-        "prompt": "How did the story end?",
+        "id": "q-058-2",
+        "prompt": "What does the lettuce do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The lettuce pull the cucumber."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   },
   {
-    "id": "story-68",
-    "title": "The big dog",
+    "recordVersion": "0.1.0",
+    "id": "story-059",
+    "title": "The Cucumber",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "w-sight-1612",
-          "w-cvc-142",
-          "w-cvc-361"
-        ],
-        "illustrationAssetId": "asset-dog"
+          "s-0391"
+        ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0392"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "w-sight-1613",
-          "w-cvc-317",
-          "w-sight-1600",
-          "w-cvc-142",
-          "w-cvc-361"
+          "s-0393"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "w-sight-1607",
-          "w-cvc-317"
+          "s-0394"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "w-sight-1600",
-          "w-sight-1600",
-          "w-cvc-317"
+          "s-0395"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-68-1",
-        "prompt": "What is the story about?",
+        "id": "q-059-1",
+        "prompt": "Who is in the story?",
         "acceptableAnswers": [
-          "the big dog",
-          "the the big dog"
+          "cucumber"
         ],
         "type": "literal"
       },
       {
-        "id": "q-68-2",
-        "prompt": "How did the story end?",
+        "id": "q-059-2",
+        "prompt": "What does the cucumber do?",
         "acceptableAnswers": [
-          "happy",
-          "they were happy",
-          "they went home happy"
+          "The cucumber push the corn."
         ],
         "type": "literal"
       }
     ],
     "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
     "licence": {
-      "tier": "cc0-1.0",
-      "licenceId": "CC0-1.0",
-      "sourceUrl": "https://example.org/stories",
-      "proofPath": "docs/licence/cc0.md"
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-060",
+    "title": "The Corn",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0396"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "s-0397"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "s-0398"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "s-0399"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "s-0400"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-060-1",
+        "prompt": "Who is in the story?",
+        "acceptableAnswers": [
+          "corn"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-060-2",
+        "prompt": "What does the corn do?",
+        "acceptableAnswers": [
+          "The corn need the man."
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+      "proofPath": "content/mvp/LICENCE.md"
     }
   }
 ]
