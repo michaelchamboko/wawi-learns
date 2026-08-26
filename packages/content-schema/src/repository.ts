@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { lstat, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import {
   AssetRecordSchema,
@@ -18,6 +18,7 @@ import {
   type StoryRecord,
   type WordRecord,
 } from "../src/index.full";
+import { isSafeContentPath } from "./validators";
 
 export interface CanonicalCorpus {
   readonly manifest: ContentPackManifest;
@@ -37,34 +38,65 @@ export interface CanonicalCorpus {
  * stories, 40+ maths templates) is committed under `content/<version>/` by
  * the build step and is not checked into this spike.
  */
-export async function loadCanonicalCorpus(root: string): Promise<CanonicalCorpus> {
+export async function loadCanonicalCorpus(
+  root: string,
+): Promise<CanonicalCorpus> {
   const base = resolve(root, "content", "seed");
-  const [manifestRaw, gpcsRaw, wordsRaw, sentencesRaw, storiesRaw, assetsRaw, formationsRaw, mathsRaw] =
-    await Promise.all([
-      readFile(resolve(base, "manifest.json"), "utf-8"),
-      readFile(resolve(base, "gpcs.json"), "utf-8"),
-      readFile(resolve(base, "words.json"), "utf-8"),
-      readFile(resolve(base, "sentences.json"), "utf-8"),
-      readFile(resolve(base, "stories.json"), "utf-8"),
-      readFile(resolve(base, "assets.json"), "utf-8"),
-      readFile(resolve(base, "formations.json"), "utf-8"),
-      readFile(resolve(base, "maths.json"), "utf-8"),
-    ]);
+  const readSeed = async (name: string): Promise<string> => {
+    if (!isSafeContentPath(`content/seed/${name}`) || !name.endsWith(".json"))
+      throw new Error(`path-escape:${name}`);
+    const file = resolve(base, name);
+    if ((await lstat(file)).isSymbolicLink())
+      throw new Error(`symlink-rejected:${name}`);
+    return readFile(file, "utf-8");
+  };
+  const [
+    manifestRaw,
+    gpcsRaw,
+    wordsRaw,
+    sentencesRaw,
+    storiesRaw,
+    assetsRaw,
+    formationsRaw,
+    mathsRaw,
+  ] = await Promise.all([
+    readSeed("manifest.json"),
+    readSeed("gpcs.json"),
+    readSeed("words.json"),
+    readSeed("sentences.json"),
+    readSeed("stories.json"),
+    readSeed("assets.json"),
+    readSeed("formations.json"),
+    readSeed("maths.json"),
+  ]);
+
+  const legacy = (value: unknown) =>
+    value && typeof value === "object" && !("recordVersion" in value)
+      ? { ...(value as Record<string, unknown>), recordVersion: "0.1.0" }
+      : value;
 
   return {
     manifest: ContentPackManifestSchema.parse(JSON.parse(manifestRaw)),
-    gpcs: (JSON.parse(gpcsRaw) as unknown[]).map((value) => GpcRecordSchema.parse(value)),
-    words: (JSON.parse(wordsRaw) as unknown[]).map((value) => WordRecordSchema.parse(value)),
-    sentences: (JSON.parse(sentencesRaw) as unknown[]).map((value) =>
-      SentenceRecordSchema.parse(value),
+    gpcs: (JSON.parse(gpcsRaw) as unknown[]).map((value) =>
+      GpcRecordSchema.parse(legacy(value)),
     ),
-    stories: (JSON.parse(storiesRaw) as unknown[]).map((value) => StoryRecordSchema.parse(value)),
-    assets: (JSON.parse(assetsRaw) as unknown[]).map((value) => AssetRecordSchema.parse(value)),
+    words: (JSON.parse(wordsRaw) as unknown[]).map((value) =>
+      WordRecordSchema.parse(legacy(value)),
+    ),
+    sentences: (JSON.parse(sentencesRaw) as unknown[]).map((value) =>
+      SentenceRecordSchema.parse(legacy(value)),
+    ),
+    stories: (JSON.parse(storiesRaw) as unknown[]).map((value) =>
+      StoryRecordSchema.parse(legacy(value)),
+    ),
+    assets: (JSON.parse(assetsRaw) as unknown[]).map((value) =>
+      AssetRecordSchema.parse(legacy(value)),
+    ),
     formations: (JSON.parse(formationsRaw) as unknown[]).map((value) =>
-      FormationPathSchema.parse(value),
+      FormationPathSchema.parse(legacy(value)),
     ),
     mathsTemplates: (JSON.parse(mathsRaw) as unknown[]).map((value) =>
-      MathsTemplateSchema.parse(value),
+      MathsTemplateSchema.parse(legacy(value)),
     ),
   };
 }

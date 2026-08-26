@@ -1,0 +1,6 @@
+task_id: SLC-003-T001
+check_kind: unit
+check_id: schema-validator-contract
+result: pass
+recorded_at: '2026-08-26T04:16:59Z'
+source_path: tests\content\schema.test.ts

@@ -3,6 +3,11 @@ import {
   GpcRecordSchema,
   WordRecordSchema,
   ContentPackManifestSchema,
+  SentenceRecordSchema,
+  StoryRecordSchema,
+  MathsTemplateSchema,
+  AssetRecordSchema,
+  FormationPathSchema,
   type GpcRecord,
   type WordRecord,
   type ContentPackManifest,
@@ -18,6 +23,7 @@ const baseLicence = {
 describe("SLC-003-T001 — content schema", () => {
   it("GPC record requires phonemes, position, curriculum order and a licence", () => {
     const valid: GpcRecord = {
+      recordVersion: "0.1.0",
       id: "gpc-s",
       grapheme: "s",
       phonemes: ["s"],
@@ -36,6 +42,7 @@ describe("SLC-003-T001 — content schema", () => {
 
   it("Word record rejects US spelling", () => {
     const us: WordRecord = {
+      recordVersion: "0.1.0",
       id: "w-color",
       spelling: "color",
       phonemes: ["k", "uh", "l", "uh", "r"],
@@ -73,5 +80,170 @@ describe("SLC-003-T001 — content schema", () => {
       sizeBytes: 0,
     };
     expect(ContentPackManifestSchema.safeParse(manifest).success).toBe(true);
+  });
+
+  it("retains the versioned PRD word metadata instead of silently dropping it", () => {
+    const result = WordRecordSchema.safeParse({
+      id: "w-cat",
+      spelling: "cat",
+      displayForm: "Cat",
+      lowercaseForm: "cat",
+      wordClass: "noun",
+      definition: "a small animal",
+      exampleSentences: ["The cat sat."],
+      phonemes: ["k", "a", "t"],
+      graphemeSegments: ["c", "a", "t"],
+      syllableSegments: ["cat"],
+      pronunciationRef: "audio/cat.mp3",
+      curriculumBand: "reception",
+      decodableByStage: { reception: true, year1: true },
+      commonExceptionWord: false,
+      frequencyBand: "high",
+      wordLength: 3,
+      concreteImageSuitable: true,
+      imageAssetRefs: ["asset-cat"],
+      audioAssetRefs: ["audio-cat"],
+      tracingPathAvailable: false,
+      spellingPatternTags: ["cvc"],
+      confusionSets: ["b/d"],
+      allowedActivityTypes: ["picture-match"],
+      safetyStatus: "approved",
+      source: "reviewed-core",
+      reviewStatus: "approved",
+      reviewer: "content-reviewer",
+      version: "1.0.0",
+      deprecated: false,
+      recordVersion: "1.0.0",
+      gpcIds: ["gpc-c", "gpc-a", "gpc-t"],
+      category: "concrete",
+      decodable: true,
+      taughtIn: ["reception"],
+      licence: baseLicence,
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.displayForm).toBe("Cat");
+      expect(result.data.reviewStatus).toBe("approved");
+      expect(result.data.version).toBe("1.0.0");
+    }
+  });
+
+  it("rejects incomplete explicitly versioned word, sentence, story and maths records", () => {
+    expect(
+      WordRecordSchema.safeParse({
+        id: "legacy-without-version",
+        spelling: "cat",
+        phonemes: ["k"],
+        gpcIds: [],
+        category: "concrete",
+        decodable: true,
+        taughtIn: ["reception"],
+        licence: baseLicence,
+      }).success,
+    ).toBe(false);
+    expect(
+      WordRecordSchema.safeParse({
+        id: "unknown-version",
+        spelling: "cat",
+        phonemes: ["k"],
+        gpcIds: [],
+        category: "concrete",
+        decodable: true,
+        taughtIn: ["reception"],
+        licence: baseLicence,
+        recordVersion: "9.0.0",
+      }).success,
+    ).toBe(false);
+    expect(
+      WordRecordSchema.safeParse({
+        id: "w",
+        spelling: "cat",
+        phonemes: ["k"],
+        gpcIds: [],
+        category: "concrete",
+        decodable: true,
+        taughtIn: ["reception"],
+        licence: baseLicence,
+        recordVersion: "1.0.0",
+      }).success,
+    ).toBe(false);
+    expect(
+      SentenceRecordSchema.safeParse({
+        id: "s",
+        text: "A cat.",
+        wordIds: ["w"],
+        decodableRatio: 1,
+        level: "reception",
+        licence: baseLicence,
+        recordVersion: "1.0.0",
+      }).success,
+    ).toBe(false);
+    expect(
+      StoryRecordSchema.safeParse({
+        id: "story",
+        title: "Story",
+        pages: [{ pageNumber: 1, sentenceIds: ["s"] }],
+        questions: [
+          {
+            id: "q",
+            prompt: "What?",
+            acceptableAnswers: ["cat"],
+            type: "literal",
+          },
+        ],
+        level: "reception",
+        licence: baseLicence,
+        recordVersion: "1.0.0",
+      }).success,
+    ).toBe(false);
+    expect(
+      MathsTemplateSchema.safeParse({
+        id: "m",
+        strand: "number-to-10",
+        level: "reception",
+        representation: "concrete",
+        generator: "count",
+        answerKey: "n",
+        misconceptionTags: [],
+        licence: baseLicence,
+        recordVersion: "1.0.0",
+      }).success,
+    ).toBe(false);
+    expect(
+      GpcRecordSchema.safeParse({
+        recordVersion: "1.0.0",
+        id: "g",
+        grapheme: "g",
+        phonemes: ["g"],
+        exampleWordIds: [],
+        position: "initial",
+        curriculumOrder: 1,
+        taughtIn: ["reception"],
+        licence: baseLicence,
+      }).success,
+    ).toBe(false);
+    expect(
+      AssetRecordSchema.safeParse({
+        recordVersion: "1.0.0",
+        id: "a",
+        url: "/a.svg",
+        contentType: "image/svg+xml",
+        sha256: "0".repeat(64),
+        bytes: 1,
+        greyscaleRecognisable: true,
+        licence: baseLicence,
+      }).success,
+    ).toBe(false);
+    expect(
+      FormationPathSchema.safeParse({
+        recordVersion: "1.0.0",
+        id: "f",
+        grapheme: "g",
+        width: 1,
+        height: 1,
+        waypoints: [],
+        licence: baseLicence,
+      }).success,
+    ).toBe(false);
   });
 });

@@ -1,0 +1,6 @@
+task_id: SLC-003-T001
+check_kind: integration
+check_id: content-suite
+result: pass
+recorded_at: '2026-08-26T04:17:26Z'
+source_path: tests\content\validators.test.ts
