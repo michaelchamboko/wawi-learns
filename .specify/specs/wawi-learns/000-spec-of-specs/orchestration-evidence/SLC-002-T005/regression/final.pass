@@ -1,6 +1,6 @@
 task_id: SLC-002-T005
 check_kind: regression
-check_id: check-plus-test-delta-final
+check_id: final
 result: pass
-recorded_at: '2026-08-26T02:28:33Z'
+recorded_at: '2026-08-26T02:18:50Z'
 source_path: package.json

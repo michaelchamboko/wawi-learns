@@ -1,0 +1,6 @@
+task_id: SLC-002-T005
+check_kind: deployment
+check_id: inspect-final
+result: pass
+recorded_at: '2026-08-26T02:13:20Z'
+source_path: package.json

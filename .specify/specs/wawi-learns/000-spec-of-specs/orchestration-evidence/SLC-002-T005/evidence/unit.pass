@@ -1,6 +1,6 @@
 task_id: SLC-002-T005
-check_kind: unit
-check_id: authorization-final
+check_kind: evidence
+check_id: unit
 result: pass
-recorded_at: '2026-08-26T02:24:26Z'
+recorded_at: '2026-08-26T02:14:23Z'
 source_path: tests\unit\local-data\authorization.test.ts

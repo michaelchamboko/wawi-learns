@@ -1,0 +1,6 @@
+task_id: SLC-002-T005
+check_kind: e2e
+check_id: offline-first-run-final
+result: pass
+recorded_at: '2026-08-26T02:25:25Z'
+source_path: tests\e2e\onboarding\offline-first-run.spec.ts
