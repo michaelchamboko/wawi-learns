@@ -2,13 +2,14 @@
   {
     "recordVersion": "0.1.0",
     "id": "story-001",
-    "title": "The Man and the Woman",
+    "title": "The cat.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
           "s-0001"
-        ]
+        ],
+        "illustrationAssetId": "asset-cat"
       },
       {
         "pageNumber": 2,
@@ -39,49 +40,32 @@
         "sentenceIds": [
           "s-0006"
         ]
-      },
-      {
-        "pageNumber": 7,
-        "sentenceIds": [
-          "s-0007"
-        ]
-      },
-      {
-        "pageNumber": 8,
-        "sentenceIds": [
-          "s-0008"
-        ]
-      },
-      {
-        "pageNumber": 9,
-        "sentenceIds": [
-          "s-0009"
-        ]
-      },
-      {
-        "pageNumber": 10,
-        "sentenceIds": [
-          "s-0010"
-        ]
       }
     ],
     "questions": [
       {
-        "id": "q-001-1",
-        "prompt": "Who is in the story?",
+        "id": "story-001-q1",
+        "prompt": "What is the cat?",
         "acceptableAnswers": [
-          "man",
-          "woman"
+          "The cat is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-001-2",
-        "prompt": "What does the man do?",
+        "id": "story-001-q2",
+        "prompt": "What can the cat do?",
         "acceptableAnswers": [
-          "The man eat the woman."
+          "The cat can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-001-q3",
+        "prompt": "Is the cat big?",
+        "acceptableAnswers": [
+          "The cat is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -90,93 +74,76 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
     "id": "story-002",
-    "title": "The Boy and the Girl",
+    "title": "The dog.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0011"
+          "s-0007"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0012"
+          "s-0008"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0013"
+          "s-0009"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0014"
+          "s-0010"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "s-0015"
+          "s-0011"
         ]
       },
       {
         "pageNumber": 6,
         "sentenceIds": [
-          "s-0016"
-        ]
-      },
-      {
-        "pageNumber": 7,
-        "sentenceIds": [
-          "s-0017"
-        ]
-      },
-      {
-        "pageNumber": 8,
-        "sentenceIds": [
-          "s-0018"
-        ]
-      },
-      {
-        "pageNumber": 9,
-        "sentenceIds": [
-          "s-0019"
-        ]
-      },
-      {
-        "pageNumber": 10,
-        "sentenceIds": [
-          "s-0020"
+          "s-0012"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-002-1",
-        "prompt": "Who is in the story?",
+        "id": "story-002-q1",
+        "prompt": "What is the dog?",
         "acceptableAnswers": [
-          "boy",
-          "girl"
+          "The dog is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-002-2",
-        "prompt": "What does the boy do?",
+        "id": "story-002-q2",
+        "prompt": "What can the dog do?",
         "acceptableAnswers": [
-          "The boy write the girl."
+          "The dog can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-002-q3",
+        "prompt": "Is the dog big?",
+        "acceptableAnswers": [
+          "The dog is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -185,71 +152,203 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
     "id": "story-003",
-    "title": "The Baby and the Child",
+    "title": "The bird.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0021"
+          "s-0013"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0022"
+          "s-0014"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0023"
+          "s-0015"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0024"
+          "s-0016"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "s-0025"
+          "s-0017"
         ]
       },
       {
         "pageNumber": 6,
         "sentenceIds": [
+          "s-0018"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-003-q1",
+        "prompt": "What is the bird?",
+        "acceptableAnswers": [
+          "The bird is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-003-q2",
+        "prompt": "What can the bird do?",
+        "acceptableAnswers": [
+          "The bird can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-003-q3",
+        "prompt": "Is the bird big?",
+        "acceptableAnswers": [
+          "The bird is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-004",
+    "title": "The cow.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0019"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "s-0020"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "s-0021"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "s-0022"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "s-0023"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0024"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-004-q1",
+        "prompt": "What is the cow?",
+        "acceptableAnswers": [
+          "The cow is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-004-q2",
+        "prompt": "What can the cow do?",
+        "acceptableAnswers": [
+          "The cow can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-004-q3",
+        "prompt": "Is the cow big?",
+        "acceptableAnswers": [
+          "The cow is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-005",
+    "title": "The pig.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0025"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
           "s-0026"
         ]
       },
       {
-        "pageNumber": 7,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0027"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0028"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0029"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0030"
         ]
@@ -257,21 +356,28 @@
     ],
     "questions": [
       {
-        "id": "q-003-1",
-        "prompt": "Who is in the story?",
+        "id": "story-005-q1",
+        "prompt": "What is the pig?",
         "acceptableAnswers": [
-          "baby",
-          "child"
+          "The pig is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-003-2",
-        "prompt": "What does the baby do?",
+        "id": "story-005-q2",
+        "prompt": "What can the pig do?",
         "acceptableAnswers": [
-          "The baby open the child."
+          "The pig can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-005-q3",
+        "prompt": "Is the pig big?",
+        "acceptableAnswers": [
+          "The pig is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -280,14 +386,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-004",
-    "title": "The Father and the Mother",
+    "id": "story-006",
+    "title": "The fox.",
     "pages": [
       {
         "pageNumber": 1,
@@ -324,144 +430,110 @@
         "sentenceIds": [
           "s-0036"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-006-q1",
+        "prompt": "What is the fox?",
+        "acceptableAnswers": [
+          "The fox is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 7,
+        "id": "story-006-q2",
+        "prompt": "What can the fox do?",
+        "acceptableAnswers": [
+          "The fox can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-006-q3",
+        "prompt": "Is the fox big?",
+        "acceptableAnswers": [
+          "The fox is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-007",
+    "title": "The rat.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0037"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0038"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0039"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0040"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-004-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "father",
-          "mother"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-004-2",
-        "prompt": "What does the father do?",
-        "acceptableAnswers": [
-          "The father find the mother."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-005",
-    "title": "The Dad and the Mom",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0041"
         ]
       },
       {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0042"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0043"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0044"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0045"
-        ]
-      },
-      {
         "pageNumber": 6,
         "sentenceIds": [
-          "s-0046"
-        ]
-      },
-      {
-        "pageNumber": 7,
-        "sentenceIds": [
-          "s-0047"
-        ]
-      },
-      {
-        "pageNumber": 8,
-        "sentenceIds": [
-          "s-0048"
-        ]
-      },
-      {
-        "pageNumber": 9,
-        "sentenceIds": [
-          "s-0049"
-        ]
-      },
-      {
-        "pageNumber": 10,
-        "sentenceIds": [
-          "s-0050"
+          "s-0042"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-005-1",
-        "prompt": "Who is in the story?",
+        "id": "story-007-q1",
+        "prompt": "What is the rat?",
         "acceptableAnswers": [
-          "dad",
-          "mom"
+          "The rat is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-005-2",
-        "prompt": "What does the dad do?",
+        "id": "story-007-q2",
+        "prompt": "What can the rat do?",
         "acceptableAnswers": [
-          "The dad make the mom."
+          "The rat can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-007-q3",
+        "prompt": "Is the rat big?",
+        "acceptableAnswers": [
+          "The rat is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -470,71 +542,203 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-006",
-    "title": "The Brother and the Sister",
+    "id": "story-008",
+    "title": "The bat.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0051"
+          "s-0043"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0052"
+          "s-0044"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0053"
+          "s-0045"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0054"
+          "s-0046"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "s-0055"
+          "s-0047"
         ]
       },
       {
         "pageNumber": 6,
         "sentenceIds": [
+          "s-0048"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-008-q1",
+        "prompt": "What is the bat?",
+        "acceptableAnswers": [
+          "The bat is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-008-q2",
+        "prompt": "What can the bat do?",
+        "acceptableAnswers": [
+          "The bat can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-008-q3",
+        "prompt": "Is the bat big?",
+        "acceptableAnswers": [
+          "The bat is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-009",
+    "title": "The man.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0049"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "s-0050"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "s-0051"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "s-0052"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "s-0053"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0054"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-009-q1",
+        "prompt": "What is the man?",
+        "acceptableAnswers": [
+          "The man is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-009-q2",
+        "prompt": "What can the man do?",
+        "acceptableAnswers": [
+          "The man can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-009-q3",
+        "prompt": "Is the man big?",
+        "acceptableAnswers": [
+          "The man is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-010",
+    "title": "The woman.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0055"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
           "s-0056"
         ]
       },
       {
-        "pageNumber": 7,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0057"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0058"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0059"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0060"
         ]
@@ -542,21 +746,28 @@
     ],
     "questions": [
       {
-        "id": "q-006-1",
-        "prompt": "Who is in the story?",
+        "id": "story-010-q1",
+        "prompt": "What is the woman?",
         "acceptableAnswers": [
-          "brother",
-          "sister"
+          "The woman is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-006-2",
-        "prompt": "What does the brother do?",
+        "id": "story-010-q2",
+        "prompt": "What can the woman do?",
         "acceptableAnswers": [
-          "The brother paint the sister."
+          "The woman can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-010-q3",
+        "prompt": "Is the woman big?",
+        "acceptableAnswers": [
+          "The woman is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -565,14 +776,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-007",
-    "title": "The Uncle and the Aunt",
+    "id": "story-011",
+    "title": "The boy.",
     "pages": [
       {
         "pageNumber": 1,
@@ -609,144 +820,110 @@
         "sentenceIds": [
           "s-0066"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-011-q1",
+        "prompt": "What is the boy?",
+        "acceptableAnswers": [
+          "The boy is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 7,
+        "id": "story-011-q2",
+        "prompt": "What can the boy do?",
+        "acceptableAnswers": [
+          "The boy can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-011-q3",
+        "prompt": "Is the boy big?",
+        "acceptableAnswers": [
+          "The boy is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-012",
+    "title": "The girl.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0067"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0068"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0069"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0070"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-007-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "uncle",
-          "aunt"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-007-2",
-        "prompt": "What does the uncle do?",
-        "acceptableAnswers": [
-          "The uncle count the aunt."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-008",
-    "title": "The Grandpa and the Grandma",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0071"
         ]
       },
       {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0072"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0073"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0074"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0075"
-        ]
-      },
-      {
         "pageNumber": 6,
         "sentenceIds": [
-          "s-0076"
-        ]
-      },
-      {
-        "pageNumber": 7,
-        "sentenceIds": [
-          "s-0077"
-        ]
-      },
-      {
-        "pageNumber": 8,
-        "sentenceIds": [
-          "s-0078"
-        ]
-      },
-      {
-        "pageNumber": 9,
-        "sentenceIds": [
-          "s-0079"
-        ]
-      },
-      {
-        "pageNumber": 10,
-        "sentenceIds": [
-          "s-0080"
+          "s-0072"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-008-1",
-        "prompt": "Who is in the story?",
+        "id": "story-012-q1",
+        "prompt": "What is the girl?",
         "acceptableAnswers": [
-          "grandpa",
-          "grandma"
+          "The girl is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-008-2",
-        "prompt": "What does the grandpa do?",
+        "id": "story-012-q2",
+        "prompt": "What can the girl do?",
         "acceptableAnswers": [
-          "The grandpa hold the grandma."
+          "The girl can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-012-q3",
+        "prompt": "Is the girl big?",
+        "acceptableAnswers": [
+          "The girl is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -755,71 +932,203 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-009",
-    "title": "The Friend and the Neighbour",
+    "id": "story-013",
+    "title": "The baby.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0081"
+          "s-0073"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0082"
+          "s-0074"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0083"
+          "s-0075"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0084"
+          "s-0076"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "s-0085"
+          "s-0077"
         ]
       },
       {
         "pageNumber": 6,
         "sentenceIds": [
+          "s-0078"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-013-q1",
+        "prompt": "What is the baby?",
+        "acceptableAnswers": [
+          "The baby is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-013-q2",
+        "prompt": "What can the baby do?",
+        "acceptableAnswers": [
+          "The baby can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-013-q3",
+        "prompt": "Is the baby big?",
+        "acceptableAnswers": [
+          "The baby is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-014",
+    "title": "The friend.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0079"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "s-0080"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "s-0081"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "s-0082"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "s-0083"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0084"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-014-q1",
+        "prompt": "What is the friend?",
+        "acceptableAnswers": [
+          "The friend is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-014-q2",
+        "prompt": "What can the friend do?",
+        "acceptableAnswers": [
+          "The friend can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-014-q3",
+        "prompt": "Is the friend big?",
+        "acceptableAnswers": [
+          "The friend is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-015",
+    "title": "The dad.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0085"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
           "s-0086"
         ]
       },
       {
-        "pageNumber": 7,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0087"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0088"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0089"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0090"
         ]
@@ -827,21 +1136,28 @@
     ],
     "questions": [
       {
-        "id": "q-009-1",
-        "prompt": "Who is in the story?",
+        "id": "story-015-q1",
+        "prompt": "What is the dad?",
         "acceptableAnswers": [
-          "friend",
-          "neighbour"
+          "The dad is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-009-2",
-        "prompt": "What does the friend do?",
+        "id": "story-015-q2",
+        "prompt": "What can the dad do?",
         "acceptableAnswers": [
-          "The friend call the neighbour."
+          "The dad can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-015-q3",
+        "prompt": "Is the dad big?",
+        "acceptableAnswers": [
+          "The dad is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -850,20 +1166,21 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-010",
-    "title": "The Cousin and the Dog",
+    "id": "story-016",
+    "title": "The sun.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
           "s-0091"
-        ]
+        ],
+        "illustrationAssetId": "asset-sun"
       },
       {
         "pageNumber": 2,
@@ -894,144 +1211,110 @@
         "sentenceIds": [
           "s-0096"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-016-q1",
+        "prompt": "What is the sun?",
+        "acceptableAnswers": [
+          "The sun is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 7,
+        "id": "story-016-q2",
+        "prompt": "What can the sun do?",
+        "acceptableAnswers": [
+          "The sun can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-016-q3",
+        "prompt": "Is the sun big?",
+        "acceptableAnswers": [
+          "The sun is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-017",
+    "title": "The ball.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0097"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0098"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0099"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0100"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-010-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "cousin",
-          "dog"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-010-2",
-        "prompt": "What does the cousin do?",
-        "acceptableAnswers": [
-          "The cousin push the dog."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-011",
-    "title": "The Cat and the Bird",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0101"
         ]
       },
       {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0102"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0103"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0104"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0105"
-        ]
-      },
-      {
         "pageNumber": 6,
         "sentenceIds": [
-          "s-0106"
-        ]
-      },
-      {
-        "pageNumber": 7,
-        "sentenceIds": [
-          "s-0107"
-        ]
-      },
-      {
-        "pageNumber": 8,
-        "sentenceIds": [
-          "s-0108"
-        ]
-      },
-      {
-        "pageNumber": 9,
-        "sentenceIds": [
-          "s-0109"
-        ]
-      },
-      {
-        "pageNumber": 10,
-        "sentenceIds": [
-          "s-0110"
+          "s-0102"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-011-1",
-        "prompt": "Who is in the story?",
+        "id": "story-017-q1",
+        "prompt": "What is the ball?",
         "acceptableAnswers": [
-          "cat",
-          "bird"
+          "The ball is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-011-2",
-        "prompt": "What does the cat do?",
+        "id": "story-017-q2",
+        "prompt": "What can the ball do?",
         "acceptableAnswers": [
-          "The cat eat the bird."
+          "The ball can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-017-q3",
+        "prompt": "Is the ball big?",
+        "acceptableAnswers": [
+          "The ball is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -1040,71 +1323,203 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-012",
-    "title": "The Fish and the Horse",
+    "id": "story-018",
+    "title": "The book.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0111"
+          "s-0103"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0112"
+          "s-0104"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0113"
+          "s-0105"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0114"
+          "s-0106"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "s-0115"
+          "s-0107"
         ]
       },
       {
         "pageNumber": 6,
         "sentenceIds": [
+          "s-0108"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-018-q1",
+        "prompt": "What is the book?",
+        "acceptableAnswers": [
+          "The book is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-018-q2",
+        "prompt": "What can the book do?",
+        "acceptableAnswers": [
+          "The book can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-018-q3",
+        "prompt": "Is the book big?",
+        "acceptableAnswers": [
+          "The book is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-019",
+    "title": "The hat.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0109"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "s-0110"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "s-0111"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "s-0112"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "s-0113"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0114"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-019-q1",
+        "prompt": "What is the hat?",
+        "acceptableAnswers": [
+          "The hat is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-019-q2",
+        "prompt": "What can the hat do?",
+        "acceptableAnswers": [
+          "The hat can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-019-q3",
+        "prompt": "Is the hat big?",
+        "acceptableAnswers": [
+          "The hat is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-020",
+    "title": "The bus.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0115"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
           "s-0116"
         ]
       },
       {
-        "pageNumber": 7,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0117"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0118"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0119"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0120"
         ]
@@ -1112,21 +1527,28 @@
     ],
     "questions": [
       {
-        "id": "q-012-1",
-        "prompt": "Who is in the story?",
+        "id": "story-020-q1",
+        "prompt": "What is the bus?",
         "acceptableAnswers": [
-          "fish",
-          "horse"
+          "The bus is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-012-2",
-        "prompt": "What does the fish do?",
+        "id": "story-020-q2",
+        "prompt": "What can the bus do?",
         "acceptableAnswers": [
-          "The fish write the horse."
+          "The bus can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-020-q3",
+        "prompt": "Is the bus big?",
+        "acceptableAnswers": [
+          "The bus is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -1135,14 +1557,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-013",
-    "title": "The Cow and the Pig",
+    "id": "story-021",
+    "title": "The cup.",
     "pages": [
       {
         "pageNumber": 1,
@@ -1179,144 +1601,110 @@
         "sentenceIds": [
           "s-0126"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-021-q1",
+        "prompt": "What is the cup?",
+        "acceptableAnswers": [
+          "The cup is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 7,
+        "id": "story-021-q2",
+        "prompt": "What can the cup do?",
+        "acceptableAnswers": [
+          "The cup can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-021-q3",
+        "prompt": "Is the cup big?",
+        "acceptableAnswers": [
+          "The cup is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-022",
+    "title": "The box.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0127"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0128"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0129"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0130"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-013-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "cow",
-          "pig"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-013-2",
-        "prompt": "What does the cow do?",
-        "acceptableAnswers": [
-          "The cow open the pig."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-014",
-    "title": "The Sheep and the Duck",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0131"
         ]
       },
       {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0132"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0133"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0134"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0135"
-        ]
-      },
-      {
         "pageNumber": 6,
         "sentenceIds": [
-          "s-0136"
-        ]
-      },
-      {
-        "pageNumber": 7,
-        "sentenceIds": [
-          "s-0137"
-        ]
-      },
-      {
-        "pageNumber": 8,
-        "sentenceIds": [
-          "s-0138"
-        ]
-      },
-      {
-        "pageNumber": 9,
-        "sentenceIds": [
-          "s-0139"
-        ]
-      },
-      {
-        "pageNumber": 10,
-        "sentenceIds": [
-          "s-0140"
+          "s-0132"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-014-1",
-        "prompt": "Who is in the story?",
+        "id": "story-022-q1",
+        "prompt": "What is the box?",
         "acceptableAnswers": [
-          "sheep",
-          "duck"
+          "The box is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-014-2",
-        "prompt": "What does the sheep do?",
+        "id": "story-022-q2",
+        "prompt": "What can the box do?",
         "acceptableAnswers": [
-          "The sheep find the duck."
+          "The box can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-022-q3",
+        "prompt": "Is the box big?",
+        "acceptableAnswers": [
+          "The box is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -1325,71 +1713,203 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-015",
-    "title": "The Chicken and the Goat",
+    "id": "story-023",
+    "title": "The pen.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0141"
+          "s-0133"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0142"
+          "s-0134"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0143"
+          "s-0135"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0144"
+          "s-0136"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "s-0145"
+          "s-0137"
         ]
       },
       {
         "pageNumber": 6,
         "sentenceIds": [
+          "s-0138"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-023-q1",
+        "prompt": "What is the pen?",
+        "acceptableAnswers": [
+          "The pen is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-023-q2",
+        "prompt": "What can the pen do?",
+        "acceptableAnswers": [
+          "The pen can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-023-q3",
+        "prompt": "Is the pen big?",
+        "acceptableAnswers": [
+          "The pen is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-024",
+    "title": "The bed.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0139"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "s-0140"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "s-0141"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "s-0142"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "s-0143"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0144"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-024-q1",
+        "prompt": "What is the bed?",
+        "acceptableAnswers": [
+          "The bed is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-024-q2",
+        "prompt": "What can the bed do?",
+        "acceptableAnswers": [
+          "The bed can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-024-q3",
+        "prompt": "Is the bed big?",
+        "acceptableAnswers": [
+          "The bed is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-025",
+    "title": "The top.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0145"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
           "s-0146"
         ]
       },
       {
-        "pageNumber": 7,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0147"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0148"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0149"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0150"
         ]
@@ -1397,21 +1917,28 @@
     ],
     "questions": [
       {
-        "id": "q-015-1",
-        "prompt": "Who is in the story?",
+        "id": "story-025-q1",
+        "prompt": "What is the top?",
         "acceptableAnswers": [
-          "chicken",
-          "goat"
+          "The top is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-015-2",
-        "prompt": "What does the chicken do?",
+        "id": "story-025-q2",
+        "prompt": "What can the top do?",
         "acceptableAnswers": [
-          "The chicken make the goat."
+          "The top can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-025-q3",
+        "prompt": "Is the top big?",
+        "acceptableAnswers": [
+          "The top is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -1420,14 +1947,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-016",
-    "title": "The Rabbit and the Mouse",
+    "id": "story-026",
+    "title": "The big cat.",
     "pages": [
       {
         "pageNumber": 1,
@@ -1464,144 +1991,110 @@
         "sentenceIds": [
           "s-0156"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-026-q1",
+        "prompt": "What is the big cat?",
+        "acceptableAnswers": [
+          "The big cat is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 7,
+        "id": "story-026-q2",
+        "prompt": "What can the big cat do?",
+        "acceptableAnswers": [
+          "The big cat can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-026-q3",
+        "prompt": "Is the big cat big?",
+        "acceptableAnswers": [
+          "The big cat is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-027",
+    "title": "The big dog.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0157"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0158"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0159"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0160"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-016-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "rabbit",
-          "mouse"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-016-2",
-        "prompt": "What does the rabbit do?",
-        "acceptableAnswers": [
-          "The rabbit paint the mouse."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-017",
-    "title": "The Rat and the Hamster",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0161"
         ]
       },
       {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0162"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0163"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0164"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0165"
-        ]
-      },
-      {
         "pageNumber": 6,
         "sentenceIds": [
-          "s-0166"
-        ]
-      },
-      {
-        "pageNumber": 7,
-        "sentenceIds": [
-          "s-0167"
-        ]
-      },
-      {
-        "pageNumber": 8,
-        "sentenceIds": [
-          "s-0168"
-        ]
-      },
-      {
-        "pageNumber": 9,
-        "sentenceIds": [
-          "s-0169"
-        ]
-      },
-      {
-        "pageNumber": 10,
-        "sentenceIds": [
-          "s-0170"
+          "s-0162"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-017-1",
-        "prompt": "Who is in the story?",
+        "id": "story-027-q1",
+        "prompt": "What is the big dog?",
         "acceptableAnswers": [
-          "rat",
-          "hamster"
+          "The big dog is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-017-2",
-        "prompt": "What does the rat do?",
+        "id": "story-027-q2",
+        "prompt": "What can the big dog do?",
         "acceptableAnswers": [
-          "The rat count the hamster."
+          "The big dog can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-027-q3",
+        "prompt": "Is the big dog big?",
+        "acceptableAnswers": [
+          "The big dog is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -1610,71 +2103,203 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-018",
-    "title": "The Gerbil and the Ferret",
+    "id": "story-028",
+    "title": "The big bird.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0171"
+          "s-0163"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0172"
+          "s-0164"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0173"
+          "s-0165"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0174"
+          "s-0166"
         ]
       },
       {
         "pageNumber": 5,
         "sentenceIds": [
-          "s-0175"
+          "s-0167"
         ]
       },
       {
         "pageNumber": 6,
         "sentenceIds": [
+          "s-0168"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-028-q1",
+        "prompt": "What is the big bird?",
+        "acceptableAnswers": [
+          "The big bird is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-028-q2",
+        "prompt": "What can the big bird do?",
+        "acceptableAnswers": [
+          "The big bird can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-028-q3",
+        "prompt": "Is the big bird big?",
+        "acceptableAnswers": [
+          "The big bird is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-029",
+    "title": "The big cow.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0169"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "s-0170"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "s-0171"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "s-0172"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "s-0173"
+        ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0174"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-029-q1",
+        "prompt": "What is the big cow?",
+        "acceptableAnswers": [
+          "The big cow is big."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-029-q2",
+        "prompt": "What can the big cow do?",
+        "acceptableAnswers": [
+          "The big cow can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-029-q3",
+        "prompt": "Is the big cow big?",
+        "acceptableAnswers": [
+          "The big cow is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-030",
+    "title": "The big pig.",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "s-0175"
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
           "s-0176"
         ]
       },
       {
-        "pageNumber": 7,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0177"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0178"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0179"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0180"
         ]
@@ -1682,21 +2307,28 @@
     ],
     "questions": [
       {
-        "id": "q-018-1",
-        "prompt": "Who is in the story?",
+        "id": "story-030-q1",
+        "prompt": "What is the big pig?",
         "acceptableAnswers": [
-          "gerbil",
-          "ferret"
+          "The big pig is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-018-2",
-        "prompt": "What does the gerbil do?",
+        "id": "story-030-q2",
+        "prompt": "What can the big pig do?",
         "acceptableAnswers": [
-          "The gerbil hold the ferret."
+          "The big pig can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-030-q3",
+        "prompt": "Is the big pig big?",
+        "acceptableAnswers": [
+          "The big pig is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -1705,14 +2337,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-019",
-    "title": "The Parrot and the Goldfish",
+    "id": "story-031",
+    "title": "The big fox.",
     "pages": [
       {
         "pageNumber": 1,
@@ -1749,208 +2381,266 @@
         "sentenceIds": [
           "s-0186"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-031-q1",
+        "prompt": "What is the big fox?",
+        "acceptableAnswers": [
+          "The big fox is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 7,
+        "id": "story-031-q2",
+        "prompt": "What can the big fox do?",
+        "acceptableAnswers": [
+          "The big fox can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-031-q3",
+        "prompt": "Is the big fox big?",
+        "acceptableAnswers": [
+          "The big fox is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-032",
+    "title": "The big rat.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0187"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0188"
         ]
       },
       {
-        "pageNumber": 9,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0189"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0190"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-019-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "parrot",
-          "goldfish"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-019-2",
-        "prompt": "What does the parrot do?",
-        "acceptableAnswers": [
-          "The parrot call the goldfish."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-020",
-    "title": "The Frog and the Turtle",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0191"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0192"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-032-q1",
+        "prompt": "What is the big rat?",
+        "acceptableAnswers": [
+          "The big rat is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 3,
+        "id": "story-032-q2",
+        "prompt": "What can the big rat do?",
+        "acceptableAnswers": [
+          "The big rat can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-032-q3",
+        "prompt": "Is the big rat big?",
+        "acceptableAnswers": [
+          "The big rat is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-033",
+    "title": "The big bat.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0193"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0194"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0195"
         ]
       },
       {
-        "pageNumber": 6,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0196"
         ]
       },
       {
-        "pageNumber": 7,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0197"
         ]
       },
       {
-        "pageNumber": 8,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0198"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-033-q1",
+        "prompt": "What is the big bat?",
+        "acceptableAnswers": [
+          "The big bat is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 9,
+        "id": "story-033-q2",
+        "prompt": "What can the big bat do?",
+        "acceptableAnswers": [
+          "The big bat can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-033-q3",
+        "prompt": "Is the big bat big?",
+        "acceptableAnswers": [
+          "The big bat is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-034",
+    "title": "The big man.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0199"
         ]
       },
       {
-        "pageNumber": 10,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0200"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-020-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "frog",
-          "turtle"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-020-2",
-        "prompt": "What does the frog do?",
-        "acceptableAnswers": [
-          "The frog push the turtle."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-021",
-    "title": "The Snake",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0201"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0202"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0203"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0204"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0205"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-021-1",
-        "prompt": "Who is in the story?",
+        "id": "story-034-q1",
+        "prompt": "What is the big man?",
         "acceptableAnswers": [
-          "snake"
+          "The big man is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-021-2",
-        "prompt": "What does the snake do?",
+        "id": "story-034-q2",
+        "prompt": "What can the big man do?",
         "acceptableAnswers": [
-          "The snake eat the spider."
+          "The big man can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-034-q3",
+        "prompt": "Is the big man big?",
+        "acceptableAnswers": [
+          "The big man is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -1959,41 +2649,47 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-022",
-    "title": "The Spider",
+    "id": "story-035",
+    "title": "The big woman.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0206"
+          "s-0205"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0207"
+          "s-0206"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0208"
+          "s-0207"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0209"
+          "s-0208"
         ]
       },
       {
         "pageNumber": 5,
+        "sentenceIds": [
+          "s-0209"
+        ]
+      },
+      {
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0210"
         ]
@@ -2001,20 +2697,28 @@
     ],
     "questions": [
       {
-        "id": "q-022-1",
-        "prompt": "Who is in the story?",
+        "id": "story-035-q1",
+        "prompt": "What is the big woman?",
         "acceptableAnswers": [
-          "spider"
+          "The big woman is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-022-2",
-        "prompt": "What does the spider do?",
+        "id": "story-035-q2",
+        "prompt": "What can the big woman do?",
         "acceptableAnswers": [
-          "The spider read the ant."
+          "The big woman can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-035-q3",
+        "prompt": "Is the big woman big?",
+        "acceptableAnswers": [
+          "The big woman is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2023,14 +2727,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-023",
-    "title": "The Ant",
+    "id": "story-036",
+    "title": "The big boy.",
     "pages": [
       {
         "pageNumber": 1,
@@ -2061,24 +2765,38 @@
         "sentenceIds": [
           "s-0215"
         ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0216"
+        ]
       }
     ],
     "questions": [
       {
-        "id": "q-023-1",
-        "prompt": "Who is in the story?",
+        "id": "story-036-q1",
+        "prompt": "What is the big boy?",
         "acceptableAnswers": [
-          "ant"
+          "The big boy is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-023-2",
-        "prompt": "What does the ant do?",
+        "id": "story-036-q2",
+        "prompt": "What can the big boy do?",
         "acceptableAnswers": [
-          "The ant write the bee."
+          "The big boy can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-036-q3",
+        "prompt": "Is the big boy big?",
+        "acceptableAnswers": [
+          "The big boy is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2087,254 +2805,232 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-024",
-    "title": "The Bee",
+    "id": "story-037",
+    "title": "The big girl.",
     "pages": [
       {
         "pageNumber": 1,
-        "sentenceIds": [
-          "s-0216"
-        ]
-      },
-      {
-        "pageNumber": 2,
         "sentenceIds": [
           "s-0217"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0218"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0219"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0220"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-024-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "bee"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-024-2",
-        "prompt": "What does the bee do?",
-        "acceptableAnswers": [
-          "The bee draw the butterfly."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-025",
-    "title": "The Butterfly",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0221"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0222"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-037-q1",
+        "prompt": "What is the big girl?",
+        "acceptableAnswers": [
+          "The big girl is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 3,
+        "id": "story-037-q2",
+        "prompt": "What can the big girl do?",
+        "acceptableAnswers": [
+          "The big girl can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-037-q3",
+        "prompt": "Is the big girl big?",
+        "acceptableAnswers": [
+          "The big girl is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-038",
+    "title": "The big baby.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0223"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0224"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0225"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-025-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "butterfly"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-025-2",
-        "prompt": "What does the butterfly do?",
-        "acceptableAnswers": [
-          "The butterfly open the lion."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-026",
-    "title": "The Lion",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0226"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0227"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0228"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-038-q1",
+        "prompt": "What is the big baby?",
+        "acceptableAnswers": [
+          "The big baby is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 4,
+        "id": "story-038-q2",
+        "prompt": "What can the big baby do?",
+        "acceptableAnswers": [
+          "The big baby can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-038-q3",
+        "prompt": "Is the big baby big?",
+        "acceptableAnswers": [
+          "The big baby is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-039",
+    "title": "The big friend.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0229"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0230"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-026-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "lion"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-026-2",
-        "prompt": "What does the lion do?",
-        "acceptableAnswers": [
-          "The lion close the tiger."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-027",
-    "title": "The Tiger",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0231"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0232"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0233"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0234"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0235"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-027-1",
-        "prompt": "Who is in the story?",
+        "id": "story-039-q1",
+        "prompt": "What is the big friend?",
         "acceptableAnswers": [
-          "tiger"
+          "The big friend is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-027-2",
-        "prompt": "What does the tiger do?",
+        "id": "story-039-q2",
+        "prompt": "What can the big friend do?",
         "acceptableAnswers": [
-          "The tiger find the bear."
+          "The big friend can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-039-q3",
+        "prompt": "Is the big friend big?",
+        "acceptableAnswers": [
+          "The big friend is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2343,41 +3039,47 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-028",
-    "title": "The Bear",
+    "id": "story-040",
+    "title": "The big dad.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0236"
+          "s-0235"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0237"
+          "s-0236"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0238"
+          "s-0237"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0239"
+          "s-0238"
         ]
       },
       {
         "pageNumber": 5,
+        "sentenceIds": [
+          "s-0239"
+        ]
+      },
+      {
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0240"
         ]
@@ -2385,20 +3087,28 @@
     ],
     "questions": [
       {
-        "id": "q-028-1",
-        "prompt": "Who is in the story?",
+        "id": "story-040-q1",
+        "prompt": "What is the big dad?",
         "acceptableAnswers": [
-          "bear"
+          "The big dad is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-028-2",
-        "prompt": "What does the bear do?",
+        "id": "story-040-q2",
+        "prompt": "What can the big dad do?",
         "acceptableAnswers": [
-          "The bear give the wolf."
+          "The big dad can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-040-q3",
+        "prompt": "Is the big dad big?",
+        "acceptableAnswers": [
+          "The big dad is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2407,14 +3117,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-029",
-    "title": "The Wolf",
+    "id": "story-041",
+    "title": "The big sun.",
     "pages": [
       {
         "pageNumber": 1,
@@ -2445,24 +3155,38 @@
         "sentenceIds": [
           "s-0245"
         ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0246"
+        ]
       }
     ],
     "questions": [
       {
-        "id": "q-029-1",
-        "prompt": "Who is in the story?",
+        "id": "story-041-q1",
+        "prompt": "What is the big sun?",
         "acceptableAnswers": [
-          "wolf"
+          "The big sun is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-029-2",
-        "prompt": "What does the wolf do?",
+        "id": "story-041-q2",
+        "prompt": "What can the big sun do?",
         "acceptableAnswers": [
-          "The wolf make the fox."
+          "The big sun can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-041-q3",
+        "prompt": "Is the big sun big?",
+        "acceptableAnswers": [
+          "The big sun is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2471,254 +3195,232 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-030",
-    "title": "The Fox",
+    "id": "story-042",
+    "title": "The big ball.",
     "pages": [
       {
         "pageNumber": 1,
-        "sentenceIds": [
-          "s-0246"
-        ]
-      },
-      {
-        "pageNumber": 2,
         "sentenceIds": [
           "s-0247"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0248"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0249"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0250"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-030-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "fox"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-030-2",
-        "prompt": "What does the fox do?",
-        "acceptableAnswers": [
-          "The fox drink the deer."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-031",
-    "title": "The Deer",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0251"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0252"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-042-q1",
+        "prompt": "What is the big ball?",
+        "acceptableAnswers": [
+          "The big ball is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 3,
+        "id": "story-042-q2",
+        "prompt": "What can the big ball do?",
+        "acceptableAnswers": [
+          "The big ball can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-042-q3",
+        "prompt": "Is the big ball big?",
+        "acceptableAnswers": [
+          "The big ball is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-043",
+    "title": "The big book.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0253"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0254"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0255"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-031-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "deer"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-031-2",
-        "prompt": "What does the deer do?",
-        "acceptableAnswers": [
-          "The deer paint the elephant."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-032",
-    "title": "The Elephant",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0256"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0257"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0258"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-043-q1",
+        "prompt": "What is the big book?",
+        "acceptableAnswers": [
+          "The big book is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 4,
+        "id": "story-043-q2",
+        "prompt": "What can the big book do?",
+        "acceptableAnswers": [
+          "The big book can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-043-q3",
+        "prompt": "Is the big book big?",
+        "acceptableAnswers": [
+          "The big book is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-044",
+    "title": "The big hat.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0259"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0260"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-032-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "elephant"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-032-2",
-        "prompt": "What does the elephant do?",
-        "acceptableAnswers": [
-          "The elephant love the giraffe."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-033",
-    "title": "The Giraffe",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0261"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0262"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0263"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0264"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0265"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-033-1",
-        "prompt": "Who is in the story?",
+        "id": "story-044-q1",
+        "prompt": "What is the big hat?",
         "acceptableAnswers": [
-          "giraffe"
+          "The big hat is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-033-2",
-        "prompt": "What does the giraffe do?",
+        "id": "story-044-q2",
+        "prompt": "What can the big hat do?",
         "acceptableAnswers": [
-          "The giraffe count the zebra."
+          "The big hat can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-044-q3",
+        "prompt": "Is the big hat big?",
+        "acceptableAnswers": [
+          "The big hat is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2727,41 +3429,47 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-034",
-    "title": "The Zebra",
+    "id": "story-045",
+    "title": "The big bus.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0266"
+          "s-0265"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0267"
+          "s-0266"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0268"
+          "s-0267"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0269"
+          "s-0268"
         ]
       },
       {
         "pageNumber": 5,
+        "sentenceIds": [
+          "s-0269"
+        ]
+      },
+      {
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0270"
         ]
@@ -2769,20 +3477,28 @@
     ],
     "questions": [
       {
-        "id": "q-034-1",
-        "prompt": "Who is in the story?",
+        "id": "story-045-q1",
+        "prompt": "What is the big bus?",
         "acceptableAnswers": [
-          "zebra"
+          "The big bus is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-034-2",
-        "prompt": "What does the zebra do?",
+        "id": "story-045-q2",
+        "prompt": "What can the big bus do?",
         "acceptableAnswers": [
-          "The zebra show the monkey."
+          "The big bus can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-045-q3",
+        "prompt": "Is the big bus big?",
+        "acceptableAnswers": [
+          "The big bus is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2791,14 +3507,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-035",
-    "title": "The Monkey",
+    "id": "story-046",
+    "title": "The big cup.",
     "pages": [
       {
         "pageNumber": 1,
@@ -2829,24 +3545,38 @@
         "sentenceIds": [
           "s-0275"
         ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0276"
+        ]
       }
     ],
     "questions": [
       {
-        "id": "q-035-1",
-        "prompt": "Who is in the story?",
+        "id": "story-046-q1",
+        "prompt": "What is the big cup?",
         "acceptableAnswers": [
-          "monkey"
+          "The big cup is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-035-2",
-        "prompt": "What does the monkey do?",
+        "id": "story-046-q2",
+        "prompt": "What can the big cup do?",
         "acceptableAnswers": [
-          "The monkey hold the kangaroo."
+          "The big cup can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-046-q3",
+        "prompt": "Is the big cup big?",
+        "acceptableAnswers": [
+          "The big cup is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -2855,254 +3585,232 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-036",
-    "title": "The Kangaroo",
+    "id": "story-047",
+    "title": "The big box.",
     "pages": [
       {
         "pageNumber": 1,
-        "sentenceIds": [
-          "s-0276"
-        ]
-      },
-      {
-        "pageNumber": 2,
         "sentenceIds": [
           "s-0277"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0278"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0279"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0280"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-036-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "kangaroo"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-036-2",
-        "prompt": "What does the kangaroo do?",
-        "acceptableAnswers": [
-          "The kangaroo wash the koala."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-037",
-    "title": "The Koala",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0281"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0282"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-047-q1",
+        "prompt": "What is the big box?",
+        "acceptableAnswers": [
+          "The big box is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 3,
+        "id": "story-047-q2",
+        "prompt": "What can the big box do?",
+        "acceptableAnswers": [
+          "The big box can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-047-q3",
+        "prompt": "Is the big box big?",
+        "acceptableAnswers": [
+          "The big box is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-048",
+    "title": "The big pen.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0283"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0284"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0285"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-037-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "koala"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-037-2",
-        "prompt": "What does the koala do?",
-        "acceptableAnswers": [
-          "The koala call the panda."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-038",
-    "title": "The Panda",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0286"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0287"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0288"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-048-q1",
+        "prompt": "What is the big pen?",
+        "acceptableAnswers": [
+          "The big pen is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 4,
+        "id": "story-048-q2",
+        "prompt": "What can the big pen do?",
+        "acceptableAnswers": [
+          "The big pen can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-048-q3",
+        "prompt": "Is the big pen big?",
+        "acceptableAnswers": [
+          "The big pen is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-049",
+    "title": "The big bed.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0289"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0290"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-038-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "panda"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-038-2",
-        "prompt": "What does the panda do?",
-        "acceptableAnswers": [
-          "The panda pull the apple."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "reception",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-039",
-    "title": "The Apple",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0291"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0292"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0293"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0294"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0295"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-039-1",
-        "prompt": "Who is in the story?",
+        "id": "story-049-q1",
+        "prompt": "What is the big bed?",
         "acceptableAnswers": [
-          "apple"
+          "The big bed is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-039-2",
-        "prompt": "What does the apple do?",
+        "id": "story-049-q2",
+        "prompt": "What can the big bed do?",
         "acceptableAnswers": [
-          "The apple push the banana."
+          "The big bed can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-049-q3",
+        "prompt": "Is the big bed big?",
+        "acceptableAnswers": [
+          "The big bed is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -3111,41 +3819,47 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-040",
-    "title": "The Banana",
+    "id": "story-050",
+    "title": "The big top.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0296"
+          "s-0295"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0297"
+          "s-0296"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0298"
+          "s-0297"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0299"
+          "s-0298"
         ]
       },
       {
         "pageNumber": 5,
+        "sentenceIds": [
+          "s-0299"
+        ]
+      },
+      {
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0300"
         ]
@@ -3153,20 +3867,28 @@
     ],
     "questions": [
       {
-        "id": "q-040-1",
-        "prompt": "Who is in the story?",
+        "id": "story-050-q1",
+        "prompt": "What is the big top?",
         "acceptableAnswers": [
-          "banana"
+          "The big top is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-040-2",
-        "prompt": "What does the banana do?",
+        "id": "story-050-q2",
+        "prompt": "What can the big top do?",
         "acceptableAnswers": [
-          "The banana need the orange."
+          "The big top can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-050-q3",
+        "prompt": "Is the big top big?",
+        "acceptableAnswers": [
+          "The big top is big."
+        ],
+        "type": "inferential"
       }
     ],
     "level": "reception",
@@ -3175,14 +3897,14 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-041",
-    "title": "The Orange",
+    "id": "story-051",
+    "title": "The big pot.",
     "pages": [
       {
         "pageNumber": 1,
@@ -3213,323 +3935,321 @@
         "sentenceIds": [
           "s-0305"
         ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0306"
+        ]
       }
     ],
     "questions": [
       {
-        "id": "q-041-1",
-        "prompt": "Who is in the story?",
+        "id": "story-051-q1",
+        "prompt": "What is the big pot?",
         "acceptableAnswers": [
-          "orange"
+          "The big pot is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-041-2",
-        "prompt": "What does the orange do?",
+        "id": "story-051-q2",
+        "prompt": "What can the big pot do?",
         "acceptableAnswers": [
-          "The orange eat the pear."
+          "The big pot can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-051-q3",
+        "prompt": "Is the big pot big?",
+        "acceptableAnswers": [
+          "The big pot is big."
+        ],
+        "type": "inferential"
       }
     ],
-    "level": "year1",
+    "level": "reception",
     "source": "content/seed/stories.json",
     "reviewStatus": "draft",
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-042",
-    "title": "The Pear",
+    "id": "story-052",
+    "title": "The small cat.",
     "pages": [
       {
         "pageNumber": 1,
-        "sentenceIds": [
-          "s-0306"
-        ]
-      },
-      {
-        "pageNumber": 2,
         "sentenceIds": [
           "s-0307"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0308"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0309"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0310"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-042-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "pear"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-042-2",
-        "prompt": "What does the pear do?",
-        "acceptableAnswers": [
-          "The pear read the grape."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-043",
-    "title": "The Grape",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0311"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0312"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-052-q1",
+        "prompt": "What is the small cat?",
+        "acceptableAnswers": [
+          "The small cat is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 3,
+        "id": "story-052-q2",
+        "prompt": "What can the small cat do?",
+        "acceptableAnswers": [
+          "The small cat can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-052-q3",
+        "prompt": "Is the small cat big?",
+        "acceptableAnswers": [
+          "The small cat is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-053",
+    "title": "The small dog.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0313"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0314"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0315"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-043-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "grape"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-043-2",
-        "prompt": "What does the grape do?",
-        "acceptableAnswers": [
-          "The grape write the strawberry."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-044",
-    "title": "The Strawberry",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0316"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0317"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0318"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-053-q1",
+        "prompt": "What is the small dog?",
+        "acceptableAnswers": [
+          "The small dog is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 4,
+        "id": "story-053-q2",
+        "prompt": "What can the small dog do?",
+        "acceptableAnswers": [
+          "The small dog can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-053-q3",
+        "prompt": "Is the small dog big?",
+        "acceptableAnswers": [
+          "The small dog is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-054",
+    "title": "The small bird.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0319"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0320"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-044-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "strawberry"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-044-2",
-        "prompt": "What does the strawberry do?",
-        "acceptableAnswers": [
-          "The strawberry draw the blueberry."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-045",
-    "title": "The Blueberry",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0321"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0322"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0323"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0324"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0325"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-045-1",
-        "prompt": "Who is in the story?",
+        "id": "story-054-q1",
+        "prompt": "What is the small bird?",
         "acceptableAnswers": [
-          "blueberry"
+          "The small bird is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-045-2",
-        "prompt": "What does the blueberry do?",
+        "id": "story-054-q2",
+        "prompt": "What can the small bird do?",
         "acceptableAnswers": [
-          "The blueberry open the raspberry."
+          "The small bird can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-054-q3",
+        "prompt": "Is the small bird big?",
+        "acceptableAnswers": [
+          "The small bird is big."
+        ],
+        "type": "inferential"
       }
     ],
-    "level": "year1",
+    "level": "reception",
     "source": "content/seed/stories.json",
     "reviewStatus": "draft",
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-046",
-    "title": "The Raspberry",
+    "id": "story-055",
+    "title": "The small cow.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0326"
+          "s-0325"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0327"
+          "s-0326"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0328"
+          "s-0327"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0329"
+          "s-0328"
         ]
       },
       {
         "pageNumber": 5,
+        "sentenceIds": [
+          "s-0329"
+        ]
+      },
+      {
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0330"
         ]
@@ -3537,36 +4257,44 @@
     ],
     "questions": [
       {
-        "id": "q-046-1",
-        "prompt": "Who is in the story?",
+        "id": "story-055-q1",
+        "prompt": "What is the small cow?",
         "acceptableAnswers": [
-          "raspberry"
+          "The small cow is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-046-2",
-        "prompt": "What does the raspberry do?",
+        "id": "story-055-q2",
+        "prompt": "What can the small cow do?",
         "acceptableAnswers": [
-          "The raspberry close the watermelon."
+          "The small cow can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-055-q3",
+        "prompt": "Is the small cow big?",
+        "acceptableAnswers": [
+          "The small cow is big."
+        ],
+        "type": "inferential"
       }
     ],
-    "level": "year1",
+    "level": "reception",
     "source": "content/seed/stories.json",
     "reviewStatus": "draft",
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-047",
-    "title": "The Watermelon",
+    "id": "story-056",
+    "title": "The small pig.",
     "pages": [
       {
         "pageNumber": 1,
@@ -3597,323 +4325,321 @@
         "sentenceIds": [
           "s-0335"
         ]
+      },
+      {
+        "pageNumber": 6,
+        "sentenceIds": [
+          "s-0336"
+        ]
       }
     ],
     "questions": [
       {
-        "id": "q-047-1",
-        "prompt": "Who is in the story?",
+        "id": "story-056-q1",
+        "prompt": "What is the small pig?",
         "acceptableAnswers": [
-          "watermelon"
+          "The small pig is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-047-2",
-        "prompt": "What does the watermelon do?",
+        "id": "story-056-q2",
+        "prompt": "What can the small pig do?",
         "acceptableAnswers": [
-          "The watermelon find the pineapple."
+          "The small pig can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-056-q3",
+        "prompt": "Is the small pig big?",
+        "acceptableAnswers": [
+          "The small pig is big."
+        ],
+        "type": "inferential"
       }
     ],
-    "level": "year1",
+    "level": "reception",
     "source": "content/seed/stories.json",
     "reviewStatus": "draft",
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-048",
-    "title": "The Pineapple",
+    "id": "story-057",
+    "title": "The small fox.",
     "pages": [
       {
         "pageNumber": 1,
-        "sentenceIds": [
-          "s-0336"
-        ]
-      },
-      {
-        "pageNumber": 2,
         "sentenceIds": [
           "s-0337"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0338"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0339"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0340"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-048-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "pineapple"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-048-2",
-        "prompt": "What does the pineapple do?",
-        "acceptableAnswers": [
-          "The pineapple give the mango."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-049",
-    "title": "The Mango",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0341"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0342"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-057-q1",
+        "prompt": "What is the small fox?",
+        "acceptableAnswers": [
+          "The small fox is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 3,
+        "id": "story-057-q2",
+        "prompt": "What can the small fox do?",
+        "acceptableAnswers": [
+          "The small fox can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-057-q3",
+        "prompt": "Is the small fox big?",
+        "acceptableAnswers": [
+          "The small fox is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-058",
+    "title": "The small rat.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0343"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0344"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0345"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-049-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "mango"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-049-2",
-        "prompt": "What does the mango do?",
-        "acceptableAnswers": [
-          "The mango make the peach."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-050",
-    "title": "The Peach",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0346"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0347"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0348"
         ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "story-058-q1",
+        "prompt": "What is the small rat?",
+        "acceptableAnswers": [
+          "The small rat is big."
+        ],
+        "type": "literal"
       },
       {
-        "pageNumber": 4,
+        "id": "story-058-q2",
+        "prompt": "What can the small rat do?",
+        "acceptableAnswers": [
+          "The small rat can run."
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "story-058-q3",
+        "prompt": "Is the small rat big?",
+        "acceptableAnswers": [
+          "The small rat is big."
+        ],
+        "type": "inferential"
+      }
+    ],
+    "level": "reception",
+    "source": "content/seed/stories.json",
+    "reviewStatus": "draft",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
+    }
+  },
+  {
+    "recordVersion": "0.1.0",
+    "id": "story-059",
+    "title": "The small bat.",
+    "pages": [
+      {
+        "pageNumber": 1,
         "sentenceIds": [
           "s-0349"
         ]
       },
       {
-        "pageNumber": 5,
+        "pageNumber": 2,
         "sentenceIds": [
           "s-0350"
         ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-050-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "peach"
-        ],
-        "type": "literal"
       },
       {
-        "id": "q-050-2",
-        "prompt": "What does the peach do?",
-        "acceptableAnswers": [
-          "The peach drink the plum."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-051",
-    "title": "The Plum",
-    "pages": [
-      {
-        "pageNumber": 1,
+        "pageNumber": 3,
         "sentenceIds": [
           "s-0351"
         ]
       },
       {
-        "pageNumber": 2,
+        "pageNumber": 4,
         "sentenceIds": [
           "s-0352"
         ]
       },
       {
-        "pageNumber": 3,
+        "pageNumber": 5,
         "sentenceIds": [
           "s-0353"
         ]
       },
       {
-        "pageNumber": 4,
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0354"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0355"
         ]
       }
     ],
     "questions": [
       {
-        "id": "q-051-1",
-        "prompt": "Who is in the story?",
+        "id": "story-059-q1",
+        "prompt": "What is the small bat?",
         "acceptableAnswers": [
-          "plum"
+          "The small bat is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-051-2",
-        "prompt": "What does the plum do?",
+        "id": "story-059-q2",
+        "prompt": "What can the small bat do?",
         "acceptableAnswers": [
-          "The plum paint the cherry."
+          "The small bat can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-059-q3",
+        "prompt": "Is the small bat big?",
+        "acceptableAnswers": [
+          "The small bat is big."
+        ],
+        "type": "inferential"
       }
     ],
-    "level": "year1",
+    "level": "reception",
     "source": "content/seed/stories.json",
     "reviewStatus": "draft",
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   },
   {
     "recordVersion": "0.1.0",
-    "id": "story-052",
-    "title": "The Cherry",
+    "id": "story-060",
+    "title": "The small man.",
     "pages": [
       {
         "pageNumber": 1,
         "sentenceIds": [
-          "s-0356"
+          "s-0355"
         ]
       },
       {
         "pageNumber": 2,
         "sentenceIds": [
-          "s-0357"
+          "s-0356"
         ]
       },
       {
         "pageNumber": 3,
         "sentenceIds": [
-          "s-0358"
+          "s-0357"
         ]
       },
       {
         "pageNumber": 4,
         "sentenceIds": [
-          "s-0359"
+          "s-0358"
         ]
       },
       {
         "pageNumber": 5,
+        "sentenceIds": [
+          "s-0359"
+        ]
+      },
+      {
+        "pageNumber": 6,
         "sentenceIds": [
           "s-0360"
         ]
@@ -3921,542 +4647,38 @@
     ],
     "questions": [
       {
-        "id": "q-052-1",
-        "prompt": "Who is in the story?",
+        "id": "story-060-q1",
+        "prompt": "What is the small man?",
         "acceptableAnswers": [
-          "cherry"
+          "The small man is big."
         ],
         "type": "literal"
       },
       {
-        "id": "q-052-2",
-        "prompt": "What does the cherry do?",
+        "id": "story-060-q2",
+        "prompt": "What can the small man do?",
         "acceptableAnswers": [
-          "The cherry love the kiwi."
+          "The small man can run."
         ],
         "type": "literal"
+      },
+      {
+        "id": "story-060-q3",
+        "prompt": "Is the small man big?",
+        "acceptableAnswers": [
+          "The small man is big."
+        ],
+        "type": "inferential"
       }
     ],
-    "level": "year1",
+    "level": "reception",
     "source": "content/seed/stories.json",
     "reviewStatus": "draft",
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-053",
-    "title": "The Kiwi",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0361"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0362"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0363"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0364"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0365"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-053-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "kiwi"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-053-2",
-        "prompt": "What does the kiwi do?",
-        "acceptableAnswers": [
-          "The kiwi count the carrot."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-054",
-    "title": "The Carrot",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0366"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0367"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0368"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0369"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0370"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-054-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "carrot"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-054-2",
-        "prompt": "What does the carrot do?",
-        "acceptableAnswers": [
-          "The carrot show the potato."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-055",
-    "title": "The Potato",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0371"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0372"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0373"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0374"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0375"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-055-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "potato"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-055-2",
-        "prompt": "What does the potato do?",
-        "acceptableAnswers": [
-          "The potato hold the tomato."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-056",
-    "title": "The Tomato",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0376"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0377"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0378"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0379"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0380"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-056-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "tomato"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-056-2",
-        "prompt": "What does the tomato do?",
-        "acceptableAnswers": [
-          "The tomato wash the onion."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-057",
-    "title": "The Onion",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0381"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0382"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0383"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0384"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0385"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-057-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "onion"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-057-2",
-        "prompt": "What does the onion do?",
-        "acceptableAnswers": [
-          "The onion call the lettuce."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-058",
-    "title": "The Lettuce",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0386"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0387"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0388"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0389"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0390"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-058-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "lettuce"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-058-2",
-        "prompt": "What does the lettuce do?",
-        "acceptableAnswers": [
-          "The lettuce pull the cucumber."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-059",
-    "title": "The Cucumber",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0391"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0392"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0393"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0394"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0395"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-059-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "cucumber"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-059-2",
-        "prompt": "What does the cucumber do?",
-        "acceptableAnswers": [
-          "The cucumber push the corn."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
-    }
-  },
-  {
-    "recordVersion": "0.1.0",
-    "id": "story-060",
-    "title": "The Corn",
-    "pages": [
-      {
-        "pageNumber": 1,
-        "sentenceIds": [
-          "s-0396"
-        ]
-      },
-      {
-        "pageNumber": 2,
-        "sentenceIds": [
-          "s-0397"
-        ]
-      },
-      {
-        "pageNumber": 3,
-        "sentenceIds": [
-          "s-0398"
-        ]
-      },
-      {
-        "pageNumber": 4,
-        "sentenceIds": [
-          "s-0399"
-        ]
-      },
-      {
-        "pageNumber": 5,
-        "sentenceIds": [
-          "s-0400"
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "id": "q-060-1",
-        "prompt": "Who is in the story?",
-        "acceptableAnswers": [
-          "corn"
-        ],
-        "type": "literal"
-      },
-      {
-        "id": "q-060-2",
-        "prompt": "What does the corn do?",
-        "acceptableAnswers": [
-          "The corn need the man."
-        ],
-        "type": "literal"
-      }
-    ],
-    "level": "year1",
-    "source": "content/seed/stories.json",
-    "reviewStatus": "draft",
-    "licence": {
-      "tier": "project-original",
-      "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/stories.json",
+      "proofPath": "content/seed/stories.json"
     }
   }
 ]

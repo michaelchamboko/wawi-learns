@@ -28,8 +28,8 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/formations.json",
+      "proofPath": "content/seed/formations.json"
     }
   },
   {
@@ -40,18 +40,18 @@
     "height": 120,
     "waypoints": [
       {
-        "x": 50,
-        "y": 110,
-        "direction": "top-to-bottom"
+        "x": 60,
+        "y": 20,
+        "direction": "right-to-left"
       },
       {
-        "x": 25,
+        "x": 20,
         "y": 60,
         "direction": "left-to-right"
       },
       {
-        "x": 75,
-        "y": 60,
+        "x": 60,
+        "y": 100,
         "direction": "right-to-left"
       }
     ],
@@ -61,8 +61,8 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/formations.json",
+      "proofPath": "content/seed/formations.json"
     }
   },
   {
@@ -73,19 +73,14 @@
     "height": 120,
     "waypoints": [
       {
-        "x": 50,
+        "x": 40,
         "y": 110,
         "direction": "top-to-bottom"
       },
       {
-        "x": 25,
-        "y": 60,
+        "x": 15,
+        "y": 35,
         "direction": "left-to-right"
-      },
-      {
-        "x": 75,
-        "y": 60,
-        "direction": "right-to-left"
       }
     ],
     "reviewStatus": "draft",
@@ -94,8 +89,8 @@
     "licence": {
       "tier": "project-original",
       "licenceId": "WAWI-MVP-ORIGINAL-1.0",
-      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
-      "proofPath": "content/mvp/LICENCE.md"
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/seed/formations.json",
+      "proofPath": "content/seed/formations.json"
     }
   }
 ]

@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 256
+revision: 265
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: e5eed0a100244df1378e923d0739f750a20df083f3752e114460a05c5334b8af
+  implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -974,7 +974,7 @@ slices:
   - id: "SLC-003-T003"
     title: "Build reading and media core"
     rank: 13
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-003-T002"]
     requirements: ["PRD-FR-002", "PRD-FR-019"]
     acceptance: ["AC-SLC-003-003"]
@@ -988,7 +988,49 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: content
+      check_id: reading-media-inventory
+      result: pass
+      recorded_at: '2026-08-26T20:15:33Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\content\reading-media-inventory.pass
+      implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\raw\green-reading-media-inventory.log
+    - check_kind: content
+      check_id: reading-media-red
+      result: fail
+      recorded_at: '2026-08-26T20:15:50Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\content\reading-media-red.fail
+      implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\raw\red-reading-media-inventory.log
+    - check_kind: content
+      check_id: suite
+      result: pass
+      recorded_at: '2026-08-26T20:16:03Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\content\suite.pass
+      implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\raw\test-content.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-26T20:16:16Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\regression\check.pass
+      implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\raw\check.log
+    - check_kind: unit
+      check_id: reading-media
+      result: pass
+      recorded_at: '2026-08-26T20:16:55Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\unit\reading-media.pass
+      implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\raw\green-reading-media-inventory.log
+    - check_kind: integration
+      check_id: content-suite
+      result: pass
+      recorded_at: '2026-08-26T20:17:09Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\integration\content-suite.pass
+      implementation_fingerprint: bbf4dd2ad38c6eae5bfe5265a8f148daaac2d53325240208458e25942cc943a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\raw\test-content.log
     blockers: []
     active_owner:
     reopens:
@@ -1040,6 +1082,10 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
+    completed_at: '2026-08-26T20:17:30Z'
   - id: "SLC-003-T004"
     title: "Build mathematics core"
     rank: 14
@@ -1109,6 +1155,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-003-T005"
     title: "Build and publish immutable packs"
     rank: 15
@@ -1178,6 +1227,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-004"
   directory: "004-adaptive-learner-core"
   state: "STALE"
@@ -1258,6 +1310,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-004-T002"
     title: "Implement lesson scheduling and weak recovery"
     rank: 17
@@ -1327,6 +1382,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-004-T003"
     title: "Implement baseline and progress windows"
     rank: 18
@@ -1396,6 +1454,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-004-T004"
     title: "Build child home and activity shell"
     rank: 19
@@ -1465,6 +1526,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-004-T005"
     title: "Deliver core adaptive English journey"
     rank: 20
@@ -1534,6 +1598,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-005"
   directory: "005-handwriting-spelling-speech"
   state: "STALE"
@@ -1614,6 +1681,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-005-T002"
     title: "Implement spelling and composition progression"
     rank: 22
@@ -1683,6 +1753,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
@@ -1752,6 +1825,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-005-T004"
     title: "Implement ephemeral pronunciation assessment"
     rank: 24
@@ -1821,6 +1897,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-005-T005"
     title: "Integrate multimodal lesson and privacy regression"
     rank: 25
@@ -1890,6 +1969,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -1970,6 +2052,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
@@ -2039,6 +2124,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
@@ -2108,6 +2196,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -2177,6 +2268,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -2246,6 +2340,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -2326,6 +2423,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -2395,6 +2495,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -2464,6 +2567,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -2533,6 +2639,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -2613,6 +2722,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -2682,6 +2794,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -2751,6 +2866,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -2820,6 +2938,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -2889,6 +3010,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -2969,6 +3093,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -3038,6 +3165,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -3107,6 +3237,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -3176,6 +3309,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -3245,6 +3381,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -3325,6 +3464,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -3394,6 +3536,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -3463,6 +3608,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -3532,6 +3680,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -3601,6 +3752,9 @@ slices:
     - reason: verified-surgical-word-inventory-repair
       by: SLC-003-T002
       recorded_at: '2026-08-26T12:55:16Z'
+    - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
+      by: SLC-003-T003
+      recorded_at: '2026-08-26T18:28:19Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -3964,4 +4118,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-26T12:58:06Z'
+updated_at: '2026-08-26T20:17:30Z'

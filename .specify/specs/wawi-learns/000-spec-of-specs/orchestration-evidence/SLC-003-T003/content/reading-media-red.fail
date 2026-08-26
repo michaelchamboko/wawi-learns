@@ -1,0 +1,6 @@
+task_id: SLC-003-T003
+check_kind: content
+check_id: reading-media-red
+result: fail
+recorded_at: '2026-08-26T20:15:50Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T003\raw\red-reading-media-inventory.log

@@ -13,9 +13,110 @@
     "formations": 3,
     "mathsTemplates": 0
   },
-  "assets": [],
+  "assets": [
+    {
+      "recordVersion": "0.1.0",
+      "id": "asset-cat",
+      "url": "/content/mvp/images/cat.svg",
+      "contentType": "image/svg+xml",
+      "sha256": "1a9e5955390ce9e917d5d9b863a994946a1d7ab2a6e532c3e46b259f5ec36a67",
+      "bytes": 651,
+      "greyscaleRecognisable": true,
+      "assetKind": "image",
+      "safetyStatus": "pending",
+      "reviewStatus": "draft",
+      "reviewer": "pending-human-review",
+      "source": "content/mvp/images",
+      "licence": {
+        "tier": "project-original",
+        "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+        "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+        "proofPath": "content/mvp/LICENCE.md"
+      }
+    },
+    {
+      "recordVersion": "0.1.0",
+      "id": "asset-sun",
+      "url": "/content/mvp/images/sun.svg",
+      "contentType": "image/svg+xml",
+      "sha256": "b0da0f9a0cc95d479d3cac90ae5e0206f0813f71ecdea8b4272a3e12bcaedb71",
+      "bytes": 622,
+      "greyscaleRecognisable": true,
+      "assetKind": "image",
+      "safetyStatus": "pending",
+      "reviewStatus": "draft",
+      "reviewer": "pending-human-review",
+      "source": "content/mvp/images",
+      "licence": {
+        "tier": "project-original",
+        "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+        "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+        "proofPath": "content/mvp/LICENCE.md"
+      }
+    },
+    {
+      "recordVersion": "0.1.0",
+      "id": "asset-sit",
+      "url": "/content/mvp/images/sit.svg",
+      "contentType": "image/svg+xml",
+      "sha256": "d73d29318238d8fa3f54515d3ca70ed2e81a0a09b18b0bfd20652b5cb5536aeb",
+      "bytes": 634,
+      "greyscaleRecognisable": true,
+      "assetKind": "image",
+      "safetyStatus": "pending",
+      "reviewStatus": "draft",
+      "reviewer": "pending-human-review",
+      "source": "content/mvp/images",
+      "licence": {
+        "tier": "project-original",
+        "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+        "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+        "proofPath": "content/mvp/LICENCE.md"
+      }
+    },
+    {
+      "recordVersion": "0.1.0",
+      "id": "asset-sat",
+      "url": "/content/mvp/images/sat.svg",
+      "contentType": "image/svg+xml",
+      "sha256": "fe108747fa87bffd55728ed0aef5858ab8514d24bd37fa2d74834020ca33be5d",
+      "bytes": 701,
+      "greyscaleRecognisable": true,
+      "assetKind": "image",
+      "safetyStatus": "pending",
+      "reviewStatus": "draft",
+      "reviewer": "pending-human-review",
+      "source": "content/mvp/images",
+      "licence": {
+        "tier": "project-original",
+        "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+        "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+        "proofPath": "content/mvp/LICENCE.md"
+      }
+    },
+    {
+      "recordVersion": "0.1.0",
+      "id": "asset-can",
+      "url": "/content/mvp/images/can.svg",
+      "contentType": "image/svg+xml",
+      "sha256": "ac99775331fd62f3c76f208ed9fb3d43d321fca76059f37162aea83b25d1b6f3",
+      "bytes": 597,
+      "greyscaleRecognisable": true,
+      "assetKind": "image",
+      "safetyStatus": "pending",
+      "reviewStatus": "draft",
+      "reviewer": "pending-human-review",
+      "source": "content/mvp/images",
+      "licence": {
+        "tier": "project-original",
+        "licenceId": "WAWI-MVP-ORIGINAL-1.0",
+        "sourceUrl": "https://github.com/michaelchamboko/wawi-learns/blob/main/content/mvp/LICENCE.md",
+        "proofPath": "content/mvp/LICENCE.md"
+      }
+    }
+  ],
   "entryUrls": [
     "/content/0.1.0-spike/manifest.json"
   ],
-  "sizeBytes": 0
+  "sizeBytes": 3205
 }
