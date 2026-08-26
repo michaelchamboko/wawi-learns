@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 207
+revision: 213
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,14 +7,14 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: dd8e15978006f50be4aaf328371654db3594c80545a13c3e9ecb2561edae9538
+  implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
   decomposition_version: "v002"
   frozen_sequence: true
 project:
-  state: "IN_PROGRESS"
+  state: "AWAITING_APPROVAL"
   current_task:
   active_owner:
   blockers: []
@@ -336,25 +336,25 @@ slices:
       rollback: []
     evidence:
     - check_kind: unit
-      check_id: ai-safety
+      check_id: licensing-provenance-repair
       result: pass
-      recorded_at: '2026-08-25T22:43:54Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T005\unit\ai-safety.pass
-      implementation_fingerprint: be11e5f0b90f30ff8650cf4b74ae205b2cf86654cad8a4585081b006afec898d
+      recorded_at: '2026-08-26T04:41:17Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T005\unit\licensing-provenance-repair.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
       source_path: tests\integration\spikes\ai-safety.test.ts
     - check_kind: integration
-      check_id: licensing-packaging
+      check_id: licensing-provenance-repair
       result: pass
-      recorded_at: '2026-08-25T22:44:19Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T005\integration\licensing-packaging.pass
-      implementation_fingerprint: be11e5f0b90f30ff8650cf4b74ae205b2cf86654cad8a4585081b006afec898d
+      recorded_at: '2026-08-26T04:41:43Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T005\integration\licensing-provenance-repair.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
       source_path: tests\integration\spikes\licensing.test.ts
     - check_kind: regression
-      check_id: check-plus-test-delta
+      check_id: licensing-typecheck-repair
       result: pass
-      recorded_at: '2026-08-25T22:44:47Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T005\regression\check-plus-test-delta.pass
-      implementation_fingerprint: be11e5f0b90f30ff8650cf4b74ae205b2cf86654cad8a4585081b006afec898d
+      recorded_at: '2026-08-26T04:42:33Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-001-T005\regression\licensing-typecheck-repair.pass
+      implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
       source_path: package.json
     blockers: []
     active_owner:
@@ -371,10 +371,13 @@ slices:
     - reason: typecheck-duplicate-properties-in-attempt-fixture
       by: SLC-001-T003
       recorded_at: '2026-08-25T22:15:46Z'
-    completed_at: '2026-08-25T22:45:12Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
+    completed_at: '2026-08-26T04:43:06Z'
 - id: "SLC-002"
   directory: "002-secure-offline-foundation"
-  state: "DONE"
+  state: "STALE"
   rank: 2
   business_rank: 2
   dependencies: ["SLC-001"]
@@ -386,7 +389,7 @@ slices:
   - id: "SLC-002-T001"
     title: "Materialise workspace and CI contract"
     rank: 6
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-001-T005"]
     requirements: ["PRD-FR-023", "PRD-FR-030", "PRD-NFR-005"]
     acceptance: ["AC-SLC-002-001"]
@@ -400,28 +403,7 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: unit
-      check_id: repository-contract
-      result: pass
-      recorded_at: '2026-08-25T23:21:31Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T001\unit\repository-contract.pass
-      implementation_fingerprint: 75130d84904b1a5d612f6ff208df4a7de61d7625a9da260a53ff7d60d9c2acea
-      source_path: tests\unit\repository-contract.test.ts
-    - check_kind: regression
-      check_id: check-plus-test-delta
-      result: pass
-      recorded_at: '2026-08-25T23:21:59Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T001\regression\check-plus-test-delta.pass
-      implementation_fingerprint: 75130d84904b1a5d612f6ff208df4a7de61d7625a9da260a53ff7d60d9c2acea
-      source_path: package.json
-    - check_kind: integration
-      check_id: content
-      result: pass
-      recorded_at: '2026-08-25T23:23:10Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T001\integration\content.pass
-      implementation_fingerprint: 75130d84904b1a5d612f6ff208df4a7de61d7625a9da260a53ff7d60d9c2acea
-      source_path: tests\content\validators.test.ts
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -440,11 +422,13 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
-    completed_at: '2026-08-25T23:23:26Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-002-T002"
     title: "Implement Convex parent authority"
     rank: 7
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-002-T001"]
     requirements: ["PRD-FR-003", "PRD-FR-023", "PRD-FR-029", "PRD-NFR-004"]
     acceptance: ["AC-SLC-002-002"]
@@ -458,35 +442,7 @@ slices:
       migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: unit
-      check_id: auth-guards
-      result: pass
-      recorded_at: '2026-08-25T23:28:51Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\unit\auth-guards.pass
-      implementation_fingerprint: d1863558fed4859ad07acc92558c7f6e57da063bedf1038a37fa8712d4d621fb
-      source_path: tests\unit\convex\auth-guards.test.ts
-    - check_kind: integration
-      check_id: authorization
-      result: pass
-      recorded_at: '2026-08-25T23:29:16Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\integration\authorization.pass
-      implementation_fingerprint: d1863558fed4859ad07acc92558c7f6e57da063bedf1038a37fa8712d4d621fb
-      source_path: tests\integration\convex\authorization.test.ts
-    - check_kind: migration
-      check_id: schema-compatibility
-      result: pass
-      recorded_at: '2026-08-25T23:29:41Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\migration\schema-compatibility.pass
-      implementation_fingerprint: d1863558fed4859ad07acc92558c7f6e57da063bedf1038a37fa8712d4d621fb
-      source_path: tests\integration\convex\schema-compatibility.test.ts
-    - check_kind: regression
-      check_id: check-plus-test-delta
-      result: pass
-      recorded_at: '2026-08-25T23:30:02Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T002\regression\check-plus-test-delta.pass
-      implementation_fingerprint: d1863558fed4859ad07acc92558c7f6e57da063bedf1038a37fa8712d4d621fb
-      source_path: package.json
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -505,11 +461,13 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
-    completed_at: '2026-08-25T23:30:27Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-002-T003"
     title: "Implement durable local stores and sync"
     rank: 8
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-002-T002"]
     requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
     acceptance: ["AC-SLC-002-003"]
@@ -523,35 +481,7 @@ slices:
       migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: integration
-      check_id: sync
-      result: pass
-      recorded_at: '2026-08-25T23:38:56Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\integration\sync.pass
-      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
-      source_path: tests\integration\convex\sync.test.ts
-    - check_kind: migration
-      check_id: local-data
-      result: pass
-      recorded_at: '2026-08-25T23:39:17Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\migration\local-data.pass
-      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
-      source_path: tests\integration\local-data\migrations.test.ts
-    - check_kind: regression
-      check_id: check-plus-test-delta
-      result: pass
-      recorded_at: '2026-08-25T23:39:39Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\regression\check-plus-test-delta.pass
-      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
-      source_path: package.json
-    - check_kind: unit
-      check_id: local-data
-      result: pass
-      recorded_at: '2026-08-25T23:40:04Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T003\unit\local-data.pass
-      implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
-      source_path: tests\unit\local-data\attempts.test.ts
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -570,11 +500,13 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
       by: SLC-002-T001
       recorded_at: '2026-08-25T23:20:05Z'
-    completed_at: '2026-08-25T23:40:31Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-002-T004"
     title: "Implement onboarding and assessment baseline"
     rank: 9
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-002-T003"]
     requirements: ["PRD-FR-003", "PRD-FR-026"]
     acceptance: ["AC-SLC-002-004"]
@@ -588,35 +520,7 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: unit
-      check_id: assessment-linux-repair
-      result: pass
-      recorded_at: '2026-08-26T03:20:34Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\unit\assessment-linux-repair.pass
-      implementation_fingerprint: 84dca2497ed087d1156cda70620d150e90dba2b00dfa08aaec6c998eeb7fd785
-      source_path: tests\unit\local-data\authorization.test.ts
-    - check_kind: regression
-      check_id: check-plus-test-delta-linux-repair
-      result: pass
-      recorded_at: '2026-08-26T03:20:59Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\regression\check-plus-test-delta-linux-repair.pass
-      implementation_fingerprint: 84dca2497ed087d1156cda70620d150e90dba2b00dfa08aaec6c998eeb7fd785
-      source_path: package.json
-    - check_kind: e2e
-      check_id: assessment-linux-repair
-      result: pass
-      recorded_at: '2026-08-26T03:21:22Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\e2e\assessment-linux-repair.pass
-      implementation_fingerprint: 84dca2497ed087d1156cda70620d150e90dba2b00dfa08aaec6c998eeb7fd785
-      source_path: tests\e2e\onboarding\assessment.spec.ts
-    - check_kind: e2e
-      check_id: assessment-linux-repair
-      result: pass
-      recorded_at: '2026-08-26T03:21:43Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\e2e\assessment-linux-repair.pass
-      implementation_fingerprint: 84dca2497ed087d1156cda70620d150e90dba2b00dfa08aaec6c998eeb7fd785
-      source_path: tests\e2e\onboarding\assessment.spec.ts
+    evidence: []
     blockers:
     - reason: assessment-e2e-missing:no tests/e2e/onboarding/assessment.spec.ts and no onboarding assessment route/component exists; unit engine passes but declared browser acceptance cannot run
       recorded_at: '2026-08-25T23:43:43Z'
@@ -652,11 +556,13 @@ slices:
     - reason: linux-pack-hash-and-onboarding-assertion-repair
       by: SLC-002-T004
       recorded_at: '2026-08-26T03:19:30Z'
-    completed_at: '2026-08-26T03:22:16Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-002-T005"
     title: "Complete authorised offline first run"
     rank: 10
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-002-T004"]
     requirements: ["PRD-FR-003", "PRD-FR-022", "PRD-FR-029", "PRD-NFR-003"]
     acceptance: ["AC-SLC-002-003", "AC-SLC-002-005"]
@@ -670,49 +576,7 @@ slices:
       migration: []
       deployment: ["vercel project inspect wawi-learns"]
       rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
-    evidence:
-    - check_kind: unit
-      check_id: authorization-fixture-repair
-      result: pass
-      recorded_at: '2026-08-26T03:38:09Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\unit\authorization-fixture-repair.pass
-      implementation_fingerprint: 864bc54331075e876139c698c83205fa1ed4c1d2a2f772517ec21e84c6bd0ec7
-      source_path: tests\unit\local-data\authorization.test.ts
-    - check_kind: integration
-      check_id: installations-fixture-repair
-      result: pass
-      recorded_at: '2026-08-26T03:38:35Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\integration\installations-fixture-repair.pass
-      implementation_fingerprint: 864bc54331075e876139c698c83205fa1ed4c1d2a2f772517ec21e84c6bd0ec7
-      source_path: tests\integration\convex\installations.test.ts
-    - check_kind: regression
-      check_id: integration-111-fixture-repair
-      result: pass
-      recorded_at: '2026-08-26T03:39:05Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\regression\integration-111-fixture-repair.pass
-      implementation_fingerprint: 864bc54331075e876139c698c83205fa1ed4c1d2a2f772517ec21e84c6bd0ec7
-      source_path: package.json
-    - check_kind: e2e
-      check_id: offline-first-run-fixture-repair
-      result: pass
-      recorded_at: '2026-08-26T03:39:32Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\e2e\offline-first-run-fixture-repair.pass
-      implementation_fingerprint: 864bc54331075e876139c698c83205fa1ed4c1d2a2f772517ec21e84c6bd0ec7
-      source_path: tests\e2e\onboarding\offline-first-run.spec.ts
-    - check_kind: deployment
-      check_id: vercel-target-fixture-repair
-      result: pass
-      recorded_at: '2026-08-26T03:39:58Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\deployment\vercel-target-fixture-repair.pass
-      implementation_fingerprint: 864bc54331075e876139c698c83205fa1ed4c1d2a2f772517ec21e84c6bd0ec7
-      source_path: .vercel\project.json
-    - check_kind: rollback
-      check_id: pwa-fixture-repair
-      result: pass
-      recorded_at: '2026-08-26T03:40:27Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\rollback\pwa-fixture-repair.pass
-      implementation_fingerprint: 864bc54331075e876139c698c83205fa1ed4c1d2a2f772517ec21e84c6bd0ec7
-      source_path: tests\e2e\spikes\pwa-rollback.spec.ts
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -755,7 +619,9 @@ slices:
     - reason: canonical-pack-digest-fixture-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T03:36:53Z'
-    completed_at: '2026-08-26T03:40:57Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-003"
   directory: "003-curriculum-content-packs"
   state: "STALE"
@@ -770,7 +636,7 @@ slices:
   - id: "SLC-003-T001"
     title: "Implement schemas, importer and validators"
     rank: 11
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-002-T005"]
     requirements: ["PRD-FR-001", "PRD-FR-002", "PRD-FR-027", "PRD-NFR-008"]
     acceptance: ["AC-SLC-003-001"]
@@ -784,28 +650,7 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: unit
-      check_id: schema-validator-contract
-      result: pass
-      recorded_at: '2026-08-26T04:16:59Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T001\unit\schema-validator-contract.pass
-      implementation_fingerprint: dd8e15978006f50be4aaf328371654db3594c80545a13c3e9ecb2561edae9538
-      source_path: tests\content\schema.test.ts
-    - check_kind: integration
-      check_id: content-suite
-      result: pass
-      recorded_at: '2026-08-26T04:17:26Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T001\integration\content-suite.pass
-      implementation_fingerprint: dd8e15978006f50be4aaf328371654db3594c80545a13c3e9ecb2561edae9538
-      source_path: tests\content\validators.test.ts
-    - check_kind: regression
-      check_id: content-type-lint
-      result: pass
-      recorded_at: '2026-08-26T04:17:58Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T001\regression\content-type-lint.pass
-      implementation_fingerprint: dd8e15978006f50be4aaf328371654db3594c80545a13c3e9ecb2561edae9538
-      source_path: package.json
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -851,7 +696,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
-    completed_at: '2026-08-26T04:18:24Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-003-T002"
     title: "Build curriculum, phonics and word core"
     rank: 12
@@ -915,6 +762,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-003-T003"
     title: "Build reading and media core"
     rank: 13
@@ -978,6 +828,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-003-T004"
     title: "Build mathematics core"
     rank: 14
@@ -1041,6 +894,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-003-T005"
     title: "Build and publish immutable packs"
     rank: 15
@@ -1104,6 +960,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-004"
   directory: "004-adaptive-learner-core"
   state: "STALE"
@@ -1178,6 +1037,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-004-T002"
     title: "Implement lesson scheduling and weak recovery"
     rank: 17
@@ -1241,6 +1103,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-004-T003"
     title: "Implement baseline and progress windows"
     rank: 18
@@ -1304,6 +1169,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-004-T004"
     title: "Build child home and activity shell"
     rank: 19
@@ -1367,6 +1235,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-004-T005"
     title: "Deliver core adaptive English journey"
     rank: 20
@@ -1430,6 +1301,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-005"
   directory: "005-handwriting-spelling-speech"
   state: "STALE"
@@ -1504,6 +1378,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-005-T002"
     title: "Implement spelling and composition progression"
     rank: 22
@@ -1567,6 +1444,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
@@ -1630,6 +1510,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-005-T004"
     title: "Implement ephemeral pronunciation assessment"
     rank: 24
@@ -1693,6 +1576,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-005-T005"
     title: "Integrate multimodal lesson and privacy regression"
     rank: 25
@@ -1756,6 +1642,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -1830,6 +1719,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
@@ -1893,6 +1785,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
@@ -1956,6 +1851,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -2019,6 +1917,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -2082,6 +1983,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -2156,6 +2060,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -2219,6 +2126,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -2282,6 +2192,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -2345,6 +2258,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -2419,6 +2335,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -2482,6 +2401,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -2545,6 +2467,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -2608,6 +2533,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -2671,6 +2599,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -2745,6 +2676,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -2808,6 +2742,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -2871,6 +2808,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -2934,6 +2874,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -2997,6 +2940,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -3071,6 +3017,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -3134,6 +3083,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -3197,6 +3149,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -3260,6 +3215,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -3323,6 +3281,9 @@ slices:
     - reason: rebaseline-after-reviewed-SLC-002-push-and-gitnexus-refresh
       by: SLC-003-T001
       recorded_at: '2026-08-26T03:54:20Z'
+    - reason: correct-false-cc0-dfe-ncelp-provenance
+      by: SLC-001-T005
+      recorded_at: '2026-08-26T04:35:46Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -3686,4 +3647,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-26T04:18:24Z'
+updated_at: '2026-08-26T04:43:06Z'

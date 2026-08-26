@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { LicenceSchema } from "../../../packages/content-schema/src/index";
+import {
+  LICENCE_TIERS,
+  LicenceSchema,
+} from "../../../packages/content-schema/src/index";
 import {
   ReasonCode,
   validateContentRepository,
@@ -19,7 +22,15 @@ const manifest: ContentPackManifest = {
   curriculumVersion: "curriculum-1",
   engineVersion: "engine-1",
   issuedAt: 1_700_000_000_000,
-  counts: { gpc: 0, words: 0, sentences: 0, stories: 0, assets: 0, formations: 0, mathsTemplates: 0 },
+  counts: {
+    gpc: 0,
+    words: 0,
+    sentences: 0,
+    stories: 0,
+    assets: 0,
+    formations: 0,
+    mathsTemplates: 0,
+  },
   assets: [],
   entryUrls: ["/content/index.json"],
   sizeBytes: 0,
@@ -37,16 +48,19 @@ describe("SLC-001-T005 — licensing spike", () => {
     const result = validateContentRepository(
       {
         gpcs: [],
-        words: [{
-          id: "w-cat",
-          spelling: "cat",
-          phonemes: ["k", "a", "t"],
-          gpcIds: ["gpc-c", "gpc-a", "gpc-t"],
-          category: "concrete",
-          decodable: true,
-          taughtIn: ["reception"],
-          licence: { ...licence, tier: "cc-by-sa-4.0" },
-        }],
+        words: [
+          {
+            id: "w-cat",
+            recordVersion: "0.1.0",
+            spelling: "cat",
+            phonemes: ["k", "a", "t"],
+            gpcIds: ["gpc-c", "gpc-a", "gpc-t"],
+            category: "concrete",
+            decodable: true,
+            taughtIn: ["reception"],
+            licence: { ...licence, tier: "cc-by-sa-4.0" },
+          },
+        ],
         sentences: [],
         stories: [],
         assets: [],
@@ -68,5 +82,27 @@ describe("SLC-001-T005 — licensing spike", () => {
     expect(result.failures.map((failure) => failure.code)).toContain(
       ReasonCode.UNKNOWN_SCHEMA_VERSION,
     );
+  });
+
+  it("keeps OGL and unproven sources quarantined before R2 support exists", () => {
+    const ogl = {
+      tier: "ogl-3",
+      licenceId: "OGL-3",
+      sourceUrl:
+        "https://www.gov.uk/government/publications/national-curriculum-in-england",
+      proofPath: "docs/licence/ogl-national-curriculum.md",
+    };
+    expect(LICENCE_TIERS).not.toContain("ogl-3");
+    expect(LicenceSchema.safeParse(ogl).success).toBe(false);
+    expect(
+      LicenceSchema.safeParse({ ...ogl, sourceUrl: "https://www.ncelp.org/" })
+        .success,
+    ).toBe(false);
+    expect(
+      LicenceSchema.safeParse({
+        ...ogl,
+        sourceUrl: "https://example.org/legacy-letters-and-sounds",
+      }).success,
+    ).toBe(false);
   });
 });

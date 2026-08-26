@@ -1,0 +1,6 @@
+task_id: SLC-001-T005
+check_kind: unit
+check_id: licensing-provenance-repair
+result: pass
+recorded_at: '2026-08-26T04:41:17Z'
+source_path: tests\integration\spikes\ai-safety.test.ts
