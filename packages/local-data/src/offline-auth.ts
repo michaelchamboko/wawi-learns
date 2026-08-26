@@ -21,6 +21,7 @@ export type InstallationSnapshot = z.infer<typeof InstallationSnapshotSchema>;
 export type ActivePackState = z.infer<typeof ActivePackStateSchema>;
 
 export const INSTALLATION_SNAPSHOT_KEY = "wawi.installation.snapshot";
+export const ACTIVE_PACK_KEY = "wawi.active.pack";
 
 export const parseInstallationSnapshot = (value: unknown): InstallationSnapshot | null => {
   const parsed = InstallationSnapshotSchema.safeParse(value);
@@ -35,6 +36,7 @@ export const persistInstallationSnapshot = (
   const parsedSnapshot = InstallationSnapshotSchema.safeParse(snapshot);
   const parsedPack = ActivePackStateSchema.safeParse(activePack);
   if (!parsedSnapshot.success || !parsedPack.success || parsedSnapshot.data.packVersion !== parsedPack.data.packVersion || parsedSnapshot.data.packDigest !== parsedPack.data.packDigest) return false;
+  storage.setItem(ACTIVE_PACK_KEY, JSON.stringify(parsedPack.data));
   storage.setItem(INSTALLATION_SNAPSHOT_KEY, JSON.stringify(parsedSnapshot.data));
   return true;
 };
@@ -43,6 +45,12 @@ export const readInstallationSnapshot = (storage: Pick<Storage, "getItem">): Ins
   const raw = storage.getItem(INSTALLATION_SNAPSHOT_KEY);
   if (!raw) return null;
   try { return parseInstallationSnapshot(JSON.parse(raw)); } catch { return null; }
+};
+
+export const readActivePack = (storage: Pick<Storage, "getItem">): ActivePackState | null => {
+  const raw = storage.getItem(ACTIVE_PACK_KEY);
+  if (!raw) return null;
+  try { const parsed = ActivePackStateSchema.safeParse(JSON.parse(raw)); return parsed.success ? parsed.data : null; } catch { return null; }
 };
 
 export type SafetyWithdrawalState = { readonly pending: boolean; readonly acknowledged: boolean };

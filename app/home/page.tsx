@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { hasConvexConfiguration } from "../ConvexClientProvider";
 import { commitAttemptThenAdvance, startSession } from "../../packages/learning-engine/src/session";
 import { LocalAttemptStore } from "../../packages/local-data/src";
-import { canOpenChildModeOffline, persistInstallationSnapshot, readInstallationSnapshot, type ActivePackState, type AttemptEvent, type InstallationSnapshot, type SyncReceipt } from "../../packages/local-data/src";
+import { canOpenChildModeOffline, persistInstallationSnapshot, readActivePack, readInstallationSnapshot, type ActivePackState, type AttemptEvent, type InstallationSnapshot, type SyncReceipt } from "../../packages/local-data/src";
 import { MVP_SESSION_PLAN, MvpActivityRenderer, activityProgressLabel, restoredActivityIndex } from "../../packages/ui/src";
 import { parentAuthErrorMessage, type ParentAuthMode } from "../(child)/home/parent-auth-errors";
 
@@ -134,7 +134,8 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
     const savedSnapshot = readInstallationSnapshot({ getItem: (key) => window.localStorage.getItem(key) });
     const restore = window.setTimeout(() => {
       if (savedSnapshot) {
-        const activePack: ActivePackState = { packVersion: savedSnapshot.packVersion, packDigest: savedSnapshot.packDigest, essentialAssetUrls: ["/", "/offline"], complete: true };
+        const activePack = readActivePack({ getItem: (key) => window.localStorage.getItem(key) });
+        if (!activePack) return;
         setOfflineAuthorized(canOpenChildModeOffline({ now: () => Date.now(), snapshot: savedSnapshot, activePack, requestedMode: "child" }).mode === "child");
       }
       if (savedIndex !== null) { setIndex(savedIndex); setStarted(true); startedAt.current = Date.now(); }
