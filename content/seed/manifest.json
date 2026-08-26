@@ -5,15 +5,17 @@
   "engineVersion": "engine-spike-1",
   "issuedAt": 1700000000000,
   "counts": {
-    "gpc": 0,
-    "words": 0,
-    "sentences": 0,
-    "stories": 0,
+    "gpc": 44,
+    "words": 1999,
+    "sentences": 399,
+    "stories": 59,
     "assets": 0,
     "formations": 0,
     "mathsTemplates": 0
   },
   "assets": [],
-  "entryUrls": ["/content/0.1.0-spike/manifest.json"],
+  "entryUrls": [
+    "/content/0.1.0-spike/manifest.json"
+  ],
   "sizeBytes": 0
 }

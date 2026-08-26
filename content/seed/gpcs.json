@@ -1,62 +1,975 @@
 [
   {
-    "id": "gpc-s",
-    "grapheme": "s",
-    "phonemes": ["s"],
-    "exampleWordIds": ["w-sun"],
-    "position": "initial",
-    "curriculumOrder": 0,
-    "taughtIn": ["reception"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
-  },
-  {
     "id": "gpc-a",
     "grapheme": "a",
-    "phonemes": ["a"],
-    "exampleWordIds": ["w-cat"],
-    "position": "medial",
-    "curriculumOrder": 1,
-    "taughtIn": ["reception"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+    "phonemes": [
+      "\u00e6"
+    ],
+    "exampleWordIds": [
+      "w-cat",
+      "w-hat"
+    ],
+    "position": "initial",
+    "curriculumOrder": 0,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
   },
   {
-    "id": "gpc-t",
-    "grapheme": "t",
-    "phonemes": ["t"],
-    "exampleWordIds": ["w-cat"],
-    "position": "final",
-    "curriculumOrder": 2,
-    "taughtIn": ["reception"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+    "id": "gpc-b",
+    "grapheme": "b",
+    "phonemes": [
+      "b"
+    ],
+    "exampleWordIds": [
+      "w-bat",
+      "w-bag"
+    ],
+    "position": "medial",
+    "curriculumOrder": 1,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
   },
   {
     "id": "gpc-c",
     "grapheme": "c",
-    "phonemes": ["k"],
-    "exampleWordIds": ["w-cat"],
+    "phonemes": [
+      "k"
+    ],
+    "exampleWordIds": [
+      "w-cat",
+      "w-can"
+    ],
+    "position": "final",
+    "curriculumOrder": 2,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-d",
+    "grapheme": "d",
+    "phonemes": [
+      "d"
+    ],
+    "exampleWordIds": [
+      "w-dad",
+      "w-dog"
+    ],
     "position": "initial",
     "curriculumOrder": 3,
-    "taughtIn": ["reception"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-e",
+    "grapheme": "e",
+    "phonemes": [
+      "e"
+    ],
+    "exampleWordIds": [
+      "w-pet",
+      "w-bed"
+    ],
+    "position": "medial",
+    "curriculumOrder": 4,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-f",
+    "grapheme": "f",
+    "phonemes": [
+      "f"
+    ],
+    "exampleWordIds": [
+      "w-fan",
+      "w-fish"
+    ],
+    "position": "final",
+    "curriculumOrder": 5,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-g",
+    "grapheme": "g",
+    "phonemes": [
+      "\u0261"
+    ],
+    "exampleWordIds": [
+      "w-pig",
+      "w-got"
+    ],
+    "position": "initial",
+    "curriculumOrder": 6,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-h",
+    "grapheme": "h",
+    "phonemes": [
+      "h"
+    ],
+    "exampleWordIds": [
+      "w-hat",
+      "w-hot"
+    ],
+    "position": "medial",
+    "curriculumOrder": 7,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-i",
+    "grapheme": "i",
+    "phonemes": [
+      "\u026a"
+    ],
+    "exampleWordIds": [
+      "w-pig",
+      "w-sit"
+    ],
+    "position": "final",
+    "curriculumOrder": 8,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-j",
+    "grapheme": "j",
+    "phonemes": [
+      "d\u0292"
+    ],
+    "exampleWordIds": [
+      "w-jam",
+      "w-jug"
+    ],
+    "position": "initial",
+    "curriculumOrder": 9,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-k",
+    "grapheme": "k",
+    "phonemes": [
+      "k"
+    ],
+    "exampleWordIds": [
+      "w-kit",
+      "w-king"
+    ],
+    "position": "medial",
+    "curriculumOrder": 10,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-l",
+    "grapheme": "l",
+    "phonemes": [
+      "l"
+    ],
+    "exampleWordIds": [
+      "w-lug",
+      "w-lot"
+    ],
+    "position": "final",
+    "curriculumOrder": 11,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-m",
+    "grapheme": "m",
+    "phonemes": [
+      "m"
+    ],
+    "exampleWordIds": [
+      "w-mat",
+      "w-man"
+    ],
+    "position": "initial",
+    "curriculumOrder": 12,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
   },
   {
     "id": "gpc-n",
     "grapheme": "n",
-    "phonemes": ["n"],
-    "exampleWordIds": ["w-sun"],
+    "phonemes": [
+      "n"
+    ],
+    "exampleWordIds": [
+      "w-net",
+      "w-nod"
+    ],
+    "position": "medial",
+    "curriculumOrder": 13,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-o",
+    "grapheme": "o",
+    "phonemes": [
+      "\u0252"
+    ],
+    "exampleWordIds": [
+      "w-hot",
+      "w-not"
+    ],
     "position": "final",
-    "curriculumOrder": 4,
-    "taughtIn": ["reception"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+    "curriculumOrder": 14,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-p",
+    "grapheme": "p",
+    "phonemes": [
+      "p"
+    ],
+    "exampleWordIds": [
+      "w-pet",
+      "w-pig"
+    ],
+    "position": "initial",
+    "curriculumOrder": 15,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-kw",
+    "grapheme": "kw",
+    "phonemes": [
+      "kw"
+    ],
+    "exampleWordIds": [
+      "w-quick"
+    ],
+    "position": "medial",
+    "curriculumOrder": 16,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-r",
+    "grapheme": "r",
+    "phonemes": [
+      "r"
+    ],
+    "exampleWordIds": [
+      "w-rat",
+      "w-run"
+    ],
+    "position": "final",
+    "curriculumOrder": 17,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-s",
+    "grapheme": "s",
+    "phonemes": [
+      "s"
+    ],
+    "exampleWordIds": [
+      "w-sun",
+      "w-sit"
+    ],
+    "position": "initial",
+    "curriculumOrder": 18,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-t",
+    "grapheme": "t",
+    "phonemes": [
+      "t"
+    ],
+    "exampleWordIds": [
+      "w-top",
+      "w-tin"
+    ],
+    "position": "medial",
+    "curriculumOrder": 19,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
   },
   {
     "id": "gpc-u",
     "grapheme": "u",
-    "phonemes": ["uh"],
-    "exampleWordIds": ["w-sun"],
+    "phonemes": [
+      "\u028c"
+    ],
+    "exampleWordIds": [
+      "w-bug",
+      "w-cut"
+    ],
+    "position": "final",
+    "curriculumOrder": 20,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-v",
+    "grapheme": "v",
+    "phonemes": [
+      "v"
+    ],
+    "exampleWordIds": [
+      "w-vet",
+      "w-van"
+    ],
+    "position": "initial",
+    "curriculumOrder": 21,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-w",
+    "grapheme": "w",
+    "phonemes": [
+      "w"
+    ],
+    "exampleWordIds": [
+      "w-win",
+      "w-wet"
+    ],
     "position": "medial",
-    "curriculumOrder": 5,
-    "taughtIn": ["reception"],
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/dfe-letters-and-sounds", "proofPath": "docs/licence/cc0.md" }
+    "curriculumOrder": 22,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ks",
+    "grapheme": "ks",
+    "phonemes": [
+      "ks"
+    ],
+    "exampleWordIds": [
+      "w-box",
+      "w-fox"
+    ],
+    "position": "final",
+    "curriculumOrder": 23,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-y",
+    "grapheme": "y",
+    "phonemes": [
+      "j"
+    ],
+    "exampleWordIds": [
+      "w-yes",
+      "w-yell"
+    ],
+    "position": "initial",
+    "curriculumOrder": 24,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-z",
+    "grapheme": "z",
+    "phonemes": [
+      "z"
+    ],
+    "exampleWordIds": [
+      "w-zip",
+      "w-zag"
+    ],
+    "position": "medial",
+    "curriculumOrder": 25,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ch",
+    "grapheme": "ch",
+    "phonemes": [
+      "t\u0283"
+    ],
+    "exampleWordIds": [
+      "w-chop",
+      "w-chip"
+    ],
+    "position": "final",
+    "curriculumOrder": 26,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-sh",
+    "grapheme": "sh",
+    "phonemes": [
+      "\u0283"
+    ],
+    "exampleWordIds": [
+      "w-ship",
+      "w-shop"
+    ],
+    "position": "initial",
+    "curriculumOrder": 27,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-th",
+    "grapheme": "th",
+    "phonemes": [
+      "\u03b8"
+    ],
+    "exampleWordIds": [
+      "w-thin",
+      "w-this"
+    ],
+    "position": "medial",
+    "curriculumOrder": 28,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ng",
+    "grapheme": "ng",
+    "phonemes": [
+      "\u014b"
+    ],
+    "exampleWordIds": [
+      "w-ring",
+      "w-song"
+    ],
+    "position": "final",
+    "curriculumOrder": 29,
+    "taughtIn": [
+      "reception"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ai",
+    "grapheme": "ai",
+    "phonemes": [
+      "e\u026a"
+    ],
+    "exampleWordIds": [
+      "w-pail",
+      "w-wait"
+    ],
+    "position": "initial",
+    "curriculumOrder": 30,
+    "taughtIn": [
+      "reception",
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ee",
+    "grapheme": "ee",
+    "phonemes": [
+      "i\u02d0"
+    ],
+    "exampleWordIds": [
+      "w-see",
+      "w-feet"
+    ],
+    "position": "medial",
+    "curriculumOrder": 31,
+    "taughtIn": [
+      "reception",
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-igh",
+    "grapheme": "igh",
+    "phonemes": [
+      "a\u026a"
+    ],
+    "exampleWordIds": [
+      "w-high",
+      "w-night"
+    ],
+    "position": "final",
+    "curriculumOrder": 32,
+    "taughtIn": [
+      "reception",
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-oa",
+    "grapheme": "oa",
+    "phonemes": [
+      "\u0259\u028a"
+    ],
+    "exampleWordIds": [
+      "w-boat",
+      "w-goat"
+    ],
+    "position": "initial",
+    "curriculumOrder": 33,
+    "taughtIn": [
+      "reception",
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-oo",
+    "grapheme": "oo",
+    "phonemes": [
+      "u\u02d0"
+    ],
+    "exampleWordIds": [
+      "w-moon",
+      "w-food"
+    ],
+    "position": "medial",
+    "curriculumOrder": 34,
+    "taughtIn": [
+      "reception",
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ar",
+    "grapheme": "ar",
+    "phonemes": [
+      "\u0251\u02d0"
+    ],
+    "exampleWordIds": [
+      "w-farm",
+      "w-star"
+    ],
+    "position": "final",
+    "curriculumOrder": 35,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-or",
+    "grapheme": "or",
+    "phonemes": [
+      "\u0254\u02d0"
+    ],
+    "exampleWordIds": [
+      "w-for",
+      "w-born"
+    ],
+    "position": "initial",
+    "curriculumOrder": 36,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ur",
+    "grapheme": "ur",
+    "phonemes": [
+      "\u025c\u02d0"
+    ],
+    "exampleWordIds": [
+      "w-hurt",
+      "w-turn"
+    ],
+    "position": "medial",
+    "curriculumOrder": 37,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ow",
+    "grapheme": "ow",
+    "phonemes": [
+      "a\u028a"
+    ],
+    "exampleWordIds": [
+      "w-cow",
+      "w-town"
+    ],
+    "position": "final",
+    "curriculumOrder": 38,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-oi",
+    "grapheme": "oi",
+    "phonemes": [
+      "\u0254\u026a"
+    ],
+    "exampleWordIds": [
+      "w-coin",
+      "w-soil"
+    ],
+    "position": "initial",
+    "curriculumOrder": 39,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ear",
+    "grapheme": "ear",
+    "phonemes": [
+      "\u026a\u0259"
+    ],
+    "exampleWordIds": [
+      "w-ear",
+      "w-fear"
+    ],
+    "position": "medial",
+    "curriculumOrder": 40,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-air",
+    "grapheme": "air",
+    "phonemes": [
+      "e\u0259"
+    ],
+    "exampleWordIds": [
+      "w-air",
+      "w-fair"
+    ],
+    "position": "final",
+    "curriculumOrder": 41,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-ng",
+    "grapheme": "ng",
+    "phonemes": [
+      "\u014b"
+    ],
+    "exampleWordIds": [
+      "w-ring",
+      "w-song"
+    ],
+    "position": "final",
+    "curriculumOrder": 42,
+    "taughtIn": [
+      "reception",
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "gpc-wh",
+    "grapheme": "wh",
+    "phonemes": [
+      "w"
+    ],
+    "exampleWordIds": [
+      "w-when",
+      "w-what"
+    ],
+    "position": "initial",
+    "curriculumOrder": 43,
+    "taughtIn": [
+      "year1"
+    ],
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/dfe-letters-and-sounds",
+      "proofPath": "docs/licence/cc0.md"
+    }
   }
 ]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "assist-1",
+    "type": "letter_tracing",
+    "name": "Letter Tracing",
+    "description": "A letter tracing template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-2",
+    "type": "number_tracing",
+    "name": "Number Tracing",
+    "description": "A number tracing template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-3",
+    "type": "shape_tracing",
+    "name": "Shape Tracing",
+    "description": "A shape tracing template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-4",
+    "type": "word_tracing",
+    "name": "Word Tracing",
+    "description": "A word tracing template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-5",
+    "type": "sentence_copying",
+    "name": "Sentence Copying",
+    "description": "A sentence copying template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-6",
+    "type": "picture_matching",
+    "name": "Picture Matching",
+    "description": "A picture matching template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-7",
+    "type": "sound_matching",
+    "name": "Sound Matching",
+    "description": "A sound matching template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-8",
+    "type": "word_building",
+    "name": "Word Building",
+    "description": "A word building template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-9",
+    "type": "sentence_building",
+    "name": "Sentence Building",
+    "description": "A sentence building template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-10",
+    "type": "story_sequencing",
+    "name": "Story Sequencing",
+    "description": "A story sequencing template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-11",
+    "type": "phonics_sorting",
+    "name": "Phonics Sorting",
+    "description": "A phonics sorting template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-12",
+    "type": "rhyming_pairs",
+    "name": "Rhyming Pairs",
+    "description": "A rhyming pairs template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-13",
+    "type": "beginning_sounds",
+    "name": "Beginning Sounds",
+    "description": "A beginning sounds template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-14",
+    "type": "ending_sounds",
+    "name": "Ending Sounds",
+    "description": "A ending sounds template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-15",
+    "type": "middle_sounds",
+    "name": "Middle Sounds",
+    "description": "A middle sounds template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-16",
+    "type": "blending_practice",
+    "name": "Blending Practice",
+    "description": "A blending practice template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-17",
+    "type": "segmenting_practice",
+    "name": "Segmenting Practice",
+    "description": "A segmenting practice template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-18",
+    "type": "sight_word_practice",
+    "name": "Sight Word Practice",
+    "description": "A sight word practice template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-19",
+    "type": "vocabulary_builder",
+    "name": "Vocabulary Builder",
+    "description": "A vocabulary builder template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "assist-20",
+    "type": "comprehension_check",
+    "name": "Comprehension Check",
+    "description": "A comprehension check template for assisted learning",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/templates",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  }
+]

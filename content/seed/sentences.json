@@ -1,26 +1,6706 @@
 [
   {
-    "id": "sent-a-cat-sat",
-    "text": "A cat sat.",
-    "wordIds": ["w-cat", "w-sat"],
-    "decodableRatio": 1,
+    "id": "s-100",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
     "level": "reception",
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/sentences", "proofPath": "docs/licence/cc0.md" }
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
   },
   {
-    "id": "sent-the-sun",
-    "text": "The sun is up.",
-    "wordIds": ["w-sun"],
-    "decodableRatio": 0.5,
+    "id": "s-101",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
     "level": "reception",
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/sentences", "proofPath": "docs/licence/cc0.md" }
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
   },
   {
-    "id": "sent-can-sit",
-    "text": "I can sit.",
-    "wordIds": ["w-can", "w-sit"],
-    "decodableRatio": 1,
+    "id": "s-102",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
     "level": "reception",
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/sentences", "proofPath": "docs/licence/cc0.md" }
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-103",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-104",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-105",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-106",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-107",
+    "text": "The big dog runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-108",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-109",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-110",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-111",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-112",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-113",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-114",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-115",
+    "text": "The big dog jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-116",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-117",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-118",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-119",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-120",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-121",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-122",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-123",
+    "text": "The big dog walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-124",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-125",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-126",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-127",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-128",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-129",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-130",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-131",
+    "text": "The big dog talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-132",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-133",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-134",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-135",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-136",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-137",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-138",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-139",
+    "text": "The big dog sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-140",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-141",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-142",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-143",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-144",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-145",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-146",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-147",
+    "text": "The big dog plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-148",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-149",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-150",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-151",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-152",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-153",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-154",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-155",
+    "text": "The big dog eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-156",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-157",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-158",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-159",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-160",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-161",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-162",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-163",
+    "text": "The big dog drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-164",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-165",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-166",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-167",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-168",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-169",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-170",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-171",
+    "text": "The big dog sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-172",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-173",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-174",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-175",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-176",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-177",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-178",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-179",
+    "text": "The big dog reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-180",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-181",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-182",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-183",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-184",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-185",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-186",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-187",
+    "text": "The big dog writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-188",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-189",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-190",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-191",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-192",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-193",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-194",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-195",
+    "text": "The big dog draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-196",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-197",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-198",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-199",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-200",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-201",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-202",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-203",
+    "text": "The big dog paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-204",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-205",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-206",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-207",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-208",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-209",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-210",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-211",
+    "text": "The big dog builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-212",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-213",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-214",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-215",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-216",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-217",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-218",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-219",
+    "text": "The big dog makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-220",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-221",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-222",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-223",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-224",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-225",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-226",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-227",
+    "text": "The big dog takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-228",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-229",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-230",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-231",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-232",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-233",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-234",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-235",
+    "text": "The big dog gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-236",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-237",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-238",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-239",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-240",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-241",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-242",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-243",
+    "text": "The big dog gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-244",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-245",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-246",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-247",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-248",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-249",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-250",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-251",
+    "text": "The big dog sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-252",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-253",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-254",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-255",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-256",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-257",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-258",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-259",
+    "text": "The big dog hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-361"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-260",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-261",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-262",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-263",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-264",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-265",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-266",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-267",
+    "text": "The big cat runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-268",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-269",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-270",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-271",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-272",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-273",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-274",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-275",
+    "text": "The big cat jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-276",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-277",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-278",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-279",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-280",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-281",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-282",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-283",
+    "text": "The big cat walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-284",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-285",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-286",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-287",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-288",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-289",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-290",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-291",
+    "text": "The big cat talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-292",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-293",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-294",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-295",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-296",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-297",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-298",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-299",
+    "text": "The big cat sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-300",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-301",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-302",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-303",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-304",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-305",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-306",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-307",
+    "text": "The big cat plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-308",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-309",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-310",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-311",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-312",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-313",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-314",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-315",
+    "text": "The big cat eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-316",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-317",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-318",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-319",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-320",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-321",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-322",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-323",
+    "text": "The big cat drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-324",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-325",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-326",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-327",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-328",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-329",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-330",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-331",
+    "text": "The big cat sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-332",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-333",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-334",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-335",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-336",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-337",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-338",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-339",
+    "text": "The big cat reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-340",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-341",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-342",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-343",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-344",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-345",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-346",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-347",
+    "text": "The big cat writes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-348",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-349",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-350",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-351",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-352",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-353",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-354",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-355",
+    "text": "The big cat draws.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-356",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-357",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-358",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-359",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-360",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-361",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-362",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-363",
+    "text": "The big cat paints.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-364",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-365",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-366",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-367",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-368",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-369",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-370",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-371",
+    "text": "The big cat builds.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-372",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-373",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-374",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-375",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-376",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-377",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-378",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-379",
+    "text": "The big cat makes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-380",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-381",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-382",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-383",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-384",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-385",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-386",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-387",
+    "text": "The big cat takes.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-388",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-389",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-390",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-391",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-392",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-393",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-394",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-395",
+    "text": "The big cat gives.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-396",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-397",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-398",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-399",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-400",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-401",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-402",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-403",
+    "text": "The big cat gets.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-404",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-405",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-406",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-407",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-408",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-409",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-410",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-411",
+    "text": "The big cat sees.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-412",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-413",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-414",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-415",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-416",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-417",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-418",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-419",
+    "text": "The big cat hears.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142",
+      "w-cvc-210"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-420",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-421",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-422",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-423",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-424",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-425",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-426",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-427",
+    "text": "The big bird runs.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-428",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-429",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-430",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-431",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-432",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-433",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-434",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-435",
+    "text": "The big bird jumps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-436",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-437",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-438",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-439",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-440",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-441",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-442",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-443",
+    "text": "The big bird walks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-444",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-445",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-446",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-447",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-448",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-449",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-450",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-451",
+    "text": "The big bird talks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-452",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-453",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-454",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-455",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-456",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-457",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-458",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-459",
+    "text": "The big bird sings.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-460",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-461",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-462",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-463",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-464",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-465",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-466",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-467",
+    "text": "The big bird plays.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-468",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-469",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-470",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-471",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-472",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-473",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-474",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-475",
+    "text": "The big bird eats.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-476",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-477",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-478",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-479",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-480",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-481",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-482",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-483",
+    "text": "The big bird drinks.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-484",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-485",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-486",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-487",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-488",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-489",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-490",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-491",
+    "text": "The big bird sleeps.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-492",
+    "text": "The big bird reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-493",
+    "text": "The big bird reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-494",
+    "text": "The big bird reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-495",
+    "text": "The big bird reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-496",
+    "text": "The big bird reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-497",
+    "text": "The big bird reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "s-498",
+    "text": "The big bird reads.",
+    "wordIds": [
+      "w-sight-1600",
+      "w-cvc-142"
+    ],
+    "decodableRatio": 0.8,
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/sentences",
+      "proofPath": "docs/licence/cc0.md"
+    }
   }
 ]

@@ -1,27 +1,4486 @@
 [
   {
-    "id": "story-the-cat-and-the-sun",
-    "title": "The Cat and the Sun",
+    "id": "story-10",
+    "title": "The big dog",
     "pages": [
-      { "pageNumber": 1, "sentenceIds": ["sent-a-cat-sat"], "illustrationAssetId": "asset-cat" },
-      { "pageNumber": 2, "sentenceIds": ["sent-the-sun"], "illustrationAssetId": "asset-sun" },
-      { "pageNumber": 3, "sentenceIds": ["sent-can-sit"], "illustrationAssetId": "asset-can" }
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
     ],
     "questions": [
       {
-        "id": "q-what-sat",
-        "prompt": "What sat?",
-        "acceptableAnswers": ["cat", "a cat", "the cat"],
+        "id": "q-10-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
         "type": "literal"
       },
       {
-        "id": "q-where",
-        "prompt": "Where did the cat sit?",
-        "acceptableAnswers": ["in the sun", "outside"],
-        "type": "inferential"
+        "id": "q-10-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
       }
     ],
     "level": "reception",
-    "licence": { "tier": "cc0-1.0", "licenceId": "CC0-1.0", "sourceUrl": "https://example.org/stories", "proofPath": "docs/licence/cc0.md" }
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-11",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-11-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-11-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-12",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-12-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-12-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-13",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-13-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-13-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-14",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-14-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-14-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-15",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-15-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-15-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-16",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-16-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-16-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-17",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-17-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-17-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-18",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-18-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-18-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-19",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-19-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-19-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-20",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-20-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-20-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-21",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-21-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-21-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-22",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-22-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-22-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-23",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-23-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-23-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-24",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-24-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-24-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-25",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-25-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-25-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-26",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-26-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-26-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-27",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-27-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-27-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-28",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-28-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-28-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-29",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-29-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-29-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "reception",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-30",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-30-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-30-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-31",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-31-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-31-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-32",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-32-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-32-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-33",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-33-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-33-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-34",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-34-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-34-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-35",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-35-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-35-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-36",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-36-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-36-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-37",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-37-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-37-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-38",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-38-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-38-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-39",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-39-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-39-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-40",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-40-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-40-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-41",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-41-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-41-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-42",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-42-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-42-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-43",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-43-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-43-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-44",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-44-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-44-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-45",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-45-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-45-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-46",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-46-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-46-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-47",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-47-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-47-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-48",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-48-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-48-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-49",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-49-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-49-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-50",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-50-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-50-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-51",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-51-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-51-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-52",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-52-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-52-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-53",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-53-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-53-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-54",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-54-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-54-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-55",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-55-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-55-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-56",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-56-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-56-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-57",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-57-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-57-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-58",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-58-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-58-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-59",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-59-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-59-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-60",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-60-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-60-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-61",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-61-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-61-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-62",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-62-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-62-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-63",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-63-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-63-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-64",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-64-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-64-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-65",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-65-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-65-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-66",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-66-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-66-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-67",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-67-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-67-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
+  },
+  {
+    "id": "story-68",
+    "title": "The big dog",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "sentenceIds": [
+          "w-sight-1612",
+          "w-cvc-142",
+          "w-cvc-361"
+        ],
+        "illustrationAssetId": "asset-dog"
+      },
+      {
+        "pageNumber": 2,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "sentenceIds": [
+          "w-sight-1613",
+          "w-cvc-317",
+          "w-sight-1600",
+          "w-cvc-142",
+          "w-cvc-361"
+        ]
+      },
+      {
+        "pageNumber": 4,
+        "sentenceIds": [
+          "w-sight-1607",
+          "w-cvc-317"
+        ]
+      },
+      {
+        "pageNumber": 5,
+        "sentenceIds": [
+          "w-sight-1600",
+          "w-sight-1600",
+          "w-cvc-317"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-68-1",
+        "prompt": "What is the story about?",
+        "acceptableAnswers": [
+          "the big dog",
+          "the the big dog"
+        ],
+        "type": "literal"
+      },
+      {
+        "id": "q-68-2",
+        "prompt": "How did the story end?",
+        "acceptableAnswers": [
+          "happy",
+          "they were happy",
+          "they went home happy"
+        ],
+        "type": "literal"
+      }
+    ],
+    "level": "year1",
+    "licence": {
+      "tier": "cc0-1.0",
+      "licenceId": "CC0-1.0",
+      "sourceUrl": "https://example.org/stories",
+      "proofPath": "docs/licence/cc0.md"
+    }
   }
 ]
