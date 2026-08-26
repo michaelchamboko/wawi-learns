@@ -31,6 +31,7 @@ export default defineSchema({
     installationId: v.string(),
     lastSeenAt: v.number(),
     packVersion: v.string(),
+    packDigest: v.string(),
     revokedAt: v.optional(v.number()),
   })
     .index("byInstallation", ["installationId"])

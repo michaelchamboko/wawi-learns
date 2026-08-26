@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 138
+revision: 142
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+  implementation_fingerprint: a1a36a0803b5af598f537662f63c07b6800a7276a3a1912eb089e30b1a72a8df
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -678,7 +678,35 @@ slices:
       migration: []
       deployment: ["vercel inspect $VERCEL_PREVIEW_URL"]
       rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
-    evidence: []
+    evidence:
+    - check_kind: integration
+      check_id: authorization
+      result: pass
+      recorded_at: '2026-08-26T01:08:49Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\integration\authorization.pass
+      implementation_fingerprint: a1a36a0803b5af598f537662f63c07b6800a7276a3a1912eb089e30b1a72a8df
+      source_path: tests\integration\convex\installations.test.ts
+    - check_kind: e2e
+      check_id: offline-first-run
+      result: pass
+      recorded_at: '2026-08-26T01:09:24Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\e2e\offline-first-run.pass
+      implementation_fingerprint: a1a36a0803b5af598f537662f63c07b6800a7276a3a1912eb089e30b1a72a8df
+      source_path: tests\e2e\onboarding\offline-first-run.spec.ts
+    - check_kind: unit
+      check_id: authorization-final
+      result: pass
+      recorded_at: '2026-08-26T01:10:15Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\unit\authorization-final.pass
+      implementation_fingerprint: a1a36a0803b5af598f537662f63c07b6800a7276a3a1912eb089e30b1a72a8df
+      source_path: tests\unit\local-data\authorization.test.ts
+    - check_kind: regression
+      check_id: check-plus-test-delta-final
+      result: pass
+      recorded_at: '2026-08-26T01:10:36Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\regression\check-plus-test-delta-final.pass
+      implementation_fingerprint: a1a36a0803b5af598f537662f63c07b6800a7276a3a1912eb089e30b1a72a8df
+      source_path: package.json
     blockers: []
     active_owner: '@Builder'
     reopens:
@@ -2912,4 +2940,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-26T00:46:30Z'
+updated_at: '2026-08-26T01:10:36Z'

@@ -2,6 +2,15 @@ import { mutationGeneric } from "convex/server";
 import { v } from "convex/values";
 import { requireAuthenticatedParent } from "./lib/requireParent";
 
+export const installationSnapshotFor = (parentId: string, childProfileId: string, installationId: string, issuedAt: number) => ({
+  parentId,
+  childProfileId,
+  installationId,
+  packVersion: "1.0.0",
+  packDigest: "0000000000000000000000000000000000000000000000000000000000000000",
+  issuedAt,
+});
+
 export const registerInstallation = mutationGeneric({
   args: { installationId: v.string() },
   handler: async (ctx, args) => {
@@ -10,8 +19,9 @@ export const registerInstallation = mutationGeneric({
     if (!profile) throw new Error("child profile missing");
     const existing = await ctx.db.query("installations").withIndex("byInstallation", (query) => query.eq("installationId", args.installationId)).unique();
     if (existing && (existing.parentId !== parent.parentId || existing.childProfileId !== profile._id)) throw new Error("installation ownership mismatch");
-    if (existing) { await ctx.db.patch(existing._id, { lastSeenAt: Date.now(), revokedAt: undefined }); return existing.installationId; }
-    await ctx.db.insert("installations", { parentId: parent.parentId, childProfileId: profile._id, installationId: args.installationId, lastSeenAt: Date.now(), packVersion: "mvp-1" });
-    return args.installationId;
+    const snapshot = installationSnapshotFor(parent.parentId, profile._id, args.installationId, Date.now());
+    if (existing) { await ctx.db.patch(existing._id, { lastSeenAt: Date.now(), revokedAt: undefined, packVersion: snapshot.packVersion, packDigest: snapshot.packDigest }); return snapshot; }
+    await ctx.db.insert("installations", { ...snapshot, lastSeenAt: Date.now() });
+    return snapshot;
   },
 });

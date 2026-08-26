@@ -23,6 +23,19 @@ const waitForReady = async (page: Page) => {
 };
 
 test.describe("SLC-002-T005 — offline first run", () => {
+  test("authorises a validated pack online and opens only child mode offline", async ({ page, context }) => {
+    await page.goto(`${BASE_URL}/offline/harness`, { waitUntil: "domcontentloaded" });
+    await page.getByTestId("authorize-offline").click();
+    await expect(page.getByText(/offline access is ready/i)).toBeVisible();
+    await context.setOffline(true);
+    await page.getByTestId("enter-child-offline").click();
+    await expect(page.getByTestId("offline-child-shell")).toBeVisible();
+    await expect(page.getByTestId("parent-route-denied")).toBeVisible();
+    await page.evaluate(() => localStorage.setItem("wawi.installation.snapshot", "not-json"));
+    await page.getByTestId("enter-child-offline").click();
+    await expect(page.getByText(/child mode unavailable/i)).toBeVisible();
+  });
+
   test("child shell opens after the SW controls the page and the offline fallback shell serves unknown routes", async ({
     browser,
   }) => {

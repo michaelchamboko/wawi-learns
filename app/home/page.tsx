@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { hasConvexConfiguration } from "../ConvexClientProvider";
 import { commitAttemptThenAdvance, startSession } from "../../packages/learning-engine/src/session";
 import { LocalAttemptStore } from "../../packages/local-data/src";
-import type { AttemptEvent, SyncReceipt } from "../../packages/local-data/src";
+import { canOpenChildModeOffline, persistInstallationSnapshot, readInstallationSnapshot, type ActivePackState, type AttemptEvent, type InstallationSnapshot, type SyncReceipt } from "../../packages/local-data/src";
 import { MVP_SESSION_PLAN, MvpActivityRenderer, activityProgressLabel, restoredActivityIndex } from "../../packages/ui/src";
 import { parentAuthErrorMessage, type ParentAuthMode } from "../(child)/home/parent-auth-errors";
 
@@ -121,6 +121,7 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
   const [hintCount, setHintCount] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>(null);
   const [status, setStatus] = useState("Ready when you are");
+  const [offlineAuthorized, setOfflineAuthorized] = useState(false);
   const [error, setError] = useState("");
   const startedAt = useRef(0);
   const installationId = useRef<string | null>(null);
@@ -130,7 +131,12 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
     const update = () => setOnline(navigator.onLine);
     window.addEventListener("online", update); window.addEventListener("offline", update);
     const savedIndex = restoredActivityIndex(window.localStorage.getItem(checkpointKey));
+    const savedSnapshot = readInstallationSnapshot({ getItem: (key) => window.localStorage.getItem(key) });
     const restore = window.setTimeout(() => {
+      if (savedSnapshot) {
+        const activePack: ActivePackState = { packVersion: savedSnapshot.packVersion, packDigest: savedSnapshot.packDigest, essentialAssetUrls: ["/", "/offline"], complete: true };
+        setOfflineAuthorized(canOpenChildModeOffline({ now: () => Date.now(), snapshot: savedSnapshot, activePack, requestedMode: "child" }).mode === "child");
+      }
       if (savedIndex !== null) { setIndex(savedIndex); setStarted(true); startedAt.current = Date.now(); }
     }, 0);
     return () => { window.clearTimeout(restore); window.removeEventListener("online", update); window.removeEventListener("offline", update); };
@@ -153,8 +159,8 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
 
   const start = async () => {
     setError("");
-    if (!navigator.onLine) { setError("Reconnect to start today’s adventure."); return; }
-    try { const id = installationIdFor(profile._id); await registerInstallation({ installationId: id }); installationId.current = id; setStarted(true); startedAt.current = Date.now(); }
+    if (!navigator.onLine) { if (offlineAuthorized) { setStarted(true); startedAt.current = Date.now(); } else setError("Reconnect to start today’s adventure."); return; }
+    try { const id = installationIdFor(profile._id); const registered = await registerInstallation({ installationId: id }) as InstallationSnapshot; const activePack: ActivePackState = { packVersion: registered.packVersion, packDigest: registered.packDigest, essentialAssetUrls: ["/", "/offline"], complete: true }; if (!persistInstallationSnapshot(registered, activePack, { setItem: (key, value) => window.localStorage.setItem(key, value) })) throw new Error("pack validation failed"); installationId.current = id; setOfflineAuthorized(true); setStarted(true); startedAt.current = Date.now(); }
     catch { setError("We could not start just yet. Please try again."); }
   };
 
@@ -178,7 +184,7 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
     const next = index + 1; window.localStorage.setItem(checkpointKey, String(next)); setIndex(next); setHintCount(0); setFeedback(null); startedAt.current = Date.now();
   };
 
-  if (!online && !started) return <main className="learner-shell"><section className="reconnect-card"><h2>Let’s reconnect first.</h2><p>Your open adventure is safe. Come back online to continue.</p></section></main>;
+  if (!online && !started && !offlineAuthorized) return <main className="learner-shell"><section className="reconnect-card"><h2>Let’s reconnect first.</h2><p>Your open adventure is safe. Come back online to continue.</p></section></main>;
   if (!started && status === "Adventure complete") return <main className="learner-shell"><section className="completion-card"><p className="eyebrow">Adventure complete</p><h2>You did five brilliant steps.</h2><div className="stars" aria-label="Five trail tokens">🍃 🍃 🍃 🍃 🍃</div><p>Every try helps your learning grow.</p><button className="primary-button" type="button" onClick={() => setStatus("Ready when you are")}>Back home</button></section></main>;
   if (!started) return <main className="learner-shell" data-testid="child-home"><header className="learner-header"><div><p className="eyebrow">Wawi Learns</p><h1>Hi {profile.displayName}</h1></div><span className="connection-status">{online ? status : "Saved on this device"}</span></header><section className="home-card"><p className="progress-label">Today&apos;s adventure</p><h2>Five small steps, one big smile.</h2><p>Listen, look, tap and build at your own pace.</p><div className="trail" aria-label={`${completedCount} activities completed today`}>{[1, 2, 3, 4, 5].map((step) => <span key={step} className={step <= completedCount ? "trail-token done" : "trail-token"}>{step}</span>)}</div><button className="primary-button" type="button" onClick={() => void start()}>Continue My Adventure <span aria-hidden="true">→</span></button>{error ? <p className="form-error" role="alert">{error}</p> : null}</section></main>;
   const activity = MVP_SESSION_PLAN[index];
