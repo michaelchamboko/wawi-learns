@@ -1,0 +1,6 @@
+task_id: SLC-002-T005
+check_kind: rollback
+check_id: pwa-fixture-repair
+result: pass
+recorded_at: '2026-08-26T03:40:27Z'
+source_path: tests\e2e\spikes\pwa-rollback.spec.ts

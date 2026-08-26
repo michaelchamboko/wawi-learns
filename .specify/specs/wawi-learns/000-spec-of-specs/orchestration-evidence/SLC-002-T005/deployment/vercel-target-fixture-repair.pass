@@ -1,0 +1,6 @@
+task_id: SLC-002-T005
+check_kind: deployment
+check_id: vercel-target-fixture-repair
+result: pass
+recorded_at: '2026-08-26T03:39:57Z'
+source_path: .vercel\project.json
