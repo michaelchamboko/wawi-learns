@@ -10,20 +10,80 @@ export const LICENCE_TIERS = [
   "cc0-1.0",
   "commercial-perpetual",
   "project-original",
+  "ogl-3.0",
 ] as const;
 export type LicenceTier = (typeof LICENCE_TIERS)[number];
 
 export const SchemaVersionSchema = z.string().regex(/^\d+\.\d+\.\d+$/);
 export const RecordVersionSchema = z.enum(["0.1.0", "1.0.0"]);
 
+const safeRelativeProofPath = (value: string): boolean => {
+  if (!value || value.startsWith("/") || /^[a-zA-Z]:[\\/]/.test(value))
+    return false;
+  const segments = value.replaceAll("\\", "/").split("/");
+  return (
+    !segments.includes("..") &&
+    !segments.some((segment) => segment === "") &&
+    !/[.](?:js|jsx|ts|tsx|mjs|cjs)$/i.test(value)
+  );
+};
+
+const SourceDigestSchema = z.string().regex(/^[a-f0-9]{64}$/);
+
+export const ReviewReceiptSchema = z.object({
+  reviewerKind: z.literal("human"),
+  reviewerId: z.string().min(1),
+  reviewerName: z.string().min(1),
+  reviewedAt: z.string().datetime(),
+  sourceDigest: SourceDigestSchema,
+  itemDigest: SourceDigestSchema,
+  decision: z.enum(["approved", "rejected"]),
+});
+
+const requireApprovedReceipt = (
+  value: { reviewStatus?: string; reviewReceipt?: unknown },
+  ctx: z.RefinementCtx,
+) => {
+  const receipt = ReviewReceiptSchema.safeParse(value.reviewReceipt);
+  if (
+    value.reviewStatus === "approved" &&
+    (!receipt.success || receipt.data.decision !== "approved")
+  ) {
+    ctx.addIssue({
+      code: "custom",
+      path: ["reviewReceipt"],
+      message: "approved records require a valid human review receipt",
+    });
+  }
+};
+
 export const LicenceSchema = z.object({
   tier: z.enum(LICENCE_TIERS),
   licenceId: z.string().min(1),
   sourceUrl: z.string().url(),
-  proofPath: z.string().min(1),
+  proofPath: z.string().min(1).refine(safeRelativeProofPath, {
+    message: "proofPath must be a safe relative non-executable path",
+  }),
+  attribution: z.string().min(1).optional(),
+  sourceDigest: SourceDigestSchema.optional(),
   reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
   reviewer: z.string().min(1).optional(),
   reviewedAt: z.string().datetime().optional(),
+}).superRefine((value, ctx) => {
+  if (value.tier === "ogl-3.0") {
+    if (!value.attribution)
+      ctx.addIssue({
+        code: "custom",
+        path: ["attribution"],
+        message: "OGL 3.0 requires non-empty attribution",
+      });
+    if (!value.sourceDigest)
+      ctx.addIssue({
+        code: "custom",
+        path: ["sourceDigest"],
+        message: "OGL 3.0 requires a 64-hex source digest",
+      });
+  }
 });
 
 const usSpellingBan = (value: string) =>
@@ -47,9 +107,11 @@ export const GpcRecordSchema = z
     source: z.string().min(1).optional(),
     reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
     reviewer: z.string().min(1).optional(),
+    reviewReceipt: ReviewReceiptSchema.optional(),
     licence: LicenceSchema,
   })
   .superRefine((value, ctx) => {
+    requireApprovedReceipt(value, ctx);
     if (value.recordVersion === "1.0.0") {
       for (const field of ["source", "reviewStatus", "reviewer"] as const)
         if (value[field] === undefined)
@@ -93,6 +155,7 @@ export const WordRecordSchema = z
     source: z.string().min(1).optional(),
     reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
     reviewer: z.string().min(1).optional(),
+    reviewReceipt: ReviewReceiptSchema.optional(),
     version: SchemaVersionSchema.optional(),
     deprecated: z.boolean().optional(),
     gpcIds: z.array(z.string()).min(1),
@@ -104,6 +167,7 @@ export const WordRecordSchema = z
     licence: LicenceSchema,
   })
   .superRefine((value, ctx) => {
+    requireApprovedReceipt(value, ctx);
     if (value.recordVersion !== "1.0.0") return;
     for (const field of [
       "displayForm",
@@ -158,10 +222,12 @@ export const SentenceRecordSchema = z
     source: z.string().min(1).optional(),
     reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
     reviewer: z.string().min(1).optional(),
+    reviewReceipt: ReviewReceiptSchema.optional(),
     level: z.enum(["reception", "year1"]),
     licence: LicenceSchema,
   })
   .superRefine((value, ctx) => {
+    requireApprovedReceipt(value, ctx);
     if (value.recordVersion !== "1.0.0") return;
     for (const field of [
       "curriculumBand",
@@ -211,10 +277,12 @@ export const StoryRecordSchema = z
     source: z.string().min(1).optional(),
     reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
     reviewer: z.string().min(1).optional(),
+    reviewReceipt: ReviewReceiptSchema.optional(),
     level: z.enum(["reception", "year1"]),
     licence: LicenceSchema,
   })
   .superRefine((value, ctx) => {
+    requireApprovedReceipt(value, ctx);
     if (value.recordVersion !== "1.0.0") return;
     for (const field of [
       "curriculumBand",
@@ -248,10 +316,12 @@ export const AssetRecordSchema = z
     safetyStatus: z.enum(["pending", "approved", "rejected"]).optional(),
     reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
     reviewer: z.string().min(1).optional(),
+    reviewReceipt: ReviewReceiptSchema.optional(),
     source: z.string().min(1).optional(),
     licence: LicenceSchema,
   })
   .superRefine((value, ctx) => {
+    requireApprovedReceipt(value, ctx);
     if (value.recordVersion === "1.0.0") {
       for (const field of [
         "assetKind",
@@ -290,10 +360,12 @@ export const FormationPathSchema = z
     ),
     reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
     reviewer: z.string().min(1).optional(),
+    reviewReceipt: ReviewReceiptSchema.optional(),
     source: z.string().min(1).optional(),
     licence: LicenceSchema,
   })
   .superRefine((value, ctx) => {
+    requireApprovedReceipt(value, ctx);
     if (value.recordVersion === "1.0.0") {
       for (const field of ["reviewStatus", "reviewer", "source"] as const)
         if (value[field] === undefined)
@@ -335,9 +407,11 @@ export const MathsTemplateSchema = z
     offlineAssetRequirements: z.array(z.string().min(1)).optional(),
     reviewStatus: z.enum(["draft", "in-review", "approved"]).optional(),
     reviewer: z.string().min(1).optional(),
+    reviewReceipt: ReviewReceiptSchema.optional(),
     licence: LicenceSchema,
   })
   .superRefine((value, ctx) => {
+    requireApprovedReceipt(value, ctx);
     if (value.recordVersion !== "1.0.0") return;
     for (const field of [
       "difficulty",

@@ -343,4 +343,40 @@ describe("SLC-003-T001 — content validators", () => {
       ReasonCode.MISSING_REVIEW,
     );
   });
+
+  it("requires a valid human receipt when a v1 record is approved", () => {
+    const result = validateContentRepository(
+      {
+        ...emptyRepo,
+        words: [
+          {
+            id: "w",
+            recordVersion: "1.0.0",
+            spelling: "cat",
+            phonemes: ["k"],
+            gpcIds: [],
+            category: "concrete",
+            decodable: true,
+            taughtIn: ["reception"],
+            source: "reviewed-core",
+            reviewStatus: "approved",
+            reviewer: "reviewer",
+            licence: baseLicence,
+          },
+        ],
+      },
+      baseManifest,
+      {
+        minimumWords: 0,
+        minimumIllustratedWords: 0,
+        minimumSentences: 0,
+        minimumStories: 0,
+        minimumGpcs: 0,
+        minimumMathsTemplates: 0,
+      },
+    );
+    expect(result.failures.map((failure) => failure.code)).toContain(
+      ReasonCode.MISSING_REVIEW,
+    );
+  });
 });

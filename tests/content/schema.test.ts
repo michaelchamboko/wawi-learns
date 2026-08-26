@@ -8,6 +8,7 @@ import {
   MathsTemplateSchema,
   AssetRecordSchema,
   FormationPathSchema,
+  ReviewReceiptSchema,
   type GpcRecord,
   type WordRecord,
   type ContentPackManifest,
@@ -111,6 +112,15 @@ describe("SLC-003-T001 — content schema", () => {
       source: "reviewed-core",
       reviewStatus: "approved",
       reviewer: "content-reviewer",
+      reviewReceipt: {
+        reviewerKind: "human",
+        reviewerId: "reviewer-1",
+        reviewerName: "Human Reviewer",
+        reviewedAt: "2026-08-26T05:00:00.000Z",
+        sourceDigest: "a".repeat(64),
+        itemDigest: "b".repeat(64),
+        decision: "approved",
+      },
       version: "1.0.0",
       deprecated: false,
       recordVersion: "1.0.0",
@@ -126,6 +136,43 @@ describe("SLC-003-T001 — content schema", () => {
       expect(result.data.reviewStatus).toBe("approved");
       expect(result.data.version).toBe("1.0.0");
     }
+  });
+
+  it("requires a complete human review receipt for approved records", () => {
+    const receipt = {
+      reviewerKind: "human" as const,
+      reviewerId: "reviewer-1",
+      reviewerName: "Human Reviewer",
+      reviewedAt: "2026-08-26T05:00:00.000Z",
+      sourceDigest: "a".repeat(64),
+      itemDigest: "b".repeat(64),
+      decision: "approved" as const,
+    };
+    expect(ReviewReceiptSchema.safeParse(receipt).success).toBe(true);
+    expect(
+      ReviewReceiptSchema.safeParse({ ...receipt, sourceDigest: "bad" })
+        .success,
+    ).toBe(false);
+    expect(
+      ReviewReceiptSchema.safeParse({ ...receipt, decision: "pending" })
+        .success,
+    ).toBe(false);
+    expect(
+      WordRecordSchema.safeParse({
+        recordVersion: "0.1.0",
+        id: "w-rejected",
+        spelling: "cat",
+        phonemes: ["k", "a", "t"],
+        gpcIds: ["gpc-c"],
+        category: "concrete",
+        decodable: true,
+        taughtIn: ["reception"],
+        reviewStatus: "approved",
+        reviewer: "content-reviewer",
+        reviewReceipt: { ...receipt, decision: "rejected" },
+        licence: baseLicence,
+      }).success,
+    ).toBe(false);
   });
 
   it("rejects incomplete explicitly versioned word, sentence, story and maths records", () => {

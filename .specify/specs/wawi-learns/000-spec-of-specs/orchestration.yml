@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 244
+revision: 250
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,14 +7,14 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 11d73d969b74f837a04ef6ba280cb237740a67fb0eb62730c72561d7b5a67065
+  implementation_fingerprint: 5ebca923240412d9b4f0a7c08aed0f5c0a1e51b48147e7e976a1c24c4ccf9549
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
   decomposition_version: "v002"
   frozen_sequence: true
 project:
-  state: "AWAITING_APPROVAL"
+  state: "IN_PROGRESS"
   current_task:
   active_owner:
   blockers: []
@@ -788,7 +788,7 @@ slices:
   - id: "SLC-003-T001"
     title: "Implement schemas, importer and validators"
     rank: 11
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-002-T005"]
     requirements: ["PRD-FR-001", "PRD-FR-002", "PRD-FR-027", "PRD-NFR-008"]
     acceptance: ["AC-SLC-003-001"]
@@ -802,7 +802,35 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: schema
+      result: pass
+      recorded_at: '2026-08-26T06:07:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T001\unit\schema.pass
+      implementation_fingerprint: 5ebca923240412d9b4f0a7c08aed0f5c0a1e51b48147e7e976a1c24c4ccf9549
+      source_path: tests\content\schema.test.ts
+    - check_kind: unit
+      check_id: schema
+      result: pass
+      recorded_at: '2026-08-26T06:09:14Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T001\unit\schema.pass
+      implementation_fingerprint: 5ebca923240412d9b4f0a7c08aed0f5c0a1e51b48147e7e976a1c24c4ccf9549
+      source_path: tests\content\schema.test.ts
+    - check_kind: regression
+      check_id: content-type-lint
+      result: pass
+      recorded_at: '2026-08-26T06:15:46Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T001\regression\content-type-lint.pass
+      implementation_fingerprint: 5ebca923240412d9b4f0a7c08aed0f5c0a1e51b48147e7e976a1c24c4ccf9549
+      source_path: packages\content-schema\src\validators.ts
+    - check_kind: integration
+      check_id: content-suite
+      result: pass
+      recorded_at: '2026-08-26T06:18:46Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T001\integration\content-suite.pass
+      implementation_fingerprint: 5ebca923240412d9b4f0a7c08aed0f5c0a1e51b48147e7e976a1c24c4ccf9549
+      source_path: tests\content\english-inventory.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -851,6 +879,7 @@ slices:
     - reason: correct-false-cc0-dfe-ncelp-provenance
       by: SLC-001-T005
       recorded_at: '2026-08-26T04:35:46Z'
+    completed_at: '2026-08-26T06:21:45Z'
   - id: "SLC-003-T002"
     title: "Build curriculum, phonics and word core"
     rank: 12
@@ -3799,4 +3828,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-26T05:24:01Z'
+updated_at: '2026-08-26T06:21:45Z'

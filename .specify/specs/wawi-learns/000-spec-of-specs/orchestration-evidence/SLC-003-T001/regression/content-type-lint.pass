@@ -2,5 +2,5 @@ task_id: SLC-003-T001
 check_kind: regression
 check_id: content-type-lint
 result: pass
-recorded_at: '2026-08-26T04:17:58Z'
-source_path: package.json
+recorded_at: '2026-08-26T06:15:45Z'
+source_path: packages\content-schema\src\validators.ts

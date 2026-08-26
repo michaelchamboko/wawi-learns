@@ -4,6 +4,7 @@ import {
   FormationPathSchema,
   GpcRecordSchema,
   MathsTemplateSchema,
+  ReviewReceiptSchema,
   SentenceRecordSchema,
   StoryRecordSchema,
   WordRecordSchema,
@@ -48,7 +49,8 @@ export interface ValidationResult {
 const licenceOk = (tier: string): boolean =>
   tier === "cc0-1.0" ||
   tier === "commercial-perpetual" ||
-  tier === "project-original";
+  tier === "project-original" ||
+  tier === "ogl-3.0";
 
 export interface Repository {
   readonly gpcs: readonly unknown[];
@@ -216,11 +218,14 @@ export function validateContentRepository(
     values.forEach((value, index) => {
       if (!value || typeof value !== "object") return;
       const record = value as Record<string, unknown>;
+      const receipt = ReviewReceiptSchema.safeParse(record.reviewReceipt);
       if (
         record.recordVersion === "1.0.0" &&
         (record.reviewStatus !== "approved" ||
           typeof record.reviewer !== "string" ||
-          typeof record.source !== "string")
+          typeof record.source !== "string" ||
+          !receipt.success ||
+          receipt.data.decision !== "approved")
       ) {
         failures.push({
           code: ReasonCode.MISSING_REVIEW,

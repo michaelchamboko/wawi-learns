@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   LICENCE_TIERS,
   LicenceSchema,
+  ReviewReceiptSchema,
 } from "../../../packages/content-schema/src/index";
 import {
   ReasonCode,
@@ -84,25 +85,52 @@ describe("SLC-001-T005 — licensing spike", () => {
     );
   });
 
-  it("keeps OGL and unproven sources quarantined before R2 support exists", () => {
+  it("accepts OGL 3.0 only with attributable, hashed and safe source evidence", () => {
     const ogl = {
-      tier: "ogl-3",
-      licenceId: "OGL-3",
+      tier: "ogl-3.0",
+      licenceId: "OGL-3.0",
+      attribution: "Department for Education",
+      sourceDigest: "b".repeat(64),
       sourceUrl:
         "https://www.gov.uk/government/publications/national-curriculum-in-england",
       proofPath: "docs/licence/ogl-national-curriculum.md",
     };
-    expect(LICENCE_TIERS).not.toContain("ogl-3");
-    expect(LicenceSchema.safeParse(ogl).success).toBe(false);
+    expect(LICENCE_TIERS).toContain("ogl-3.0");
+    expect(LicenceSchema.safeParse(ogl).success).toBe(true);
     expect(
-      LicenceSchema.safeParse({ ...ogl, sourceUrl: "https://www.ncelp.org/" })
+      LicenceSchema.safeParse({ ...ogl, attribution: "" }).success,
+    ).toBe(false);
+    expect(
+      LicenceSchema.safeParse({ ...ogl, sourceDigest: "not-a-digest" })
         .success,
     ).toBe(false);
     expect(
-      LicenceSchema.safeParse({
-        ...ogl,
-        sourceUrl: "https://example.org/legacy-letters-and-sounds",
-      }).success,
+      LicenceSchema.safeParse({ ...ogl, proofPath: "../private/proof.md" })
+        .success,
     ).toBe(false);
+    expect(
+      LicenceSchema.safeParse({ ...ogl, sourceUrl: "not-a-url" }).success,
+    ).toBe(false);
+  });
+
+  it("exports one explicit human approval receipt shape", () => {
+    const receipt = {
+      reviewerKind: "human" as const,
+      reviewerId: "reviewer-1",
+      reviewerName: "Human Reviewer",
+      reviewedAt: "2026-08-26T05:00:00.000Z",
+      sourceDigest: "b".repeat(64),
+      itemDigest: "c".repeat(64),
+      decision: "approved",
+    };
+    expect(ReviewReceiptSchema.safeParse(receipt).success).toBe(true);
+    expect(
+      ReviewReceiptSchema.safeParse({ ...receipt, decision: "pending" })
+        .success,
+    ).toBe(false);
+    expect(
+      ReviewReceiptSchema.safeParse({ ...receipt, decision: "rejected" })
+        .success,
+    ).toBe(true);
   });
 });
