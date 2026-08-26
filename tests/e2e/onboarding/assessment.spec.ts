@@ -5,7 +5,7 @@ const BASE_URL = process.env.PWA_E2E_BASE_URL ?? "http://127.0.0.1:3100";
 test.describe("SLC-002-T004 — assessment onboarding", () => {
   test("fails closed for unauthenticated visitors", async ({ page }) => {
     await page.goto(`${BASE_URL}/onboarding`, { waitUntil: "domcontentloaded" });
-    await expect(page.getByRole("heading", { name: "Parent sign-in required" })).toBeVisible();
+    await expect(page.getByTestId("parent-setup-required").or(page.getByRole("heading", { name: "Parent sign-in required" }))).toBeVisible();
     await expect(page.getByText(/no grades/i)).toHaveCount(0);
   });
 

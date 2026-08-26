@@ -1,0 +1,6 @@
+task_id: SLC-002-T005
+check_kind: deployment
+check_id: vercel-project-target-linux-repair
+result: pass
+recorded_at: '2026-08-26T03:25:21Z'
+source_path: .vercel\project.json
