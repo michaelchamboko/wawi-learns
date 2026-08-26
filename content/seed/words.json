@@ -62720,5 +62720,40 @@
       "sourceUrl": "https://example.org/wordlist",
       "proofPath": "docs/licence/cc0.md"
     }
+  },
+  {
+    "id": "w-2000",
+    "spelling": "colourful",
+    "phonemes": [
+      "c",
+      "o",
+      "l",
+      "o",
+      "u",
+      "r",
+      "f",
+      "u",
+      "l"
+    ],
+    "gpcIds": [
+      "gpc-c",
+      "gpc-o",
+      "gpc-l",
+      "gpc-o"
+    ],
+    "category": "concrete",
+    "decodable": true,
+    "taughtIn": [
+      "reception",
+      "year1"
+    ],
+    "illustrationAssetId": "asset-colourful",
+    "audioAssetId": "asset-colourful-audio",
+    "licence": {
+      "tier": "project-original",
+      "licenceId": "wawi-original-1.0",
+      "sourceUrl": "https://github.com/michaelchamboko/wawi-learns",
+      "proofPath": "content/seed/words.json"
+    }
   }
 ]

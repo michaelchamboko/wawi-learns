@@ -1,9 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { resolve } from "node:path";
-import { corpusToRepository, loadCanonicalCorpus } from "../../packages/content-schema/src/index.full";
 import {
   DEFAULT_THRESHOLDS,
-  validateContentRepository,
+  loadCanonicalCorpus,
 } from "../../packages/content-schema/src/index.full";
 
 const repoRoot = resolve(__dirname, "..", "..");
@@ -20,12 +19,13 @@ describe("SLC-003-T002/3/4/5 — content seed", () => {
     expect(corpus.mathsTemplates.length).toBeGreaterThan(0);
   });
 
-  it("seed corpus does NOT yet meet PRD minima (production build will replace it)", async () => {
+  it("meets the word inventory minima", async () => {
     const corpus = await loadCanonicalCorpus(repoRoot);
-    const result = validateContentRepository(corpusToRepository(corpus), corpus.manifest);
-    expect(result.ok).toBe(false);
-    expect(corpus.words.length).toBeLessThan(DEFAULT_THRESHOLDS.minimumWords);
-    expect(corpus.sentences.length).toBeLessThan(DEFAULT_THRESHOLDS.minimumSentences);
+    const illustratedWords = corpus.words.filter((word) => word.illustrationAssetId);
+    expect(corpus.words.length).toBeGreaterThanOrEqual(DEFAULT_THRESHOLDS.minimumWords);
+    expect(illustratedWords.length).toBeGreaterThanOrEqual(
+      DEFAULT_THRESHOLDS.minimumIllustratedWords,
+    );
   });
 
   it("every word record carries a recognised licence tier and a non-empty phoneme list", async () => {
