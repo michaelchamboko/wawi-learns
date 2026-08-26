@@ -1,0 +1,6 @@
+task_id: SLC-003-T002
+check_kind: integration
+check_id: content-suite
+result: pass
+recorded_at: '2026-08-26T12:57:23Z'
+source_path: package.json
