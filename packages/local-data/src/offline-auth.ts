@@ -22,6 +22,11 @@ export type ActivePackState = z.infer<typeof ActivePackStateSchema>;
 
 export const INSTALLATION_SNAPSHOT_KEY = "wawi.installation.snapshot";
 export const ACTIVE_PACK_KEY = "wawi.active.pack";
+export const OFFLINE_AUTHORIZATION_KEY = "wawi.offline.authorization";
+export const SafetyLockoutStateSchema = z.object({ microphoneDisabled: z.literal(true), pendingSync: z.literal(true), acknowledged: z.boolean() });
+export const OfflineAuthorizationEnvelopeSchema = z.object({ snapshot: InstallationSnapshotSchema, activePack: ActivePackStateSchema, lockout: SafetyLockoutStateSchema });
+export type SafetyLockoutState = z.infer<typeof SafetyLockoutStateSchema>;
+export type OfflineAuthorizationEnvelope = z.infer<typeof OfflineAuthorizationEnvelopeSchema>;
 
 export const parseInstallationSnapshot = (value: unknown): InstallationSnapshot | null => {
   const parsed = InstallationSnapshotSchema.safeParse(value);
@@ -31,26 +36,34 @@ export const parseInstallationSnapshot = (value: unknown): InstallationSnapshot 
 export const persistInstallationSnapshot = (
   snapshot: unknown,
   activePack: unknown,
-  storage: Pick<Storage, "setItem">,
+  storage: Pick<Storage, "setItem" | "getItem">,
 ): boolean => {
   const parsedSnapshot = InstallationSnapshotSchema.safeParse(snapshot);
   const parsedPack = ActivePackStateSchema.safeParse(activePack);
   if (!parsedSnapshot.success || !parsedPack.success || parsedSnapshot.data.packVersion !== parsedPack.data.packVersion || parsedSnapshot.data.packDigest !== parsedPack.data.packDigest) return false;
-  storage.setItem(ACTIVE_PACK_KEY, JSON.stringify(parsedPack.data));
-  storage.setItem(INSTALLATION_SNAPSHOT_KEY, JSON.stringify(parsedSnapshot.data));
+  const envelope: OfflineAuthorizationEnvelope = { snapshot: parsedSnapshot.data, activePack: parsedPack.data, lockout: { microphoneDisabled: true, pendingSync: true, acknowledged: false } };
+  try { storage.setItem(OFFLINE_AUTHORIZATION_KEY, JSON.stringify(envelope)); } catch { return false; }
   return true;
 };
 
 export const readInstallationSnapshot = (storage: Pick<Storage, "getItem">): InstallationSnapshot | null => {
-  const raw = storage.getItem(INSTALLATION_SNAPSHOT_KEY);
-  if (!raw) return null;
-  try { return parseInstallationSnapshot(JSON.parse(raw)); } catch { return null; }
+  return readOfflineAuthorization(storage)?.snapshot ?? null;
 };
 
 export const readActivePack = (storage: Pick<Storage, "getItem">): ActivePackState | null => {
-  const raw = storage.getItem(ACTIVE_PACK_KEY);
+  return readOfflineAuthorization(storage)?.activePack ?? null;
+};
+
+export const readOfflineAuthorization = (storage: Pick<Storage, "getItem">): OfflineAuthorizationEnvelope | null => {
+  const raw = storage.getItem(OFFLINE_AUTHORIZATION_KEY);
   if (!raw) return null;
-  try { const parsed = ActivePackStateSchema.safeParse(JSON.parse(raw)); return parsed.success ? parsed.data : null; } catch { return null; }
+  try { const parsed = OfflineAuthorizationEnvelopeSchema.safeParse(JSON.parse(raw)); return parsed.success ? parsed.data : null; } catch { return null; }
+};
+
+export const requestSafetyLockout = (storage: Pick<Storage, "getItem" | "setItem">): boolean => {
+  const current = readOfflineAuthorization(storage);
+  if (!current) return false;
+  try { storage.setItem(OFFLINE_AUTHORIZATION_KEY, JSON.stringify({ ...current, lockout: { microphoneDisabled: true, pendingSync: true, acknowledged: false } })); return true; } catch { return false; }
 };
 
 export type SafetyWithdrawalState = { readonly pending: boolean; readonly acknowledged: boolean };

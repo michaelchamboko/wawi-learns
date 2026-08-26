@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { hasConvexConfiguration } from "../ConvexClientProvider";
 import { commitAttemptThenAdvance, startSession } from "../../packages/learning-engine/src/session";
 import { LocalAttemptStore } from "../../packages/local-data/src";
-import { canOpenChildModeOffline, persistInstallationSnapshot, readActivePack, readInstallationSnapshot, type ActivePackState, type AttemptEvent, type InstallationSnapshot, type SyncReceipt } from "../../packages/local-data/src";
+import { canOpenChildModeOffline, persistInstallationSnapshot, prepareEssentialPack, readActivePack, readInstallationSnapshot, type AttemptEvent, type InstallationSnapshot, type SyncReceipt } from "../../packages/local-data/src";
 import { MVP_SESSION_PLAN, MvpActivityRenderer, activityProgressLabel, restoredActivityIndex } from "../../packages/ui/src";
 import { parentAuthErrorMessage, type ParentAuthMode } from "../(child)/home/parent-auth-errors";
 
@@ -161,7 +161,7 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
   const start = async () => {
     setError("");
     if (!navigator.onLine) { if (offlineAuthorized) { setStarted(true); startedAt.current = Date.now(); } else setError("Reconnect to start today’s adventure."); return; }
-    try { const id = installationIdFor(profile._id); const registered = await registerInstallation({ installationId: id }) as InstallationSnapshot; const activePack: ActivePackState = { packVersion: registered.packVersion, packDigest: registered.packDigest, essentialAssetUrls: ["/", "/offline"], complete: true }; if (!persistInstallationSnapshot(registered, activePack, { setItem: (key, value) => window.localStorage.setItem(key, value) })) throw new Error("pack validation failed"); installationId.current = id; setOfflineAuthorized(true); setStarted(true); startedAt.current = Date.now(); }
+    try { const id = installationIdFor(profile._id); const registered = await registerInstallation({ installationId: id }) as InstallationSnapshot; const activePack = await prepareEssentialPack(async (url) => (await fetch(url)).arrayBuffer()); if (!activePack || activePack.packDigest !== registered.packDigest || activePack.packVersion !== registered.packVersion || !persistInstallationSnapshot(registered, activePack, { getItem: (key) => window.localStorage.getItem(key), setItem: (key, value) => window.localStorage.setItem(key, value) })) throw new Error("pack validation failed"); installationId.current = id; setOfflineAuthorized(true); setStarted(true); startedAt.current = Date.now(); }
     catch { setError("We could not start just yet. Please try again."); }
   };
 

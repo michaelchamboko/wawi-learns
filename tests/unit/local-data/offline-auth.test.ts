@@ -3,11 +3,13 @@ import {
   canOpenChildModeOffline,
   type InstallationSnapshot,
   type ActivePackState,
-  INSTALLATION_SNAPSHOT_KEY,
+  OFFLINE_AUTHORIZATION_KEY,
   parseInstallationSnapshot,
   persistInstallationSnapshot,
   readInstallationSnapshot,
   canQueueDependentProviderWork,
+  readOfflineAuthorization,
+  requestSafetyLockout,
 } from "../../../packages/local-data/src/offline-auth";
 
 const NOW = 1_700_000_000_000;
@@ -67,7 +69,7 @@ describe("SLC-002-T005 — offline authorisation", () => {
     expect(persistInstallationSnapshot({ ...snapshot(), packDigest: "b".repeat(64) }, activePack, storage)).toBe(false);
     expect(readInstallationSnapshot(storage)).toEqual(prior);
     expect(parseInstallationSnapshot({ ...snapshot(), parentId: "" })).toBeNull();
-    expect(values.has(INSTALLATION_SNAPSHOT_KEY)).toBe(true);
+    expect(values.has(OFFLINE_AUTHORIZATION_KEY)).toBe(true);
   });
 
   it("denies missing, incomplete, or mismatched active packs", () => {
@@ -80,5 +82,24 @@ describe("SLC-002-T005 — offline authorisation", () => {
     expect(canQueueDependentProviderWork({ pending: true, acknowledged: false })).toBe(false);
     expect(canQueueDependentProviderWork({ pending: false, acknowledged: true })).toBe(false);
     expect(canQueueDependentProviderWork({ pending: false, acknowledged: false })).toBe(true);
+  });
+
+  it("persists the safety lockout without enabling dependent provider work", () => {
+    const values = new Map<string, string>();
+    const storage = { getItem: (key: string) => values.get(key) ?? null, setItem: (key: string, value: string) => values.set(key, value) };
+    expect(persistInstallationSnapshot(snapshot(), activePack, storage)).toBe(true);
+    expect(requestSafetyLockout(storage)).toBe(true);
+    expect(readOfflineAuthorization(storage)?.lockout).toEqual({ microphoneDisabled: true, pendingSync: true, acknowledged: false });
+    expect(canQueueDependentProviderWork({ pending: true, acknowledged: false })).toBe(false);
+  });
+
+  it("keeps the prior envelope when storage rejects an update", () => {
+    const values = new Map<string, string>();
+    const stable = { getItem: (key: string) => values.get(key) ?? null, setItem: (key: string, value: string) => values.set(key, value) };
+    expect(persistInstallationSnapshot(snapshot(), activePack, stable)).toBe(true);
+    const prior = values.get(OFFLINE_AUTHORIZATION_KEY);
+    const failing = { getItem: stable.getItem, setItem: () => { throw new Error("offline storage unavailable"); } };
+    expect(persistInstallationSnapshot(snapshot({ installationId: "install-b" }), activePack, failing)).toBe(false);
+    expect(values.get(OFFLINE_AUTHORIZATION_KEY)).toBe(prior);
   });
 });

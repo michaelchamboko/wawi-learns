@@ -27,10 +27,16 @@ export {
   persistInstallationSnapshot,
   readInstallationSnapshot,
   readActivePack,
+  readOfflineAuthorization,
+  requestSafetyLockout,
+  SafetyLockoutStateSchema,
   type InstallationSnapshot,
   type ActivePackState,
   type SafetyWithdrawalState,
+  type OfflineAuthorizationEnvelope,
+  type SafetyLockoutState,
   type OfflineMode,
   type OfflineAuthDecision,
   type OfflineAuthInput,
 } from "./offline-auth";
+export { ESSENTIAL_PACK_DIGEST, ESSENTIAL_PACK_VERSION, essentialPackManifest, prepareEssentialPack } from "./essential-pack";

@@ -1,13 +1,14 @@
 import { mutationGeneric } from "convex/server";
 import { v } from "convex/values";
 import { requireAuthenticatedParent } from "./lib/requireParent";
+import { ESSENTIAL_PACK_DIGEST, ESSENTIAL_PACK_VERSION } from "../packages/local-data/src/essential-pack";
 
 export const installationSnapshotFor = (parentId: string, childProfileId: string, installationId: string, issuedAt: number) => ({
   parentId,
   childProfileId,
   installationId,
-  packVersion: "1.0.0",
-  packDigest: "0000000000000000000000000000000000000000000000000000000000000000",
+  packVersion: ESSENTIAL_PACK_VERSION,
+  packDigest: ESSENTIAL_PACK_DIGEST,
   issuedAt,
 });
 
@@ -20,7 +21,8 @@ export const registerInstallation = mutationGeneric({
     const existing = await ctx.db.query("installations").withIndex("byInstallation", (query) => query.eq("installationId", args.installationId)).unique();
     if (existing && (existing.parentId !== parent.parentId || existing.childProfileId !== profile._id)) throw new Error("installation ownership mismatch");
     const snapshot = installationSnapshotFor(parent.parentId, profile._id, args.installationId, Date.now());
-    if (existing) { await ctx.db.patch(existing._id, { lastSeenAt: Date.now(), revokedAt: undefined, packVersion: snapshot.packVersion, packDigest: snapshot.packDigest }); return snapshot; }
+    if (existing?.revokedAt) return { ...snapshot, revokedAt: existing.revokedAt };
+    if (existing) { await ctx.db.patch(existing._id, { lastSeenAt: Date.now(), packVersion: snapshot.packVersion, packDigest: snapshot.packDigest }); return snapshot; }
     await ctx.db.insert("installations", { ...snapshot, lastSeenAt: Date.now() });
     return snapshot;
   },

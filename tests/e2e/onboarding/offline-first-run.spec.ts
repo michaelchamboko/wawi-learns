@@ -27,13 +27,12 @@ test.describe("SLC-002-T005 — offline first run", () => {
     await page.goto(`${BASE_URL}/offline/harness`, { waitUntil: "domcontentloaded" });
     await page.getByTestId("authorize-offline").click();
     await expect(page.getByText(/offline access is ready/i)).toBeVisible();
+    await page.goto(`${BASE_URL}/offline`, { waitUntil: "domcontentloaded" });
     await context.setOffline(true);
-    await page.getByTestId("enter-child-offline").click();
-    await expect(page.getByTestId("offline-child-shell")).toBeVisible();
-    await expect(page.getByTestId("parent-route-denied")).toBeVisible();
-    await page.evaluate(() => localStorage.setItem("wawi.installation.snapshot", "not-json"));
-    await page.getByTestId("enter-child-offline").click();
-    await expect(page.getByText(/child mode unavailable/i)).toBeVisible();
+    await expect(page.getByTestId("offline-child-entry")).toBeVisible();
+    await expect(page.getByTestId("offline-parent-denied")).toBeVisible();
+    await page.getByRole("button", { name: /disable microphone/i }).click();
+    await expect(page.getByTestId("offline-safety-lockout")).toBeVisible();
   });
 
   test("child shell opens after the SW controls the page and the offline fallback shell serves unknown routes", async ({
