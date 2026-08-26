@@ -1,0 +1,6 @@
+task_id: SLC-002-T004
+check_kind: integration
+check_id: assessment-lifecycle
+result: pass
+recorded_at: '2026-08-26T00:38:08Z'
+source_path: tests\integration\convex\assessment.test.ts

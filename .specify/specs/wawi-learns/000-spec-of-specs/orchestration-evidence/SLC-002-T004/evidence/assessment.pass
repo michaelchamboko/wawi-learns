@@ -1,6 +1,6 @@
 task_id: SLC-002-T004
-check_kind: unit
+check_kind: evidence
 check_id: assessment
 result: pass
-recorded_at: '2026-08-26T00:39:39Z'
+recorded_at: '2026-08-26T00:41:39Z'
 source_path: tests\unit\learning-engine\assessment.test.ts

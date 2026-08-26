@@ -5,12 +5,10 @@ import { findAuthenticatedParent, requireAuthenticatedParent } from "./lib/requi
 const estimate = v.union(v.literal("new"), v.literal("some"), v.literal("unsure"));
 const result = v.union(v.literal("correct"), v.literal("incorrect"), v.literal("partial"), v.literal("skipped"));
 
-const childForParent = async (ctx: Parameters<typeof requireAuthenticatedParent>[0], childProfileId: string) => {
-  const parent = await requireAuthenticatedParent(ctx);
-  const child = await ctx.db.get(childProfileId as never);
-  if (!child || child.parentId !== parent.parentId) throw new Error("child ownership mismatch");
-  return { parent, child };
-};
+const REQUIRED_DIMENSIONS = new Set(["phonics", "spelling", "reading", "maths"]);
+
+export const assessmentHasRequiredCoverage = (dimensions: readonly string[]) =>
+  [...REQUIRED_DIMENSIONS].every((dimension) => dimensions.includes(dimension));
 
 export const getCurrentAssessment = queryGeneric({
   args: {},
@@ -29,13 +27,15 @@ export const getCurrentAssessment = queryGeneric({
 });
 
 export const startAssessment = mutationGeneric({
-  args: { childProfileId: v.string(), parentEstimate: estimate },
+  args: { childProfileId: v.id("childProfiles"), parentEstimate: estimate },
   handler: async (ctx, args) => {
-    const { parent } = await childForParent(ctx, args.childProfileId);
-    const prior = await ctx.db.query("assessmentCandidates").withIndex("byChild", (q) => q.eq("childProfileId", args.childProfileId as never)).collect();
+    const parent = await requireAuthenticatedParent(ctx);
+    const child = await ctx.db.get(args.childProfileId);
+    if (!child || child.parentId !== parent.parentId) throw new Error("child ownership mismatch");
+    const prior = await ctx.db.query("assessmentCandidates").withIndex("byChild", (q) => q.eq("childProfileId", args.childProfileId)).collect();
     return ctx.db.insert("assessmentCandidates", {
       parentId: parent.parentId,
-      childProfileId: args.childProfileId as never,
+      childProfileId: args.childProfileId,
       version: prior.length + 1,
       baselineVersion: "baseline-1",
       status: "open",
@@ -47,12 +47,12 @@ export const startAssessment = mutationGeneric({
 });
 
 export const recordAssessmentAttempt = mutationGeneric({
-  args: { candidateId: v.string(), dimension: v.string(), itemId: v.string(), result },
+  args: { candidateId: v.id("assessmentCandidates"), dimension: v.string(), itemId: v.string(), result },
   handler: async (ctx, args) => {
     const parent = await requireAuthenticatedParent(ctx);
-    const candidate = await ctx.db.get(args.candidateId as never);
+    const candidate = await ctx.db.get(args.candidateId);
     if (!candidate || candidate.parentId !== parent.parentId || candidate.status !== "open") throw new Error("assessment ownership mismatch");
-    const attempts = await ctx.db.query("assessmentAttempts").withIndex("byCandidate", (q) => q.eq("candidateId", args.candidateId as never)).collect();
+    const attempts = await ctx.db.query("assessmentAttempts").withIndex("byCandidate", (q) => q.eq("candidateId", args.candidateId)).collect();
     await ctx.db.insert("assessmentAttempts", {
       candidateId: candidate._id,
       parentId: parent.parentId,
@@ -63,18 +63,20 @@ export const recordAssessmentAttempt = mutationGeneric({
       result: args.result,
       occurredAt: Date.now(),
     });
-    if (attempts.length + 1 >= candidate.targetItems) {
+    const dimensions = [...attempts.map((attempt) => attempt.dimension), args.dimension];
+    if (assessmentHasRequiredCoverage(dimensions)) {
       await ctx.db.patch(candidate._id, { status: "completed", completedAt: Date.now() });
+      await ctx.db.patch(candidate.childProfileId, { activeAssessmentCandidateId: candidate._id });
     }
     return { sequence: attempts.length + 1 };
   },
 });
 
 export const skipAssessment = mutationGeneric({
-  args: { candidateId: v.string() },
+  args: { candidateId: v.id("assessmentCandidates") },
   handler: async (ctx, args) => {
     const parent = await requireAuthenticatedParent(ctx);
-    const candidate = await ctx.db.get(args.candidateId as never);
+    const candidate = await ctx.db.get(args.candidateId);
     if (!candidate || candidate.parentId !== parent.parentId || candidate.status !== "open") throw new Error("assessment ownership mismatch");
     await ctx.db.patch(candidate._id, { status: "incomplete", completedAt: Date.now() });
   },

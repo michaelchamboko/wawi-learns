@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 121
+revision: 138
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: b3dfd7918ec698aa0dbbf67b176bf00538dac90bd0628bb2d318fd1e08cc0a04
+  implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -15,7 +15,7 @@ plan:
   frozen_sequence: true
 project:
   state: "IN_PROGRESS"
-  current_task: SLC-002-T004
+  current_task: SLC-002-T005
   active_owner: '@Builder'
   blockers: []
 priorities:
@@ -574,7 +574,7 @@ slices:
   - id: "SLC-002-T004"
     title: "Implement onboarding and assessment baseline"
     rank: 9
-    state: "IN_PROGRESS"
+    state: "DONE"
     dependencies: ["SLC-002-T003"]
     requirements: ["PRD-FR-003", "PRD-FR-026"]
     acceptance: ["AC-SLC-002-004"]
@@ -588,49 +588,52 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: integration
+      check_id: assessment-lifecycle
+      result: pass
+      recorded_at: '2026-08-26T00:38:09Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\integration\assessment-lifecycle.pass
+      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      source_path: tests\integration\convex\assessment.test.ts
+    - check_kind: regression
+      check_id: check-plus-test-delta
+      result: pass
+      recorded_at: '2026-08-26T00:38:43Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\regression\check-plus-test-delta.pass
+      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      source_path: package.json
+    - check_kind: e2e
+      check_id: assessment-harness
+      result: pass
+      recorded_at: '2026-08-26T00:39:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\e2e\assessment-harness.pass
+      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      source_path: tests\e2e\onboarding\assessment.spec.ts
+    - check_kind: evidence
+      check_id: unit
+      result: pass
+      recorded_at: '2026-08-26T00:40:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\evidence\unit.pass
+      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      source_path: tests\unit\learning-engine\assessment.test.ts
+    - check_kind: evidence
+      check_id: assessment
+      result: pass
+      recorded_at: '2026-08-26T00:41:39Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\evidence\assessment.pass
+      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      source_path: tests\unit\learning-engine\assessment.test.ts
+    - check_kind: unit
+      check_id: assessment-new
+      result: pass
+      recorded_at: '2026-08-26T00:42:25Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\unit\assessment-new.pass
+      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      source_path: tests\unit\learning-engine\assessment.test.ts
     blockers:
     - reason: assessment-e2e-missing:no tests/e2e/onboarding/assessment.spec.ts and no onboarding assessment route/component exists; unit engine passes but declared browser acceptance cannot run
       recorded_at: '2026-08-25T23:43:43Z'
-    active_owner: '@Builder'
-    reopens:
-    - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
-      by: SLC-001-T001
-      recorded_at: '2026-08-25T10:00:23Z'
-    - reason: accepted hosted-delivery governance and public-build plan changed
-      by: SLC-001-T001
-      recorded_at: '2026-08-25T11:40:46Z'
-    - reason: GitNexus index refresh updated repository guidance counts after evidence
-      by: SLC-001-T001
-      recorded_at: '2026-08-25T12:10:53Z'
-    - reason: typecheck-duplicate-properties-in-attempt-fixture
-      by: SLC-001-T003
-      recorded_at: '2026-08-25T22:15:46Z'
-    - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
-      by: SLC-002-T001
-      recorded_at: '2026-08-25T23:20:05Z'
-    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
-      by: SLC-002-T004
-      recorded_at: '2026-08-25T23:44:13Z'
-  - id: "SLC-002-T005"
-    title: "Complete authorised offline first run"
-    rank: 10
-    state: "STALE"
-    dependencies: ["SLC-002-T004"]
-    requirements: ["PRD-FR-003", "PRD-FR-022", "PRD-FR-029", "PRD-NFR-003"]
-    acceptance: ["AC-SLC-002-003", "AC-SLC-002-005"]
-    interfaces: ["proposed:packages/local-data/src/authorization.ts:canOpenChildModeOffline(snapshot: AuthorizationSnapshot) -> boolean"]
-    documentation_evidence: *platform_docs
-    checks:
-      unit: ["npm exec vitest run tests/unit/local-data/authorization.test.ts"]
-      integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
-      regression: ["npm run check"]
-      e2e: ["npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts"]
-      migration: []
-      deployment: ["vercel inspect $VERCEL_PREVIEW_URL"]
-      rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
-    evidence: []
-    blockers: []
     active_owner:
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
@@ -651,6 +654,58 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
+    completed_at: '2026-08-26T00:45:52Z'
+  - id: "SLC-002-T005"
+    title: "Complete authorised offline first run"
+    rank: 10
+    state: "IN_PROGRESS"
+    dependencies: ["SLC-002-T004"]
+    requirements: ["PRD-FR-003", "PRD-FR-022", "PRD-FR-029", "PRD-NFR-003"]
+    acceptance: ["AC-SLC-002-003", "AC-SLC-002-005"]
+    interfaces: ["proposed:packages/local-data/src/authorization.ts:canOpenChildModeOffline(snapshot: AuthorizationSnapshot) -> boolean"]
+    documentation_evidence: *platform_docs
+    checks:
+      unit: ["npm exec vitest run tests/unit/local-data/authorization.test.ts"]
+      integration: ["npm exec vitest run tests/integration/convex/authorization.test.ts"]
+      regression: ["npm run check"]
+      e2e: ["npm exec playwright test tests/e2e/onboarding/offline-first-run.spec.ts"]
+      migration: []
+      deployment: ["vercel inspect $VERCEL_PREVIEW_URL"]
+      rollback: ["npm exec playwright test tests/e2e/spikes/pwa-rollback.spec.ts"]
+    evidence: []
+    blockers: []
+    active_owner: '@Builder'
+    reopens:
+    - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
+      by: SLC-001-T001
+      recorded_at: '2026-08-25T10:00:23Z'
+    - reason: accepted hosted-delivery governance and public-build plan changed
+      by: SLC-001-T001
+      recorded_at: '2026-08-25T11:40:46Z'
+    - reason: GitNexus index refresh updated repository guidance counts after evidence
+      by: SLC-001-T001
+      recorded_at: '2026-08-25T12:10:53Z'
+    - reason: typecheck-duplicate-properties-in-attempt-fixture
+      by: SLC-001-T003
+      recorded_at: '2026-08-25T22:15:46Z'
+    - reason: rebaseline-after-reviewed-SLC-001-cohort-deployment
+      by: SLC-002-T001
+      recorded_at: '2026-08-25T23:20:05Z'
+    - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
+      by: SLC-002-T004
+      recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-003"
   directory: "003-curriculum-content-packs"
   state: "STALE"
@@ -701,6 +756,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-003-T002"
     title: "Build curriculum, phonics and word core"
     rank: 12
@@ -740,6 +801,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-003-T003"
     title: "Build reading and media core"
     rank: 13
@@ -779,6 +846,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-003-T004"
     title: "Build mathematics core"
     rank: 14
@@ -818,6 +891,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-003-T005"
     title: "Build and publish immutable packs"
     rank: 15
@@ -857,6 +936,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-004"
   directory: "004-adaptive-learner-core"
   state: "STALE"
@@ -907,6 +992,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-004-T002"
     title: "Implement lesson scheduling and weak recovery"
     rank: 17
@@ -946,6 +1037,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-004-T003"
     title: "Implement baseline and progress windows"
     rank: 18
@@ -985,6 +1082,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-004-T004"
     title: "Build child home and activity shell"
     rank: 19
@@ -1024,6 +1127,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-004-T005"
     title: "Deliver core adaptive English journey"
     rank: 20
@@ -1063,6 +1172,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-005"
   directory: "005-handwriting-spelling-speech"
   state: "STALE"
@@ -1113,6 +1228,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-005-T002"
     title: "Implement spelling and composition progression"
     rank: 22
@@ -1152,6 +1273,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
@@ -1191,6 +1318,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-005-T004"
     title: "Implement ephemeral pronunciation assessment"
     rank: 24
@@ -1230,6 +1363,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-005-T005"
     title: "Integrate multimodal lesson and privacy regression"
     rank: 25
@@ -1269,6 +1408,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -1319,6 +1464,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
@@ -1358,6 +1509,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
@@ -1397,6 +1554,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -1436,6 +1599,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -1475,6 +1644,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -1525,6 +1700,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -1564,6 +1745,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -1603,6 +1790,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -1642,6 +1835,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -1692,6 +1891,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -1731,6 +1936,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -1770,6 +1981,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -1809,6 +2026,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -1848,6 +2071,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -1898,6 +2127,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -1937,6 +2172,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -1976,6 +2217,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -2015,6 +2262,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -2054,6 +2307,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -2104,6 +2363,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -2143,6 +2408,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -2182,6 +2453,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -2221,6 +2498,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -2260,6 +2543,12 @@ slices:
     - reason: assessment-e2e-missing-product-slice:onboarding-route-persistence-and-accessible-journey-absent
       by: SLC-002-T004
       recorded_at: '2026-08-25T23:44:13Z'
+    - reason: assessment-implementation-and-harness-verified
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:31:10Z'
+    - reason: rebaseline-after-green-assessment-cohort-packet
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T00:36:54Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -2623,4 +2912,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-25T23:44:39Z'
+updated_at: '2026-08-26T00:46:30Z'

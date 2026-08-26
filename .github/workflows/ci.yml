@@ -51,6 +51,8 @@ jobs:
 
   offline-e2e:
     runs-on: ubuntu-latest
+    env:
+      WAWI_E2E_ASSESSMENT_HARNESS: 1
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

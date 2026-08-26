@@ -22,6 +22,7 @@ export default defineSchema({
     yearGroup: v.union(v.literal("reception"), v.literal("year1")),
     createdAt: v.number(),
     targetDailyMinutes: v.number(),
+    activeAssessmentCandidateId: v.optional(v.id("assessmentCandidates")),
   }).index("byParent", ["parentId"]),
 
   installations: defineTable({
