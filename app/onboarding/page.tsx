@@ -5,9 +5,15 @@ import { anyApi } from "convex/server";
 import { useMutation, useQuery } from "convex/react";
 import Link from "next/link";
 import { useState } from "react";
+import { hasConvexConfiguration } from "../ConvexClientProvider";
 import { AssessmentAuthLink, AssessmentExperience, type AssessmentEstimate, type AssessmentResult } from "./assessment-experience";
 
 export default function AssessmentOnboardingPage() {
+  if (!hasConvexConfiguration) return <main className="learner-shell" data-testid="parent-setup-required"><section className="setup-card"><p className="eyebrow">Wawi Learns</p><h1>Parent setup is needed.</h1><p>This private assessment opens after the parent connection has been configured.</p><Link className="primary-button" href="/">Back to the parent page</Link></section></main>;
+  return <ConfiguredAssessmentOnboardingPage />;
+}
+
+function ConfiguredAssessmentOnboardingPage() {
   const { isLoading, isAuthenticated } = useConvexAuth();
   const assessment = useQuery(anyApi.assessments.getCurrentAssessment) as { profile: { _id: string; displayName: string } | null; candidate: { _id: string; status: "open" | "completed" | "incomplete"; targetItems: number; version: number } | null; attempts: { itemId: string; dimension: string; result: string }[] } | undefined;
   const start = useMutation(anyApi.assessments.startAssessment);

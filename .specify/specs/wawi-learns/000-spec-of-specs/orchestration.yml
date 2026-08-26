@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 162
+revision: 176
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 0d4db66b09af4e634efa1d29ce848b5e231606c4cd3156d7ada811375adb7e23
+  implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -589,48 +589,27 @@ slices:
       deployment: []
       rollback: []
     evidence:
-    - check_kind: integration
-      check_id: assessment-lifecycle
+    - check_kind: unit
+      check_id: assessment-convex-guard-final
       result: pass
-      recorded_at: '2026-08-26T00:38:09Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\integration\assessment-lifecycle.pass
-      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
-      source_path: tests\integration\convex\assessment.test.ts
+      recorded_at: '2026-08-26T02:53:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\unit\assessment-convex-guard-final.pass
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
+      source_path: tests\unit\learning-engine\assessment.test.ts
     - check_kind: regression
-      check_id: check-plus-test-delta
+      check_id: check-plus-test-delta-final
       result: pass
-      recorded_at: '2026-08-26T00:38:43Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\regression\check-plus-test-delta.pass
-      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      recorded_at: '2026-08-26T02:54:08Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\regression\check-plus-test-delta-final.pass
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
       source_path: package.json
     - check_kind: e2e
-      check_id: assessment-harness
+      check_id: assessment-harness-final
       result: pass
-      recorded_at: '2026-08-26T00:39:57Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\e2e\assessment-harness.pass
-      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
+      recorded_at: '2026-08-26T02:54:32Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\e2e\assessment-harness-final.pass
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
       source_path: tests\e2e\onboarding\assessment.spec.ts
-    - check_kind: evidence
-      check_id: unit
-      result: pass
-      recorded_at: '2026-08-26T00:40:58Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\evidence\unit.pass
-      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
-      source_path: tests\unit\learning-engine\assessment.test.ts
-    - check_kind: evidence
-      check_id: assessment
-      result: pass
-      recorded_at: '2026-08-26T00:41:39Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\evidence\assessment.pass
-      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
-      source_path: tests\unit\learning-engine\assessment.test.ts
-    - check_kind: unit
-      check_id: assessment-new
-      result: pass
-      recorded_at: '2026-08-26T00:42:25Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T004\unit\assessment-new.pass
-      implementation_fingerprint: 157129af74bac90c7bf4db3939d32654cf490cfc2521dd413a20c42306c4c31e
-      source_path: tests\unit\learning-engine\assessment.test.ts
     blockers:
     - reason: assessment-e2e-missing:no tests/e2e/onboarding/assessment.spec.ts and no onboarding assessment route/component exists; unit engine passes but declared browser acceptance cannot run
       recorded_at: '2026-08-25T23:43:43Z'
@@ -660,7 +639,10 @@ slices:
     - reason: rebaseline-after-green-assessment-cohort-packet
       by: SLC-002-T004
       recorded_at: '2026-08-26T00:36:54Z'
-    completed_at: '2026-08-26T00:45:52Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
+    completed_at: '2026-08-26T02:54:57Z'
   - id: "SLC-002-T005"
     title: "Complete authorised offline first run"
     rank: 10
@@ -682,45 +664,45 @@ slices:
     - check_kind: unit
       check_id: authorization-final
       result: pass
-      recorded_at: '2026-08-26T02:24:26Z'
+      recorded_at: '2026-08-26T02:55:54Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\unit\authorization-final.pass
-      implementation_fingerprint: 0d4db66b09af4e634efa1d29ce848b5e231606c4cd3156d7ada811375adb7e23
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
       source_path: tests\unit\local-data\authorization.test.ts
     - check_kind: integration
       check_id: authorization-final
       result: pass
-      recorded_at: '2026-08-26T02:24:48Z'
+      recorded_at: '2026-08-26T02:56:19Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\integration\authorization-final.pass
-      implementation_fingerprint: 0d4db66b09af4e634efa1d29ce848b5e231606c4cd3156d7ada811375adb7e23
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
       source_path: tests\integration\convex\authorization.test.ts
-    - check_kind: e2e
-      check_id: offline-first-run-final
-      result: pass
-      recorded_at: '2026-08-26T02:25:25Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\e2e\offline-first-run-final.pass
-      implementation_fingerprint: 0d4db66b09af4e634efa1d29ce848b5e231606c4cd3156d7ada811375adb7e23
-      source_path: tests\e2e\onboarding\offline-first-run.spec.ts
-    - check_kind: rollback
-      check_id: pwa-rollback-final
-      result: pass
-      recorded_at: '2026-08-26T02:26:00Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\rollback\pwa-rollback-final.pass
-      implementation_fingerprint: 0d4db66b09af4e634efa1d29ce848b5e231606c4cd3156d7ada811375adb7e23
-      source_path: tests\e2e\spikes\pwa-rollback.spec.ts
     - check_kind: regression
       check_id: check-plus-test-delta-final
       result: pass
-      recorded_at: '2026-08-26T02:28:33Z'
+      recorded_at: '2026-08-26T02:56:44Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\regression\check-plus-test-delta-final.pass
-      implementation_fingerprint: 0d4db66b09af4e634efa1d29ce848b5e231606c4cd3156d7ada811375adb7e23
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
       source_path: package.json
+    - check_kind: e2e
+      check_id: offline-first-run-final
+      result: pass
+      recorded_at: '2026-08-26T02:57:09Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\e2e\offline-first-run-final.pass
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
+      source_path: tests\e2e\onboarding\offline-first-run.spec.ts
     - check_kind: deployment
       check_id: vercel-project-target
       result: pass
-      recorded_at: '2026-08-26T02:28:58Z'
+      recorded_at: '2026-08-26T02:57:36Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\deployment\vercel-project-target.pass
-      implementation_fingerprint: 0d4db66b09af4e634efa1d29ce848b5e231606c4cd3156d7ada811375adb7e23
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
       source_path: .vercel\project.json
+    - check_kind: rollback
+      check_id: pwa-rollback-final
+      result: pass
+      recorded_at: '2026-08-26T02:58:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-002-T005\rollback\pwa-rollback-final.pass
+      implementation_fingerprint: 75e3ba3967d7c77c0a82f66bb6cb4c81b56b68dd983e503a04944dc8e828af82
+      source_path: tests\e2e\spikes\pwa-rollback.spec.ts
     blockers: []
     active_owner:
     reopens:
@@ -754,7 +736,10 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
-    completed_at: '2026-08-26T02:29:28Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
+    completed_at: '2026-08-26T02:58:30Z'
 - id: "SLC-003"
   directory: "003-curriculum-content-packs"
   state: "STALE"
@@ -817,6 +802,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-003-T002"
     title: "Build curriculum, phonics and word core"
     rank: 12
@@ -868,6 +856,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-003-T003"
     title: "Build reading and media core"
     rank: 13
@@ -919,6 +910,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-003-T004"
     title: "Build mathematics core"
     rank: 14
@@ -970,6 +964,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-003-T005"
     title: "Build and publish immutable packs"
     rank: 15
@@ -1021,6 +1018,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-004"
   directory: "004-adaptive-learner-core"
   state: "STALE"
@@ -1083,6 +1083,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-004-T002"
     title: "Implement lesson scheduling and weak recovery"
     rank: 17
@@ -1134,6 +1137,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-004-T003"
     title: "Implement baseline and progress windows"
     rank: 18
@@ -1185,6 +1191,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-004-T004"
     title: "Build child home and activity shell"
     rank: 19
@@ -1236,6 +1245,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-004-T005"
     title: "Deliver core adaptive English journey"
     rank: 20
@@ -1287,6 +1299,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-005"
   directory: "005-handwriting-spelling-speech"
   state: "STALE"
@@ -1349,6 +1364,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-005-T002"
     title: "Implement spelling and composition progression"
     rank: 22
@@ -1400,6 +1418,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
@@ -1451,6 +1472,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-005-T004"
     title: "Implement ephemeral pronunciation assessment"
     rank: 24
@@ -1502,6 +1526,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-005-T005"
     title: "Integrate multimodal lesson and privacy regression"
     rank: 25
@@ -1553,6 +1580,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -1615,6 +1645,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
@@ -1666,6 +1699,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
@@ -1717,6 +1753,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -1768,6 +1807,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -1819,6 +1861,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -1881,6 +1926,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -1932,6 +1980,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -1983,6 +2034,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -2034,6 +2088,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -2096,6 +2153,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -2147,6 +2207,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -2198,6 +2261,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -2249,6 +2315,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -2300,6 +2369,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -2362,6 +2434,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -2413,6 +2488,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -2464,6 +2542,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -2515,6 +2596,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -2566,6 +2650,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -2628,6 +2715,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -2679,6 +2769,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -2730,6 +2823,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -2781,6 +2877,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -2832,6 +2931,9 @@ slices:
     - reason: rebaseline-after-deployment-check-definition-repair
       by: SLC-002-T005
       recorded_at: '2026-08-26T02:22:02Z'
+    - reason: ci-prerender-missing-convex-config-guard
+      by: SLC-002-T004
+      recorded_at: '2026-08-26T02:52:44Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -3195,4 +3297,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-26T02:29:28Z'
+updated_at: '2026-08-26T02:58:30Z'

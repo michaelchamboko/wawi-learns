@@ -1,0 +1,6 @@
+task_id: SLC-002-T004
+check_kind: e2e
+check_id: assessment-harness-final
+result: pass
+recorded_at: '2026-08-26T02:54:32Z'
+source_path: tests\e2e\onboarding\assessment.spec.ts
