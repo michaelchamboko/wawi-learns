@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 306
+revision: 311
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: b355ea950ec1f8c114f0987d3498aa83b4dcf978fbffcce1de0475893258e333
+  implementation_fingerprint: 0d3571531e631c658dc542ddb57b590571d39eae6b67fb603e04c1ce082853ba
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -1623,7 +1623,7 @@ slices:
   - id: "SLC-004-T003"
     title: "Implement baseline and progress windows"
     rank: 18
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-004-T002"]
     requirements: ["PRD-FR-003", "PRD-FR-026"]
     acceptance: ["AC-SLC-004-003"]
@@ -1637,7 +1637,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: progress-windows
+      result: pass
+      recorded_at: '2026-08-27T08:00:02Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T003\unit\progress-windows.pass
+      implementation_fingerprint: 0d3571531e631c658dc542ddb57b590571d39eae6b67fb603e04c1ce082853ba
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T003\raw\unit-progress-windows.log
+    - check_kind: integration
+      check_id: progress-replay
+      result: pass
+      recorded_at: '2026-08-27T08:00:12Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T003\integration\progress-replay.pass
+      implementation_fingerprint: 0d3571531e631c658dc542ddb57b590571d39eae6b67fb603e04c1ce082853ba
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T003\raw\integration-progress-replay.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T08:00:22Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T003\regression\check.pass
+      implementation_fingerprint: 0d3571531e631c658dc542ddb57b590571d39eae6b67fb603e04c1ce082853ba
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T003\raw\regression-check.log
     blockers: []
     active_owner:
     reopens:
@@ -1692,6 +1713,7 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    completed_at: '2026-08-27T08:00:42Z'
   - id: "SLC-004-T004"
     title: "Build child home and activity shell"
     rank: 19
@@ -4353,4 +4375,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T07:53:29Z'
+updated_at: '2026-08-27T08:00:42Z'
