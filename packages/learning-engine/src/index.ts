@@ -7,6 +7,7 @@ export * from "./spelling";
 export * from "./tts-fallback";
 export * from "./revisions";
 export * from "./ai-budget";
+export * from "./ai-content";
 export * from "./red-team";
 export * from "./maths";
 export * from "./rewards";
