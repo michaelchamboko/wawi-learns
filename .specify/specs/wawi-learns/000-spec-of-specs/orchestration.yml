@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 333
+revision: 338
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: c2fb4718c640b4cdfccec1f8a36c56ac07c3f9353c7494c1158906fb9c48ae18
+  implementation_fingerprint: 37a094c0840df444a72c41b9a67bb3145aa902cfd64662236512af68e0933322
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -2117,7 +2117,7 @@ slices:
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-005-T002"]
     requirements: ["PRD-FR-014"]
     acceptance: ["AC-SLC-005-003"]
@@ -2131,7 +2131,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: tts
+      result: pass
+      recorded_at: '2026-08-27T09:55:19Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T003\unit\tts.pass
+      implementation_fingerprint: 37a094c0840df444a72c41b9a67bb3145aa902cfd64662236512af68e0933322
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T003\raw\unit-tts.log
+    - check_kind: integration
+      check_id: tts-fallback
+      result: pass
+      recorded_at: '2026-08-27T09:55:38Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T003\integration\tts-fallback.pass
+      implementation_fingerprint: 37a094c0840df444a72c41b9a67bb3145aa902cfd64662236512af68e0933322
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T003\raw\unit-tts.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T09:56:00Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T003\regression\check.pass
+      implementation_fingerprint: 37a094c0840df444a72c41b9a67bb3145aa902cfd64662236512af68e0933322
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T003\raw\regression-check.log
     blockers: []
     active_owner:
     reopens:
@@ -2189,6 +2210,7 @@ slices:
     - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
       by: SLC-005-T001
       recorded_at: '2026-08-27T08:48:59Z'
+    completed_at: '2026-08-27T09:56:20Z'
   - id: "SLC-005-T004"
     title: "Implement ephemeral pronunciation assessment"
     rank: 24
@@ -4557,4 +4579,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T08:54:15Z'
+updated_at: '2026-08-27T09:56:20Z'
