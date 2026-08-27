@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 350
+revision: 363
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,14 +7,14 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 5543e8c7d6da33434495ac0c70f72e0118035324f4edc6e98e819d026c3f7093
+  implementation_fingerprint: cf379ec0023d5a6a490920a04a3a3113962887e95cf113df68522ec9f4e15681
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
   decomposition_version: "v002"
   frozen_sequence: true
 project:
-  state: "AWAITING_APPROVAL"
+  state: "IN_PROGRESS"
   current_task:
   active_owner:
   blockers: []
@@ -2329,28 +2329,28 @@ slices:
     - check_kind: unit
       check_id: no-raw-audio
       result: pass
-      recorded_at: '2026-08-27T11:21:01Z'
+      recorded_at: '2026-08-27T11:28:32Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\unit\no-raw-audio.pass
       implementation_fingerprint: 5543e8c7d6da33434495ac0c70f72e0118035324f4edc6e98e819d026c3f7093
       source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-integration.log
     - check_kind: integration
       check_id: audio
       result: pass
-      recorded_at: '2026-08-27T11:21:11Z'
+      recorded_at: '2026-08-27T11:28:49Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\integration\audio.pass
       implementation_fingerprint: 5543e8c7d6da33434495ac0c70f72e0118035324f4edc6e98e819d026c3f7093
       source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-integration.log
     - check_kind: regression
       check_id: check
       result: pass
-      recorded_at: '2026-08-27T11:21:21Z'
+      recorded_at: '2026-08-27T11:29:05Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\regression\check.pass
       implementation_fingerprint: 5543e8c7d6da33434495ac0c70f72e0118035324f4edc6e98e819d026c3f7093
       source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\regression-check.log
     - check_kind: e2e
       check_id: multimodal-language
       result: pass
-      recorded_at: '2026-08-27T11:21:31Z'
+      recorded_at: '2026-08-27T11:29:20Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\e2e\multimodal-language.pass
       implementation_fingerprint: 5543e8c7d6da33434495ac0c70f72e0118035324f4edc6e98e819d026c3f7093
       source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\regression-check.log
@@ -2414,7 +2414,13 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
-    completed_at: '2026-08-27T11:21:41Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
+    completed_at: '2026-08-27T11:29:33Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -2429,7 +2435,7 @@ slices:
   - id: "SLC-006-T001"
     title: "Implement controlled reading and curated reader"
     rank: 26
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-005-T005"]
     requirements: ["PRD-FR-011", "PRD-FR-017"]
     acceptance: ["AC-SLC-006-001"]
@@ -2443,7 +2449,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: reading
+      result: pass
+      recorded_at: '2026-08-27T11:35:52Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\unit\reading.pass
+      implementation_fingerprint: cf379ec0023d5a6a490920a04a3a3113962887e95cf113df68522ec9f4e15681
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\unit-reading.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T11:36:02Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\regression\check.pass
+      implementation_fingerprint: cf379ec0023d5a6a490920a04a3a3113962887e95cf113df68522ec9f4e15681
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\regression-check.log
+    - check_kind: e2e
+      check_id: curated-reader
+      result: pass
+      recorded_at: '2026-08-27T11:36:13Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\e2e\curated-reader.pass
+      implementation_fingerprint: cf379ec0023d5a6a490920a04a3a3113962887e95cf113df68522ec9f4e15681
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\regression-check.log
     blockers: []
     active_owner:
     reopens:
@@ -2504,6 +2531,13 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
+    completed_at: '2026-08-27T11:36:24Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
@@ -2582,6 +2616,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
@@ -2660,6 +2700,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -2738,6 +2784,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -2816,6 +2868,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -2905,6 +2963,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -2983,6 +3047,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -3061,6 +3131,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -3139,6 +3215,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -3228,6 +3310,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -3306,6 +3394,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -3384,6 +3478,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -3462,6 +3562,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -3540,6 +3646,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -3629,6 +3741,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -3707,6 +3825,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -3785,6 +3909,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -3863,6 +3993,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -3941,6 +4077,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -4030,6 +4172,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -4108,6 +4256,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -4186,6 +4340,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -4264,6 +4424,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -4342,6 +4508,12 @@ slices:
     - reason: 'Implementation tree changed after start: updated .gitignore to exclude generated content packs so they cannot be committed accidentally. Rebasing to current tree before completion.'
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:14:51Z'
+    - reason: 'e2e-scope-violation:973af9b: T005 replaced functional multimodal tests with shell-only checks and changed no scheduler/renderer/attempt code, leaving required permission/offline/cancel/fallback/dimension behavior unproven.'
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:26:27Z'
+    - reason: Rebaseline after .gitignore commit changed the implementation tree; T005 work is complete and committed at 973af9ba.
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T11:27:50Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -4705,4 +4877,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T11:21:41Z'
+updated_at: '2026-08-27T11:36:24Z'
