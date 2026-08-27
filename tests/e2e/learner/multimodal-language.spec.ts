@@ -1,38 +1,61 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Browser, type BrowserContext, type Page } from "@playwright/test";
 
 const BASE_URL = process.env.PWA_E2E_BASE_URL ?? "http://127.0.0.1:3100";
 
-/**
- * SLC-005-T005 — multimodal language lesson (shell-level contract).
- *
- * The full multimodal lesson (picture-word -> tracing -> spelling -> speech with
- * the planned-mistake loop) runs inside the authenticated child session and is
- * covered at the unit/integration layer by tests/unit/ui/activity-renderer.test.tsx
- * and tests/unit/ui/mvp-session.test.tsx. This spec verifies the reachable
- * learner-shell entry contract the lesson is launched from: an accessible shell
- * landmark, a single primary action, keyboard reachability, and no child-facing
- * external links.
- */
-test.describe("SLC-005-T005 — multimodal lesson (shell entry)", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto(`${BASE_URL}/home`, { waitUntil: "networkidle" });
+const openHarness = async (browser: Browser): Promise<{ context: BrowserContext; page: Page }> => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.goto(`${BASE_URL}/home/multimodal-harness`, { waitUntil: "networkidle" });
+  await expect(page.getByTestId("multimodal-harness")).toBeVisible();
+  return { context, page };
+};
+
+const advanceToSpeech = async (page: Page) => {
+  await page.getByRole("button", { name: "I'm ready" }).click();
+  await page.getByRole("button", { name: "sun", exact: true }).click();
+  await page.getByRole("button", { name: "sit", exact: true }).click();
+  await page.getByRole("button", { name: "I traced it", exact: true }).click();
+  for (const letter of ["c", "a", "n"]) await page.getByRole("button", { name: letter, exact: true }).click();
+};
+
+test.describe("SLC-005-T005 — multimodal language lesson", () => {
+  test("records only matching-dimension evidence through picture, tracing, spelling and speech", async ({ browser }) => {
+    const { context, page } = await openHarness(browser);
+    await advanceToSpeech(page);
+    await page.getByTestId("microphone-permission").click();
+    await page.getByTestId("speech-record").click();
+
+    await expect(page.getByTestId("attempt-log")).toHaveText([
+      "phonics:w-cat:correct",
+      "phonics:w-sun:correct",
+      "reading:w-sit:correct",
+      "tracing:w-sat:correct",
+      "spelling:w-can:correct",
+      "speech:w-cat:partial",
+    ].join("|"));
+    await context.close();
   });
 
-  test("renders an accessible learner-shell landmark with a primary action", async ({ page }) => {
-    const shell = page
-      .getByTestId("parent-setup-required")
-      .or(page.getByTestId("parent-auth"))
-      .or(page.getByTestId("picture-word-activity"));
-    await expect(shell.first()).toBeVisible();
-    const primary = page.locator("button.primary-button").first();
-    await expect(primary).toBeVisible();
-    await expect(primary).toBeEnabled();
-    await primary.focus();
-    await expect(primary).toBeFocused();
+  test("uses denied-microphone fallback and records speech only after the child confirms practice", async ({ browser }) => {
+    const { context, page } = await openHarness(browser);
+    await advanceToSpeech(page);
+
+    await page.getByTestId("deny-microphone").click();
+    await expect(page.getByTestId("speech-fallback")).toBeVisible();
+    await expect(page.getByTestId("attempt-log")).not.toContainText("speech:");
+    await page.getByRole("button", { name: "I said it" }).click();
+    await expect(page.getByTestId("attempt-log")).toContainText("speech:w-cat:partial");
+    await context.close();
   });
 
-  test("exposes no child-facing external links (safe shell)", async ({ page }) => {
-    const external = page.locator('a[target="_blank"]');
-    await expect(external).toHaveCount(0);
+  test("uses offline speech fallback and cancel records no attempt", async ({ browser }) => {
+    const { context, page } = await openHarness(browser);
+    await advanceToSpeech(page);
+
+    await page.getByTestId("toggle-offline").click();
+    await expect(page.getByTestId("speech-fallback")).toBeVisible();
+    await page.getByTestId("cancel-activity").click();
+    await expect(page.getByTestId("attempt-log")).not.toContainText("speech:");
+    await context.close();
   });
 });

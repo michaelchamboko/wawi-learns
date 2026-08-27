@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 415
+revision: 430
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,14 +7,14 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
+  implementation_fingerprint: 3627a146a10abfa45a3f52ad7b1099ae0c51ddd92c3dca8aa3fc66c13c9e13f8
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
   decomposition_version: "v002"
   frozen_sequence: true
 project:
-  state: "IN_PROGRESS"
+  state: "AWAITING_APPROVAL"
   current_task:
   active_owner:
   blockers: []
@@ -2327,33 +2327,89 @@ slices:
       rollback: []
     evidence:
     - check_kind: unit
-      check_id: no-raw-audio
+      check_id: multimodal-focused
       result: pass
-      recorded_at: '2026-08-27T11:53:22Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\unit\no-raw-audio.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-integration.log
-    - check_kind: integration
-      check_id: audio
-      result: pass
-      recorded_at: '2026-08-27T11:53:33Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\integration\audio.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-integration.log
+      recorded_at: '2026-08-27T17:39:18Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\unit\multimodal-focused.pass
+      implementation_fingerprint: f685fbb249be322de4491f2005ec34b2ba4aa4c87e44ad3ae2854f389ca47708
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\multimodal-focused-repair.log
     - check_kind: regression
       check_id: check
       result: pass
-      recorded_at: '2026-08-27T11:53:44Z'
+      recorded_at: '2026-08-27T17:39:30Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\regression\check.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\regression-check.log
+      implementation_fingerprint: f685fbb249be322de4491f2005ec34b2ba4aa4c87e44ad3ae2854f389ca47708
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\regression-check-repair.log
     - check_kind: e2e
       check_id: multimodal-language
       result: pass
-      recorded_at: '2026-08-27T11:53:57Z'
+      recorded_at: '2026-08-27T17:39:41Z'
       evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\e2e\multimodal-language.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\regression-check.log
+      implementation_fingerprint: f685fbb249be322de4491f2005ec34b2ba4aa4c87e44ad3ae2854f389ca47708
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\e2e-multimodal-language-repair.log
+    - check_kind: unit
+      check_id: no-raw-audio
+      result: pass
+      recorded_at: '2026-08-27T17:40:10Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\unit\no-raw-audio.pass
+      implementation_fingerprint: f685fbb249be322de4491f2005ec34b2ba4aa4c87e44ad3ae2854f389ca47708
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log
+    - check_kind: integration
+      check_id: audio
+      result: pass
+      recorded_at: '2026-08-27T17:40:21Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\integration\audio.pass
+      implementation_fingerprint: f685fbb249be322de4491f2005ec34b2ba4aa4c87e44ad3ae2854f389ca47708
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log
+    - check_kind: unit
+      check_id: no-raw-audio
+      result: pass
+      recorded_at: '2026-08-27T17:41:22Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\unit\no-raw-audio.pass
+      implementation_fingerprint: 78ab36a1c67673d296b50c2a7749bbbccd773604d09f10ea740e48738d22deb5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log
+    - check_kind: integration
+      check_id: audio
+      result: pass
+      recorded_at: '2026-08-27T17:41:34Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\integration\audio.pass
+      implementation_fingerprint: 78ab36a1c67673d296b50c2a7749bbbccd773604d09f10ea740e48738d22deb5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log
+    - check_kind: unit
+      check_id: no-raw-audio
+      result: pass
+      recorded_at: '2026-08-27T17:48:39Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\unit\no-raw-audio.pass
+      implementation_fingerprint: 3627a146a10abfa45a3f52ad7b1099ae0c51ddd92c3dca8aa3fc66c13c9e13f8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log
+    - check_kind: integration
+      check_id: audio
+      result: pass
+      recorded_at: '2026-08-27T17:48:50Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\integration\audio.pass
+      implementation_fingerprint: 3627a146a10abfa45a3f52ad7b1099ae0c51ddd92c3dca8aa3fc66c13c9e13f8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log
+    - check_kind: unit
+      check_id: multimodal-focused
+      result: pass
+      recorded_at: '2026-08-27T17:49:01Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\unit\multimodal-focused.pass
+      implementation_fingerprint: 3627a146a10abfa45a3f52ad7b1099ae0c51ddd92c3dca8aa3fc66c13c9e13f8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\multimodal-focused-repair.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T17:49:14Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\regression\check.pass
+      implementation_fingerprint: 3627a146a10abfa45a3f52ad7b1099ae0c51ddd92c3dca8aa3fc66c13c9e13f8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\regression-check-repair.log
+    - check_kind: e2e
+      check_id: multimodal-language
+      result: pass
+      recorded_at: '2026-08-27T17:49:25Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\e2e\multimodal-language.pass
+      implementation_fingerprint: 3627a146a10abfa45a3f52ad7b1099ae0c51ddd92c3dca8aa3fc66c13c9e13f8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\e2e-multimodal-language-repair.log
     blockers:
     - reason: 'technical-block: third recurrence of unverifiable shell-only multimodal E2E. Repair requires a fresh red behavioural suite plus real scheduler, home renderer, and dimension-correct AttemptEvent path; downstream work is invalid until that exists.'
       recorded_at: '2026-08-27T11:51:58Z'
@@ -2434,7 +2490,10 @@ slices:
     - reason: Clear stale BLOCKED state; T005 was completed and committed at 973af9ba. Re-closing.
       by: SLC-005-T005
       recorded_at: '2026-08-27T11:52:59Z'
-    completed_at: '2026-08-27T11:54:08Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
+    completed_at: '2026-08-27T17:49:42Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -2449,7 +2508,7 @@ slices:
   - id: "SLC-006-T001"
     title: "Implement controlled reading and curated reader"
     rank: 26
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-005-T005"]
     requirements: ["PRD-FR-011", "PRD-FR-017"]
     acceptance: ["AC-SLC-006-001"]
@@ -2463,28 +2522,7 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: unit
-      check_id: reading
-      result: pass
-      recorded_at: '2026-08-27T11:55:23Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\unit\reading.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\unit-reading.log
-    - check_kind: regression
-      check_id: check
-      result: pass
-      recorded_at: '2026-08-27T11:55:34Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\regression\check.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\regression-check.log
-    - check_kind: e2e
-      check_id: curated-reader
-      result: pass
-      recorded_at: '2026-08-27T11:55:46Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\e2e\curated-reader.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\regression-check.log
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -2569,11 +2607,13 @@ slices:
     - reason: Re-settle ledger; T001 complete (committed 1ada8ce9).
       by: SLC-006-T001
       recorded_at: '2026-08-27T11:55:01Z'
-    completed_at: '2026-08-27T11:55:57Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-006-T001"]
     requirements: ["PRD-FR-017", "PRD-FR-018", "PRD-FR-019", "PRD-NFR-008"]
     acceptance: ["AC-SLC-006-002"]
@@ -2587,35 +2627,7 @@ slices:
       migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: unit
-      check_id: generated-revision
-      result: pass
-      recorded_at: '2026-08-27T11:56:43Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\unit\generated-revision.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\raw\unit-integration.log
-    - check_kind: integration
-      check_id: generated-state
-      result: pass
-      recorded_at: '2026-08-27T11:56:55Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\integration\generated-state.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\raw\unit-integration.log
-    - check_kind: migration
-      check_id: schema-compatibility
-      result: pass
-      recorded_at: '2026-08-27T11:57:06Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\migration\schema-compatibility.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\raw\unit-integration.log
-    - check_kind: regression
-      check_id: check
-      result: pass
-      recorded_at: '2026-08-27T11:57:18Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\regression\check.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\raw\regression-check.log
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -2706,11 +2718,13 @@ slices:
     - reason: Re-settle ledger; T002 complete (committed 6aad0905).
       by: SLC-006-T002
       recorded_at: '2026-08-27T11:56:21Z'
-    completed_at: '2026-08-27T11:57:30Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
-    state: "DONE"
+    state: "STALE"
     dependencies: ["SLC-006-T002"]
     requirements: ["PRD-FR-018", "PRD-FR-021"]
     acceptance: ["AC-SLC-006-003"]
@@ -2724,28 +2738,7 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence:
-    - check_kind: unit
-      check_id: ai-output
-      result: pass
-      recorded_at: '2026-08-27T11:58:15Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\unit\ai-output.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\raw\unit-integration.log
-    - check_kind: integration
-      check_id: constrained-actions
-      result: pass
-      recorded_at: '2026-08-27T11:58:27Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\integration\constrained-actions.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\raw\unit-integration.log
-    - check_kind: regression
-      check_id: check
-      result: pass
-      recorded_at: '2026-08-27T11:58:40Z'
-      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\regression\check.pass
-      implementation_fingerprint: f85c46ba659b3c5fbd12dd1a559c863efc223c0a494c0a6d32a00393884fd209
-      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\raw\regression-check.log
+    evidence: []
     blockers: []
     active_owner:
     reopens:
@@ -2845,7 +2838,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
-    completed_at: '2026-08-27T11:58:53Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -2963,6 +2958,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -3080,6 +3078,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -3208,6 +3209,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -3325,6 +3329,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -3442,6 +3449,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -3559,6 +3569,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -3687,6 +3700,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -3804,6 +3820,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -3921,6 +3940,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -4038,6 +4060,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -4155,6 +4180,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -4283,6 +4311,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -4400,6 +4431,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -4517,6 +4551,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -4634,6 +4671,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -4751,6 +4791,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -4879,6 +4922,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -4996,6 +5042,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -5113,6 +5162,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -5230,6 +5282,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -5347,6 +5402,9 @@ slices:
     - reason: Re-settle ledger after commit 992f3941; T003 generateContent complete.
       by: SLC-006-T003
       recorded_at: '2026-08-27T11:57:52Z'
+    - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
+      by: SLC-005-T005
+      recorded_at: '2026-08-27T16:33:54Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -5710,4 +5768,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T11:58:53Z'
+updated_at: '2026-08-27T17:49:42Z'

@@ -1,9 +1,16 @@
+import type { AttemptDimension } from "../../local-data/src/types";
+
 export type MvpActivityKind =
   | "learn-card"
   | "audio-picture"
   | "picture-word"
+  | "trace"
+  | "spell"
+  | "say-word"
   | "letter-tiles"
   | "mixed-recap";
+
+export type MicrophoneRequirement = "none" | "required";
 
 export interface MvpActivity {
   readonly id: string;
@@ -12,7 +19,9 @@ export interface MvpActivity {
   readonly itemId: string;
   readonly image: string;
   readonly prompt: string;
+  readonly dimension: AttemptDimension;
   readonly choices?: readonly string[];
+  readonly microphone?: MicrophoneRequirement;
 }
 
 export const MVP_SESSION_PLAN: readonly MvpActivity[] = [
@@ -23,6 +32,7 @@ export const MVP_SESSION_PLAN: readonly MvpActivity[] = [
     itemId: "w-cat",
     image: "/content/mvp/images/cat.svg",
     prompt: "Meet the cat. Tap the speaker, then say cat.",
+    dimension: "phonics",
   },
   {
     id: "hear-sun",
@@ -32,6 +42,7 @@ export const MVP_SESSION_PLAN: readonly MvpActivity[] = [
     image: "/content/mvp/images/sun.svg",
     prompt: "Listen. Which picture says sun?",
     choices: ["sun", "cat", "can"],
+    dimension: "phonics",
   },
   {
     id: "read-sit",
@@ -41,23 +52,36 @@ export const MVP_SESSION_PLAN: readonly MvpActivity[] = [
     image: "/content/mvp/images/sit.svg",
     prompt: "Which word matches the picture?",
     choices: ["sat", "sit", "sun"],
+    dimension: "reading",
   },
   {
-    id: "build-sat",
-    kind: "letter-tiles",
+    id: "trace-sat",
+    kind: "trace",
     word: "sat",
     itemId: "w-sat",
     image: "/content/mvp/images/sat.svg",
-    prompt: "Build the word sat.",
+    prompt: "Trace sat with your finger.",
+    dimension: "tracing",
   },
   {
-    id: "recap-can",
-    kind: "mixed-recap",
+    id: "spell-can",
+    kind: "spell",
     word: "can",
     itemId: "w-can",
     image: "/content/mvp/images/can.svg",
-    prompt: "One more. Which word matches the picture?",
-    choices: ["can", "cat", "sat"],
+    prompt: "Spell can.",
+    choices: ["c", "a", "n"],
+    dimension: "spelling",
+  },
+  {
+    id: "say-cat",
+    kind: "say-word",
+    word: "cat",
+    itemId: "w-cat",
+    image: "/content/mvp/images/cat.svg",
+    prompt: "Say cat after the sound.",
+    dimension: "speech",
+    microphone: "required",
   },
 ];
 

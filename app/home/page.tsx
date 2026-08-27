@@ -6,9 +6,9 @@ import { useMutation, useQuery } from "convex/react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { hasConvexConfiguration } from "../ConvexClientProvider";
-import { commitAttemptThenAdvance, startSession } from "../../packages/learning-engine/src/session";
+import { cancelActivityAttempt, commitActivityAttemptThenAdvance, startSession } from "../../packages/learning-engine/src/session";
 import { LocalAttemptStore } from "../../packages/local-data/src";
-import { canOpenChildModeOffline, persistInstallationSnapshot, prepareEssentialPack, readActivePack, readInstallationSnapshot, type AttemptEvent, type InstallationSnapshot, type SyncReceipt } from "../../packages/local-data/src";
+import { canOpenChildModeOffline, persistInstallationSnapshot, prepareEssentialPack, readActivePack, readInstallationSnapshot, type InstallationSnapshot, type SyncReceipt } from "../../packages/local-data/src";
 import { MVP_SESSION_PLAN, MvpActivityRenderer, activityProgressLabel, restoredActivityIndex } from "../../packages/ui/src";
 import { parentAuthErrorMessage, type ParentAuthMode } from "../(child)/home/parent-auth-errors";
 import { OfflineEntry } from "../offline/offline-entry";
@@ -124,6 +124,7 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
   const [feedback, setFeedback] = useState<Feedback>(null);
   const [status, setStatus] = useState("Ready when you are");
   const [offlineAuthorized, setOfflineAuthorized] = useState(false);
+  const [microphoneState, setMicrophoneState] = useState<"unknown" | "granted" | "denied">("unknown");
   const [error, setError] = useState("");
   const startedAt = useRef(0);
   const installationId = useRef<string | null>(null);
@@ -167,17 +168,15 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
     catch { setError("We could not start just yet. Please try again."); }
   };
 
-  const answer = async (result: "correct" | "incorrect") => {
+  const answer = async (result: "correct" | "incorrect" | "partial") => {
     const activity = MVP_SESSION_PLAN[index];
     const id = installationId.current ?? installationIdFor(profile._id);
     installationId.current = id;
-    const base = { eventId: newEventId(), installationId: id, occurredAt: Date.now(), durationMs: Date.now() - startedAt.current, dimension: "phonics" as const, itemId: activity.itemId, result, hintCount, clientVersion };
+    const base = { eventId: newEventId(), occurredAt: Date.now(), durationMs: Date.now() - startedAt.current, result, hintCount };
     try {
-      if (result === "correct") {
-        const state = startSession(profile._id, id, clientVersion, { itemId: activity.itemId, dimension: "phonics", modality: activity.kind });
-        const outcome = await commitAttemptThenAdvance(state, base, { appendAttempt: (event) => store.appendAttempt(event), now: () => Date.now() });
-        if (!outcome.advance) throw new Error(outcome.nextState.lastError ?? "save-failed");
-      } else await store.appendAttempt({ ...base, sourceSequence: 0, recordedAt: Date.now() } as AttemptEvent);
+      const state = startSession(profile._id, id, clientVersion, { itemId: activity.itemId, dimension: activity.dimension, modality: activity.kind });
+      const outcome = await commitActivityAttemptThenAdvance(state, activity, base, { appendAttempt: (event) => store.appendAttempt(event), now: () => Date.now() });
+      if (!outcome.advance) throw new Error(outcome.nextState.lastError ?? "save-failed");
       await syncNow(); setFeedback(result === "correct" ? "correct" : "retry");
     } catch { setError("We need a grown-up to check this device before we continue."); }
   };
@@ -187,11 +186,30 @@ function MvpLearner({ profile, completedCount }: { profile: NonNullable<HomeData
     const next = index + 1; window.localStorage.setItem(checkpointKey, String(next)); setIndex(next); setHintCount(0); setFeedback(null); startedAt.current = Date.now();
   };
 
+  const cancelCurrentActivity = () => {
+    const activity = MVP_SESSION_PLAN[index];
+    const id = installationId.current ?? installationIdFor(profile._id);
+    const state = startSession(profile._id, id, clientVersion, { itemId: activity.itemId, dimension: activity.dimension, modality: activity.kind });
+    cancelActivityAttempt(state, activity, microphoneState === "denied" ? "microphone-denied" : !online ? "offline" : "child-cancelled");
+    setStarted(false);
+    setFeedback(null);
+    setStatus("Paused — no attempt recorded");
+  };
+
+  const requestMicrophone = async () => {
+    try {
+      const permission = await navigator.permissions?.query?.({ name: "microphone" as PermissionName });
+      setMicrophoneState(permission?.state === "denied" ? "denied" : "granted");
+    } catch {
+      setMicrophoneState("denied");
+    }
+  };
+
   if (!online && !started && !offlineAuthorized) return <main className="learner-shell"><section className="reconnect-card"><h2>Let’s reconnect first.</h2><p>Your open adventure is safe. Come back online to continue.</p></section></main>;
-  if (!started && status === "Adventure complete") return <main className="learner-shell"><section className="completion-card"><p className="eyebrow">Adventure complete</p><h2>You did five brilliant steps.</h2><div className="stars" aria-label="Five trail tokens">🍃 🍃 🍃 🍃 🍃</div><p>Every try helps your learning grow.</p><button className="primary-button" type="button" onClick={() => setStatus("Ready when you are")}>Back home</button></section></main>;
-  if (!started) return <main className="learner-shell" data-testid="child-home"><header className="learner-header"><div><p className="eyebrow">Wawi Learns</p><h1>Hi {profile.displayName}</h1></div><span className="connection-status">{online ? status : "Saved on this device"}</span></header><section className="home-card"><p className="progress-label">Today&apos;s adventure</p><h2>Five small steps, one big smile.</h2><p>Listen, look, tap and build at your own pace.</p><div className="trail" aria-label={`${completedCount} activities completed today`}>{[1, 2, 3, 4, 5].map((step) => <span key={step} className={step <= completedCount ? "trail-token done" : "trail-token"}>{step}</span>)}</div><button className="primary-button" type="button" onClick={() => void start()}>Continue My Adventure <span aria-hidden="true">→</span></button>{error ? <p className="form-error" role="alert">{error}</p> : null}</section></main>;
+  if (!started && status === "Adventure complete") return <main className="learner-shell"><section className="completion-card"><p className="eyebrow">Adventure complete</p><h2>You did six brilliant steps.</h2><div className="stars" aria-label="Six trail tokens">🍃 🍃 🍃 🍃 🍃 🍃</div><p>Every try helps your learning grow.</p><button className="primary-button" type="button" onClick={() => setStatus("Ready when you are")}>Back home</button></section></main>;
+  if (!started) return <main className="learner-shell" data-testid="child-home"><header className="learner-header"><div><p className="eyebrow">Wawi Learns</p><h1>Hi {profile.displayName}</h1></div><span className="connection-status">{online ? status : "Saved on this device"}</span></header><section className="home-card"><p className="progress-label">Today&apos;s adventure</p><h2>Six small steps, one big smile.</h2><p>Listen, look, tap, trace, spell and say at your own pace.</p><div className="trail" aria-label={`${completedCount} activities completed today`}>{[1, 2, 3, 4, 5, 6].map((step) => <span key={step} className={step <= completedCount ? "trail-token done" : "trail-token"}>{step}</span>)}</div><button className="primary-button" type="button" onClick={() => void start()}>Continue My Adventure <span aria-hidden="true">→</span></button>{error ? <p className="form-error" role="alert">{error}</p> : null}</section></main>;
   const activity = MVP_SESSION_PLAN[index];
-  return <main className="learner-shell" data-testid="mvp-session"><div className="session-actions"><span className="progress-label">{activityProgressLabel(index)}</span><button className="link-button" type="button" onClick={() => setStarted(false)}>Pause and go home</button></div><MvpActivityRenderer activity={activity} hintCount={hintCount} disabled={feedback !== null} onHint={() => setHintCount((count) => count + 1)} onSpeak={speak} onAnswer={answer} />{feedback === "correct" ? <div className="feedback correct" role="status">Lovely work!<br /><button className="primary-button" type="button" onClick={advance}>{index + 1 === MVP_SESSION_PLAN.length ? "Finish adventure" : "Next step"}</button></div> : null}{feedback === "retry" ? <div className="feedback retry" role="status">Let&apos;s try another way.<br /><button className="primary-button" type="button" onClick={() => setFeedback(null)}>Try again</button></div> : null}{error ? <p className="form-error" role="alert">{error}</p> : null}</main>;
+  return <main className="learner-shell" data-testid="mvp-session"><div className="session-actions"><span className="progress-label">{activityProgressLabel(index)}</span><button className="link-button" type="button" onClick={() => setStarted(false)}>Pause and go home</button></div><MvpActivityRenderer activity={activity} hintCount={hintCount} disabled={feedback !== null} onHint={() => setHintCount((count) => count + 1)} onSpeak={speak} onAnswer={answer} onCancel={cancelCurrentActivity} onRequestMicrophone={() => void requestMicrophone()} microphoneState={microphoneState} online={online} />{feedback === "correct" ? <div className="feedback correct" role="status">Lovely work!<br /><button className="primary-button" type="button" onClick={advance}>{index + 1 === MVP_SESSION_PLAN.length ? "Finish adventure" : "Next step"}</button></div> : null}{feedback === "retry" ? <div className="feedback retry" role="status">Let&apos;s try another way.<br /><button className="primary-button" type="button" onClick={() => setFeedback(null)}>Try again</button></div> : null}{error ? <p className="form-error" role="alert">{error}</p> : null}</main>;
 }
 
 function LoadingShell({ label }: { label: string }) { return <main className="learner-shell"><section className="setup-card"><p aria-live="polite">{label}</p></section></main>; }

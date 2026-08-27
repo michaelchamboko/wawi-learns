@@ -4,7 +4,7 @@ import {
   type MasteryState,
 } from "./mastery";
 
-export type ActivityKind = "learn" | "picture-word" | "tile" | "trace" | "spell" | "read";
+export type ActivityKind = "learn" | "picture-word" | "tile" | "trace" | "spell" | "read" | "say-word";
 
 export interface LessonContext {
   readonly childProfileId: string;
@@ -140,24 +140,45 @@ export const selectNextActivity = (input: BuildPlanInput): ActivityPlan => {
   }
 
   // Rotate modality if the same one was used twice in a row in this dimension.
+  // Speech (microphone) and tracing (handwriting) are higher-friction modalities:
+  // never schedule a third consecutive one when another candidate is available.
   const recent = context.recentModalityByDimension[chosen.dimension] ?? [];
-  const lastModality = recent.at(-1);
+  const lastTwo = recent.slice(-2);
+  let selected = chosen;
   let modality = chosen.modality;
+  if (lastTwo.length === 2 && lastTwo.every((m) => m === modality) && (modality === "say-word" || modality === "trace")) {
+    const fallback = candidates.find((c) => c.modality !== modality) ?? chosen;
+    selected = fallback;
+    modality = fallback.modality;
+    return {
+      dimension: selected.dimension,
+      modality,
+      itemId: selected.itemId,
+      reason: "modality-fatigue-rotation",
+      audit: { isWeak: selected.isWeak, isNew: selected.isNew },
+    };
+  }
+  const lastModality = recent.at(-1);
   if (lastModality === modality) {
-    const fallback = modality === "picture-word" ? "tile" : "picture-word";
-    modality = fallback;
+    const fallback = candidates.find((c) => c.dimension === chosen.dimension && c.modality !== modality);
+    if (fallback) {
+      selected = fallback;
+      modality = fallback.modality;
+    } else {
+      modality = modality === "picture-word" ? "tile" : "picture-word";
+    }
   }
 
   return {
-    dimension: chosen.dimension,
+    dimension: selected.dimension,
     modality,
-    itemId: chosen.itemId,
-    reason: chosen.isWeak
+    itemId: selected.itemId,
+    reason: selected.isWeak
       ? "weak-recovery"
-      : chosen.isNew
+      : selected.isNew
         ? "new-introduction"
         : "retention",
-    audit: { isWeak: chosen.isWeak, isNew: chosen.isNew },
+    audit: { isWeak: selected.isWeak, isNew: selected.isNew },
   };
 };
 

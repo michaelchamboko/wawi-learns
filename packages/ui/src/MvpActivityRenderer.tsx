@@ -3,13 +3,19 @@
 import { useState } from "react";
 import type { MvpActivity } from "./mvp-session";
 
+export type MicrophoneState = "unknown" | "granted" | "denied";
+
 export interface MvpActivityRendererProps {
   readonly activity: MvpActivity;
   readonly hintCount: number;
   readonly disabled?: boolean;
-  readonly onAnswer: (result: "correct" | "incorrect") => Promise<void>;
+  readonly onAnswer: (result: "correct" | "incorrect" | "partial") => Promise<void>;
   readonly onHint: () => void;
   readonly onSpeak: (word: string) => void;
+  readonly onCancel?: () => void;
+  readonly onRequestMicrophone?: () => void;
+  readonly microphoneState?: MicrophoneState;
+  readonly online?: boolean;
 }
 
 const visualFor = (word: string): string => `/content/mvp/images/${word}.svg`;
@@ -21,9 +27,13 @@ export function MvpActivityRenderer({
   onAnswer,
   onHint,
   onSpeak,
+  onCancel,
+  onRequestMicrophone,
+  microphoneState = "unknown",
+  online = true,
 }: MvpActivityRendererProps) {
   const [tiles, setTiles] = useState<string[]>([]);
-  const isTileActivity = activity.kind === "letter-tiles";
+  const isTileActivity = activity.kind === "letter-tiles" || activity.kind === "spell";
 
   const choose = (choice: string) => {
     void onAnswer(choice === activity.word ? "correct" : "incorrect");
@@ -78,15 +88,48 @@ export function MvpActivityRenderer({
       ) : null}
 
       {isTileActivity ? (
-        <div className="tile-game" aria-label="Build the word">
+        <div className="tile-game" aria-label="Build the word" data-testid="spelling-practice">
           <div className="tile-slots" aria-label="Your word">{tiles.length ? tiles.join("") : "Tap the letters"}</div>
           <div className="letter-tiles">
-            {["t", "s", "a"].map((letter, index) => (
+            {(activity.choices ?? [...activity.word]).map((letter, index) => (
               <button className="letter-tile" type="button" key={`${letter}-${index}`} onClick={() => chooseTile(letter)} disabled={disabled || tiles.includes(letter)}>
                 {letter}
               </button>
             ))}
           </div>
+        </div>
+      ) : null}
+
+      {activity.kind === "trace" ? (
+        <div className="trace-practice" data-testid="tracing-practice" aria-label={`Trace ${activity.word}`}>
+          <p>Follow the letters with your finger: <strong>{activity.word}</strong></p>
+          <button className="primary-button" type="button" onClick={() => void onAnswer("correct")} disabled={disabled}>
+            I traced it
+          </button>
+        </div>
+      ) : null}
+
+      {activity.kind === "say-word" ? (
+        <div className="speech-practice" data-testid="speech-practice">
+          {!online || microphoneState === "denied" ? (
+            <div data-testid="speech-fallback">
+              <p>Tap when you have said the word with a grown-up.</p>
+              <button className="primary-button" type="button" onClick={() => void onAnswer("partial")} disabled={disabled}>
+                I said it
+              </button>
+            </div>
+          ) : microphoneState === "unknown" ? (
+            <button className="primary-button" type="button" data-testid="microphone-permission" onClick={onRequestMicrophone} disabled={disabled}>
+              Ask to use the microphone
+            </button>
+          ) : (
+            <button className="primary-button" type="button" data-testid="speech-record" onClick={() => void onAnswer("partial")} disabled={disabled}>
+              Record my word
+            </button>
+          )}
+          <button className="quiet-button" type="button" data-testid="cancel-activity" onClick={onCancel} disabled={disabled}>
+            Pause and try later
+          </button>
         </div>
       ) : null}
 

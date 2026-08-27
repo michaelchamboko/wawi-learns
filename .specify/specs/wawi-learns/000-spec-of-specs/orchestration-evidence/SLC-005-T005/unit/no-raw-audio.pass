@@ -2,5 +2,5 @@ task_id: SLC-005-T005
 check_kind: unit
 check_id: no-raw-audio
 result: pass
-recorded_at: '2026-08-27T11:53:21Z'
-source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-integration.log
+recorded_at: '2026-08-27T17:48:39Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log

@@ -34,6 +34,12 @@ export interface CommitAttemptInput {
   readonly occurredAt: number;
 }
 
+export interface ActivityAttemptPlan {
+  readonly itemId: string;
+  readonly dimension: AttemptEvent["dimension"];
+  readonly kind: string;
+}
+
 export interface CommitAttemptOutcome {
   readonly nextState: SessionState;
   readonly advance: boolean;
@@ -113,6 +119,34 @@ export const commitAttemptThenAdvance = async (
     };
   }
 };
+
+export const commitActivityAttemptThenAdvance = async (
+  state: SessionState,
+  activity: ActivityAttemptPlan,
+  input: Omit<CommitAttemptInput, "dimension" | "itemId">,
+  deps: CommitAttemptDependencies,
+): Promise<CommitAttemptOutcome> =>
+  commitAttemptThenAdvance(
+    state,
+    {
+      ...input,
+      dimension: activity.dimension,
+      itemId: activity.itemId,
+    },
+    deps,
+  );
+
+export const cancelActivityAttempt = (
+  state: SessionState,
+  _activity: ActivityAttemptPlan,
+  reason: "microphone-denied" | "offline" | "child-cancelled",
+): CommitAttemptOutcome => ({
+  nextState: {
+    ...state,
+    lastError: `cancelled:${reason}`,
+  },
+  advance: false,
+});
 
 export const completeSession = (state: SessionState): SessionState => ({
   ...state,

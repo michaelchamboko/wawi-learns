@@ -2,5 +2,5 @@ task_id: SLC-005-T005
 check_kind: integration
 check_id: audio
 result: pass
-recorded_at: '2026-08-27T11:53:33Z'
-source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-integration.log
+recorded_at: '2026-08-27T17:48:50Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T005\raw\security-audio-repair.log
