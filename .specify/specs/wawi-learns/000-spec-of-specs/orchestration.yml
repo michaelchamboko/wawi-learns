@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 328
+revision: 333
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 475b5c6a998034bcfc024b50ea0ea09553928c5b08daddb801e20feb9282d459
+  implementation_fingerprint: c2fb4718c640b4cdfccec1f8a36c56ac07c3f9353c7494c1158906fb9c48ae18
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -2020,7 +2020,7 @@ slices:
   - id: "SLC-005-T002"
     title: "Implement spelling and composition progression"
     rank: 22
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-005-T001"]
     requirements: ["PRD-FR-012", "PRD-FR-005"]
     acceptance: ["AC-SLC-005-002"]
@@ -2034,7 +2034,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: spelling
+      result: pass
+      recorded_at: '2026-08-27T08:53:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T002\unit\spelling.pass
+      implementation_fingerprint: c2fb4718c640b4cdfccec1f8a36c56ac07c3f9353c7494c1158906fb9c48ae18
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T002\raw\unit-spelling.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T08:53:54Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T002\regression\check.pass
+      implementation_fingerprint: c2fb4718c640b4cdfccec1f8a36c56ac07c3f9353c7494c1158906fb9c48ae18
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T002\raw\regression-check.log
+    - check_kind: e2e
+      check_id: spelling-progression
+      result: pass
+      recorded_at: '2026-08-27T08:54:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T002\e2e\spelling-progression.pass
+      implementation_fingerprint: c2fb4718c640b4cdfccec1f8a36c56ac07c3f9353c7494c1158906fb9c48ae18
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T002\raw\regression-check.log
     blockers: []
     active_owner:
     reopens:
@@ -2092,6 +2113,7 @@ slices:
     - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
       by: SLC-005-T001
       recorded_at: '2026-08-27T08:48:59Z'
+    completed_at: '2026-08-27T08:54:15Z'
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
@@ -4535,4 +4557,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T08:50:10Z'
+updated_at: '2026-08-27T08:54:15Z'
