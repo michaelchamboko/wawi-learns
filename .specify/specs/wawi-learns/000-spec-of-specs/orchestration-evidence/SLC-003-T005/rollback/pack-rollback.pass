@@ -1,0 +1,6 @@
+task_id: SLC-003-T005
+check_kind: rollback
+check_id: pack-rollback
+result: pass
+recorded_at: '2026-08-27T05:48:52Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-003-T005\raw\e2e-content.json

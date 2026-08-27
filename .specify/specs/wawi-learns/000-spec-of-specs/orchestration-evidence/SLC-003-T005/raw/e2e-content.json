@@ -1,0 +1,245 @@
+npm notice run wawi-learns@0.0.0-local npx
+npm notice run playwright test tests/e2e/content/core-pack-install.spec.ts tests/e2e/content/pack-rollback.spec.ts --reporter=json
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\micha\\.buzz\\REPOS\\Antigravity Applications Created\\Wawi Learns\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/content/core-pack-install.spec.ts",
+      "tests/e2e/content/pack-rollback.spec.ts",
+      "--reporter=json"
+    ],
+    "configFile": "C:\\Users\\micha\\.buzz\\REPOS\\Antigravity Applications Created\\Wawi Learns\\playwright.config.ts",
+    "rootDir": "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "content\\core-pack-install.spec.ts",
+      "file": "content/core-pack-install.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SLC-003-T005 — core pack install",
+          "file": "content/core-pack-install.spec.ts",
+          "line": 30,
+          "column": 6,
+          "specs": [
+            {
+              "title": "serves a schema-shaped core pack manifest",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 437,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-27T05:46:20.207Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1b1a67682b6ca91d0f6-a64b45da430451aecfa0",
+              "file": "content/core-pack-install.spec.ts",
+              "line": 35,
+              "column": 3
+            },
+            {
+              "title": "every packed asset downloads and matches its declared hash (two-slot activation)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 455,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-27T05:46:20.975Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1b1a67682b6ca91d0f6-2bf2cb0d468da7a4c579",
+              "file": "content/core-pack-install.spec.ts",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "a corrupted asset fails activation and keeps the prior pack (fails closed)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 213,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-27T05:46:21.457Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1b1a67682b6ca91d0f6-b3ba95e6dcc144fc4caf",
+              "file": "content/core-pack-install.spec.ts",
+              "line": 77,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "content\\pack-rollback.spec.ts",
+      "file": "content/pack-rollback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SLC-003-T005 — pack rollback",
+          "file": "content/pack-rollback.spec.ts",
+          "line": 76,
+          "column": 6,
+          "specs": [
+            {
+              "title": "a valid essential pack activates while a corrupt full candidate is rolled back",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 454,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-27T05:46:21.702Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b700fd7fac922140bac7-3fffaa15a4dee36c6123",
+              "file": "content/pack-rollback.spec.ts",
+              "line": 81,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-27T05:46:19.364Z",
+    "duration": 2935.575,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
