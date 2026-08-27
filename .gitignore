@@ -14,6 +14,11 @@ test-results/
 # Hosting and local tooling
 .vercel/
 
+# Generated content packs (regenerate via `npm run build:packs`)
+public/content/1.0.0/
+public/content/1.0.0-essential/
+public/content/1.0.0-t5test-*/
+
 # Environment and secrets
 .env
 .env.*
