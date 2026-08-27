@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 322
+revision: 328
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,14 +7,14 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 0ddffb91b1ed69ad24d31319b24a6154b18f832ed71177c13980df5c04602b82
+  implementation_fingerprint: 475b5c6a998034bcfc024b50ea0ea09553928c5b08daddb801e20feb9282d459
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
   decomposition_version: "v002"
   frozen_sequence: true
 project:
-  state: "AWAITING_APPROVAL"
+  state: "IN_PROGRESS"
   current_task:
   active_owner:
   blockers: []
@@ -1923,7 +1923,7 @@ slices:
   - id: "SLC-005-T001"
     title: "Implement adaptive tracing"
     rank: 21
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-004-T005"]
     requirements: ["PRD-FR-013"]
     acceptance: ["AC-SLC-005-001"]
@@ -1937,7 +1937,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: score-trace
+      result: pass
+      recorded_at: '2026-08-27T08:49:39Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T001\unit\score-trace.pass
+      implementation_fingerprint: 475b5c6a998034bcfc024b50ea0ea09553928c5b08daddb801e20feb9282d459
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T001\raw\unit-score-trace.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T08:49:50Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T001\regression\check.pass
+      implementation_fingerprint: 475b5c6a998034bcfc024b50ea0ea09553928c5b08daddb801e20feb9282d459
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T001\raw\regression-check.log
+    - check_kind: e2e
+      check_id: input-matrix
+      result: pass
+      recorded_at: '2026-08-27T08:50:00Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T001\e2e\input-matrix.pass
+      implementation_fingerprint: 475b5c6a998034bcfc024b50ea0ea09553928c5b08daddb801e20feb9282d459
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-005-T001\raw\regression-check.log
     blockers: []
     active_owner:
     reopens:
@@ -1992,6 +2013,10 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
+    completed_at: '2026-08-27T08:50:10Z'
   - id: "SLC-005-T002"
     title: "Implement spelling and composition progression"
     rank: 22
@@ -2064,6 +2089,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-005-T003"
     title: "Implement TTS and audio hierarchy"
     rank: 23
@@ -2136,6 +2164,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-005-T004"
     title: "Implement ephemeral pronunciation assessment"
     rank: 24
@@ -2208,6 +2239,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-005-T005"
     title: "Integrate multimodal lesson and privacy regression"
     rank: 25
@@ -2280,6 +2314,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
   state: "STALE"
@@ -2363,6 +2400,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
@@ -2435,6 +2475,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
@@ -2507,6 +2550,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
@@ -2579,6 +2625,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
@@ -2651,6 +2700,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
   state: "STALE"
@@ -2734,6 +2786,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
@@ -2806,6 +2861,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
@@ -2878,6 +2936,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
@@ -2950,6 +3011,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
   state: "STALE"
@@ -3033,6 +3097,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
@@ -3105,6 +3172,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
@@ -3177,6 +3247,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
@@ -3249,6 +3322,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
@@ -3321,6 +3397,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
   state: "STALE"
@@ -3404,6 +3483,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
@@ -3476,6 +3558,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
@@ -3548,6 +3633,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
@@ -3620,6 +3708,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
@@ -3692,6 +3783,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
   state: "STALE"
@@ -3775,6 +3869,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
@@ -3847,6 +3944,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
@@ -3919,6 +4019,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
@@ -3991,6 +4094,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
@@ -4063,6 +4169,9 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    - reason: 'Implementation tree changed after start: added tests/unit/tracing/score-trace.test.ts and tests/e2e/tracing/input-matrix.spec.ts (new declared T001 checks). Rebasing to current tree before completion.'
+      by: SLC-005-T001
+      recorded_at: '2026-08-27T08:48:59Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -4426,4 +4535,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T08:41:02Z'
+updated_at: '2026-08-27T08:50:10Z'
