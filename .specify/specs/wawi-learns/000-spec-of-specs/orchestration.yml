@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 291
+revision: 301
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,14 +7,14 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 8fbba70d6a28596d6b0f889fb9cfd84602fb4055e939f209e98899e70a971a01
+  implementation_fingerprint: 8e4d941e0367508565e8952b3cd8ef590c3d071f11239376806f8b2fc5c451fc
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
   decomposition_version: "v002"
   frozen_sequence: true
 project:
-  state: "AWAITING_APPROVAL"
+  state: "IN_PROGRESS"
   current_task:
   active_owner:
   blockers: []
@@ -1400,7 +1400,7 @@ slices:
   - id: "SLC-004-T001"
     title: "Implement evidence and mastery projection"
     rank: 16
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-003-T005"]
     requirements: ["PRD-FR-007"]
     acceptance: ["AC-SLC-004-001"]
@@ -1414,7 +1414,63 @@ slices:
       migration: ["npm exec vitest run tests/unit/learning-engine/replay-compatibility.test.ts"]
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: mastery
+      result: pass
+      recorded_at: '2026-08-27T06:12:23Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\unit\mastery.pass
+      implementation_fingerprint: a7f05036135d645089c033ca0917806f13fc46d8defea709d722ca0a04bfd9db
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\unit-mastery.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T06:12:33Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\regression\check.pass
+      implementation_fingerprint: a7f05036135d645089c033ca0917806f13fc46d8defea709d722ca0a04bfd9db
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\regression-check.log
+    - check_kind: integration
+      check_id: replay
+      result: pass
+      recorded_at: '2026-08-27T07:45:22Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\integration\replay.pass
+      implementation_fingerprint: 4f5d1af6d739e2c7e8ccdbf3c1196a6fd265e31c65e5e28ce6782aff5faa72ca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\integration-replay.log
+    - check_kind: migration
+      check_id: replay-compatibility
+      result: pass
+      recorded_at: '2026-08-27T07:45:36Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\migration\replay-compatibility.pass
+      implementation_fingerprint: 4f5d1af6d739e2c7e8ccdbf3c1196a6fd265e31c65e5e28ce6782aff5faa72ca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\migration-replay.log
+    - check_kind: unit
+      check_id: mastery
+      result: pass
+      recorded_at: '2026-08-27T07:47:32Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\unit\mastery.pass
+      implementation_fingerprint: 8e4d941e0367508565e8952b3cd8ef590c3d071f11239376806f8b2fc5c451fc
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\unit-mastery.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T07:47:47Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\regression\check.pass
+      implementation_fingerprint: 8e4d941e0367508565e8952b3cd8ef590c3d071f11239376806f8b2fc5c451fc
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\regression-check.log
+    - check_kind: integration
+      check_id: replay
+      result: pass
+      recorded_at: '2026-08-27T07:48:02Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\integration\replay.pass
+      implementation_fingerprint: 8e4d941e0367508565e8952b3cd8ef590c3d071f11239376806f8b2fc5c451fc
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\integration-replay.log
+    - check_kind: migration
+      check_id: replay-compatibility
+      result: pass
+      recorded_at: '2026-08-27T07:48:30Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\migration\replay-compatibility.pass
+      implementation_fingerprint: 8e4d941e0367508565e8952b3cd8ef590c3d071f11239376806f8b2fc5c451fc
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\migration-replay.log
     blockers: []
     active_owner:
     reopens:
@@ -1469,6 +1525,7 @@ slices:
     - reason: uncommitted repair edits rebaselined after implementation_hash_changed reference e5eed0a current bbf4dd2; audit confirms only six allowed seed/test files changed, no temp artifacts, AGENTS.md/CLAUDE.md untouched
       by: SLC-003-T003
       recorded_at: '2026-08-26T18:28:19Z'
+    completed_at: '2026-08-27T07:48:42Z'
   - id: "SLC-004-T002"
     title: "Implement lesson scheduling and weak recovery"
     rank: 17
@@ -4274,4 +4331,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T05:49:25Z'
+updated_at: '2026-08-27T07:48:42Z'

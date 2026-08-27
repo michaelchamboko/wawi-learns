@@ -1,0 +1,6 @@
+task_id: SLC-004-T001
+check_kind: integration
+check_id: replay
+result: pass
+recorded_at: '2026-08-27T07:48:02Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T001\raw\integration-replay.log
