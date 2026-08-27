@@ -6,7 +6,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   test: {
-    include: ["tests/**/*.test.ts", "tests/**/*.unit.test.ts", "tests/**/*.property.test.ts"],
+    include: ["tests/**/*.test.ts", "tests/**/*.test.tsx", "tests/**/*.unit.test.ts", "tests/**/*.property.test.ts"],
     exclude: ["tests/e2e/**", "node_modules/**", ".next/**"],
     environment: "node",
   },

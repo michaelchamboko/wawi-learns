@@ -160,20 +160,19 @@ function buildManifest(
 }
 
 function buildVariant(input: BuildPackInput, corpus: CanonicalCorpus, essential: boolean): BuiltPack {
-  // Pack version field stays semver (schema-enforced). The essential variant
-  // is written to a distinct directory so both can coexist on disk; the URL
-  // base uses that directory segment so the manifest resolves to the real
-  // served file paths.
-  const packVersion = essential ? `${input.version}-essential` : input.version;
+  // `dirSegment` is the on-disk/URL directory (e.g. "1.0.0" or "1.0.0-essential").
+  // The manifest `packVersion` field is always the released semver, which the
+  // consumer schema requires; it does not vary by directory.
+  const dirSegment = essential ? `${input.version}-essential` : input.version;
   const files = planFiles(corpus, essential);
   const manifest = buildManifest(
-    packVersion,
-    input.version,
+    dirSegment,
+    "1.0.0",
     input.curriculumVersion,
     input.engineVersion,
     files,
   );
-  return { packVersion, manifest, files };
+  return { packVersion: dirSegment, manifest, files };
 }
 
 export async function buildPacks(input: BuildPackInput): Promise<PackBuildResult> {

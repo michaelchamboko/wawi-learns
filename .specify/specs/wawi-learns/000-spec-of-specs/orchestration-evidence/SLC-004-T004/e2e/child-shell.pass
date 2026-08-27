@@ -1,0 +1,6 @@
+task_id: SLC-004-T004
+check_kind: e2e
+check_id: child-shell
+result: pass
+recorded_at: '2026-08-27T08:34:39Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-004-T004\raw\regression-check.log
