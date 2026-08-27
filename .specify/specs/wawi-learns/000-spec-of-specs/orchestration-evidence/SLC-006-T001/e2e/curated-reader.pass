@@ -2,5 +2,5 @@ task_id: SLC-006-T001
 check_kind: e2e
 check_id: curated-reader
 result: pass
-recorded_at: '2026-08-27T11:36:13Z'
+recorded_at: '2026-08-27T11:42:44Z'
 source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\regression-check.log
