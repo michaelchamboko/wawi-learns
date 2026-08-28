@@ -24,3 +24,4 @@ export * from "./rollback";
 export * from "./release-evidence";
 export * from "./review-records";
 export * from "./platform-binding";
+export * from "./production-candidate";
