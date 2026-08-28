@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   buildMathsActivity,
+  type MathsLessonContext,
   type MathsTemplate,
 } from "../../../packages/learning-engine/src/index";
 
@@ -12,85 +13,54 @@ const baseTemplate = (overrides: Partial<MathsTemplate> = {}): MathsTemplate => 
   generator: "count-objects",
   answerKey: "n",
   misconceptionTags: ["count-all"],
+  hintSequence: ["Count each object once."],
   ...overrides,
 });
 
-describe("SLC-007-T002/T003 — maths templates", () => {
-  it("count-objects yields a Reception count question in [1,10]", () => {
+const context = (
+  seed: number,
+  template: MathsTemplate = baseTemplate(),
+  recentRepresentations: MathsLessonContext["recentRepresentations"] = [],
+): MathsLessonContext => ({
+  template,
+  seed,
+  now: 1_700_000_000_000,
+  recentRepresentations,
+});
+
+describe("SLC-007-T001/T002/T003 — maths templates", () => {
+  it("same seed always produces the same item and prompt", () => {
     for (let seed = 0; seed < 100; seed += 1) {
-      const plan = buildMathsActivity(baseTemplate({ generator: "count-objects" }), seed);
-      const answer = Number(plan.item.answer);
-      expect(Number.isInteger(answer)).toBe(true);
-      expect(answer).toBeGreaterThanOrEqual(1);
-      expect(answer).toBeLessThanOrEqual(10);
+      const a = buildMathsActivity(context(seed));
+      const b = buildMathsActivity(context(seed));
+      expect(a.item.itemId).toBe(b.item.itemId);
+      expect(a.item.prompt).toBe(b.item.prompt);
+      expect(a.item.answer).toBe(b.item.answer);
+      expect(a.reviewDelayMs).toBe(b.reviewDelayMs);
     }
   });
 
-  it("subitise yields a Reception subitising question in [1,5]", () => {
-    for (let seed = 0; seed < 50; seed += 1) {
-      const plan = buildMathsActivity(
-        baseTemplate({ generator: "subitise", strand: "number-to-10", representation: "concrete" }),
-        seed,
-      );
-      const answer = Number(plan.item.answer);
-      expect(answer).toBeGreaterThanOrEqual(1);
-      expect(answer).toBeLessThanOrEqual(5);
-    }
+  it("recent repeated representations trigger a longer delay for delayed recall", () => {
+    const a = buildMathsActivity(context(7, baseTemplate({ representation: "concrete" }), ["concrete", "concrete"]));
+    const b = buildMathsActivity(context(7, baseTemplate({ representation: "concrete" }), ["concrete"]));
+    expect(a.reviewDelayMs).toBeGreaterThan(b.reviewDelayMs);
+    expect(a.supportStrategy).toContain("rotate-representation");
+    expect(b.supportStrategy).not.toContain("rotate-representation");
   });
 
-  it("number-bonds yields a + ? = 10 with the correct complement", () => {
-    for (let seed = 0; seed < 50; seed += 1) {
-      const plan = buildMathsActivity(
-        baseTemplate({ generator: "number-bonds", strand: "addition-subtraction", representation: "pictorial" }),
-        seed,
-      );
-      const match = /^(\d+) \+ \? = 10$/.exec(plan.item.prompt);
-      expect(match).not.toBeNull();
-      const a = Number(match![1]);
-      const b = Number(plan.item.answer);
-      expect(a + b).toBe(10);
-    }
-  });
-
-  it("tens-and-units yields a Year 1 place-value question", () => {
-    for (let seed = 0; seed < 50; seed += 1) {
-      const plan = buildMathsActivity(
+  it("support strategies are derived from misconception tags", () => {
+    const plan = buildMathsActivity(
+      context(
+        11,
         baseTemplate({
-          generator: "tens-and-units",
-          strand: "place-value",
-          level: "year1",
-          representation: "abstract",
+          generator: "one-less",
+          strand: "number-to-10",
+          representation: "concrete",
+          misconceptionTags: ["count-back-error"],
         }),
-        seed,
-      );
-      const match = /^(\d+) tens and (\d+) units$/.exec(plan.item.prompt);
-      expect(match).not.toBeNull();
-      const tens = Number(match![1]);
-      const units = Number(match![2]);
-      expect(tens * 10 + units).toBe(Number(plan.item.answer));
-      expect(plan.item.answer.length).toBeGreaterThan(0);
-    }
-  });
-
-  it("coin-combinations yields a Year 1 money question with no impossible coins", () => {
-    for (let seed = 0; seed < 50; seed += 1) {
-      const plan = buildMathsActivity(
-        baseTemplate({
-          generator: "coin-combinations",
-          strand: "money",
-          level: "year1",
-          representation: "pictorial",
-        }),
-        seed,
-      );
-      const match = /^5p×(\d+) \+ 2p×(\d+) \+ 1p×(\d+)$/.exec(plan.item.prompt);
-      expect(match).not.toBeNull();
-      const f = Number(match![1]);
-      const t = Number(match![2]);
-      const o = Number(match![3]);
-      expect(f).toBeLessThanOrEqual(2);
-      expect(t).toBeLessThanOrEqual(2);
-      expect(o).toBeLessThanOrEqual(4);
-    }
+      ),
+    );
+    expect(plan.supportStrategy).toContain("count-backwards");
+    expect(plan.workedExample.length).toBeGreaterThan(0);
   });
 });

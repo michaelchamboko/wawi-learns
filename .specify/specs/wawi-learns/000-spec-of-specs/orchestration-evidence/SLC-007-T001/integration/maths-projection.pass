@@ -1,0 +1,6 @@
+task_id: SLC-007-T001
+check_kind: integration
+check_id: maths-projection
+result: pass
+recorded_at: '2026-08-28T07:25:19Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\raw\integration-maths.log

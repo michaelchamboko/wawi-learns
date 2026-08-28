@@ -2,11 +2,5 @@ task_id: SLC-007-T001
 check_kind: unit
 check_id: maths
 result: pass
-recorded_at: '2026-08-11T15:00:00Z'
-command: npm exec vitest run tests/unit/learning-engine/maths.test.ts tests/unit/learning-engine/maths.property.test.ts
-test_count: 11
-evidence_owner: @Jimmy
-notes:
-  - Deterministic mulberry32-seeded generators produce the same itemId for the same seed.
-  - count-objects, subitise, number-bonds, tens-and-units, coin-combinations all satisfy answer and prompt invariants.
-  - Full-reveal attempts (3+ hints) are classified as incorrect regardless of the answer string.
+recorded_at: '2026-08-28T07:24:48Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\raw\unit-maths.log

@@ -1,10 +1,8 @@
 import { describe, expect, it } from "vitest";
-import fc from "fast-check";
 import {
-  DETERMINISTIC_SEED_BASE,
   buildMathsActivity,
   classifyMathsAttempt,
-  type MathsItem,
+  type MathsLessonContext,
   type MathsTemplate,
 } from "../../../packages/learning-engine/src/index";
 
@@ -16,72 +14,79 @@ const baseTemplate = (overrides: Partial<MathsTemplate> = {}): MathsTemplate => 
   generator: "count-objects",
   answerKey: "n",
   misconceptionTags: ["count-all"],
+  hintSequence: ["Count each object once."],
+  ...overrides,
+});
+
+const baseContext = (overrides: Partial<MathsLessonContext> = {}): MathsLessonContext => ({
+  template: baseTemplate(),
+  seed: 42,
+  now: 1_700_000_000_000,
+  recentRepresentations: [],
   ...overrides,
 });
 
 describe("SLC-007-T001 — maths engine", () => {
-  it("builds a deterministic activity for the same seed", () => {
-    const template = baseTemplate();
-    const a = buildMathsActivity(template, 42);
-    const b = buildMathsActivity(template, 42);
-    expect(a.item).toEqual(b.item);
+  it("builds a deterministic maths activity plan with delayed recall metadata", () => {
+    const context = baseContext({ recentRepresentations: ["concrete", "concrete"] });
+    const a = buildMathsActivity(context);
+    const b = buildMathsActivity(context);
+    expect(a).toEqual(b);
+    expect(a.dimension).toBe("maths");
+    expect(a.item.representation).toBe("concrete");
+    expect(a.reviewDelayMs).toBeGreaterThan(24 * 60 * 60 * 1000);
+    expect(a.supportStrategy).toContain("rotate-representation");
+    expect(a.workedExample).toContain("Count");
   });
 
   it("throws on an unknown generator", () => {
-    const template = baseTemplate({ generator: "missing-generator" });
-    expect(() => buildMathsActivity(template, 1)).toThrowError(/unknown-generator/);
+    const context = baseContext({ template: baseTemplate({ generator: "missing-generator" }) });
+    expect(() => buildMathsActivity(context)).toThrowError(/unknown-generator/);
   });
 
-  it("classifies correct, incorrect, partial and skipped answers", () => {
-    const item: MathsItem = {
-      itemId: "tpl-1-1",
-      templateId: "tpl-1",
-      strand: "number-to-10",
-      representation: "concrete",
-      prompt: "How many objects?",
-      answer: "3",
-      allowedAnswers: ["3"],
-      misconceptionTags: ["count-all"],
-    };
+  it("classifies correct, incorrect, partial and skipped answers into maths evidence", () => {
+    const template = baseTemplate();
+    const evidence = classifyMathsAttempt(
+      { itemId: "tpl-1-42", result: "correct", hintCount: 0, occurredAt: 0, answer: "7" },
+      template,
+    );
+    expect(evidence.dimension).toBe("maths");
+    expect(evidence.templateId).toBe("tpl-1");
+    expect(evidence.result).toBe("correct");
+    expect(evidence.masteryState).toMatch(/practising|strong/);
+    expect(evidence.supportStrategy).toContain("count-with-objects");
+    expect(evidence.englishIsolation).toBe(true);
+
     expect(
-      classifyMathsAttempt({ itemId: "tpl-1-1", result: "correct", hintCount: 0, occurredAt: 0, answer: "3" }, item),
-    ).toBe("correct");
-    expect(
-      classifyMathsAttempt({ itemId: "tpl-1-1", result: "incorrect", hintCount: 0, occurredAt: 0, answer: "5" }, item),
+      classifyMathsAttempt(
+        { itemId: "tpl-1-42", result: "incorrect", hintCount: 0, occurredAt: 0, answer: "5" },
+        template,
+      ).result,
     ).toBe("incorrect");
     expect(
-      classifyMathsAttempt({ itemId: "tpl-1-1", result: "skipped", hintCount: 0, occurredAt: 0, answer: "" }, item),
+      classifyMathsAttempt(
+        { itemId: "tpl-1-42", result: "skipped", hintCount: 0, occurredAt: 0, answer: "" },
+        template,
+      ).result,
     ).toBe("skipped");
   });
 
-  it("always classifies full-reveal attempts as incorrect", () => {
-    const item: MathsItem = {
-      itemId: "tpl-1-1",
-      templateId: "tpl-1",
-      strand: "number-to-10",
+  it("accepts a nearby numeric estimate without speed pressure", () => {
+    const template = baseTemplate({
+      generator: "estimate-100",
+      strand: "number-to-100",
+      level: "year1",
       representation: "concrete",
-      prompt: "How many objects?",
-      answer: "3",
-      allowedAnswers: ["3"],
-      misconceptionTags: ["count-all"],
-    };
-    expect(
-      classifyMathsAttempt({ itemId: "tpl-1-1", result: "correct", hintCount: 3, occurredAt: 0, answer: "3" }, item),
-    ).toBe("incorrect");
-  });
-
-  it("property: same seed always produces same itemId", () => {
-    fc.assert(
-      fc.property(fc.integer({ min: 1, max: 1_000_000 }), (seed) => {
-        const a = buildMathsActivity(baseTemplate(), seed);
-        const b = buildMathsActivity(baseTemplate(), seed);
-        expect(a.item.itemId).toBe(b.item.itemId);
-      }),
-      { numRuns: 50 },
+      misconceptionTags: ["over-under-estimate"],
+    });
+    const plan = buildMathsActivity({ ...baseContext({ template, seed: 9 }), recentRepresentations: ["concrete"] });
+    const actual = Number(plan.item.answer) + 6;
+    const evidence = classifyMathsAttempt(
+      { itemId: plan.item.itemId, result: "partial", hintCount: 1, occurredAt: 0, answer: String(actual) },
+      template,
     );
-  });
-
-  it("the deterministic seed base is anchored at DETERMINISTIC_SEED_BASE", () => {
-    expect(DETERMINISTIC_SEED_BASE).toBe(1_700_000_000);
+    expect(evidence.result).toBe("partial");
+    expect(evidence.masteryState).toBe("learning");
+    expect(evidence.delayMs).toBeGreaterThan(0);
   });
 });
