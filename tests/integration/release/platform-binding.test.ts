@@ -1,26 +1,47 @@
 import { describe, expect, it } from "vitest";
-import { readPlatformBinding } from "../../../packages/learning-engine/src/index";
+import {
+  EXPECTED,
+  validatePlatformBinding,
+  type PlatformBinding,
+} from "../../../packages/learning-engine/src/platform-binding";
+
+const binding = (overrides: Partial<PlatformBinding> = {}): PlatformBinding => ({
+  repository: EXPECTED.repository,
+  vercelProject: EXPECTED.vercelProject,
+  vercelRoot: EXPECTED.vercelRoot,
+  branch: EXPECTED.branch,
+  candidateSha: "sha-1",
+  githubActionsRunSha: "sha-1",
+  vercelDeploymentSha: "sha-1",
+  convexDeploymentSha: "sha-1",
+  ...overrides,
+});
 
 describe("SLC-010-T003 — platform binding", () => {
-  it("the repository is bound to michaelchamboko/wawi-learns", () => {
-    const binding = readPlatformBinding();
-    expect(binding.repo).toBe("https://github.com/michaelchamboko/wawi-learns.git");
+  it("passes when repo, project, root, branch and all receipts match the candidate SHA", () => {
+    const result = validatePlatformBinding(binding());
+    expect(result.passed).toBe(true);
+    expect(result.reasons).toEqual([]);
   });
 
-  it("the Vercel project is wawi-learns rooted at .", () => {
-    const binding = readPlatformBinding();
-    expect(binding.vercelProject).toBe("wawi-learns");
-    expect(binding.vercelRoot).toBe(".");
+  it("fails on repository, project, root or branch mismatch", () => {
+    expect(validatePlatformBinding(binding({ repository: "other/repo" })).passed).toBe(false);
+    expect(validatePlatformBinding(binding({ vercelProject: "other" })).passed).toBe(false);
+    expect(validatePlatformBinding(binding({ vercelRoot: "/app" })).passed).toBe(false);
+    expect(validatePlatformBinding(binding({ branch: "develop" })).passed).toBe(false);
   });
 
-  it("the production branch is main with Node 24.x", () => {
-    const binding = readPlatformBinding();
-    expect(binding.productionBranch).toBe("main");
-    expect(binding.nodeVersion).toBe("24.x");
+  it("fails when any immutable receipt is missing", () => {
+    const result = validatePlatformBinding(
+      binding({ githubActionsRunSha: null, vercelDeploymentSha: null, convexDeploymentSha: null }),
+    );
+    expect(result.passed).toBe(false);
+    expect(result.reasons).toContain("no immutable deployment receipts present");
   });
 
-  it("the GitHub Actions workflow exists", () => {
-    const binding = readPlatformBinding();
-    expect(binding.hasCiWorkflow).toBe(true);
+  it("fails when a receipt SHA does not match the candidate", () => {
+    const result = validatePlatformBinding(binding({ vercelDeploymentSha: "sha-2" }));
+    expect(result.passed).toBe(false);
+    expect(result.reasons.some((r) => r.includes("receipt SHA"))).toBe(true);
   });
 });

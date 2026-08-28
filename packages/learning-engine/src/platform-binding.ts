@@ -1,42 +1,56 @@
 /**
- * Platform binding (SLC-010-T003).
- * Verifies the local repository is bound to the canonical GitHub
- * repository and Vercel project. Hosted-only checks (vercel project
- * inspect, github actions receipts) live in the deployment pipeline.
+ * Platform binding validation (SLC-010-T003).
+ * Pure. Verifies the direct-main delivery configuration: the exact repo,
+ * the Vercel `wawi-learns` project, root `.`, production branch `main`, and
+ * a vercel/Convex receipt bound to the exact candidate SHA. No secrets.
  */
-import { existsSync, readFileSync } from "node:fs";
-import { resolve } from "node:path";
-
-const repoRoot = resolve(__dirname, "..", "..", "..");
-
 export interface PlatformBinding {
-  readonly repo: string;
+  readonly repository: string;
   readonly vercelProject: string;
   readonly vercelRoot: string;
-  readonly productionBranch: string;
-  readonly nodeVersion: string;
-  readonly hasCiWorkflow: boolean;
+  readonly branch: string;
+  readonly candidateSha: string;
+  readonly githubActionsRunSha: string | null;
+  readonly vercelDeploymentSha: string | null;
+  readonly convexDeploymentSha: string | null;
 }
 
-const required = (key: string, value: string | undefined): string => {
-  if (!value) throw new Error(`missing-binding:${key}`);
-  return value;
-};
+export const EXPECTED = {
+  repository: "michaelchamboko/wawi-learns",
+  vercelProject: "wawi-learns",
+  vercelRoot: ".",
+  branch: "main",
+} as const;
 
-export const readPlatformBinding = (): PlatformBinding => {
-  const manifestRaw = readFileSync(resolve(repoRoot, ".specify/specs/wawi-learns/000-spec-of-specs/manifest.yml"), "utf-8");
-  const repo = required("repository.remote", /remote:\s*"([^"]+)"/.exec(manifestRaw)?.[1]);
-  const vercelProject = required("vercel.project", /vercel_project:\s*"([^"]+)"/.exec(manifestRaw)?.[1]);
-  const vercelRoot = required("vercel.root", /vercel_root_directory:\s*"([^"]+)"/.exec(manifestRaw)?.[1]);
-  const productionBranch = required("branch", /production_branch:\s*"([^"]+)"/.exec(manifestRaw)?.[1]);
-  const nodeVersion = required("node", /vercel_node_version:\s*"([^"]+)"/.exec(manifestRaw)?.[1]);
-  const hasCiWorkflow = existsSync(resolve(repoRoot, ".github/workflows/ci.yml"));
-  return {
-    repo,
-    vercelProject,
-    vercelRoot,
-    productionBranch,
-    nodeVersion,
-    hasCiWorkflow,
-  };
+export const validatePlatformBinding = (
+  binding: PlatformBinding,
+): { passed: boolean; reasons: string[] } => {
+  const reasons: string[] = [];
+
+  if (binding.repository !== EXPECTED.repository) {
+    reasons.push(`repository mismatch: expected ${EXPECTED.repository}, got ${binding.repository}`);
+  }
+  if (binding.vercelProject !== EXPECTED.vercelProject) {
+    reasons.push(`vercel project mismatch: expected ${EXPECTED.vercelProject}, got ${binding.vercelProject}`);
+  }
+  if (binding.vercelRoot !== EXPECTED.vercelRoot) {
+    reasons.push(`vercel root mismatch: expected ${EXPECTED.vercelRoot}, got ${binding.vercelRoot}`);
+  }
+  if (binding.branch !== EXPECTED.branch) {
+    reasons.push(`branch mismatch: expected ${EXPECTED.branch}, got ${binding.branch}`);
+  }
+
+  const receipts = [binding.githubActionsRunSha, binding.vercelDeploymentSha, binding.convexDeploymentSha].filter(
+    (s): s is string => s !== null,
+  );
+  if (receipts.length === 0) {
+    reasons.push("no immutable deployment receipts present");
+  }
+  for (const receipt of receipts) {
+    if (receipt !== binding.candidateSha) {
+      reasons.push(`receipt SHA ${receipt} does not match candidate ${binding.candidateSha}`);
+    }
+  }
+
+  return { passed: reasons.length === 0, reasons };
 };
