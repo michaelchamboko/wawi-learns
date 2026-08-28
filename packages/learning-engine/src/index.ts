@@ -20,5 +20,6 @@ export * from "./sanitize";
 export * from "./custom-pack";
 export * from "./custom-pack-validator";
 export * from "./accessibility";
+export * from "./rollback";
 export * from "./release-evidence";
 export * from "./platform-binding";
