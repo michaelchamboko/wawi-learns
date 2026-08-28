@@ -17,5 +17,7 @@ export * from "./deletion";
 export * from "./version-pin";
 export * from "./reconcile";
 export * from "./sanitize";
+export * from "./custom-pack";
+export * from "./custom-pack-validator";
 export * from "./release-evidence";
 export * from "./platform-binding";
