@@ -22,4 +22,5 @@ export * from "./custom-pack-validator";
 export * from "./accessibility";
 export * from "./rollback";
 export * from "./release-evidence";
+export * from "./review-records";
 export * from "./platform-binding";
