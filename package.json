@@ -20,7 +20,9 @@
     "test:offline": "playwright test tests/e2e/onboarding",
     "test:security": "vitest run tests/security",
     "build:packs": "tsx scripts/content/build-packs.ts",
-    "verify:pack": "tsx scripts/content/verify-pack.ts"
+    "verify:pack": "tsx scripts/content/verify-pack.ts",
+    "release:evidence": "vitest run tests/integration/release/evidence-manifest.test.ts",
+    "release:verify": "vitest run tests/integration/release"
   },
   "engines": {
     "node": ">=24 <25"
