@@ -4,29 +4,47 @@ import { useMemo, useState } from "react";
 import receptionSeed from "../../content/seed/maths.json";
 import { buildMathsActivity, type MathsTemplate, type Representation } from "../../packages/learning-engine/src/maths";
 
-const RECEPTION_TEMPLATES = receptionSeed.filter((template) => template.level === "reception") as unknown as readonly MathsTemplate[];
+const ALL_MATHS_TEMPLATES = receptionSeed as unknown as readonly MathsTemplate[];
 
 const BASE_NOW = 1_700_000_000_000;
 
-export const ActivityRenderer = () => {
+export interface ActivityRendererProps {
+  readonly level?: "reception" | "year1";
+  readonly testIdPrefix?: string;
+  readonly summaryLabel?: string;
+  readonly templates?: readonly MathsTemplate[];
+}
+
+const filterByLevel = (level: "reception" | "year1") =>
+  ALL_MATHS_TEMPLATES.filter((template) => template.level === level);
+
+export const ActivityRenderer = ({
+  level = "reception",
+  testIdPrefix = "reception-maths",
+  summaryLabel = "Reception maths",
+  templates,
+}: ActivityRendererProps) => {
+  const list = useMemo(() => templates ?? filterByLevel(level), [templates, level]);
   const [index, setIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [completed, setCompleted] = useState(false);
 
   const current = useMemo(() => {
-    const template = RECEPTION_TEMPLATES[index] ?? RECEPTION_TEMPLATES[0]!;
+    const template = list[index] ?? list[0]!;
     return buildMathsActivity({
       template,
       seed: index + 1,
       now: BASE_NOW,
-      recentRepresentations: RECEPTION_TEMPLATES.slice(0, index).map((item) => item.representation as Representation),
+      recentRepresentations: list
+        .slice(0, index)
+        .map((item) => item.representation as Representation),
     });
-  }, [index]);
+  }, [index, list]);
 
-  const progressText = `Activity ${Math.min(index + 1, RECEPTION_TEMPLATES.length)} of ${RECEPTION_TEMPLATES.length}`;
+  const progressText = `Activity ${Math.min(index + 1, list.length)} of ${list.length}`;
 
   const advance = () => {
-    if (index + 1 >= RECEPTION_TEMPLATES.length) {
+    if (index + 1 >= list.length) {
       setCompleted(true);
       return;
     }
@@ -36,25 +54,25 @@ export const ActivityRenderer = () => {
 
   if (completed) {
     return (
-      <main className="learner-shell" data-testid="reception-maths-complete">
+      <main className="learner-shell" data-testid={`${testIdPrefix}-complete`}>
         <section className="setup-card">
-          <p className="eyebrow">Reception maths</p>
-          <h2>All thirteen steps are done.</h2>
+          <p className="eyebrow">{summaryLabel}</p>
+          <h2>All steps are done.</h2>
           <p>Worked examples, practice and delayed recall all stayed offline-friendly.</p>
-          <p data-testid="reception-maths-summary">{RECEPTION_TEMPLATES.length} reception outcomes rehearsed</p>
+          <p data-testid={`${testIdPrefix}-summary`}>{list.length} outcomes rehearsed</p>
         </section>
       </main>
     );
   }
 
   return (
-    <main className="learner-shell" data-testid="reception-maths-journey">
+    <main className="learner-shell" data-testid={`${testIdPrefix}-journey`}>
       <section className="home-card">
-        <p className="eyebrow">Reception maths</p>
+        <p className="eyebrow">{summaryLabel}</p>
         <h1>Concrete, pictorial, abstract</h1>
-        <p data-testid="reception-maths-progress">{progressText}</p>
+        <p data-testid={`${testIdPrefix}-progress`}>{progressText}</p>
         <p>Accuracy and understanding matter more than speed.</p>
-        <article className="activity-card" data-testid="reception-maths-card">
+        <article className="activity-card" data-testid={`${testIdPrefix}-card`}>
           <p className="progress-label">{current.item.strand}</p>
           <h2>{current.item.prompt}</h2>
           <p data-testid="worked-example">Worked example: {current.workedExample}</p>
@@ -68,7 +86,7 @@ export const ActivityRenderer = () => {
               I got it
             </button>
           </div>
-          {showAnswer ? <p data-testid="reception-answer">Answer: {current.item.answer}</p> : null}
+          {showAnswer ? <p data-testid={`${testIdPrefix}-answer`}>Answer: {current.item.answer}</p> : null}
         </article>
       </section>
     </main>
