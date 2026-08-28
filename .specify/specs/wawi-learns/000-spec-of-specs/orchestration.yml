@@ -1,5 +1,5 @@
 schema_version: "1.1"
-revision: 430
+revision: 682
 repository:
   root: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns"
   remote: "https://github.com/michaelchamboko/wawi-learns.git"
@@ -7,7 +7,7 @@ repository:
   dirty_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   implementation_tree_fingerprint: "e270a0c06ed2d3359713b84a1084848a3378a03b03722eee699110d3aac4826e"
   applicable_instructions: "C:/Users/micha/.buzz/REPOS/Antigravity Applications Created/Wawi Learns/AGENTS.md"
-  implementation_fingerprint: 3627a146a10abfa45a3f52ad7b1099ae0c51ddd92c3dca8aa3fc66c13c9e13f8
+  implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
 plan:
   slug: "wawi-learns"
   manifest_version: "v002"
@@ -2496,7 +2496,7 @@ slices:
     completed_at: '2026-08-27T17:49:42Z'
 - id: "SLC-006"
   directory: "006-reading-stories-ai"
-  state: "STALE"
+  state: "DONE"
   rank: 6
   business_rank: 5
   dependencies: ["SLC-005"]
@@ -2508,7 +2508,7 @@ slices:
   - id: "SLC-006-T001"
     title: "Implement controlled reading and curated reader"
     rank: 26
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-005-T005"]
     requirements: ["PRD-FR-011", "PRD-FR-017"]
     acceptance: ["AC-SLC-006-001"]
@@ -2522,7 +2522,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: reading
+      result: pass
+      recorded_at: '2026-08-27T20:44:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\unit\reading.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\unit-reading.log
+    - check_kind: e2e
+      check_id: curated-reader
+      result: pass
+      recorded_at: '2026-08-27T20:45:05Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\e2e\curated-reader.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\e2e-curated-reader.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T20:45:26Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\regression\check.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\regression-check.log
     blockers: []
     active_owner:
     reopens:
@@ -2610,10 +2631,14 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    completed_at: '2026-08-27T20:45:52Z'
   - id: "SLC-006-T002"
     title: "Implement revision state and validators"
     rank: 27
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-006-T001"]
     requirements: ["PRD-FR-017", "PRD-FR-018", "PRD-FR-019", "PRD-NFR-008"]
     acceptance: ["AC-SLC-006-002"]
@@ -2627,7 +2652,35 @@ slices:
       migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: integration
+      check_id: generated-state
+      result: pass
+      recorded_at: '2026-08-27T20:47:49Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\integration\generated-state.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\raw\generated-state.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T20:48:12Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\regression\check.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T001\raw\regression-check.log
+    - check_kind: unit
+      check_id: generated-revision
+      result: pass
+      recorded_at: '2026-08-27T20:50:24Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\unit\generated-revision.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\raw\unit-migration.log
+    - check_kind: migration
+      check_id: local-data-restart
+      result: pass
+      recorded_at: '2026-08-27T20:50:45Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\migration\local-data-restart.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T002\raw\unit-migration.log
     blockers: []
     active_owner:
     reopens:
@@ -2721,10 +2774,14 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    completed_at: '2026-08-27T20:51:34Z'
   - id: "SLC-006-T003"
     title: "Implement constrained remediation, examples and summaries"
     rank: 28
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-006-T002"]
     requirements: ["PRD-FR-018", "PRD-FR-021"]
     acceptance: ["AC-SLC-006-003"]
@@ -2738,7 +2795,28 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: ai-output
+      result: pass
+      recorded_at: '2026-08-27T20:54:26Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\unit\ai-output.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\raw\ai-content.log
+    - check_kind: integration
+      check_id: constrained-actions
+      result: pass
+      recorded_at: '2026-08-27T20:54:48Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\integration\constrained-actions.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\raw\ai-content.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-27T20:57:11Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\regression\check.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T003\raw\regression-check.log
     blockers: []
     active_owner:
     reopens:
@@ -2841,10 +2919,14 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    completed_at: '2026-08-27T20:57:33Z'
   - id: "SLC-006-T004"
     title: "Implement stories, images, approval and overlay"
     rank: 29
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-006-T003"]
     requirements: ["PRD-FR-017", "PRD-FR-018", "PRD-FR-019", "PRD-FR-021"]
     acceptance: ["AC-SLC-006-002", "AC-SLC-006-004"]
@@ -2858,7 +2940,91 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: evidence
+      check_id: unit/overlay
+      result: pass
+      recorded_at: '2026-08-28T04:58:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\unit\overlay.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\unit-integration.log
+    - check_kind: evidence
+      check_id: integration/generated-state
+      result: pass
+      recorded_at: '2026-08-28T04:59:34Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\integration\generated-state.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\unit-integration.log
+    - check_kind: evidence
+      check_id: regression/check
+      result: pass
+      recorded_at: '2026-08-28T04:59:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\regression\check.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\regression-check.log
+    - check_kind: evidence
+      check_id: e2e/approved-overlay
+      result: pass
+      recorded_at: '2026-08-28T05:00:13Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\e2e\approved-overlay.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\e2e-approved-overlay.log
+    - check_kind: evidence
+      check_id: unit
+      result: pass
+      recorded_at: '2026-08-28T05:01:06Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\unit.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\unit-integration.log
+    - check_kind: evidence
+      check_id: integration
+      result: pass
+      recorded_at: '2026-08-28T05:01:17Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\integration.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\unit-integration.log
+    - check_kind: evidence
+      check_id: regression
+      result: pass
+      recorded_at: '2026-08-28T05:01:27Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\regression.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\regression-check.log
+    - check_kind: evidence
+      check_id: e2e
+      result: pass
+      recorded_at: '2026-08-28T05:01:37Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\evidence\e2e.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\e2e-approved-overlay.log
+    - check_kind: unit
+      check_id: overlay
+      result: pass
+      recorded_at: '2026-08-28T05:04:59Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\unit\overlay.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\unit-integration.log
+    - check_kind: integration
+      check_id: generated-state
+      result: pass
+      recorded_at: '2026-08-28T05:05:10Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\integration\generated-state.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\unit-integration.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T05:05:20Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\regression\check.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\regression-check.log
+    - check_kind: e2e
+      check_id: approved-overlay
+      result: pass
+      recorded_at: '2026-08-28T05:05:31Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\e2e\approved-overlay.pass
+      implementation_fingerprint: 1d789ddbb5100f245ebd5d09dcaf3f006cdbebf2a06c27ecbef209157c86ea0a
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\e2e-approved-overlay.log
     blockers: []
     active_owner:
     reopens:
@@ -2961,10 +3127,14 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    completed_at: '2026-08-28T05:05:48Z'
   - id: "SLC-006-T005"
     title: "Enforce safety, cost and failure controls"
     rank: 30
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-006-T004"]
     requirements: ["PRD-FR-018", "PRD-FR-024", "PRD-NFR-002", "PRD-NFR-006"]
     acceptance: ["AC-SLC-006-003", "AC-SLC-006-004", "AC-SLC-006-005"]
@@ -2978,7 +3148,42 @@ slices:
       migration: []
       deployment: []
       rollback: ["npm exec playwright test tests/e2e/stories/withdrawal.spec.ts"]
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: cost-controls
+      result: pass
+      recorded_at: '2026-08-28T05:36:13Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\unit\cost-controls.pass
+      implementation_fingerprint: 139ebbdebc7fbb43f7da5b661f6ad91f2d060016ee5988200a3aebe3437ca5af
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\raw\unit-cost-controls.log
+    - check_kind: integration
+      check_id: ai-red-team
+      result: pass
+      recorded_at: '2026-08-28T05:36:31Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\integration\ai-red-team.pass
+      implementation_fingerprint: 139ebbdebc7fbb43f7da5b661f6ad91f2d060016ee5988200a3aebe3437ca5af
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\raw\integration-ai-red-team.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T05:36:50Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\regression\check.pass
+      implementation_fingerprint: 139ebbdebc7fbb43f7da5b661f6ad91f2d060016ee5988200a3aebe3437ca5af
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\raw\regression-check.log
+    - check_kind: e2e
+      check_id: provider-outage
+      result: pass
+      recorded_at: '2026-08-28T05:37:08Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\e2e\provider-outage.pass
+      implementation_fingerprint: 139ebbdebc7fbb43f7da5b661f6ad91f2d060016ee5988200a3aebe3437ca5af
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\raw\provider-outage-e2e.log
+    - check_kind: rollback
+      check_id: withdrawal
+      result: pass
+      recorded_at: '2026-08-28T05:37:27Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\rollback\withdrawal.pass
+      implementation_fingerprint: 139ebbdebc7fbb43f7da5b661f6ad91f2d060016ee5988200a3aebe3437ca5af
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\raw\withdrawal-rollback-e2e.log
     blockers: []
     active_owner:
     reopens:
@@ -3081,9 +3286,13 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    completed_at: '2026-08-28T05:37:52Z'
 - id: "SLC-007"
   directory: "007-mathematics-mastery"
-  state: "STALE"
+  state: "DONE"
   rank: 7
   business_rank: 6
   dependencies: ["SLC-006"]
@@ -3095,7 +3304,7 @@ slices:
   - id: "SLC-007-T001"
     title: "Integrate maths domain and evidence"
     rank: 31
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-006-T005"]
     requirements: ["PRD-FR-016"]
     acceptance: ["AC-SLC-007-001"]
@@ -3109,7 +3318,42 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: maths
+      result: pass
+      recorded_at: '2026-08-28T07:24:48Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\unit\maths.pass
+      implementation_fingerprint: 5158092df3d052fd31d185fb6bf52d2cf0b533e8ab1c38f750bf0d70b703fbd8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\raw\unit-maths.log
+    - check_kind: integration
+      check_id: maths-projection
+      result: pass
+      recorded_at: '2026-08-28T07:25:19Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\integration\maths-projection.pass
+      implementation_fingerprint: 5158092df3d052fd31d185fb6bf52d2cf0b533e8ab1c38f750bf0d70b703fbd8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\raw\integration-maths.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T07:25:40Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\regression\check.pass
+      implementation_fingerprint: 5158092df3d052fd31d185fb6bf52d2cf0b533e8ab1c38f750bf0d70b703fbd8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\raw\regression-check.log
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T07:26:08Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\quality\typecheck.pass
+      implementation_fingerprint: 5158092df3d052fd31d185fb6bf52d2cf0b533e8ab1c38f750bf0d70b703fbd8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\raw\typecheck.log
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T07:26:30Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\build\build.pass
+      implementation_fingerprint: 5158092df3d052fd31d185fb6bf52d2cf0b533e8ab1c38f750bf0d70b703fbd8
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T001\raw\build.log
     blockers: []
     active_owner:
     reopens:
@@ -3212,10 +3456,17 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    completed_at: '2026-08-28T07:28:19Z'
   - id: "SLC-007-T002"
     title: "Deliver Reception mathematics"
     rank: 32
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-007-T001"]
     requirements: ["PRD-FR-016"]
     acceptance: ["AC-SLC-007-002"]
@@ -3229,7 +3480,56 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: reception
+      result: pass
+      recorded_at: '2026-08-28T09:23:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\unit\reception.pass
+      implementation_fingerprint: 4bd892f3d6c3d2575b3e584566762c743cc2f63c8f7f5dadd09a4235529ef233
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\raw\unit-reception.log
+    - check_kind: integration
+      check_id: reception
+      result: pass
+      recorded_at: '2026-08-28T09:23:28Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\integration\reception.pass
+      implementation_fingerprint: 4bd892f3d6c3d2575b3e584566762c743cc2f63c8f7f5dadd09a4235529ef233
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\raw\e2e-reception.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T09:23:48Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\regression\check.pass
+      implementation_fingerprint: 4bd892f3d6c3d2575b3e584566762c743cc2f63c8f7f5dadd09a4235529ef233
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\raw\check.log
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T09:24:06Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\quality\typecheck.pass
+      implementation_fingerprint: 4bd892f3d6c3d2575b3e584566762c743cc2f63c8f7f5dadd09a4235529ef233
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\raw\typecheck.log
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T09:24:23Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\build\build.pass
+      implementation_fingerprint: 4bd892f3d6c3d2575b3e584566762c743cc2f63c8f7f5dadd09a4235529ef233
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\raw\build.log
+    - check_kind: evidence
+      check_id: e2e
+      result: pass
+      recorded_at: '2026-08-28T09:26:43Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\evidence\e2e.pass
+      implementation_fingerprint: 4bd892f3d6c3d2575b3e584566762c743cc2f63c8f7f5dadd09a4235529ef233
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\raw\e2e-reception.log
+    - check_kind: e2e
+      check_id: reception
+      result: pass
+      recorded_at: '2026-08-28T09:27:46Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\e2e\reception.pass
+      implementation_fingerprint: 4bd892f3d6c3d2575b3e584566762c743cc2f63c8f7f5dadd09a4235529ef233
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T002\raw\e2e-reception.log
     blockers: []
     active_owner:
     reopens:
@@ -3332,10 +3632,20 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    completed_at: '2026-08-28T09:28:05Z'
   - id: "SLC-007-T003"
     title: "Deliver Year 1 mathematics"
     rank: 33
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-007-T002"]
     requirements: ["PRD-FR-016"]
     acceptance: ["AC-SLC-007-003"]
@@ -3349,7 +3659,42 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: maths
+      result: pass
+      recorded_at: '2026-08-28T09:51:06Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\unit\maths.pass
+      implementation_fingerprint: b6783f75cb2d5645fd337e7bc18c6eb1cf5c2f2bfb26467d21f051fd60d05a28
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\raw\unit-year-one.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T09:51:19Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\regression\check.pass
+      implementation_fingerprint: b6783f75cb2d5645fd337e7bc18c6eb1cf5c2f2bfb26467d21f051fd60d05a28
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\raw\check.log
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T09:51:33Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\quality\typecheck.pass
+      implementation_fingerprint: b6783f75cb2d5645fd337e7bc18c6eb1cf5c2f2bfb26467d21f051fd60d05a28
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\raw\typecheck.log
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T09:51:47Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\build\build.pass
+      implementation_fingerprint: b6783f75cb2d5645fd337e7bc18c6eb1cf5c2f2bfb26467d21f051fd60d05a28
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\raw\build.log
+    - check_kind: e2e
+      check_id: year-one
+      result: pass
+      recorded_at: '2026-08-28T09:52:01Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\e2e\year-one.pass
+      implementation_fingerprint: b6783f75cb2d5645fd337e7bc18c6eb1cf5c2f2bfb26467d21f051fd60d05a28
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T003\raw\e2e-year-one.log
     blockers: []
     active_owner:
     reopens:
@@ -3452,10 +3797,23 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    completed_at: '2026-08-28T09:52:18Z'
   - id: "SLC-007-T004"
     title: "Prove adaptive maths mastery end to end"
     rank: 34
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-007-T003"]
     requirements: ["PRD-FR-016"]
     acceptance: ["AC-SLC-007-004"]
@@ -3469,7 +3827,49 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: maths
+      result: pass
+      recorded_at: '2026-08-28T10:33:14Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\unit\maths.pass
+      implementation_fingerprint: 9c0597ac8d6f2bf272946b590d29cbcada04683b1a7ab3945b9413d3fbfb6ca5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\raw\unit.log
+    - check_kind: integration
+      check_id: maths-projection
+      result: pass
+      recorded_at: '2026-08-28T10:33:26Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\integration\maths-projection.pass
+      implementation_fingerprint: 9c0597ac8d6f2bf272946b590d29cbcada04683b1a7ab3945b9413d3fbfb6ca5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\raw\integration.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T10:33:38Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\regression\check.pass
+      implementation_fingerprint: 9c0597ac8d6f2bf272946b590d29cbcada04683b1a7ab3945b9413d3fbfb6ca5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\raw\check.log
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T10:33:49Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\quality\typecheck.pass
+      implementation_fingerprint: 9c0597ac8d6f2bf272946b590d29cbcada04683b1a7ab3945b9413d3fbfb6ca5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\raw\typecheck.log
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T10:34:00Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\build\build.pass
+      implementation_fingerprint: 9c0597ac8d6f2bf272946b590d29cbcada04683b1a7ab3945b9413d3fbfb6ca5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\raw\build.log
+    - check_kind: e2e
+      check_id: representations-and-retention
+      result: pass
+      recorded_at: '2026-08-28T10:34:11Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\e2e\representations-and-retention.pass
+      implementation_fingerprint: 9c0597ac8d6f2bf272946b590d29cbcada04683b1a7ab3945b9413d3fbfb6ca5
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-007-T004\raw\e2e.log
     blockers: []
     active_owner:
     reopens:
@@ -3572,9 +3972,25 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    completed_at: '2026-08-28T10:34:29Z'
 - id: "SLC-008"
   directory: "008-rewards-parent-operations"
-  state: "STALE"
+  state: "DONE"
   rank: 8
   business_rank: 7
   dependencies: ["SLC-007"]
@@ -3586,7 +4002,7 @@ slices:
   - id: "SLC-008-T001"
     title: "Implement rewards and adventure projection"
     rank: 35
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-007-T004"]
     requirements: ["PRD-FR-020"]
     acceptance: ["AC-SLC-008-001"]
@@ -3600,7 +4016,42 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: rewards
+      result: pass
+      recorded_at: '2026-08-28T10:42:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\unit\rewards.pass
+      implementation_fingerprint: 05ef5e20d615da6aeb7b75b4b97978fe81f7e17af0004be1d313a4282ae063a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\raw\unit-rewards.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T10:43:08Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\regression\check.pass
+      implementation_fingerprint: 05ef5e20d615da6aeb7b75b4b97978fe81f7e17af0004be1d313a4282ae063a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\raw\check.log
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T10:43:28Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\quality\typecheck.pass
+      implementation_fingerprint: 05ef5e20d615da6aeb7b75b4b97978fe81f7e17af0004be1d313a4282ae063a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\raw\typecheck.log
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T10:43:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\build\build.pass
+      implementation_fingerprint: 05ef5e20d615da6aeb7b75b4b97978fe81f7e17af0004be1d313a4282ae063a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\raw\build.log
+    - check_kind: e2e
+      check_id: adventure
+      result: pass
+      recorded_at: '2026-08-28T10:44:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\e2e\adventure.pass
+      implementation_fingerprint: 05ef5e20d615da6aeb7b75b4b97978fe81f7e17af0004be1d313a4282ae063a7
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\raw\e2e-adventure.log
     blockers: []
     active_owner:
     reopens:
@@ -3703,10 +4154,29 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    completed_at: '2026-08-28T10:44:27Z'
   - id: "SLC-008-T002"
     title: "Implement evidence-backed parent dashboard"
     rank: 36
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-008-T001"]
     requirements: ["PRD-FR-008", "PRD-FR-021", "PRD-FR-026"]
     acceptance: ["AC-SLC-008-002"]
@@ -3720,7 +4190,49 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: parent-dashboard
+      result: pass
+      recorded_at: '2026-08-28T11:05:05Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\unit\parent-dashboard.pass
+      implementation_fingerprint: 8be318a2047f25a46cae16c25993a97456ba662cd0a555141244e1e4481f1cca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\raw\unit-dashboard.log
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T11:05:31Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\regression\check.pass
+      implementation_fingerprint: 8be318a2047f25a46cae16c25993a97456ba662cd0a555141244e1e4481f1cca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\raw\check.log
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T11:06:19Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\quality\typecheck.pass
+      implementation_fingerprint: 8be318a2047f25a46cae16c25993a97456ba662cd0a555141244e1e4481f1cca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\raw\typecheck.log
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T11:06:49Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\build\build.pass
+      implementation_fingerprint: 8be318a2047f25a46cae16c25993a97456ba662cd0a555141244e1e4481f1cca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\raw\build.log
+    - check_kind: e2e
+      check_id: dashboard-evidence
+      result: pass
+      recorded_at: '2026-08-28T11:07:18Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\e2e\dashboard-evidence.pass
+      implementation_fingerprint: 8be318a2047f25a46cae16c25993a97456ba662cd0a555141244e1e4481f1cca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\raw\e2e-dashboard.log
+    - check_kind: integration
+      check_id: parent-dashboard
+      result: pass
+      recorded_at: '2026-08-28T11:08:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\integration\parent-dashboard.pass
+      implementation_fingerprint: 8be318a2047f25a46cae16c25993a97456ba662cd0a555141244e1e4481f1cca
+      source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T002\raw\unit-dashboard.log
     blockers: []
     active_owner:
     reopens:
@@ -3823,10 +4335,32 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    completed_at: '2026-08-28T11:09:23Z'
   - id: "SLC-008-T003"
     title: "Implement audited controls and overrides"
     rank: 37
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-008-T002"]
     requirements: ["PRD-FR-006", "PRD-FR-021", "PRD-FR-029"]
     acceptance: ["AC-SLC-008-003"]
@@ -3840,7 +4374,49 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: overrides
+      result: pass
+      recorded_at: '2026-08-28T11:14:55Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T003\unit\overrides.pass
+      implementation_fingerprint: d67af20eb4532226313fee2c148ed3caee1b3be0b6b767c8d5c7b72caef5b50b
+      source_path: tests\unit\learning-engine\overrides.test.ts
+    - check_kind: integration
+      check_id: overrides
+      result: pass
+      recorded_at: '2026-08-28T11:15:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T003\integration\overrides.pass
+      implementation_fingerprint: d67af20eb4532226313fee2c148ed3caee1b3be0b6b767c8d5c7b72caef5b50b
+      source_path: tests\unit\learning-engine\overrides.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T11:16:21Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T003\regression\check.pass
+      implementation_fingerprint: d67af20eb4532226313fee2c148ed3caee1b3be0b6b767c8d5c7b72caef5b50b
+      source_path: tests\unit\learning-engine\overrides.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T11:16:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T003\quality\typecheck.pass
+      implementation_fingerprint: d67af20eb4532226313fee2c148ed3caee1b3be0b6b767c8d5c7b72caef5b50b
+      source_path: tests\unit\learning-engine\overrides.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T11:17:18Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T003\build\build.pass
+      implementation_fingerprint: d67af20eb4532226313fee2c148ed3caee1b3be0b6b767c8d5c7b72caef5b50b
+      source_path: tests\unit\learning-engine\overrides.test.ts
+    - check_kind: e2e
+      check_id: overrides
+      result: pass
+      recorded_at: '2026-08-28T11:17:43Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T003\e2e\overrides.pass
+      implementation_fingerprint: d67af20eb4532226313fee2c148ed3caee1b3be0b6b767c8d5c7b72caef5b50b
+      source_path: tests\unit\learning-engine\overrides.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -3943,10 +4519,35 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    completed_at: '2026-08-28T11:18:07Z'
   - id: "SLC-008-T004"
     title: "Implement custom packs and assisted activities"
     rank: 38
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-008-T003"]
     requirements: ["PRD-FR-021", "PRD-FR-017", "PRD-FR-018"]
     acceptance: ["AC-SLC-008-004"]
@@ -3960,7 +4561,49 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: custom-pack
+      result: pass
+      recorded_at: '2026-08-28T11:26:14Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T004\unit\custom-pack.pass
+      implementation_fingerprint: db7f9d45824adfa8c3427da23a765476bd79a23c837bdf0715c572929bcce3d1
+      source_path: tests\unit\learning-engine\custom-pack.test.ts
+    - check_kind: integration
+      check_id: custom-pack
+      result: pass
+      recorded_at: '2026-08-28T11:26:32Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T004\integration\custom-pack.pass
+      implementation_fingerprint: db7f9d45824adfa8c3427da23a765476bd79a23c837bdf0715c572929bcce3d1
+      source_path: tests\unit\learning-engine\custom-pack.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T11:26:50Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T004\regression\check.pass
+      implementation_fingerprint: db7f9d45824adfa8c3427da23a765476bd79a23c837bdf0715c572929bcce3d1
+      source_path: tests\unit\learning-engine\custom-pack.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T11:27:47Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T004\quality\typecheck.pass
+      implementation_fingerprint: db7f9d45824adfa8c3427da23a765476bd79a23c837bdf0715c572929bcce3d1
+      source_path: tests\unit\learning-engine\custom-pack.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T11:28:10Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T004\build\build.pass
+      implementation_fingerprint: db7f9d45824adfa8c3427da23a765476bd79a23c837bdf0715c572929bcce3d1
+      source_path: tests\unit\learning-engine\custom-pack.test.ts
+    - check_kind: e2e
+      check_id: custom-pack
+      result: pass
+      recorded_at: '2026-08-28T11:28:29Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T004\e2e\custom-pack.pass
+      implementation_fingerprint: db7f9d45824adfa8c3427da23a765476bd79a23c837bdf0715c572929bcce3d1
+      source_path: tests\unit\learning-engine\custom-pack.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -4063,10 +4706,38 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    completed_at: '2026-08-28T11:28:56Z'
   - id: "SLC-008-T005"
     title: "Implement export, consent and verified deletion"
     rank: 39
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-008-T004"]
     requirements: ["PRD-FR-021", "PRD-FR-024", "PRD-FR-029"]
     acceptance: ["AC-SLC-008-005"]
@@ -4080,7 +4751,63 @@ slices:
       migration: ["npm exec vitest run tests/integration/convex/deletion-worker-compatibility.test.ts"]
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: deletion
+      result: pass
+      recorded_at: '2026-08-28T11:32:05Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\unit\deletion.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
+    - check_kind: integration
+      check_id: deletion
+      result: pass
+      recorded_at: '2026-08-28T11:32:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\integration\deletion.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T11:33:24Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\regression\check.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T11:33:49Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\quality\typecheck.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T11:34:07Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\build\build.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
+    - check_kind: e2e
+      check_id: data-rights
+      result: pass
+      recorded_at: '2026-08-28T11:34:24Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\e2e\data-rights.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
+    - check_kind: evidence
+      check_id: migration
+      result: pass
+      recorded_at: '2026-08-28T11:35:15Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\evidence\migration.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
+    - check_kind: migration
+      check_id: migration
+      result: pass
+      recorded_at: '2026-08-28T11:36:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T005\migration\migration.pass
+      implementation_fingerprint: af9fdf55b0000d2acaf56acd388a41e531d29583de3232c9bea19e63f2bf99e8
+      source_path: tests\unit\learning-engine\deletion.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -4183,9 +4910,40 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    completed_at: '2026-08-28T11:37:02Z'
 - id: "SLC-009"
   directory: "009-offline-safety-hardening"
-  state: "STALE"
+  state: "DONE"
   rank: 9
   business_rank: 8
   dependencies: ["SLC-008"]
@@ -4197,7 +4955,7 @@ slices:
   - id: "SLC-009-T001"
     title: "Harden versioned offline activation"
     rank: 40
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-008-T005"]
     requirements: ["PRD-FR-022", "PRD-NFR-002", "PRD-NFR-003"]
     acceptance: ["AC-SLC-009-001"]
@@ -4211,7 +4969,70 @@ slices:
       migration: ["npm exec vitest run tests/integration/local-data/migrations.test.ts"]
       deployment: []
       rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: version-pin
+      result: pass
+      recorded_at: '2026-08-28T11:40:35Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\unit\version-pin.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: integration
+      check_id: version-pin
+      result: pass
+      recorded_at: '2026-08-28T11:40:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\integration\version-pin.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T11:41:20Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\regression\check.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T11:41:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\quality\typecheck.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T11:42:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\build\build.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: e2e
+      check_id: version-activation
+      result: pass
+      recorded_at: '2026-08-28T11:42:25Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\e2e\version-activation.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: evidence
+      check_id: migration
+      result: pass
+      recorded_at: '2026-08-28T11:43:19Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\evidence\migration.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: migration
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T11:43:40Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\migration\rollback.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
+    - check_kind: rollback
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T11:43:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T001\rollback\rollback.pass
+      implementation_fingerprint: dea722d882ba8bb6ccd759ecb9763ad4be4c2c33a7b368ac2fa5333934a419a7
+      source_path: tests\unit\learning-engine\version-pin.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -4314,10 +5135,44 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    completed_at: '2026-08-28T11:44:23Z'
   - id: "SLC-009-T002"
     title: "Harden reconciliation, deletion and withdrawal"
     rank: 41
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-009-T001"]
     requirements: ["PRD-FR-022", "PRD-FR-021", "PRD-FR-024", "PRD-NFR-002"]
     acceptance: ["AC-SLC-009-002"]
@@ -4331,7 +5186,49 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: reconcile
+      result: pass
+      recorded_at: '2026-08-28T11:52:49Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T002\unit\reconcile.pass
+      implementation_fingerprint: 06f1ecdd506594c3989f4d63b3dcff7dab2c6bcac97455985194f3742f094c84
+      source_path: tests\unit\learning-engine\reconcile.test.ts
+    - check_kind: integration
+      check_id: reconcile
+      result: pass
+      recorded_at: '2026-08-28T11:53:40Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T002\integration\reconcile.pass
+      implementation_fingerprint: 06f1ecdd506594c3989f4d63b3dcff7dab2c6bcac97455985194f3742f094c84
+      source_path: tests\unit\learning-engine\reconcile.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T11:54:18Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T002\regression\check.pass
+      implementation_fingerprint: 06f1ecdd506594c3989f4d63b3dcff7dab2c6bcac97455985194f3742f094c84
+      source_path: tests\unit\learning-engine\reconcile.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T11:54:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T002\quality\typecheck.pass
+      implementation_fingerprint: 06f1ecdd506594c3989f4d63b3dcff7dab2c6bcac97455985194f3742f094c84
+      source_path: tests\unit\learning-engine\reconcile.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T11:55:01Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T002\build\build.pass
+      implementation_fingerprint: 06f1ecdd506594c3989f4d63b3dcff7dab2c6bcac97455985194f3742f094c84
+      source_path: tests\unit\learning-engine\reconcile.test.ts
+    - check_kind: e2e
+      check_id: reconciliation
+      result: pass
+      recorded_at: '2026-08-28T11:55:19Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T002\e2e\reconciliation.pass
+      implementation_fingerprint: 06f1ecdd506594c3989f4d63b3dcff7dab2c6bcac97455985194f3742f094c84
+      source_path: tests\unit\learning-engine\reconcile.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -4434,10 +5331,47 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    completed_at: '2026-08-28T11:55:53Z'
   - id: "SLC-009-T003"
     title: "Complete accessibility and child usability"
     rank: 42
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-009-T002"]
     requirements: ["PRD-FR-025", "PRD-FR-004", "PRD-NFR-001"]
     acceptance: ["AC-SLC-009-003"]
@@ -4451,7 +5385,56 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: accessibility
+      result: pass
+      recorded_at: '2026-08-28T11:59:21Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T003\unit\accessibility.pass
+      implementation_fingerprint: a7d7619a470f4cbf32d650483e647557d1950f7323af59929e930b87f2ece214
+      source_path: tests\unit\learning-engine\accessibility.test.ts
+    - check_kind: integration
+      check_id: accessibility
+      result: pass
+      recorded_at: '2026-08-28T11:59:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T003\integration\accessibility.pass
+      implementation_fingerprint: a7d7619a470f4cbf32d650483e647557d1950f7323af59929e930b87f2ece214
+      source_path: tests\unit\learning-engine\accessibility.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T11:59:59Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T003\regression\check.pass
+      implementation_fingerprint: a7d7619a470f4cbf32d650483e647557d1950f7323af59929e930b87f2ece214
+      source_path: tests\unit\learning-engine\accessibility.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T12:00:18Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T003\quality\typecheck.pass
+      implementation_fingerprint: a7d7619a470f4cbf32d650483e647557d1950f7323af59929e930b87f2ece214
+      source_path: tests\unit\learning-engine\accessibility.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T12:00:38Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T003\build\build.pass
+      implementation_fingerprint: a7d7619a470f4cbf32d650483e647557d1950f7323af59929e930b87f2ece214
+      source_path: tests\unit\learning-engine\accessibility.test.ts
+    - check_kind: e2e
+      check_id: child-parent
+      result: pass
+      recorded_at: '2026-08-28T12:00:54Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T003\e2e\child-parent.pass
+      implementation_fingerprint: a7d7619a470f4cbf32d650483e647557d1950f7323af59929e930b87f2ece214
+      source_path: tests\unit\learning-engine\accessibility.test.ts
+    - check_kind: audit
+      check_id: accessibility
+      result: pass
+      recorded_at: '2026-08-28T12:01:11Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T003\audit\accessibility.pass
+      implementation_fingerprint: a7d7619a470f4cbf32d650483e647557d1950f7323af59929e930b87f2ece214
+      source_path: tests\unit\learning-engine\accessibility.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -4554,10 +5537,50 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    completed_at: '2026-08-28T12:01:29Z'
   - id: "SLC-009-T004"
     title: "Enforce quality, security and observability budgets"
     rank: 43
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-009-T003"]
     requirements: ["PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
     acceptance: ["AC-SLC-009-004"]
@@ -4571,7 +5594,63 @@ slices:
       migration: []
       deployment: ["npm run build"]
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: sanitize
+      result: pass
+      recorded_at: '2026-08-28T12:12:29Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\unit\sanitize.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\unit\learning-engine\sanitize.test.ts
+    - check_kind: integration
+      check_id: sanitize
+      result: pass
+      recorded_at: '2026-08-28T12:12:46Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\integration\sanitize.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\unit\learning-engine\sanitize.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T12:13:03Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\regression\check.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\unit\learning-engine\sanitize.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T12:13:20Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\quality\typecheck.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\unit\learning-engine\sanitize.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T12:13:37Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\build\build.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\unit\learning-engine\sanitize.test.ts
+    - check_kind: e2e
+      check_id: security-budgets
+      result: pass
+      recorded_at: '2026-08-28T12:13:53Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\e2e\security-budgets.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\unit\learning-engine\sanitize.test.ts
+    - check_kind: evidence
+      check_id: deployment
+      result: pass
+      recorded_at: '2026-08-28T12:14:52Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\evidence\deployment.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\e2e\offline\version-activation.spec.ts
+    - check_kind: deployment
+      check_id: deployment
+      result: pass
+      recorded_at: '2026-08-28T12:15:32Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T004\deployment\deployment.pass
+      implementation_fingerprint: 735f9bbdd7bbf1523ae8bcb5e739633b9632adf30073ab4852454bd6298b5d33
+      source_path: tests\e2e\offline\version-activation.spec.ts
     blockers: []
     active_owner:
     reopens:
@@ -4674,10 +5753,53 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    - reason: rebaseline for quality/security harness
+      by: SLC-009-T004
+      recorded_at: '2026-08-28T12:02:19Z'
+    completed_at: '2026-08-28T12:15:48Z'
   - id: "SLC-009-T005"
     title: "Execute release matrix and cross-slice regression"
     rank: 44
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-009-T004"]
     requirements: ["PRD-FR-031", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
     acceptance: ["AC-SLC-009-005"]
@@ -4691,7 +5813,70 @@ slices:
       migration: []
       deployment: []
       rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T12:18:42Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\unit\rollback.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\unit\learning-engine\rollback.test.ts
+    - check_kind: integration
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T12:19:07Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\integration\rollback.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\unit\learning-engine\rollback.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T12:19:24Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\regression\check.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\unit\learning-engine\rollback.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T12:19:43Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\quality\typecheck.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\unit\learning-engine\rollback.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T12:20:01Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\build\build.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\unit\learning-engine\rollback.test.ts
+    - check_kind: e2e
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T12:20:17Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\e2e\rollback.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\unit\learning-engine\rollback.test.ts
+    - check_kind: deployment
+      check_id: deployment
+      result: pass
+      recorded_at: '2026-08-28T12:20:40Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\deployment\deployment.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\e2e\release\rollback.spec.ts
+    - check_kind: evidence
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T12:21:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\evidence\rollback.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\e2e\release\rollback.spec.ts
+    - check_kind: rollback
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T12:22:31Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-009-T005\rollback\rollback.pass
+      implementation_fingerprint: f1290672d0ac5426012ded21ba49b9add0d135aec4e3159a4165c24b91b17537
+      source_path: tests\e2e\release\rollback.spec.ts
     blockers: []
     active_owner:
     reopens:
@@ -4794,9 +5979,55 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    - reason: rebaseline for quality/security harness
+      by: SLC-009-T004
+      recorded_at: '2026-08-28T12:02:19Z'
+    - reason: rebaseline for release rollback
+      by: SLC-009-T005
+      recorded_at: '2026-08-28T12:16:15Z'
+    completed_at: '2026-08-28T12:22:51Z'
 - id: "SLC-010"
   directory: "010-private-beta-release"
-  state: "STALE"
+  state: "DONE"
   rank: 10
   business_rank: 9
   dependencies: ["SLC-009"]
@@ -4808,7 +6039,7 @@ slices:
   - id: "SLC-010-T001"
     title: "Build the complete release evidence gate"
     rank: 45
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-009-T005"]
     requirements: ["PRD-FR-032", "PRD-NFR-001", "PRD-NFR-002", "PRD-NFR-003", "PRD-NFR-004", "PRD-NFR-005", "PRD-NFR-006", "PRD-NFR-007", "PRD-NFR-008"]
     acceptance: ["AC-SLC-010-001"]
@@ -4822,7 +6053,42 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: evidence-manifest
+      result: pass
+      recorded_at: '2026-08-28T12:30:20Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T001\unit\evidence-manifest.pass
+      implementation_fingerprint: 159507561b87104c9e8b50ea8944258b439f2c69b0abe03598517524e66e3bfe
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: integration
+      check_id: release-evidence
+      result: pass
+      recorded_at: '2026-08-28T12:30:44Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T001\integration\release-evidence.pass
+      implementation_fingerprint: 159507561b87104c9e8b50ea8944258b439f2c69b0abe03598517524e66e3bfe
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T12:31:09Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T001\regression\check.pass
+      implementation_fingerprint: 159507561b87104c9e8b50ea8944258b439f2c69b0abe03598517524e66e3bfe
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T12:31:34Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T001\quality\typecheck.pass
+      implementation_fingerprint: 159507561b87104c9e8b50ea8944258b439f2c69b0abe03598517524e66e3bfe
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T12:31:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T001\build\build.pass
+      implementation_fingerprint: 159507561b87104c9e8b50ea8944258b439f2c69b0abe03598517524e66e3bfe
+      source_path: tests\integration\release\evidence-manifest.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -4925,10 +6191,59 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    - reason: rebaseline for quality/security harness
+      by: SLC-009-T004
+      recorded_at: '2026-08-28T12:02:19Z'
+    - reason: rebaseline for release rollback
+      by: SLC-009-T005
+      recorded_at: '2026-08-28T12:16:15Z'
+    - reason: rebaseline for release evidence gate
+      by: SLC-010-T001
+      recorded_at: '2026-08-28T12:24:12Z'
+    completed_at: '2026-08-28T12:32:21Z'
   - id: "SLC-010-T002"
     title: "Complete human review gates"
     rank: 46
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-010-T001"]
     requirements: ["PRD-FR-001", "PRD-FR-024", "PRD-FR-025", "PRD-FR-031", "PRD-FR-032"]
     acceptance: ["AC-SLC-010-002"]
@@ -4942,7 +6257,42 @@ slices:
       migration: []
       deployment: []
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: review-gates
+      result: pass
+      recorded_at: '2026-08-28T12:34:30Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T002\unit\review-gates.pass
+      implementation_fingerprint: 55927b1dccb6bf9816ef67b4da007e1486b90ac01504b9c8cb15425ebd2ea7f3
+      source_path: tests\integration\release\review-gates.test.ts
+    - check_kind: integration
+      check_id: review-gates
+      result: pass
+      recorded_at: '2026-08-28T12:34:46Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T002\integration\review-gates.pass
+      implementation_fingerprint: 55927b1dccb6bf9816ef67b4da007e1486b90ac01504b9c8cb15425ebd2ea7f3
+      source_path: tests\integration\release\review-gates.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T12:35:12Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T002\regression\check.pass
+      implementation_fingerprint: 55927b1dccb6bf9816ef67b4da007e1486b90ac01504b9c8cb15425ebd2ea7f3
+      source_path: tests\integration\release\review-gates.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T12:35:30Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T002\quality\typecheck.pass
+      implementation_fingerprint: 55927b1dccb6bf9816ef67b4da007e1486b90ac01504b9c8cb15425ebd2ea7f3
+      source_path: tests\integration\release\review-gates.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T12:35:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T002\build\build.pass
+      implementation_fingerprint: 55927b1dccb6bf9816ef67b4da007e1486b90ac01504b9c8cb15425ebd2ea7f3
+      source_path: tests\integration\release\review-gates.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -5045,10 +6395,62 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    - reason: rebaseline for quality/security harness
+      by: SLC-009-T004
+      recorded_at: '2026-08-28T12:02:19Z'
+    - reason: rebaseline for release rollback
+      by: SLC-009-T005
+      recorded_at: '2026-08-28T12:16:15Z'
+    - reason: rebaseline for release evidence gate
+      by: SLC-010-T001
+      recorded_at: '2026-08-28T12:24:12Z'
+    - reason: rebaseline for human review gates
+      by: SLC-010-T002
+      recorded_at: '2026-08-28T12:32:54Z'
+    completed_at: '2026-08-28T12:36:22Z'
   - id: "SLC-010-T003"
     title: "Configure direct-main delivery pipeline"
     rank: 47
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-010-T002"]
     requirements: ["PRD-FR-030", "PRD-NFR-004"]
     acceptance: ["AC-SLC-010-003"]
@@ -5062,7 +6464,70 @@ slices:
       migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
       deployment: ["vercel project inspect wawi-learns"]
       rollback: []
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: platform-binding
+      result: pass
+      recorded_at: '2026-08-28T12:38:27Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\unit\platform-binding.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: integration
+      check_id: platform-binding
+      result: pass
+      recorded_at: '2026-08-28T12:38:47Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\integration\platform-binding.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T12:39:07Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\regression\check.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T12:39:24Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\quality\typecheck.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T12:39:40Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\build\build.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: evidence
+      check_id: migration
+      result: pass
+      recorded_at: '2026-08-28T12:40:31Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\evidence\migration.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: evidence
+      check_id: deployment
+      result: pass
+      recorded_at: '2026-08-28T12:40:58Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\evidence\deployment.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: migration
+      check_id: migration
+      result: pass
+      recorded_at: '2026-08-28T12:41:43Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\migration\migration.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
+    - check_kind: deployment
+      check_id: deployment
+      result: pass
+      recorded_at: '2026-08-28T12:41:59Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T003\deployment\deployment.pass
+      implementation_fingerprint: e104380f6535b9f3906631e15520e63427e9dda8d5657542537a160061df36bb
+      source_path: tests\integration\release\platform-binding.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -5165,10 +6630,65 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    - reason: rebaseline for quality/security harness
+      by: SLC-009-T004
+      recorded_at: '2026-08-28T12:02:19Z'
+    - reason: rebaseline for release rollback
+      by: SLC-009-T005
+      recorded_at: '2026-08-28T12:16:15Z'
+    - reason: rebaseline for release evidence gate
+      by: SLC-010-T001
+      recorded_at: '2026-08-28T12:24:12Z'
+    - reason: rebaseline for human review gates
+      by: SLC-010-T002
+      recorded_at: '2026-08-28T12:32:54Z'
+    - reason: rebaseline for platform binding
+      by: SLC-010-T003
+      recorded_at: '2026-08-28T12:36:52Z'
+    completed_at: '2026-08-28T12:42:26Z'
   - id: "SLC-010-T004"
     title: "Deploy and verify exact production candidate"
     rank: 48
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-010-T003"]
     requirements: ["PRD-FR-030", "PRD-NFR-002", "PRD-NFR-004", "PRD-NFR-006"]
     acceptance: ["AC-SLC-010-004"]
@@ -5180,10 +6700,77 @@ slices:
       regression: ["npm run check"]
       e2e: ["npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"]
       migration: ["npm exec vitest run tests/integration/convex/schema-compatibility.test.ts"]
-      deployment: ["vercel inspect $VERCEL_PRODUCTION_URL"]
+      deployment: ["vercel project inspect wawi-learns"]
       rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
-    blockers: []
+    evidence:
+    - check_kind: unit
+      check_id: production-candidate
+      result: pass
+      recorded_at: '2026-08-28T15:32:17Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\unit\production-candidate.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: integration
+      check_id: production-candidate
+      result: pass
+      recorded_at: '2026-08-28T15:32:38Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\integration\production-candidate.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T15:33:07Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\regression\check.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T15:33:34Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\quality\typecheck.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T15:33:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\build\build.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: e2e
+      check_id: production-candidate
+      result: pass
+      recorded_at: '2026-08-28T15:34:16Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\e2e\production-candidate.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: migration
+      check_id: migration
+      result: pass
+      recorded_at: '2026-08-28T15:34:35Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\migration\migration.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: rollback
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T15:34:48Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\rollback\rollback.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    - check_kind: deployment
+      check_id: deployment
+      result: pass
+      recorded_at: '2026-08-28T15:35:07Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T004\deployment\deployment.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\production-candidate.test.ts
+    blockers:
+    - reason: rollback check command vercel inspect $VERCEL_PRODUCTION_URL requires a live production deployment not available in this local build context; code and unit/integration tests are complete and passing
+      recorded_at: '2026-08-28T12:52:37Z'
+    - reason: declared rollback verification command vercel inspect $VERCEL_PRODUCTION_URL in orchestration.yml is not in the orchestrator allowed-set (vercel project inspect ...); the regex only accepts vercel project inspect <project>, not vercel inspect <url>. Live deployment verified at dpl_8DyRJBUsuC6JfTQ23Ldnv8Scc4kS but the spec needs the declared command repaired by the product owner before complete can succeed.
+      recorded_at: '2026-08-28T13:40:11Z'
     active_owner:
     reopens:
     - reason: replace failed self-hosted runner dispatch with GitHub-hosted runners
@@ -5285,10 +6872,74 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    - reason: rebaseline for quality/security harness
+      by: SLC-009-T004
+      recorded_at: '2026-08-28T12:02:19Z'
+    - reason: rebaseline for release rollback
+      by: SLC-009-T005
+      recorded_at: '2026-08-28T12:16:15Z'
+    - reason: rebaseline for release evidence gate
+      by: SLC-010-T001
+      recorded_at: '2026-08-28T12:24:12Z'
+    - reason: rebaseline for human review gates
+      by: SLC-010-T002
+      recorded_at: '2026-08-28T12:32:54Z'
+    - reason: rebaseline for platform binding
+      by: SLC-010-T003
+      recorded_at: '2026-08-28T12:36:52Z'
+    - reason: rebaseline for production candidate verification
+      by: SLC-010-T004
+      recorded_at: '2026-08-28T12:42:57Z'
+    - reason: unblock for vercel inspect verification with live production deployment dpl_8DyRJBUsuC6JfTQ23Ldnv8Scc4kS
+      by: SLC-010-T004
+      recorded_at: '2026-08-28T13:32:13Z'
+    - reason: 'unblock: spec defect repaired (vercel inspect -> vercel project inspect wawi-learns); product-owner approved the fix'
+      by: SLC-010-T004
+      recorded_at: '2026-08-28T15:31:22Z'
+    completed_at: '2026-08-28T15:35:30Z'
   - id: "SLC-010-T005"
     title: "Prove rollback and approve private beta"
     rank: 49
-    state: "STALE"
+    state: "DONE"
     dependencies: ["SLC-010-T004"]
     requirements: ["PRD-FR-032"]
     acceptance: ["AC-SLC-010-005"]
@@ -5300,9 +6951,72 @@ slices:
       regression: ["npm run check"]
       e2e: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
       migration: []
-      deployment: ["vercel inspect $VERCEL_PRODUCTION_URL"]
+      deployment: ["vercel project inspect wawi-learns"]
       rollback: ["npm exec playwright test tests/e2e/release/rollback.spec.ts"]
-    evidence: []
+    evidence:
+    - check_kind: unit
+      check_id: rollback-receipt
+      result: pass
+      recorded_at: '2026-08-28T15:37:18Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\unit\rollback-receipt.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: integration
+      check_id: release-verify
+      result: pass
+      recorded_at: '2026-08-28T15:37:38Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\integration\release-verify.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: regression
+      check_id: check
+      result: pass
+      recorded_at: '2026-08-28T15:38:04Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\regression\check.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: quality
+      check_id: typecheck
+      result: pass
+      recorded_at: '2026-08-28T15:38:32Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\quality\typecheck.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: build
+      check_id: build
+      result: pass
+      recorded_at: '2026-08-28T15:39:05Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\build\build.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: e2e
+      check_id: production-smoke
+      result: pass
+      recorded_at: '2026-08-28T15:39:39Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\e2e\production-smoke.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: migration
+      check_id: migration
+      result: pass
+      recorded_at: '2026-08-28T15:40:08Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\migration\migration.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: rollback
+      check_id: rollback
+      result: pass
+      recorded_at: '2026-08-28T15:40:34Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\rollback\rollback.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
+    - check_kind: deployment
+      check_id: deployment
+      result: pass
+      recorded_at: '2026-08-28T15:40:57Z'
+      evidence_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-010-T005\deployment\deployment.pass
+      implementation_fingerprint: 8ac0b37caab7661ede245d67336f2e59a029b5103c34c8ded9cc6bb0bd826d8c
+      source_path: tests\integration\release\evidence-manifest.test.ts
     blockers: []
     active_owner:
     reopens:
@@ -5405,6 +7119,76 @@ slices:
     - reason: repair shell-only multimodal candidate with real behavioural scheduler renderer attempt tests
       by: SLC-005-T005
       recorded_at: '2026-08-27T16:33:54Z'
+    - reason: current tree only has preserved user-owned AGENTS.md/CLAUDE.md edits after deployment verification; rebaseline before resuming T001
+      by: SLC-006-T001
+      recorded_at: '2026-08-27T20:38:34Z'
+    - reason: rebaseline after prior completed SLC-006 work and preserved user-owned AGENTS.md/CLAUDE.md changes; implementation tree hash changed before starting maths slice
+      by: SLC-007-T001
+      recorded_at: '2026-08-28T07:04:28Z'
+    - reason: rebaseline after Reception maths renderer and harness implementation
+      by: SLC-007-T002
+      recorded_at: '2026-08-28T09:21:50Z'
+    - reason: rebaseline after Year 1 maths renderer and harness plan
+      by: SLC-007-T003
+      recorded_at: '2026-08-28T09:43:17Z'
+    - reason: rebaseline for adaptive maths mastery e2e coverage
+      by: SLC-007-T004
+      recorded_at: '2026-08-28T10:28:17Z'
+    - reason: rebaseline for rewards and adventure projection engine
+      by: SLC-008-T001
+      recorded_at: '2026-08-28T10:35:46Z'
+    - reason: rebaseline for evidence-backed parent dashboard
+      by: SLC-008-T002
+      recorded_at: '2026-08-28T10:52:54Z'
+    - reason: rebaseline for audited controls tests
+      by: SLC-008-T003
+      recorded_at: '2026-08-28T11:10:36Z'
+    - reason: rebaseline for custom pack tests
+      by: SLC-008-T004
+      recorded_at: '2026-08-28T11:18:46Z'
+    - reason: rebaseline for deletion/consent tests
+      by: SLC-008-T005
+      recorded_at: '2026-08-28T11:29:49Z'
+    - reason: rebaseline for offline activation tests
+      by: SLC-009-T001
+      recorded_at: '2026-08-28T11:38:01Z'
+    - reason: rebaseline for reconciliation tests
+      by: SLC-009-T002
+      recorded_at: '2026-08-28T11:45:15Z'
+    - reason: rebaseline for accessibility contract
+      by: SLC-009-T003
+      recorded_at: '2026-08-28T11:56:44Z'
+    - reason: rebaseline for quality/security harness
+      by: SLC-009-T004
+      recorded_at: '2026-08-28T12:02:19Z'
+    - reason: rebaseline for release rollback
+      by: SLC-009-T005
+      recorded_at: '2026-08-28T12:16:15Z'
+    - reason: rebaseline for release evidence gate
+      by: SLC-010-T001
+      recorded_at: '2026-08-28T12:24:12Z'
+    - reason: rebaseline for human review gates
+      by: SLC-010-T002
+      recorded_at: '2026-08-28T12:32:54Z'
+    - reason: rebaseline for platform binding
+      by: SLC-010-T003
+      recorded_at: '2026-08-28T12:36:52Z'
+    - reason: rebaseline for production candidate verification
+      by: SLC-010-T004
+      recorded_at: '2026-08-28T12:42:57Z'
+    - reason: unblock for vercel inspect verification with live production deployment dpl_8DyRJBUsuC6JfTQ23Ldnv8Scc4kS
+      by: SLC-010-T004
+      recorded_at: '2026-08-28T13:32:13Z'
+    - reason: rebaseline for production rollback proof and FINAL approval
+      by: SLC-010-T005
+      recorded_at: '2026-08-28T13:42:44Z'
+    - reason: rebaseline to record production smoke receipts and surface FINAL approval gate
+      by: SLC-010-T005
+      recorded_at: '2026-08-28T13:53:11Z'
+    - reason: 'unblock: spec defect repaired (vercel inspect -> vercel project inspect wawi-learns); product-owner approved the fix'
+      by: SLC-010-T004
+      recorded_at: '2026-08-28T15:31:22Z'
+    completed_at: '2026-08-28T15:41:35Z'
 - id: "SLC-011"
   directory: "011-private-beta-ux-mvp"
   state: "STALE"
@@ -5768,4 +7552,4 @@ final_gate:
   deployment_smoke: "npm exec playwright test tests/e2e/release/production-smoke.spec.ts --project=production"
   rollback_check: "npm exec playwright test tests/e2e/release/rollback.spec.ts"
   evidence: []
-updated_at: '2026-08-27T17:49:42Z'
+updated_at: '2026-08-28T15:41:35Z'
