@@ -21,6 +21,14 @@ export default defineConfig({
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
+    {
+      name: "production",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: process.env.PWA_E2E_BASE_URL ?? "https://wawi-learns.vercel.app",
+      },
+      testMatch: /release\/(production-smoke|rollback)\.spec\.ts/,
+    },
   ],
   webServer: process.env.PWA_E2E_NO_SERVER
     ? undefined
