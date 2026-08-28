@@ -11,6 +11,7 @@ export * from "./ai-content";
 export * from "./red-team";
 export * from "./maths";
 export * from "./rewards";
+export * from "./parent-dashboard";
 export * from "./overrides";
 export * from "./deletion";
 export * from "./version-pin";
