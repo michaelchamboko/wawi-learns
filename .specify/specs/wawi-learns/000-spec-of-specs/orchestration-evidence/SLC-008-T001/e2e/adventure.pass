@@ -1,0 +1,6 @@
+task_id: SLC-008-T001
+check_kind: e2e
+check_id: adventure
+result: pass
+recorded_at: '2026-08-28T10:44:04Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-008-T001\raw\e2e-adventure.log

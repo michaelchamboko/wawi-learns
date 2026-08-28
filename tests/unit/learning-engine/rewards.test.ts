@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import {
   EMPTY_WORLD,
   awardLearningReward,
+  mergeRewardEvents,
+  projectAdventureStage,
   projectWorldState,
   type RewardEvent,
 } from "../../../packages/learning-engine/src/index";
@@ -73,5 +75,48 @@ describe("SLC-008-T001 — reward projection", () => {
     expect(EMPTY_WORLD.celebrations).toBe(0);
     expect(EMPTY_WORLD.collection).toEqual([]);
     expect(EMPTY_WORLD.build).toEqual([]);
+  });
+
+  it("major character rewards count double and only then enable reduced motion", () => {
+    const events: RewardEvent[] = [
+      event({ eventId: "c1", kind: "character" }),
+      event({ eventId: "c2", kind: "character", intensity: "major" }),
+    ];
+    const world = projectWorldState(events, "child-1");
+    expect(world.characterStage).toBe(3);
+    const stage = projectAdventureStage(events, 2);
+    expect(stage.stage).toBe(1);
+    expect(stage.reducedMotion).toBe(true);
+  });
+
+  it("calm-only rewards stay in reduced-motion-off mode", () => {
+    const events: RewardEvent[] = [
+      event({ eventId: "c1", kind: "character" }),
+      event({ eventId: "c2", kind: "character" }),
+    ];
+    const stage = projectAdventureStage(events, 4);
+    expect(stage.reducedMotion).toBe(false);
+    expect(stage.nextStageIn).toBe(2);
+  });
+
+  it("mergeRewardEvents deduplicates by eventId and sorts by awardedAt", () => {
+    const left = [event({ eventId: "e1", kind: "collection", awardedAt: 10 })];
+    const right = [
+      event({ eventId: "e1", kind: "collection", awardedAt: 10 }),
+      event({ eventId: "e2", kind: "build", awardedAt: 5 }),
+    ];
+    const merged = mergeRewardEvents(left, right);
+    expect(merged.map((e) => e.eventId)).toEqual(["e2", "e1"]);
+  });
+
+  it("offline replay of cached events yields identical world state", () => {
+    const events = [
+      event({ eventId: "e1", kind: "collection" }),
+      event({ eventId: "b1", kind: "build" }),
+      event({ eventId: "c1", kind: "character" }),
+    ];
+    const before = projectWorldState(events, "child-1");
+    const replayed = projectWorldState(mergeRewardEvents([], events), "child-1");
+    expect(replayed).toEqual(before);
   });
 });

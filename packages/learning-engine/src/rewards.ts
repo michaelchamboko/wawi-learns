@@ -85,3 +85,37 @@ export const awardLearningReward = (
     },
   ];
 };
+
+export const projectAdventureStage = (
+  events: readonly RewardEvent[],
+  stageSize: number = 5,
+): { stage: number; nextStageIn: number; reducedMotion: boolean } => {
+  if (stageSize <= 0) throw new Error("stage-size-must-be-positive");
+  const sorted = [...events].sort((a, b) => a.awardedAt - b.awardedAt);
+  let characterStage = 0;
+  let celebrations = 0;
+  let reducedMotion = false;
+  for (const event of sorted) {
+    if (event.kind === "character") {
+      characterStage += event.intensity === "major" ? 2 : 1;
+    } else if (event.kind === "celebration") {
+      celebrations += 1;
+    }
+    if (event.intensity === "major") reducedMotion = true;
+  }
+  const earnedCelebrations = celebrations + characterStage;
+  const stage = Math.floor(earnedCelebrations / stageSize);
+  const nextStageIn = Math.max(stageSize - (earnedCelebrations % stageSize), 0);
+  return { stage, nextStageIn, reducedMotion };
+};
+
+export const mergeRewardEvents = (a: readonly RewardEvent[], b: readonly RewardEvent[]): RewardEvent[] => {
+  const seen = new Set<string>();
+  const merged: RewardEvent[] = [];
+  for (const event of [...a, ...b]) {
+    if (seen.has(event.eventId)) continue;
+    seen.add(event.eventId);
+    merged.push(event);
+  }
+  return merged.sort((left, right) => left.awardedAt - right.awardedAt);
+};
