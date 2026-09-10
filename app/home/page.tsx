@@ -60,18 +60,22 @@ function ParentAuth() {
   const [mode, setMode] = useState<ParentAuthMode>("signIn");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [busy, setBusy] = useState(false);
 
   const submit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setBusy(true);
     setError("");
+    setSuccess("");
     const form = new FormData(event.currentTarget);
     form.set("email", email);
     form.set("flow", mode);
     try {
       await signIn("password", form);
-      // signUp succeeds immediately — no email verification needed
+      if (mode === "signUp") {
+        setSuccess("Account created successfully! Signing you in...");
+      }
     } catch (reason) {
       setError(parentAuthErrorMessage(mode, reason));
     } finally {
@@ -87,6 +91,7 @@ function ParentAuth() {
         <label>Email<input name="email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} required autoComplete="email" /></label>
         <label>Password<input name="password" type="password" required autoComplete={mode === "signUp" ? "new-password" : "current-password"} /></label>
         {error ? <p className="form-error" role="alert">{error}</p> : null}
+        {success ? <p className="form-success" role="status">{success}</p> : null}
         <button className="primary-button" type="submit" disabled={busy}>{busy ? "Please wait…" : mode === "signIn" ? "Sign in" : "Create account"}</button>
       </form>
       <div className="form-row">

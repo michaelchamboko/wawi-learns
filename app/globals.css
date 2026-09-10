@@ -55,6 +55,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .auth-form input { min-height:50px; border:2px solid #d8dee4; border-radius:12px; padding:10px 12px; color:var(--ink); background:#fff; }
 .form-row { display:flex; gap:10px; flex-wrap:wrap; }
 .form-error { color:#a63d33 !important; font-weight:700; }
+.form-success { color:var(--teal) !important; font-weight:700; }
 .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
 @media (max-width: 430px) { .learner-shell, .parent-entry { width:min(100% - 24px, 760px); } .home-card, .activity-card, .completion-card, .auth-card, .setup-card, .reconnect-card { border-radius:22px; padding:22px; } .learner-header { align-items:flex-start; flex-direction:column; } }

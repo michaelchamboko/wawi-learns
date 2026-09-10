@@ -31,3 +31,4 @@ Thumbs.db
 
 # Agent session locks
 .opencode/
+.env*
