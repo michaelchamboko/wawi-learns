@@ -61,7 +61,6 @@ function ParentAuth() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
-  const isVerification = mode === "verify" || mode === "resetVerification";
 
   const submit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -69,11 +68,10 @@ function ParentAuth() {
     setError("");
     const form = new FormData(event.currentTarget);
     form.set("email", email);
-    form.set("flow", mode === "verify" ? "email-verification" : mode === "resetVerification" ? "reset-verification" : mode);
+    form.set("flow", mode);
     try {
       await signIn("password", form);
-      if (mode === "signUp") setMode("verify");
-      if (mode === "reset") setMode("resetVerification");
+      // signUp succeeds immediately — no email verification needed
     } catch (reason) {
       setError(parentAuthErrorMessage(mode, reason));
     } finally {
@@ -83,19 +81,16 @@ function ParentAuth() {
 
   return (
     <main className="learner-shell" data-testid="parent-auth"><section className="auth-card">
-      <p className="eyebrow">Parent area</p><h1>{mode === "signUp" ? "Create your account" : mode === "verify" ? "Check your email" : mode === "reset" || mode === "resetVerification" ? "Reset your password" : "Welcome back"}</h1>
+      <p className="eyebrow">Parent area</p><h1>{mode === "signUp" ? "Create your account" : "Welcome back"}</h1>
       <p>Parents manage access. Children do not need an account.</p>
       <form className="auth-form" onSubmit={(event) => void submit(event)}>
         <label>Email<input name="email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} required autoComplete="email" /></label>
-        {!isVerification && mode !== "reset" ? <label>Password<input name="password" type="password" required autoComplete={mode === "signUp" ? "new-password" : "current-password"} /></label> : null}
-        {isVerification ? <label>Code<input name="code" inputMode="numeric" required autoComplete="one-time-code" /></label> : null}
-        {mode === "resetVerification" ? <label>New password<input name="newPassword" type="password" required autoComplete="new-password" /></label> : null}
+        <label>Password<input name="password" type="password" required autoComplete={mode === "signUp" ? "new-password" : "current-password"} /></label>
         {error ? <p className="form-error" role="alert">{error}</p> : null}
-        <button className="primary-button" type="submit" disabled={busy}>{busy ? "Please wait…" : mode === "signIn" ? "Sign in" : mode === "signUp" ? "Create account" : mode === "reset" ? "Send code" : "Continue"}</button>
+        <button className="primary-button" type="submit" disabled={busy}>{busy ? "Please wait…" : mode === "signIn" ? "Sign in" : "Create account"}</button>
       </form>
       <div className="form-row">
         {mode === "signIn" ? <button className="link-button" type="button" onClick={() => setMode("signUp")}>Create an account</button> : null}
-        {mode === "signIn" ? <button className="link-button" type="button" onClick={() => setMode("reset")}>Forgot password?</button> : null}
         {mode !== "signIn" ? <button className="link-button" type="button" onClick={() => setMode("signIn")}>Back to sign in</button> : null}
       </div>
     </section></main>
