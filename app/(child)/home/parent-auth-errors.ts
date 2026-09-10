@@ -9,6 +9,16 @@ const safeMessages: Record<ParentAuthMode, string> = {
 };
 
 export function parentAuthErrorMessage(mode: ParentAuthMode, reason: unknown): string {
-  void reason;
-  return safeMessages[mode];
+  const raw = typeof reason === "object" && reason !== null && "message" in reason
+    ? (reason as { message: string }).message
+    : typeof reason === "string"
+      ? reason
+      : "";
+  const detail = raw
+    .replace(/\[Request ID: [^\]]+\]/g, "")
+    .replace(/\[CONVEX [^\]]+\]/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  const suffix = detail ? ` (${detail})` : "";
+  return safeMessages[mode] + suffix;
 }
