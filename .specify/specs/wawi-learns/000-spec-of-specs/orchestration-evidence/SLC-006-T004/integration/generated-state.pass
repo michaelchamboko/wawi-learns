@@ -1,0 +1,6 @@
+task_id: SLC-006-T004
+check_kind: integration
+check_id: generated-state
+result: pass
+recorded_at: '2026-08-28T05:05:10Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T004\raw\unit-integration.log

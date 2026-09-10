@@ -1,0 +1,6 @@
+task_id: SLC-009-T005
+check_kind: rollback
+check_id: rollback
+result: pass
+recorded_at: '2026-08-28T12:22:31Z'
+source_path: tests\e2e\release\rollback.spec.ts

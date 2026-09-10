@@ -1,0 +1,6 @@
+task_id: SLC-008-T005
+check_kind: migration
+check_id: migration
+result: pass
+recorded_at: '2026-08-28T11:36:44Z'
+source_path: tests\unit\learning-engine\deletion.test.ts

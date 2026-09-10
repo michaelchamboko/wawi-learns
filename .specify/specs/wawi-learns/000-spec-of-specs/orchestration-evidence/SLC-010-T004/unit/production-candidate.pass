@@ -1,0 +1,6 @@
+task_id: SLC-010-T004
+check_kind: unit
+check_id: production-candidate
+result: pass
+recorded_at: '2026-08-28T15:32:16Z'
+source_path: tests\integration\release\production-candidate.test.ts

@@ -1,0 +1,6 @@
+task_id: SLC-009-T005
+check_kind: unit
+check_id: rollback
+result: pass
+recorded_at: '2026-08-28T12:18:42Z'
+source_path: tests\unit\learning-engine\rollback.test.ts

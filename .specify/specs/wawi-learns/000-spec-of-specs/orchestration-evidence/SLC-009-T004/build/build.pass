@@ -1,0 +1,6 @@
+task_id: SLC-009-T004
+check_kind: build
+check_id: build
+result: pass
+recorded_at: '2026-08-28T12:13:37Z'
+source_path: tests\unit\learning-engine\sanitize.test.ts

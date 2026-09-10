@@ -1,0 +1,6 @@
+task_id: SLC-010-T001
+check_kind: integration
+check_id: release-evidence
+result: pass
+recorded_at: '2026-08-28T12:30:44Z'
+source_path: tests\integration\release\evidence-manifest.test.ts

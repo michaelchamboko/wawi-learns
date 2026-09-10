@@ -1,0 +1,6 @@
+task_id: SLC-009-T003
+check_kind: unit
+check_id: accessibility
+result: pass
+recorded_at: '2026-08-28T11:59:21Z'
+source_path: tests\unit\learning-engine\accessibility.test.ts

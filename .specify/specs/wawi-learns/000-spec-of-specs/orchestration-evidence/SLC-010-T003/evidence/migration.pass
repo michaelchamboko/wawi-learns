@@ -1,0 +1,6 @@
+task_id: SLC-010-T003
+check_kind: evidence
+check_id: migration
+result: pass
+recorded_at: '2026-08-28T12:40:31Z'
+source_path: tests\integration\release\platform-binding.test.ts

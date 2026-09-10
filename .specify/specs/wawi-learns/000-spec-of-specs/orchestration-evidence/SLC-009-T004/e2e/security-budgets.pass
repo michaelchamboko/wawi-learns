@@ -1,0 +1,6 @@
+task_id: SLC-009-T004
+check_kind: e2e
+check_id: security-budgets
+result: pass
+recorded_at: '2026-08-28T12:13:53Z'
+source_path: tests\unit\learning-engine\sanitize.test.ts

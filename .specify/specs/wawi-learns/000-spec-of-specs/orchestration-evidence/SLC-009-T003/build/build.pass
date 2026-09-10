@@ -1,0 +1,6 @@
+task_id: SLC-009-T003
+check_kind: build
+check_id: build
+result: pass
+recorded_at: '2026-08-28T12:00:38Z'
+source_path: tests\unit\learning-engine\accessibility.test.ts

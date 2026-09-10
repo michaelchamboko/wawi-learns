@@ -1,0 +1,6 @@
+task_id: SLC-008-T005
+check_kind: e2e
+check_id: data-rights
+result: pass
+recorded_at: '2026-08-28T11:34:24Z'
+source_path: tests\unit\learning-engine\deletion.test.ts

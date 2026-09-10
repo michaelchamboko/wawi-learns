@@ -1,0 +1,6 @@
+task_id: SLC-009-T004
+check_kind: deployment
+check_id: deployment
+result: pass
+recorded_at: '2026-08-28T12:15:32Z'
+source_path: tests\e2e\offline\version-activation.spec.ts

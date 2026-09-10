@@ -1,0 +1,6 @@
+task_id: SLC-010-T005
+check_kind: rollback
+check_id: rollback
+result: pass
+recorded_at: '2026-08-28T15:40:34Z'
+source_path: tests\integration\release\evidence-manifest.test.ts

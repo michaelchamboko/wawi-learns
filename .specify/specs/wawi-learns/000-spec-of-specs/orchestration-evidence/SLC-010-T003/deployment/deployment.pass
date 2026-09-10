@@ -1,0 +1,6 @@
+task_id: SLC-010-T003
+check_kind: deployment
+check_id: deployment
+result: pass
+recorded_at: '2026-08-28T12:41:59Z'
+source_path: tests\integration\release\platform-binding.test.ts

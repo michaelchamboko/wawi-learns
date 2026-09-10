@@ -1,0 +1,6 @@
+task_id: SLC-009-T001
+check_kind: rollback
+check_id: rollback
+result: pass
+recorded_at: '2026-08-28T11:43:57Z'
+source_path: tests\unit\learning-engine\version-pin.test.ts

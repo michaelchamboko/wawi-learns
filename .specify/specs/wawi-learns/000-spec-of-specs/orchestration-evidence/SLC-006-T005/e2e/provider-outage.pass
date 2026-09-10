@@ -1,0 +1,6 @@
+task_id: SLC-006-T005
+check_kind: e2e
+check_id: provider-outage
+result: pass
+recorded_at: '2026-08-28T05:37:08Z'
+source_path: .specify\specs\wawi-learns\000-spec-of-specs\orchestration-evidence\SLC-006-T005\raw\provider-outage-e2e.log

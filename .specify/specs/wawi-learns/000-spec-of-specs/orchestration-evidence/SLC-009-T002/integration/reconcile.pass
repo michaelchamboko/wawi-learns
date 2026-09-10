@@ -1,0 +1,6 @@
+task_id: SLC-009-T002
+check_kind: integration
+check_id: reconcile
+result: pass
+recorded_at: '2026-08-28T11:53:40Z'
+source_path: tests\unit\learning-engine\reconcile.test.ts
