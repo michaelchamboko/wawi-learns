@@ -23,7 +23,8 @@ export const registerInstallation = mutationGeneric({
     const snapshot = installationSnapshotFor(parent.parentId, profile._id, args.installationId, Date.now());
     if (existing?.revokedAt) return { ...snapshot, revokedAt: existing.revokedAt };
     if (existing) { await ctx.db.patch(existing._id, { lastSeenAt: Date.now(), packVersion: snapshot.packVersion, packDigest: snapshot.packDigest }); return snapshot; }
-    await ctx.db.insert("installations", { ...snapshot, lastSeenAt: Date.now() });
+    const { issuedAt, ...installation } = snapshot;
+    await ctx.db.insert("installations", { ...installation, lastSeenAt: issuedAt });
     return snapshot;
   },
 });
