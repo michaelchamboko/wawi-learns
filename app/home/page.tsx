@@ -64,13 +64,19 @@ function ParentAuth() {
   const [busy, setBusy] = useState(false);
 
   const submit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setBusy(true);
-    setError("");
-    setSuccess("");
-    const form = new FormData(event.currentTarget);
-    form.set("email", email);
-    form.set("flow", mode);
+      event.preventDefault();
+      setBusy(true);
+      setError("");
+      setSuccess("");
+      const form = new FormData(event.currentTarget);
+      const password = form.get("password") as string;
+      if (mode === "signUp" && (!password || password.length < 8)) {
+        setError("Password must be at least 8 characters.");
+        setBusy(false);
+        return;
+      }
+      form.set("email", email);
+      form.set("flow", mode);
     try {
       await signIn("password", form);
       if (mode === "signUp") {

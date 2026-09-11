@@ -12,6 +12,11 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
         }
         return { email: email.trim().toLowerCase() };
       },
+      validatePasswordRequirements(password) {
+        if (typeof password !== "string" || password.length < 8) {
+          throw new ConvexError("Password must be at least 8 characters.");
+        }
+      },
     }),
   ],
 });
