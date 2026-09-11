@@ -13,10 +13,10 @@ import type * as assessments from "../assessments.js";
 import type * as attempts from "../attempts.js";
 import type * as auth from "../auth.js";
 import type * as childProfiles from "../childProfiles.js";
-import type * as deleteAccount from "../deleteAccount.js";
 import type * as http from "../http.js";
 import type * as installations from "../installations.js";
 import type * as learner from "../learner.js";
+import type * as lib_passwordProvider from "../lib/passwordProvider.js";
 import type * as lib_requireParent from "../lib/requireParent.js";
 
 import type {
@@ -31,10 +31,10 @@ declare const fullApi: ApiFromModules<{
   attempts: typeof attempts;
   auth: typeof auth;
   childProfiles: typeof childProfiles;
-  deleteAccount: typeof deleteAccount;
   http: typeof http;
   installations: typeof installations;
   learner: typeof learner;
+  "lib/passwordProvider": typeof lib_passwordProvider;
   "lib/requireParent": typeof lib_requireParent;
 }>;
 

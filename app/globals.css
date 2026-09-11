@@ -51,6 +51,16 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .feedback .primary-button { margin-top:12px; }
 .stars { display:flex; justify-content:center; gap:8px; font-size:2.2rem; margin:18px 0; }
 .auth-form { display:grid; gap:14px; }
+.auth-shell { max-width:560px; padding-top:clamp(24px, 7vh, 72px); }
+.auth-form small { color:var(--muted); font-weight:400; line-height:1.4; }
+.auth-form input { width:100%; min-width:0; }
+.auth-password-actions { justify-content:space-between; }
+.auth-navigation { margin-top:24px; padding-top:12px; border-top:1px solid #d8dee4; }
+.auth-card .form-error, .auth-card .form-success { margin:0; padding:14px; border-radius:12px; }
+.auth-card .form-error { background:#fff1ef; }
+.auth-card .form-success { background:#e9f6f3; }
+.auth-card .primary-button { background:#b84337; box-shadow:0 5px 0 #91372e; }
+.auth-card .link-button:disabled { opacity:.55; cursor:not-allowed; }
 .auth-form label { display:grid; gap:7px; font-weight:800; }
 .auth-form input { min-height:50px; border:2px solid #d8dee4; border-radius:12px; padding:10px 12px; color:var(--ink); background:#fff; }
 .form-row { display:flex; gap:10px; flex-wrap:wrap; }

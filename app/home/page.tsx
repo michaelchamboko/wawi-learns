@@ -62,26 +62,70 @@ function ParentAuth() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [busy, setBusy] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const errorRef = useRef<HTMLParagraphElement>(null);
+  const isReset = mode === "reset";
+  const isResetVerification = mode === "resetVerification";
+  const isNewPassword = mode === "signUp" || isResetVerification;
+
+  useEffect(() => { headingRef.current?.focus(); }, [mode]);
+  useEffect(() => { if (error) errorRef.current?.focus(); }, [error]);
+
+  const changeMode = (nextMode: ParentAuthMode) => {
+    setMode(nextMode);
+    setError("");
+    setSuccess("");
+    setShowPassword(false);
+  };
+
+  const requestReset = async () => {
+    await signIn("password", { email: email.trim().toLowerCase(), flow: "reset" });
+    setMode("resetVerification");
+    setShowPassword(false);
+    setSuccess("If an account exists for this email, a reset code will arrive shortly. Check your inbox and spam folder. Use the latest code within 15 minutes.");
+  };
+
+  const resendCode = async () => {
+    if (busy) return;
+    setBusy(true);
+    setError("");
+    setSuccess("");
+    try {
+      await requestReset();
+    } catch (reason) {
+      setError(parentAuthErrorMessage("reset", reason));
+    } finally {
+      setBusy(false);
+    }
+  };
 
   const submit = async (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      setBusy(true);
-      setError("");
-      setSuccess("");
-      const form = new FormData(event.currentTarget);
-      const password = form.get("password") as string;
-      if (mode === "signUp" && (!password || password.length < 8)) {
-        setError("Password must be at least 8 characters.");
-        setBusy(false);
+    event.preventDefault();
+    if (busy) return;
+    setError("");
+    setSuccess("");
+    const form = new FormData(event.currentTarget);
+    const password = form.get(isResetVerification ? "newPassword" : "password");
+    if (isNewPassword && (typeof password !== "string" || password.length < 8)) {
+      setError("Use a password with at least 8 characters.");
+      return;
+    }
+    if (isResetVerification && password !== form.get("confirmPassword")) {
+      setError("Your passwords don't match. Enter the same new password in both fields.");
+      return;
+    }
+    form.delete("confirmPassword");
+    form.set("email", email.trim().toLowerCase());
+    form.set("flow", isResetVerification ? "reset-verification" : mode);
+    setBusy(true);
+    try {
+      if (isReset) {
+        await requestReset();
         return;
       }
-      form.set("email", email);
-      form.set("flow", mode);
-    try {
       await signIn("password", form);
-      if (mode === "signUp") {
-        setSuccess("Account created successfully! Signing you in...");
-      }
+      setSuccess(isResetVerification ? "Password updated. Signing you in..." : "Signing you in...");
     } catch (reason) {
       setError(parentAuthErrorMessage(mode, reason));
     } finally {
@@ -90,19 +134,31 @@ function ParentAuth() {
   };
 
   return (
-    <main className="learner-shell" data-testid="parent-auth"><section className="auth-card">
-      <p className="eyebrow">Parent area</p><h1>{mode === "signUp" ? "Create your account" : "Welcome back"}</h1>
-      <p>Parents manage access. Children do not need an account.</p>
-      <form className="auth-form" onSubmit={(event) => void submit(event)}>
-        <label>Email<input name="email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} required autoComplete="email" /></label>
-        <label>Password<input name="password" type="password" required autoComplete={mode === "signUp" ? "new-password" : "current-password"} /></label>
-        {error ? <p className="form-error" role="alert">{error}</p> : null}
+    <main className="learner-shell auth-shell" data-testid="parent-auth"><section className="auth-card" aria-labelledby="auth-title">
+      <p className="eyebrow">Wawi Learns · Parent area</p>
+      <h1 id="auth-title" ref={headingRef} tabIndex={-1}>{isReset ? "Forgot your password?" : isResetVerification ? "Set a new password" : mode === "signUp" ? "Create your account" : "Welcome back"}</h1>
+      <p>{isReset ? "Enter the email you registered with. We'll send you a code to reset your password." : isResetVerification ? "Enter your email code and choose a new password. Your learning data stays safe." : "Parents manage access. Children do not need an account."}</p>
+      <form key={mode} className="auth-form" aria-busy={busy} onSubmit={(event) => void submit(event)}>
+        <label>Email<input name="email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} required autoComplete="email" autoCapitalize="none" spellCheck={false} readOnly={isResetVerification} disabled={busy} /></label>
+        {isResetVerification ? <><label>Reset code<input name="code" inputMode="numeric" pattern="[0-9]{8}" minLength={8} maxLength={8} required autoComplete="one-time-code" aria-describedby="code-help" disabled={busy} /></label><small id="code-help">Enter the 8-digit code from your latest email.</small></> : null}
+        {!isReset ? <>
+          <label>{isResetVerification ? "New password" : "Password"}<input name={isResetVerification ? "newPassword" : "password"} type={showPassword ? "text" : "password"} required minLength={isNewPassword ? 8 : undefined} autoComplete={isNewPassword ? "new-password" : "current-password"} aria-describedby={isNewPassword ? "password-help" : undefined} disabled={busy} /></label>
+          {isNewPassword ? <small id="password-help">Use at least 8 characters.</small> : null}
+          {isResetVerification ? <label>Confirm new password<input name="confirmPassword" type={showPassword ? "text" : "password"} required minLength={8} autoComplete="new-password" disabled={busy} /></label> : null}
+          <div className="form-row auth-password-actions">
+            <button className="link-button" type="button" aria-pressed={showPassword} onClick={() => setShowPassword(!showPassword)} disabled={busy}>{showPassword ? "Hide password" : "Show password"}</button>
+            {mode === "signIn" ? <button className="link-button" type="button" onClick={() => changeMode("reset")} disabled={busy}>Forgot password?</button> : null}
+          </div>
+        </> : null}
+        {error ? <p ref={errorRef} tabIndex={-1} className="form-error" role="alert">{error}</p> : null}
         {success ? <p className="form-success" role="status">{success}</p> : null}
-        <button className="primary-button" type="submit" disabled={busy}>{busy ? "Please wait…" : mode === "signIn" ? "Sign in" : "Create account"}</button>
+        <button className="primary-button" type="submit" disabled={busy}>{busy ? "Please wait…" : isReset ? "Send reset code" : isResetVerification ? "Reset password and sign in" : mode === "signIn" ? "Sign in" : "Create account"}</button>
       </form>
-      <div className="form-row">
-        {mode === "signIn" ? <button className="link-button" type="button" onClick={() => setMode("signUp")}>Create an account</button> : null}
-        {mode !== "signIn" ? <button className="link-button" type="button" onClick={() => setMode("signIn")}>Back to sign in</button> : null}
+      <div className="form-row auth-navigation">
+        {mode === "signIn" ? <button className="link-button" type="button" onClick={() => changeMode("signUp")} disabled={busy}>Create an account</button> : null}
+        {mode === "signUp" ? <button className="link-button" type="button" onClick={() => changeMode("reset")} disabled={busy}>Forgot password?</button> : null}
+        {isResetVerification ? <><button className="link-button" type="button" onClick={() => void resendCode()} disabled={busy}>Send a new code</button><button className="link-button" type="button" onClick={() => changeMode("reset")} disabled={busy}>Change email</button></> : null}
+        {mode !== "signIn" ? <button className="link-button" type="button" onClick={() => changeMode("signIn")} disabled={busy}>Back to sign in</button> : null}
       </div>
     </section></main>
   );

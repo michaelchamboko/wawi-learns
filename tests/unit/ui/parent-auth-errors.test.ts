@@ -1,30 +1,32 @@
 import { describe, expect, it } from "vitest";
+import { ConvexError } from "convex/values";
 import { parentAuthErrorMessage } from "../../../app/(child)/home/parent-auth-errors";
 
 describe("parentAuthErrorMessage", () => {
-  it("never exposes Convex request identifiers but surfaces the useful error", () => {
-    const internalError = new Error(
-      "[CONVEX A(auth:signIn)] [Request ID: 5e02ffd92e0bd256] Server Error Could not find public function for 'auth:signIn'. Called by client",
+  it("explains a confirmed duplicate account and offers recovery", () => {
+    expect(parentAuthErrorMessage("signUp", new ConvexError("ACCOUNT_EXISTS"))).toBe(
+      "An account with this email already exists. Sign in or choose Forgot password to recover it.",
     );
-
-    const message = parentAuthErrorMessage("signIn", internalError);
-
-    expect(message).toContain("We couldn't sign you in");
-    expect(message).toContain("Server Error Could not find public function");
-    expect(message).not.toContain("Request ID");
-    expect(message).not.toContain("CONVEX");
-    expect(message).not.toContain("5e02ffd9");
   });
 
-  it("surfaces the real error message alongside the safe prefix", () => {
-    expect(parentAuthErrorMessage("signUp", new Error("secret"))).toBe(
-      "We couldn't create the account yet. Please try again. (secret)",
+  it("does not distinguish missing accounts from incorrect sign-in passwords", () => {
+    expect(parentAuthErrorMessage("signIn", new ConvexError("INVALID_CREDENTIALS"))).toBe(
+      "The email or password is incorrect. Check your details or choose Forgot password.",
     );
-    expect(parentAuthErrorMessage("verify", new Error("bad token"))).toBe(
-      "That code could not be confirmed. Check it and try again. (bad token)",
-    );
-    expect(parentAuthErrorMessage("reset", new Error("send failed"))).toBe(
-      "We couldn't send a reset code. Please try again. (send failed)",
-    );
+  });
+
+  it("never displays internal errors or guesses that a server failure is a duplicate account", () => {
+    for (const error of [new Error("[CONVEX A(auth:signIn)] [Request ID: secret-id] Server Error Called by client"), new Error("secret"), new ConvexError("private-data"), null]) {
+      expect(parentAuthErrorMessage("signUp", error)).toBe(
+        "We couldn't create your account. If you've registered before, sign in or choose Forgot password. Otherwise, try again shortly.",
+      );
+    }
+  });
+
+  it("provides specific safe recovery guidance", () => {
+    expect(parentAuthErrorMessage("resetVerification", new ConvexError("INVALID_RESET_CODE"))).toContain("incorrect or expired");
+    expect(parentAuthErrorMessage("reset", new ConvexError("RESET_EMAIL_UNAVAILABLE"))).toContain("couldn't send");
+    expect(parentAuthErrorMessage("signIn", new ConvexError("TOO_MANY_ATTEMPTS"))).toContain("Wait a few minutes");
+    expect(parentAuthErrorMessage("signUp", new ConvexError("PASSWORD_TOO_SHORT"))).toContain("at least 8 characters");
   });
 });
